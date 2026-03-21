@@ -2,13 +2,14 @@
 
 import time
 import logging
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from io import StringIO
 from urllib.request import urlopen
 
 import pandas as pd
 import yfinance as yf
 
-from stock_ranking.config import FETCH_DELAY_SEC
+from stock_ranking.config import FETCH_DELAY_SEC, FETCH_MAX_WORKERS
 
 logger = logging.getLogger(__name__)
 
@@ -329,18 +330,32 @@ def _add_news(data: dict, ticker_obj: yf.Ticker):
         logger.debug(f"ニュース取得エラー: {e}")
 
 
-def fetch_all_stocks(tickers: list[str], delay: float = FETCH_DELAY_SEC) -> pd.DataFrame:
-    """複数銘柄のデータを一括取得する"""
+def fetch_all_stocks(tickers: list[str], delay: float = FETCH_DELAY_SEC,
+                     max_workers: int = FETCH_MAX_WORKERS) -> pd.DataFrame:
+    """複数銘柄のデータを並列取得する。
+
+    ThreadPoolExecutorで並列化し、yfinanceの逐次取得を高速化する。
+    """
     results = []
     total = len(tickers)
-    for i, ticker in enumerate(tickers):
-        if (i + 1) % 50 == 0 or i == 0:
-            logger.info(f"取得中: {i+1}/{total} ({ticker})")
-        data = fetch_stock_data(ticker)
-        if data:
-            results.append(data)
-        if delay > 0:
-            time.sleep(delay)
+    completed = 0
+
+    logger.info(f"取得中: {total} 銘柄（並列数: {max_workers}）")
+
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        futures = {executor.submit(fetch_stock_data, t): t for t in tickers}
+        for future in as_completed(futures):
+            ticker = futures[future]
+            completed += 1
+            try:
+                data = future.result()
+                if data:
+                    results.append(data)
+            except Exception as e:
+                logger.warning(f"{ticker}: 並列取得エラー - {e}")
+
+            if completed % 50 == 0 or completed == total:
+                logger.info(f"取得中: {completed}/{total}")
 
     df = pd.DataFrame(results)
     logger.info(f"取得完了: {len(df)}/{total} 銘柄")

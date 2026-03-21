@@ -45,12 +45,10 @@ jobs:
           retention-days: 90
 
       - name: 結果をリポジトリにコミット
-        env:
-          SCORING_DATE: ${{ github.run_id }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add output/ranking_*.csv output/report_*.txt
+          git add -f output/ranking_*.csv output/report_*.txt
           if git diff --staged --quiet; then
             echo "変更なし、スキップ"
           else

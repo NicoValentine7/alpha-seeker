@@ -1,0 +1,60 @@
+name: 日次スコアリング
+
+on:
+  schedule:
+    # 米国市場クローズ後 UTC 22:00 = EST 17:00 = JST 07:00（翌朝）
+    # 平日のみ実行
+    - cron: '0 22 * * 1-5'
+  workflow_dispatch:  # 手動実行も可能
+
+permissions:
+  contents: write
+
+jobs:
+  scoring:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Python セットアップ
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: uv インストール
+        uses: astral-sh/setup-uv@v4
+
+      - name: 依存関係インストール
+        run: uv sync
+
+      - name: S&P500 スコアリング実行
+        run: |
+          uv run python -m stock_ranking.ranking --top 50
+        env:
+          PYTHONUNBUFFERED: '1'
+
+      - name: 結果をアーティファクトとして保存
+        uses: actions/upload-artifact@v4
+        with:
+          name: ranking-${{ github.run_id }}
+          path: |
+            output/ranking_*.csv
+            output/report_*.txt
+          retention-days: 90
+
+      - name: 結果をリポジトリにコミット
+        env:
+          SCORING_DATE: ${{ github.run_id }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add output/ranking_*.csv output/report_*.txt
+          if git diff --staged --quiet; then
+            echo "変更なし、スキップ"
+          else
+            COMMIT_DATE=$(date +%Y-%m-%d)
+            git commit -m "日次スコアリング結果を更新 ${COMMIT_DATE}"
+            git push
+          fi

@@ -1,0 +1,14 @@
+[project]
+name = "stock-ranking"
+version = "0.1.0"
+description = "過小評価株ランキングシステム"
+requires-python = ">=3.11"
+dependencies = [
+    "yfinance>=0.2.40",
+    "pandas>=2.0",
+    "lxml>=6.0.2",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

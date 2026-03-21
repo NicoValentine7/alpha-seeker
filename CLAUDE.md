@@ -13,7 +13,9 @@ src/stock_ranking/
 ├── data.py        # yfinanceからのデータ取得（財務・決算・アナリスト・ニュース）
 ├── scoring.py     # 4カテゴリのスコアリングロジック + バリュートラップフィルター
 ├── explain.py     # スコア根拠レポート生成
-└── ranking.py     # CLI エントリポイント（データ取得→スコアリング→出力）
+├── ranking.py     # CLI エントリポイント（データ取得→スコアリング→出力）
+├── backtest.py    # IC分析バックテスト基盤
+└── insider.py     # SEC EDGAR Form 4 インサイダー取引データ取得
 ```
 
 ## スコアリングモデル（4カテゴリ）
@@ -38,6 +40,14 @@ src/stock_ranking/
 売上3Q連続減少 or D/E>500% の銘柄は総合スコアから-20点のペナルティ。
 Seeking Alphaの「失格ルール」、Lord Abbett(2025)のバリュートラップ研究に基づく。
 
+### Piotroski F-Score
+
+9つの財務指標で0-9のスコアを算出し、バリュートラップ検出を強化:
+- 収益性(4): ROA>0, CFO>0, ROA改善, CFO>NI（アクルーアル品質）
+- レバレッジ(3): 長期負債低下, 流動比率改善, 希薄化なし
+- 効率(2): 粗利率改善, 資産回転率改善
+- F-Score≤2の銘柄はバリュートラップとして-20点ペナルティ
+
 ## 開発規約
 
 ### 実行
@@ -48,6 +58,9 @@ uv run python -m stock_ranking.ranking --tickers AAPL MSFT NVDA --top 30
 
 # S&P500全銘柄（時間がかかる）
 uv run python -m stock_ranking.ranking --top 50
+
+# IC分析バックテスト
+uv run python -m stock_ranking.backtest --csv output/ranking_YYYYMMDD.csv --days 21
 ```
 
 ### 出力

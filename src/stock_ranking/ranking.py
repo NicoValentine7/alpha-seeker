@@ -74,7 +74,7 @@ def run(tickers: list[str] | None = None, top_n: int = TOP_N_DISPLAY) -> pd.Data
 
 def _print_ranking(df: pd.DataFrame, top_n: int):
     """ランキングをコンソールに出力する"""
-    display_cols = ["ticker", "name", "sector", "total_score", "valuation_score", "growth_score", "quality_score", "earnings_momentum_score"]
+    display_cols = ["ticker", "name", "sector", "total_score", "valuation_score", "growth_score", "quality_score", "earnings_momentum_score", "piotroski_fscore"]
     available = [c for c in display_cols if c in df.columns]
     top = df.head(top_n)[available].copy()
 

@@ -281,6 +281,18 @@ def _score_rationale(row: pd.Series) -> str:
         elif beat_count >= beat_total * 0.75:
             reasons.append(f"直近{int(beat_total)}四半期中{int(beat_count)}回決算ビート")
 
+    # Piotroski F-Score
+    fscore = row.get("piotroski_fscore")
+    if fscore and pd.notna(fscore):
+        fscore = int(fscore)
+        details = row.get("piotroski_details", "")
+        if fscore >= 7:
+            reasons.append(f"Piotroski F-Score {fscore}/9 — 財務状態が優良（{details}）")
+        elif fscore >= 4:
+            reasons.append(f"Piotroski F-Score {fscore}/9 — 財務状態は普通")
+        else:
+            reasons.append(f"[警告] Piotroski F-Score {fscore}/9 — 財務状態に懸念")
+
     # バリュートラップ警告
     is_trap = row.get("is_value_trap")
     trap_reason = row.get("value_trap_reason")

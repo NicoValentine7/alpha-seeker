@@ -114,8 +114,12 @@ def fetch_stock_data(ticker: str) -> dict | None:
             data["upside_potential"] = (data["target_mean_price"] - data["current_price"]) / data["current_price"]
 
         # 財務諸表から成長率を計算
+        balance_sheet = t.balance_sheet
         if financials is not None and financials.shape[1] >= 2:
             _add_financial_growth(data, financials, cashflow)
+
+        # Piotroski F-Score（バリュートラップ検出用）
+        _add_piotroski_fscore(data, financials, cashflow, balance_sheet)
 
         # 決算データ（サプライズ・四半期推移・EPS予想トレンド）
         _add_earnings_data(data, t)
@@ -185,6 +189,162 @@ def _add_financial_growth(data: dict, financials: pd.DataFrame, cashflow: pd.Dat
 
     except Exception as e:
         logger.debug(f"財務成長率計算エラー: {e}")
+
+
+def _safe_bs_val(bs: pd.DataFrame, key: str, col_idx: int):
+    """balance_sheetから安全に値を取得"""
+    if bs is None or key not in bs.index or col_idx >= bs.shape[1]:
+        return None
+    val = bs.loc[key, bs.columns[col_idx]]
+    return float(val) if pd.notna(val) else None
+
+
+def _add_piotroski_fscore(data: dict, financials: pd.DataFrame | None,
+                          cashflow: pd.DataFrame | None, balance_sheet: pd.DataFrame | None):
+    """Piotroski F-Score (0-9) を計算して data に追加する。
+
+    収益性(4) + レバレッジ/流動性(3) + 運営効率(2) の9項目をバイナリ判定。
+    """
+    try:
+        score = 0
+        details = []
+
+        # 年次データが2期分必要
+        has_fin = financials is not None and financials.shape[1] >= 2
+        has_cf = cashflow is not None and cashflow.shape[1] >= 1
+        has_bs = balance_sheet is not None and balance_sheet.shape[1] >= 2
+
+        if not has_fin:
+            return
+
+        fin_cols = financials.columns  # 新しい順
+        total_assets_curr = _safe_bs_val(balance_sheet, "Total Assets", 0) if has_bs else None
+        total_assets_prev = _safe_bs_val(balance_sheet, "Total Assets", 1) if has_bs else None
+
+        # --- 収益性 (4点) ---
+
+        # 1. ROA > 0 (当期純利益 / 総資産)
+        ni_key = None
+        for key in ["Net Income", "Net Income Common Stockholders"]:
+            if key in financials.index:
+                ni_key = key
+                break
+        if ni_key and total_assets_curr and total_assets_curr > 0:
+            ni_curr = financials.loc[ni_key, fin_cols[0]]
+            if pd.notna(ni_curr) and ni_curr / total_assets_curr > 0:
+                score += 1
+                details.append("ROA>0")
+
+        # 2. 営業CF > 0
+        cfo_curr = None
+        if has_cf:
+            for key in ["Operating Cash Flow", "Total Cash From Operating Activities"]:
+                if key in cashflow.index:
+                    val = cashflow.loc[key, cashflow.columns[0]]
+                    if pd.notna(val):
+                        cfo_curr = float(val)
+                        break
+        if cfo_curr and cfo_curr > 0:
+            score += 1
+            details.append("CFO>0")
+
+        # 3. ROA改善 (当期ROA > 前期ROA)
+        if ni_key and total_assets_curr and total_assets_prev and total_assets_curr > 0 and total_assets_prev > 0:
+            ni_curr = financials.loc[ni_key, fin_cols[0]]
+            ni_prev = financials.loc[ni_key, fin_cols[1]]
+            if pd.notna(ni_curr) and pd.notna(ni_prev):
+                roa_curr = ni_curr / total_assets_curr
+                roa_prev = ni_prev / total_assets_prev
+                if roa_curr > roa_prev:
+                    score += 1
+                    details.append("ROA改善")
+
+        # 4. アクルーアル品質 (営業CF > 純利益)
+        if cfo_curr and ni_key:
+            ni_curr = financials.loc[ni_key, fin_cols[0]]
+            if pd.notna(ni_curr) and cfo_curr > float(ni_curr):
+                score += 1
+                details.append("CFO>NI")
+
+        # --- レバレッジ/流動性 (3点) ---
+
+        # 5. 長期負債比率が前年比低下
+        if has_bs:
+            ltd_curr = _safe_bs_val(balance_sheet, "Long Term Debt", 0)
+            ltd_prev = _safe_bs_val(balance_sheet, "Long Term Debt", 1)
+            if ltd_curr is not None and ltd_prev is not None and total_assets_curr and total_assets_prev:
+                if total_assets_curr > 0 and total_assets_prev > 0:
+                    ratio_curr = ltd_curr / total_assets_curr
+                    ratio_prev = ltd_prev / total_assets_prev
+                    if ratio_curr <= ratio_prev:
+                        score += 1
+                        details.append("LTD低下")
+
+        # 6. 流動比率が前年比改善
+        if has_bs:
+            ca_curr = _safe_bs_val(balance_sheet, "Current Assets", 0)
+            cl_curr = _safe_bs_val(balance_sheet, "Current Liabilities", 0)
+            ca_prev = _safe_bs_val(balance_sheet, "Current Assets", 1)
+            cl_prev = _safe_bs_val(balance_sheet, "Current Liabilities", 1)
+            if ca_curr and cl_curr and ca_prev and cl_prev and cl_curr > 0 and cl_prev > 0:
+                cr_curr = ca_curr / cl_curr
+                cr_prev = ca_prev / cl_prev
+                if cr_curr > cr_prev:
+                    score += 1
+                    details.append("流動比率改善")
+
+        # 7. 新株発行なし (発行済株式数が増えていない)
+        if has_bs:
+            shares_curr = _safe_bs_val(balance_sheet, "Ordinary Shares Number", 0)
+            shares_prev = _safe_bs_val(balance_sheet, "Ordinary Shares Number", 1)
+            if shares_curr is None:
+                shares_curr = _safe_bs_val(balance_sheet, "Share Issued", 0)
+                shares_prev = _safe_bs_val(balance_sheet, "Share Issued", 1)
+            if shares_curr and shares_prev and shares_curr <= shares_prev:
+                score += 1
+                details.append("希薄化なし")
+
+        # --- 運営効率 (2点) ---
+
+        # 8. 粗利率が前年比改善
+        gp_key = None
+        rev_key = None
+        for key in ["Gross Profit"]:
+            if key in financials.index:
+                gp_key = key
+                break
+        for key in ["Total Revenue", "Revenue"]:
+            if key in financials.index:
+                rev_key = key
+                break
+        if gp_key and rev_key:
+            gp_curr = financials.loc[gp_key, fin_cols[0]]
+            gp_prev = financials.loc[gp_key, fin_cols[1]]
+            rev_curr = financials.loc[rev_key, fin_cols[0]]
+            rev_prev = financials.loc[rev_key, fin_cols[1]]
+            if all(pd.notna(v) and v != 0 for v in [gp_curr, gp_prev, rev_curr, rev_prev]):
+                gm_curr = gp_curr / rev_curr
+                gm_prev = gp_prev / rev_prev
+                if gm_curr > gm_prev:
+                    score += 1
+                    details.append("粗利率改善")
+
+        # 9. 資産回転率が前年比改善
+        if rev_key and total_assets_curr and total_assets_prev and total_assets_curr > 0 and total_assets_prev > 0:
+            rev_curr = financials.loc[rev_key, fin_cols[0]]
+            rev_prev = financials.loc[rev_key, fin_cols[1]]
+            if pd.notna(rev_curr) and pd.notna(rev_prev):
+                at_curr = rev_curr / total_assets_curr
+                at_prev = rev_prev / total_assets_prev
+                if at_curr > at_prev:
+                    score += 1
+                    details.append("資産回転率改善")
+
+        data["piotroski_fscore"] = score
+        data["piotroski_details"] = "; ".join(details) if details else ""
+
+    except Exception as e:
+        logger.debug(f"Piotroski F-Score計算エラー: {e}")
 
 
 def _add_earnings_data(data: dict, ticker_obj: yf.Ticker):

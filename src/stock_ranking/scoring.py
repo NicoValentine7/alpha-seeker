@@ -218,6 +218,12 @@ def _detect_value_traps(df: pd.DataFrame) -> pd.Series:
         is_trap[extreme_debt] = True
         reasons[extreme_debt] += f"D/E>{max_de}%; "
 
+    # Piotroski F-Score が極端に低い（0-2）
+    if "piotroski_fscore" in df.columns:
+        low_fscore = df["piotroski_fscore"].notna() & (df["piotroski_fscore"] <= 2)
+        is_trap[low_fscore] = True
+        reasons[low_fscore] += "F-Score≤2(財務状態悪化); "
+
     return is_trap, reasons
 
 

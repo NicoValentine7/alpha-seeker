@@ -9,13 +9,17 @@ S&P500構成銘柄を対象に、過小評価された成長株を定量×定性
 
 ```
 src/stock_ranking/
-├── config.py      # スコアリングの重み・閾値設定
+├── config.py      # スコアリングの重み・閾値設定 + ブローカー設定
 ├── data.py        # yfinanceからのデータ取得（財務・決算・アナリスト・ニュース）
 ├── scoring.py     # 4カテゴリのスコアリングロジック + バリュートラップフィルター
-├── explain.py     # スコア根拠レポート生成
+├── explain.py     # スコア根拠レポート生成 + ポートフォリオセクション
 ├── ranking.py     # CLI エントリポイント（データ取得→スコアリング→出力）
 ├── backtest.py    # IC分析バックテスト基盤
-└── insider.py     # SEC EDGAR Form 4 インサイダー取引データ取得
+├── insider.py     # SEC EDGAR Form 4 インサイダー取引データ取得
+└── broker/        # Moomoo証券API連携
+    ├── client.py      # OpenDゲートウェイ接続管理（contextmanager）
+    ├── portfolio.py   # ポジション取得・スコアリングデータとのマージ
+    └── safety.py      # 発注安全チェック（dry-run、ポジション制限、バリデーション）
 ```
 
 ## スコアリングモデル（4カテゴリ）
@@ -59,6 +63,9 @@ uv run python -m stock_ranking.ranking --tickers AAPL MSFT NVDA --top 30
 # S&P500全銘柄（時間がかかる）
 uv run python -m stock_ranking.ranking --top 50
 
+# Moomoo保有ポジションをスコアと照合（OpenDが起動している必要あり）
+uv run python -m stock_ranking.ranking --tickers AAPL MSFT NVDA --top 30 --portfolio
+
 # IC分析バックテスト
 uv run python -m stock_ranking.backtest --csv output/ranking_YYYYMMDD.csv --days 21
 ```
@@ -83,7 +90,7 @@ yfinance経由で取得。主要データ:
 ### 依存関係
 
 - Python 3.12+, uv
-- yfinance, pandas, lxml
+- yfinance, pandas, lxml, moomoo-api
 
 ### スコアリング手法
 
@@ -104,9 +111,35 @@ GitHub Actionsで日次自動スコアリングを実行:
 - S&P500全銘柄をスコアリング → CSV/レポート生成 → コミット＆push
 - 結果はアーティファクトとしても保存（90日間保持）
 
+## Moomoo証券API連携
+
+moomoo OpenAPI経由でポートフォリオ取得・自動取引を実現する。OpenDゲートウェイデーモンがローカルで起動している必要がある。
+
+### フェーズ
+
+| Phase | 内容 | 状態 |
+|-------|------|------|
+| 1 | ポートフォリオ可視化（`--portfolio`フラグ） | 実装済み |
+| 2 | 注文提案 + 手動確認フロー | 未着手 |
+| 3 | 半自動取引（指値のみ、ポジション制限付き） | 未着手 |
+
+### 安全設計
+
+- `BROKER_DRY_RUN = True` がデフォルト（実発注にはFalseに変更が必要）
+- 1銘柄あたりポジション上限: 総資産の10%（`BROKER_MAX_POSITION_PCT`）
+- 成行注文は原則禁止（指値のみ）
+- OpenDはステートフルデーモンのためGitHub Actionsでは実行不可
+
+### OpenDセットアップ
+
+1. moomooアプリ → 設定 → OpenAPI → OpenDダウンロード
+2. `FutuOpenD.xml` にmoomoo IDとパスワードを設定
+3. OpenD起動後、`127.0.0.1:11111` でAPI接続可能
+
 ## 今後の改善候補
 
 1. バックテスト基盤の構築（IC分析による重み最適化）
 2. インサイダー取引データ（SEC EDGAR Form 4）
 3. ニュースセンチメント分析（FinBERT）
-4. Moomoo証券API連携（ポートフォリオ取得・自動取引）
+4. Moomoo証券 Phase 2: 注文提案 + 手動確認フロー
+5. Moomoo証券 Phase 3: 半自動取引

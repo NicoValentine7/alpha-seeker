@@ -4,5 +4,10 @@ __pycache__/
 .venv/
 *.egg-info/
 
+# OpenDバイナリ・認証情報（絶対にコミットしない）
+deploy/opend/FutuOpenD
+deploy/opend/FutuOpenD.xml
+deploy/opend/*.log
+
 # グローバルgitignoreのCLAUDE.md除外を上書き
 !CLAUDE.md

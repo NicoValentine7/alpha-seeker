@@ -1,0 +1,36 @@
+services:
+  # OpenDゲートウェイデーモン（moomoo API接続に必須）
+  opend:
+    image: ubuntu:22.04
+    volumes:
+      - ./deploy/opend:/opt/FutuOpenD
+      - opend-data:/root/.com.futunn.FutuOpenD
+    ports:
+      - "11111:11111"
+    command: /opt/FutuOpenD/FutuOpenD -cfg_file=/opt/FutuOpenD/FutuOpenD.xml
+    restart: always
+    healthcheck:
+      test: ["CMD", "bash", "-c", "echo > /dev/tcp/127.0.0.1/11111"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  # スコアリング + 自動発注（OpenDに接続）
+  trader:
+    build: .
+    depends_on:
+      opend:
+        condition: service_healthy
+    environment:
+      - BROKER_HOST=opend
+      - BROKER_PORT=11111
+    volumes:
+      - ./output:/app/output
+      - trade-logs:/app/logs
+    # 通常はcron/スケジューラから手動実行
+    # docker compose run trader uv run python -m stock_ranking.ranking --top 50 --auto-trade
+    command: ["uv", "run", "python", "-m", "stock_ranking.ranking", "--top", "50", "--portfolio"]
+
+volumes:
+  opend-data:
+  trade-logs:

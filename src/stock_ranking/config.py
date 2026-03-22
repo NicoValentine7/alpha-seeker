@@ -1,5 +1,7 @@
 """スコアリングの重み付け・設定値"""
 
+import os
+
 # --- カテゴリ別の総合スコアへの重み ---
 CATEGORY_WEIGHTS = {
     "valuation": 0.25,
@@ -57,9 +59,9 @@ FETCH_MAX_WORKERS = 8   # 並列取得のワーカー数
 TOP_N_DISPLAY = 30  # コンソールに表示するランキング数
 
 # --- Moomoo証券ブローカー設定 ---
-BROKER_HOST = "127.0.0.1"
-BROKER_PORT = 11111
-BROKER_DRY_RUN = True          # デフォルトdry-run。実取引時にFalseに変更
+BROKER_HOST = os.environ.get("BROKER_HOST", "127.0.0.1")
+BROKER_PORT = int(os.environ.get("BROKER_PORT", "11111"))
+BROKER_DRY_RUN = os.environ.get("BROKER_DRY_RUN", "true").lower() == "true"
 BROKER_MAX_POSITION_PCT = 0.10  # 1銘柄の上限: 総資産の10%
 
 # --- 売買シグナル設定 ---

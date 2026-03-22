@@ -143,6 +143,11 @@ td.sector {{ font-size: 11px; }}
 .fs-mid {{ color: #d29922; }}
 .fs-low {{ color: #f85149; }}
 .beat {{ font-size: 11px; }}
+.eval-tag {{ display: inline-block; padding: 1px 5px; border-radius: 3px; font-size: 10px; font-weight: 600; margin-left: 4px; vertical-align: middle; }}
+.eval-excellent {{ background: #0d3321; color: #3fb950; }}
+.eval-good {{ background: #143620; color: #56d364; }}
+.eval-fair {{ background: #2a1f00; color: #d29922; }}
+.eval-poor {{ background: #3d1214; color: #f85149; }}
 @media (max-width: 768px) {{
   .controls {{ flex-direction: column; align-items: stretch; }}
   .stats {{ margin-left: 0; }}
@@ -153,41 +158,41 @@ td.sector {{ font-size: 11px; }}
 <body>
 <div class="header">
   <h1>Alpha Seeker</h1>
-  <div class="subtitle">S&amp;P500 Undervalued Growth Stock Ranking &mdash; {total_count} stocks scored</div>
+  <div class="subtitle">S&amp;P500 過小評価グロース株ランキング &mdash; {total_count}銘柄をスコアリング</div>
 </div>
 <div class="controls">
   <div class="control-group">
-    <label>Search</label>
-    <input type="text" id="search" placeholder="Ticker or Name...">
+    <label>検索</label>
+    <input type="text" id="search" placeholder="ティッカー / 銘柄名...">
   </div>
   <div class="control-group">
-    <label>Sector</label>
-    <select id="sectorFilter"><option value="">All</option></select>
+    <label>セクター</label>
+    <select id="sectorFilter"><option value="">すべて</option></select>
   </div>
   <div class="control-group">
-    <label>Score</label>
+    <label>スコア</label>
     <select id="scoreFilter">
-      <option value="">All</option>
-      <option value="70">70+</option>
-      <option value="60">60+</option>
-      <option value="50">50+</option>
+      <option value="">すべて</option>
+      <option value="70">70+ (有望)</option>
+      <option value="60">60+ (注目)</option>
+      <option value="50">50+ (平均以上)</option>
     </select>
   </div>
   <div class="control-group">
-    <label>F-Score</label>
+    <label>財務健全性</label>
     <select id="fscoreFilter">
-      <option value="">All</option>
-      <option value="7">7+ (Good)</option>
-      <option value="5">5+ (OK)</option>
-      <option value="0-3">0-3 (Bad)</option>
+      <option value="">すべて</option>
+      <option value="7">F7+ (優良)</option>
+      <option value="5">F5+ (普通)</option>
+      <option value="0-3">F0-3 (懸念)</option>
     </select>
   </div>
   <div class="control-group">
-    <label>Trap</label>
+    <label>罠フィルター</label>
     <select id="trapFilter">
-      <option value="">All</option>
-      <option value="no">Hide Traps</option>
-      <option value="only">Traps Only</option>
+      <option value="">すべて</option>
+      <option value="no">バリュートラップ除外</option>
+      <option value="only">バリュートラップのみ</option>
     </select>
   </div>
   <div class="stats" id="stats"></div>
@@ -196,30 +201,30 @@ td.sector {{ font-size: 11px; }}
 <table>
 <thead><tr>
   <th data-key="rank" data-type="num">#</th>
-  <th data-key="ticker" data-type="str">Ticker</th>
-  <th data-key="name" data-type="str">Name</th>
-  <th data-key="sector" data-type="str">Sector</th>
-  <th data-key="total" data-type="num">Total</th>
-  <th data-key="val" data-type="num">Value</th>
-  <th data-key="grw" data-type="num">Growth</th>
-  <th data-key="qlt" data-type="num">Quality</th>
-  <th data-key="em" data-type="num">Momentum</th>
-  <th data-key="fscore" data-type="num">F</th>
+  <th data-key="ticker" data-type="str">銘柄</th>
+  <th data-key="name" data-type="str">企業名</th>
+  <th data-key="sector" data-type="str">セクター</th>
+  <th data-key="total" data-type="num">総合</th>
+  <th data-key="val" data-type="num">割安度</th>
+  <th data-key="grw" data-type="num">成長力</th>
+  <th data-key="qlt" data-type="num">質</th>
+  <th data-key="em" data-type="num">決算勢い</th>
+  <th data-key="fscore" data-type="num">F値</th>
   <th data-key="pe" data-type="num">PER</th>
-  <th data-key="fpe" data-type="num">Fwd PE</th>
+  <th data-key="fpe" data-type="num">予想PE</th>
   <th data-key="peg" data-type="num">PEG</th>
-  <th data-key="fcfy" data-type="num">FCF%</th>
+  <th data-key="fcfy" data-type="num">FCF利回</th>
   <th data-key="roe" data-type="num">ROE</th>
-  <th data-key="gm" data-type="num">GM%</th>
+  <th data-key="gm" data-type="num">粗利率</th>
   <th data-key="de" data-type="num">D/E</th>
-  <th data-key="revg" data-type="num">Rev G</th>
-  <th data-key="epsg" data-type="num">EPS G</th>
-  <th data-key="surp" data-type="num">Surp%</th>
-  <th data-key="epsrev" data-type="num">EPS Rev</th>
-  <th data-key="price" data-type="num">Price</th>
-  <th data-key="upside" data-type="num">Upside</th>
-  <th data-key="rec" data-type="str">Rec</th>
-  <th data-key="beat" data-type="str">Beat</th>
+  <th data-key="revg" data-type="num">売上成長</th>
+  <th data-key="epsg" data-type="num">EPS成長</th>
+  <th data-key="surp" data-type="num">決算サプライズ</th>
+  <th data-key="epsrev" data-type="num">EPS修正</th>
+  <th data-key="price" data-type="num">株価</th>
+  <th data-key="upside" data-type="num">上昇余地</th>
+  <th data-key="rec" data-type="str">推奨</th>
+  <th data-key="beat" data-type="str">ビート</th>
 </tr></thead>
 <tbody id="tbody"></tbody>
 </table>
@@ -257,6 +262,18 @@ function createScoreEl(v, isTotal) {{
   var span = document.createElement('span');
   span.className = 'score ' + scoreClass(v) + (isTotal ? ' total' : '');
   span.textContent = v != null ? v.toFixed(1) : '-';
+  if (isTotal && v != null) {{
+    var tag = document.createElement('span');
+    tag.className = 'eval-tag ';
+    if (v >= 70) {{ tag.className += 'eval-excellent'; tag.textContent = '有望'; }}
+    else if (v >= 60) {{ tag.className += 'eval-good'; tag.textContent = '注目'; }}
+    else if (v >= 45) {{ tag.className += 'eval-fair'; tag.textContent = '普通'; }}
+    else {{ tag.className += 'eval-poor'; tag.textContent = '割高'; }}
+    var frag = document.createDocumentFragment();
+    frag.appendChild(span);
+    frag.appendChild(tag);
+    return frag;
+  }}
   return span;
 }}
 
@@ -416,7 +433,7 @@ function render(data) {{
     frag.appendChild(tr);
   }});
   tbody.appendChild(frag);
-  document.getElementById('stats').textContent = data.length + ' / ' + TOTAL + ' stocks';
+  document.getElementById('stats').textContent = data.length + ' / ' + TOTAL + ' 銘柄';
 }}
 
 function applyFilters() {{

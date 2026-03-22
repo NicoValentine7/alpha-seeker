@@ -61,3 +61,10 @@ BROKER_HOST = "127.0.0.1"
 BROKER_PORT = 11111
 BROKER_DRY_RUN = True          # デフォルトdry-run。実取引時にFalseに変更
 BROKER_MAX_POSITION_PCT = 0.10  # 1銘柄の上限: 総資産の10%
+
+# --- 売買シグナル設定 ---
+SIGNAL_BUY_MIN_SCORE = 70         # 買い検討の最低スコア
+SIGNAL_BUY_TOP_N = 5              # 買いシグナルの最大銘柄数
+SIGNAL_SELL_MAX_SCORE = 30        # 売り検討の最高スコア
+SIGNAL_REBALANCE_THRESHOLD = 0.03  # リバランス発動の乖離率(3%)
+SIGNAL_MAX_ORDERS_PER_SESSION = 10  # 1セッションの最大注文数

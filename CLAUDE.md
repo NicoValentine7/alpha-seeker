@@ -19,6 +19,8 @@ src/stock_ranking/
 └── broker/        # Moomoo証券API連携
     ├── client.py      # OpenDゲートウェイ接続管理（contextmanager）
     ├── portfolio.py   # ポジション取得・スコアリングデータとのマージ
+    ├── signal.py      # スコアベース売買シグナル生成（買い/売り/リバランス）
+    ├── order.py       # 注文確認フロー・発注実行
     └── safety.py      # 発注安全チェック（dry-run、ポジション制限、バリデーション）
 ```
 
@@ -66,6 +68,9 @@ uv run python -m stock_ranking.ranking --top 50
 # Moomoo保有ポジションをスコアと照合（OpenDが起動している必要あり）
 uv run python -m stock_ranking.ranking --tickers AAPL MSFT NVDA --top 30 --portfolio
 
+# スコアに基づく売買提案を生成（確認フロー付き、OpenD必須）
+uv run python -m stock_ranking.ranking --top 50 --trade
+
 # IC分析バックテスト
 uv run python -m stock_ranking.backtest --csv output/ranking_YYYYMMDD.csv --days 21
 ```
@@ -90,7 +95,7 @@ yfinance経由で取得。主要データ:
 ### 依存関係
 
 - Python 3.12+, uv
-- yfinance, pandas, lxml, moomoo-api
+- yfinance, pandas, lxml, moomoo-api, pytest(dev)
 
 ### スコアリング手法
 
@@ -120,7 +125,7 @@ moomoo OpenAPI経由でポートフォリオ取得・自動取引を実現する
 | Phase | 内容 | 状態 |
 |-------|------|------|
 | 1 | ポートフォリオ可視化（`--portfolio`フラグ） | 実装済み |
-| 2 | 注文提案 + 手動確認フロー | 未着手 |
+| 2 | 注文提案 + 手動確認フロー（`--trade`フラグ） | 実装済み |
 | 3 | 半自動取引（指値のみ、ポジション制限付き） | 未着手 |
 
 ### 安全設計
@@ -141,5 +146,5 @@ moomoo OpenAPI経由でポートフォリオ取得・自動取引を実現する
 1. バックテスト基盤の構築（IC分析による重み最適化）
 2. インサイダー取引データ（SEC EDGAR Form 4）
 3. ニュースセンチメント分析（FinBERT）
-4. Moomoo証券 Phase 2: 注文提案 + 手動確認フロー
-5. Moomoo証券 Phase 3: 半自動取引
+4. Moomoo証券 Phase 3: 半自動取引（確認なし自動発注、スケジューラ連携）
+5. テストカバレッジ拡充（order.py、portfolio.pyのテスト）

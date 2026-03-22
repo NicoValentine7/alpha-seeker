@@ -22,6 +22,7 @@ def run(
     tickers: list[str] | None = None,
     top_n: int = TOP_N_DISPLAY,
     portfolio_mode: bool = False,
+    trade_mode: bool = False,
 ) -> pd.DataFrame:
     """ランキングを実行する。
 
@@ -29,6 +30,7 @@ def run(
         tickers: 対象ティッカーリスト。Noneの場合はS&P500全銘柄。
         top_n: コンソールに表示する上位N件。
         portfolio_mode: Moomoo保有ポジションをスコアと照合する。
+        trade_mode: スコアに基づく売買提案を生成し確認フローへ進む。
     """
     # S&P500銘柄リスト取得
     if tickers is None:
@@ -71,13 +73,17 @@ def run(
 
     # ポートフォリオモード: 保有銘柄をスコアと照合
     portfolio_df = None
-    if portfolio_mode:
+    if portfolio_mode or trade_mode:
         from stock_ranking.broker import get_portfolio
 
         logger.info("Moomooポートフォリオを取得中...")
         portfolio_df = get_portfolio(df)
         if not portfolio_df.empty:
             _print_portfolio(portfolio_df)
+
+    # トレードモード: 売買シグナル生成→確認フロー
+    if trade_mode:
+        _run_trade_flow(df, portfolio_df)
 
     # 出力
     _print_ranking(df, top_n)
@@ -121,6 +127,49 @@ def _save_csv(df: pd.DataFrame):
     logger.info(f"CSV保存: {path}")
 
 
+def _run_trade_flow(ranking_df: pd.DataFrame, portfolio_df: pd.DataFrame | None):
+    """売買シグナル生成→確認フロー→発注を実行する"""
+    from stock_ranking.broker.signal import generate_signals
+    from stock_ranking.broker.order import execute_orders_with_confirmation
+
+    if portfolio_df is None or portfolio_df.empty:
+        logger.warning("ポートフォリオが取得できないため売買提案をスキップ")
+        return
+
+    # 口座資産を取得
+    total_assets = _get_total_assets()
+    if total_assets <= 0:
+        logger.warning("口座資産が取得できないため売買提案をスキップ")
+        return
+
+    # シグナル生成
+    logger.info("売買シグナルを生成中...")
+    signals = generate_signals(ranking_df, portfolio_df, total_assets)
+
+    # 確認フロー→発注
+    execute_orders_with_confirmation(signals, total_assets)
+
+
+def _get_total_assets() -> float:
+    """口座の総資産を取得する"""
+    try:
+        from stock_ranking.broker.client import open_trade_context
+        from moomoo import RET_OK
+
+        with open_trade_context() as ctx:
+            ret, data = ctx.accinfo_query()
+            if ret == RET_OK and not data.empty:
+                total = data["total_assets"][0]
+                logger.info(f"口座総資産: ${total:,.0f}")
+                return float(total)
+            else:
+                logger.warning(f"口座情報取得失敗: {data}")
+                return 0.0
+    except Exception as e:
+        logger.warning(f"口座情報取得エラー: {e}")
+        return 0.0
+
+
 def _print_portfolio(portfolio_df: pd.DataFrame):
     """ポートフォリオをコンソールに出力する"""
     from stock_ranking.explain import generate_portfolio_section
@@ -147,6 +196,7 @@ def main():
     parser.add_argument("--tickers", nargs="*", help="対象ティッカー（省略時はS&P500全銘柄）")
     parser.add_argument("--top", type=int, default=TOP_N_DISPLAY, help="表示する上位N件")
     parser.add_argument("--portfolio", action="store_true", help="Moomoo保有ポジションをスコアと照合")
+    parser.add_argument("--trade", action="store_true", help="スコアに基づく売買提案を生成（--portfolio自動有効化）")
     args = parser.parse_args()
 
     logging.basicConfig(
@@ -156,7 +206,13 @@ def main():
     )
 
     tickers = args.tickers if args.tickers else None
-    run(tickers=tickers, top_n=args.top, portfolio_mode=args.portfolio)
+    portfolio = args.portfolio or args.trade  # --trade は --portfolio を暗黙的に有効化
+    run(
+        tickers=tickers,
+        top_n=args.top,
+        portfolio_mode=portfolio,
+        trade_mode=args.trade,
+    )
 
 
 if __name__ == "__main__":

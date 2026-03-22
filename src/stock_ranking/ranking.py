@@ -11,6 +11,7 @@ import pandas as pd
 from stock_ranking.config import TOP_N_DISPLAY
 from stock_ranking.data import fetch_all_stocks, fetch_sp500_tickers
 from stock_ranking.explain import generate_report
+from stock_ranking.html_report import generate_html
 from stock_ranking.scoring import calculate_total_score
 
 logger = logging.getLogger(__name__)
@@ -89,6 +90,7 @@ def run(
     _print_ranking(df, top_n)
     _save_csv(df)
     _save_report(df, top_n, portfolio_df=portfolio_df)
+    _save_html(df)
 
     return df
 
@@ -125,6 +127,15 @@ def _save_csv(df: pd.DataFrame):
 
     df_csv.to_csv(path, index=True, index_label="rank")
     logger.info(f"CSV保存: {path}")
+
+
+def _save_html(df: pd.DataFrame):
+    """インタラクティブHTMLランキングを保存する"""
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    date_str = datetime.now().strftime("%Y%m%d")
+    path = OUTPUT_DIR / f"ranking_{date_str}.html"
+    generate_html(df, path)
+    logger.info(f"HTML保存: {path}")
 
 
 def _run_trade_flow(ranking_df: pd.DataFrame, portfolio_df: pd.DataFrame | None):

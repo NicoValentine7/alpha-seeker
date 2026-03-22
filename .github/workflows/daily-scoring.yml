@@ -3,7 +3,6 @@ name: 日次スコアリング
 on:
   schedule:
     # 米国市場クローズ後 UTC 22:00 = EST 17:00 = JST 07:00（翌朝）
-    # 平日のみ実行
     - cron: '0 22 * * 1-5'
   workflow_dispatch:  # 手動実行も可能
 
@@ -37,6 +36,53 @@ jobs:
         env:
           PYTHONUNBUFFERED: '1'
 
+      - name: ranking.json を生成
+        run: |
+          uv run python -c "
+          import pandas as pd, json, math, glob
+
+          csv_files = sorted(glob.glob('output/ranking_*.csv'))
+          if not csv_files:
+              print('CSVファイルなし')
+              exit(1)
+
+          csv_path = csv_files[-1]
+          date_str = csv_path.split('ranking_')[1].replace('.csv', '')
+          df = pd.read_csv(csv_path)
+
+          cols = ['ticker', 'name', 'sector', 'total_score', 'valuation_score', 'growth_score',
+                  'quality_score', 'earnings_momentum_score', 'piotroski_fscore',
+                  'pe_ratio', 'forward_pe', 'pb_ratio', 'ev_ebitda', 'ps_ratio', 'fcf_yield',
+                  'revenue_growth_calc', 'operating_income_growth', 'eps_growth', 'peg_ratio',
+                  'roe', 'gross_margin', 'debt_to_equity', 'fcf_margin',
+                  'avg_surprise_pct', 'eps_revision_90d', 'revenue_acceleration', 'forward_eps_growth',
+                  'current_price', 'target_mean_price', 'upside_potential',
+                  'recommendation_mean', 'num_analysts', 'is_value_trap', 'value_trap_reason',
+                  'market_cap', 'earnings_beat_count', 'earnings_beat_total']
+          available = [c for c in cols if c in df.columns]
+          records = df[available].to_dict(orient='records')
+
+          def clean(obj):
+              if isinstance(obj, float) and (math.isnan(obj) or math.isinf(obj)):
+                  return None
+              if isinstance(obj, dict):
+                  return {k: clean(v) for k, v in obj.items()}
+              if isinstance(obj, list):
+                  return [clean(v) for v in obj]
+              return obj
+
+          records = clean(records)
+          with open('web/public/ranking.json', 'w') as f:
+              json.dump({'date': date_str[:4]+'-'+date_str[4:6]+'-'+date_str[6:], 'count': len(records), 'stocks': records}, f)
+          print(f'ranking.json: {len(records)} stocks')
+          "
+
+      - name: React ダッシュボードをビルド
+        run: |
+          cd web
+          npm ci
+          npm run build
+
       - name: 結果をアーティファクトとして保存
         uses: actions/upload-artifact@v4
         with:
@@ -44,14 +90,13 @@ jobs:
           path: |
             output/ranking_*.csv
             output/report_*.txt
-            output/ranking_*.html
           retention-days: 90
 
       - name: 結果をリポジトリにコミット
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -f output/ranking_*.csv output/report_*.txt output/ranking_*.html
+          git add -f output/ranking_*.csv output/report_*.txt web/public/ranking.json
           if git diff --staged --quiet; then
             echo "変更なし、スキップ"
           else
@@ -61,20 +106,10 @@ jobs:
             git push
           fi
 
-      - name: GitHub Pages用ファイルを準備
-        run: |
-          mkdir -p _site
-          # 最新のHTMLをindex.htmlとしてコピー
-          LATEST_HTML=$(ls -t output/ranking_*.html 2>/dev/null | head -1)
-          if [ -n "$LATEST_HTML" ]; then
-            cp "$LATEST_HTML" _site/index.html
-          fi
-
-      - name: GitHub Pagesにデプロイ
-        if: hashFiles('_site/index.html') != ''
+      - name: GitHub Pagesにアップロード
         uses: actions/upload-pages-artifact@v3
         with:
-          path: _site
+          path: web/dist
 
   deploy-pages:
     needs: scoring

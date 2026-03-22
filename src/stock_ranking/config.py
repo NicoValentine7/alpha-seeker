@@ -55,3 +55,9 @@ CLIP_UPPER_PERCENTILE = 95
 FETCH_DELAY_SEC = 0.15  # yfinance APIへのリクエスト間隔（逐次取得時）
 FETCH_MAX_WORKERS = 8   # 並列取得のワーカー数
 TOP_N_DISPLAY = 30  # コンソールに表示するランキング数
+
+# --- Moomoo証券ブローカー設定 ---
+BROKER_HOST = "127.0.0.1"
+BROKER_PORT = 11111
+BROKER_DRY_RUN = True          # デフォルトdry-run。実取引時にFalseに変更
+BROKER_MAX_POSITION_PCT = 0.10  # 1銘柄の上限: 総資産の10%

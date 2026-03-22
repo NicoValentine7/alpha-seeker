@@ -7,7 +7,9 @@
 import pandas as pd
 
 
-def generate_report(df: pd.DataFrame, top_n: int = 30) -> str:
+def generate_report(
+    df: pd.DataFrame, top_n: int = 30, portfolio_df: pd.DataFrame | None = None
+) -> str:
     """上位N銘柄の詳細レポートを生成する"""
     lines = []
     lines.append("=" * 100)
@@ -72,6 +74,75 @@ def generate_report(df: pd.DataFrame, top_n: int = 30) -> str:
         # スコア根拠サマリー
         lines.append("  【スコア根拠サマリー】")
         lines.append(_score_rationale(row))
+        lines.append("")
+
+    lines.append("=" * 100)
+
+    # ポートフォリオセクション（--portfolio指定時）
+    if portfolio_df is not None and not portfolio_df.empty:
+        lines.append("")
+        lines.append(generate_portfolio_section(portfolio_df))
+
+    return "\n".join(lines)
+
+
+def generate_portfolio_section(portfolio_df: pd.DataFrame) -> str:
+    """保有銘柄のスコアと損益をまとめたセクションを生成する"""
+    lines = []
+    lines.append("=" * 100)
+    lines.append("  保有ポートフォリオ vs スコアリング")
+    lines.append("=" * 100)
+    lines.append("")
+
+    if portfolio_df.empty:
+        lines.append("  保有銘柄データが取得できませんでした")
+        return "\n".join(lines)
+
+    total_market_val = (
+        portfolio_df["market_val"].sum()
+        if "market_val" in portfolio_df.columns
+        else None
+    )
+
+    for _, row in portfolio_df.iterrows():
+        ticker = row["ticker"]
+        name = row.get("name", row.get("name_moomoo", ""))
+        sector = row.get("sector", "")
+        total = _fmt_score(row.get("total_score"))
+        rank = (
+            int(row["rank_in_sp500"])
+            if "rank_in_sp500" in row.index and pd.notna(row.get("rank_in_sp500"))
+            else None
+        )
+        rank_str = f"S&P500ランク: #{rank}" if rank else "ランク: スコアなし"
+
+        # 損益
+        pl = row.get("unrealized_pl")
+        pl_pct = row.get("unrealized_pl_pct")
+        pl_str = ""
+        if pl is not None and pd.notna(pl):
+            pl_str = f"  含み損益: ${pl:+,.0f}"
+            if pl_pct is not None and pd.notna(pl_pct):
+                pl_str += f" ({pl_pct:+.2f}%)"
+
+        # ウェイト
+        mval = row.get("market_val")
+        weight_str = ""
+        if mval and total_market_val and total_market_val > 0:
+            weight_str = f"  ウェイト: {mval / total_market_val:.1%}"
+
+        lines.append(f"  {ticker}  {name}  [{sector}]")
+        lines.append(
+            f"    総合スコア: {total}  {rank_str}{pl_str}{weight_str}"
+        )
+
+        # バリュートラップ警告
+        if row.get("is_value_trap"):
+            trap_reason = row.get("value_trap_reason", "")
+            lines.append(
+                f"    [警告] バリュートラップの可能性: {trap_reason.rstrip('; ')}"
+            )
+
         lines.append("")
 
     lines.append("=" * 100)

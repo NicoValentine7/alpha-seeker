@@ -18,12 +18,17 @@ logger = logging.getLogger(__name__)
 OUTPUT_DIR = Path(__file__).resolve().parent.parent.parent / "output"
 
 
-def run(tickers: list[str] | None = None, top_n: int = TOP_N_DISPLAY) -> pd.DataFrame:
+def run(
+    tickers: list[str] | None = None,
+    top_n: int = TOP_N_DISPLAY,
+    portfolio_mode: bool = False,
+) -> pd.DataFrame:
     """ランキングを実行する。
 
     Args:
         tickers: 対象ティッカーリスト。Noneの場合はS&P500全銘柄。
         top_n: コンソールに表示する上位N件。
+        portfolio_mode: Moomoo保有ポジションをスコアと照合する。
     """
     # S&P500銘柄リスト取得
     if tickers is None:
@@ -64,10 +69,20 @@ def run(tickers: list[str] | None = None, top_n: int = TOP_N_DISPLAY) -> pd.Data
     df = df.sort_values("total_score", ascending=False).reset_index(drop=True)
     df.index = df.index + 1  # 1始まり
 
+    # ポートフォリオモード: 保有銘柄をスコアと照合
+    portfolio_df = None
+    if portfolio_mode:
+        from stock_ranking.broker import get_portfolio
+
+        logger.info("Moomooポートフォリオを取得中...")
+        portfolio_df = get_portfolio(df)
+        if not portfolio_df.empty:
+            _print_portfolio(portfolio_df)
+
     # 出力
     _print_ranking(df, top_n)
     _save_csv(df)
-    _save_report(df, top_n)
+    _save_report(df, top_n, portfolio_df=portfolio_df)
 
     return df
 
@@ -106,13 +121,22 @@ def _save_csv(df: pd.DataFrame):
     logger.info(f"CSV保存: {path}")
 
 
-def _save_report(df: pd.DataFrame, top_n: int):
+def _print_portfolio(portfolio_df: pd.DataFrame):
+    """ポートフォリオをコンソールに出力する"""
+    from stock_ranking.explain import generate_portfolio_section
+
+    print(generate_portfolio_section(portfolio_df))
+
+
+def _save_report(
+    df: pd.DataFrame, top_n: int, portfolio_df: pd.DataFrame | None = None
+):
     """詳細レポートをテキストファイルに保存する"""
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     date_str = datetime.now().strftime("%Y%m%d")
     path = OUTPUT_DIR / f"report_{date_str}.txt"
 
-    report = generate_report(df, top_n)
+    report = generate_report(df, top_n, portfolio_df=portfolio_df)
     path.write_text(report, encoding="utf-8")
     print(report)
     logger.info(f"レポート保存: {path}")
@@ -122,6 +146,7 @@ def main():
     parser = argparse.ArgumentParser(description="過小評価株ランキング")
     parser.add_argument("--tickers", nargs="*", help="対象ティッカー（省略時はS&P500全銘柄）")
     parser.add_argument("--top", type=int, default=TOP_N_DISPLAY, help="表示する上位N件")
+    parser.add_argument("--portfolio", action="store_true", help="Moomoo保有ポジションをスコアと照合")
     args = parser.parse_args()
 
     logging.basicConfig(
@@ -131,7 +156,7 @@ def main():
     )
 
     tickers = args.tickers if args.tickers else None
-    run(tickers=tickers, top_n=args.top)
+    run(tickers=tickers, top_n=args.top, portfolio_mode=args.portfolio)
 
 
 if __name__ == "__main__":

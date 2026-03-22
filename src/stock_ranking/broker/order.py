@@ -5,6 +5,7 @@ from datetime import datetime
 
 from stock_ranking.broker.client import open_trade_context
 from stock_ranking.broker.safety import OrderIntent, validate_order
+from stock_ranking.broker.trade_log import log_trade
 from stock_ranking.config import BROKER_DRY_RUN, SIGNAL_MAX_ORDERS_PER_SESSION
 
 logger = logging.getLogger(__name__)
@@ -73,6 +74,8 @@ def execute_orders_with_confirmation(
 
         # 発注実行
         result = _place_single_order(intent)
+        result["reason"] = intent.reason
+        log_trade(result, dry_run=BROKER_DRY_RUN)
         results.append(result)
 
     # 結果サマリー

@@ -9,6 +9,8 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 jobs:
   scoring:
@@ -42,13 +44,14 @@ jobs:
           path: |
             output/ranking_*.csv
             output/report_*.txt
+            output/ranking_*.html
           retention-days: 90
 
       - name: 結果をリポジトリにコミット
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -f output/ranking_*.csv output/report_*.txt
+          git add -f output/ranking_*.csv output/report_*.txt output/ranking_*.html
           if git diff --staged --quiet; then
             echo "変更なし、スキップ"
           else
@@ -56,3 +59,29 @@ jobs:
             git commit -m "日次スコアリング結果を更新 ${COMMIT_DATE}"
             git push
           fi
+
+      - name: GitHub Pages用ファイルを準備
+        run: |
+          mkdir -p _site
+          # 最新のHTMLをindex.htmlとしてコピー
+          LATEST_HTML=$(ls -t output/ranking_*.html 2>/dev/null | head -1)
+          if [ -n "$LATEST_HTML" ]; then
+            cp "$LATEST_HTML" _site/index.html
+          fi
+
+      - name: GitHub Pagesにデプロイ
+        if: hashFiles('_site/index.html') != ''
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy-pages:
+    needs: scoring
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

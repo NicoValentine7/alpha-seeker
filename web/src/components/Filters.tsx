@@ -25,7 +25,7 @@ export function Filters({
         <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-500" />
         <input
           type="text"
-          placeholder="Ticker or Name..."
+          placeholder="銘柄名 or ティッカー..."
           value={searchQuery}
           onChange={e => setSearchQuery(e.target.value)}
           className="pl-9 pr-3 py-1.5 bg-zinc-900 border border-zinc-700 rounded text-sm text-zinc-200
@@ -40,13 +40,13 @@ export function Filters({
         className="px-3 py-1.5 bg-zinc-900 border border-zinc-700 rounded text-sm text-zinc-200
                    focus:outline-none focus:border-blue-500"
       >
-        <option value="">All Sectors</option>
+        <option value="">全セクター</option>
         {sectors.map(s => <option key={s} value={s}>{s}</option>)}
       </select>
 
       {/* Min Score */}
       <div className="flex items-center gap-2">
-        <label className="text-xs text-zinc-400">Min Score</label>
+        <label className="text-xs text-zinc-400">最低スコア</label>
         <input
           type="number"
           min={0}
@@ -67,7 +67,7 @@ export function Filters({
           onChange={e => setHideValueTraps(e.target.checked)}
           className="accent-blue-500"
         />
-        Hide Value Traps
+        バリュートラップ非表示
       </label>
     </div>
   )

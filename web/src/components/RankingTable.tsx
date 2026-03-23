@@ -15,28 +15,28 @@ import { Tooltip } from './Tooltip'
 
 const tooltips: Record<string, { title: string; body: string }> = {
   total: {
-    title: 'Total Score (0-100)',
-    body: '4 categories weighted average. Valuation 25%, Growth 30%, Quality 20%, Earnings Momentum 25%.',
+    title: '総合スコア (0-100)',
+    body: '4カテゴリの加重平均。割安度 25%、成長力 30%、質 20%、決算モメンタム 25%。',
   },
   valuation: {
-    title: 'Valuation Score (0-100)',
-    body: 'PER(20%), PBR(15%), EV/EBITDA(20%), PSR(15%), FCF Yield(30%). Lower = cheaper within sector.',
+    title: '割安度スコア (0-100)',
+    body: 'PER(20%) PBR(15%) EV/EBITDA(20%) PSR(15%) FCF利回り(30%)。セクター内でパーセンタイルランク化。数値が高いほどセクター内で相対的に割安。',
   },
   growth: {
-    title: 'Growth Score (0-100)',
-    body: 'Revenue Growth(30%), Op. Income Growth(25%), EPS Growth(30%), PEG(15%). Higher = faster growing.',
+    title: '成長力スコア (0-100)',
+    body: '売上成長(30%) 営業利益成長(25%) EPS成長(30%) PEG(15%)。高いほど成長が速い。',
   },
   quality: {
-    title: 'Quality Score (0-100)',
-    body: 'ROE(30%), Gross Margin(20%), D/E(25%), FCF Margin(25%). Higher = stronger fundamentals.',
+    title: '質スコア (0-100)',
+    body: 'ROE(30%) 粗利率(20%) D/E(25%) FCFマージン(25%)。高いほど財務基盤が強い。',
   },
   momentum: {
-    title: 'Earnings Momentum (0-100)',
-    body: 'Surprise Rate(25%), EPS Revision 90d(25%), Revenue Acceleration(20%), Forward EPS Growth(30%).',
+    title: '決算モメンタム (0-100)',
+    body: '決算サプライズ率(25%) EPS予想修正90d(25%) 売上加速度(20%) 来期EPS成長予想(30%)。',
   },
   fscore: {
     title: 'Piotroski F-Score (0-9)',
-    body: '9 binary financial checks. Profitability(4), Leverage(3), Efficiency(2). Score <= 2 = value trap warning.',
+    body: '9つの財務チェック。収益性(4点) レバレッジ(3点) 効率性(2点)。2以下はバリュートラップ警告。',
   },
 }
 
@@ -89,7 +89,7 @@ export function RankingTable({ stocks }: { stocks: Stock[] }) {
     },
     {
       accessorKey: 'ticker',
-      header: ({ column }) => <HeaderCell label="Ticker" column={column} />,
+      header: ({ column }) => <HeaderCell label="銘柄" column={column} />,
       size: 70,
       cell: ({ row }) => {
         const s = row.original
@@ -102,7 +102,7 @@ export function RankingTable({ stocks }: { stocks: Stock[] }) {
               {s.ticker}
             </button>
             {s.is_value_trap && (
-              <Tooltip content={<span className="text-red-300">Value Trap: {s.value_trap_reason}</span>}>
+              <Tooltip content={<span className="text-red-300">バリュートラップ: {s.value_trap_reason}</span>}>
                 <AlertTriangle className="w-3.5 h-3.5 text-red-500" />
               </Tooltip>
             )}
@@ -112,7 +112,7 @@ export function RankingTable({ stocks }: { stocks: Stock[] }) {
     },
     {
       accessorKey: 'name',
-      header: ({ column }) => <HeaderCell label="Name" column={column} />,
+      header: ({ column }) => <HeaderCell label="企業名" column={column} />,
       size: 180,
       cell: ({ getValue }) => (
         <span className="text-sm text-zinc-400 truncate block max-w-[180px]">{getValue() as string}</span>
@@ -120,7 +120,7 @@ export function RankingTable({ stocks }: { stocks: Stock[] }) {
     },
     {
       accessorKey: 'sector',
-      header: ({ column }) => <HeaderCell label="Sector" column={column} />,
+      header: ({ column }) => <HeaderCell label="セクター" column={column} />,
       size: 140,
       cell: ({ getValue }) => (
         <span className="text-xs text-zinc-500 truncate block max-w-[140px]">{getValue() as string}</span>
@@ -128,42 +128,42 @@ export function RankingTable({ stocks }: { stocks: Stock[] }) {
     },
     {
       accessorKey: 'total_score',
-      header: ({ column }) => <HeaderCell label="Total" tooltipKey="total" column={column} />,
+      header: ({ column }) => <HeaderCell label="総合" tooltipKey="total" column={column} />,
       size: 110,
       cell: ({ getValue }) => <ScoreBar value={getValue() as number | null} />,
       sortDescFirst: true,
     },
     {
       accessorKey: 'valuation_score',
-      header: ({ column }) => <HeaderCell label="Value" tooltipKey="valuation" column={column} />,
+      header: ({ column }) => <HeaderCell label="割安度" tooltipKey="valuation" column={column} />,
       size: 110,
       cell: ({ getValue }) => <ScoreBar value={getValue() as number | null} />,
       sortDescFirst: true,
     },
     {
       accessorKey: 'growth_score',
-      header: ({ column }) => <HeaderCell label="Growth" tooltipKey="growth" column={column} />,
+      header: ({ column }) => <HeaderCell label="成長力" tooltipKey="growth" column={column} />,
       size: 110,
       cell: ({ getValue }) => <ScoreBar value={getValue() as number | null} />,
       sortDescFirst: true,
     },
     {
       accessorKey: 'quality_score',
-      header: ({ column }) => <HeaderCell label="Quality" tooltipKey="quality" column={column} />,
+      header: ({ column }) => <HeaderCell label="質" tooltipKey="quality" column={column} />,
       size: 110,
       cell: ({ getValue }) => <ScoreBar value={getValue() as number | null} />,
       sortDescFirst: true,
     },
     {
       accessorKey: 'earnings_momentum_score',
-      header: ({ column }) => <HeaderCell label="Momentum" tooltipKey="momentum" column={column} />,
+      header: ({ column }) => <HeaderCell label="決算勢い" tooltipKey="momentum" column={column} />,
       size: 110,
       cell: ({ getValue }) => <ScoreBar value={getValue() as number | null} />,
       sortDescFirst: true,
     },
     {
       accessorKey: 'piotroski_fscore',
-      header: ({ column }) => <HeaderCell label="F" tooltipKey="fscore" column={column} />,
+      header: ({ column }) => <HeaderCell label="F値" tooltipKey="fscore" column={column} />,
       size: 50,
       cell: ({ getValue }) => {
         const v = getValue() as number | null
@@ -175,7 +175,7 @@ export function RankingTable({ stocks }: { stocks: Stock[] }) {
     },
     {
       accessorKey: 'current_price',
-      header: ({ column }) => <HeaderCell label="Price" column={column} />,
+      header: ({ column }) => <HeaderCell label="株価" column={column} />,
       size: 80,
       cell: ({ getValue }) => {
         const v = getValue() as number | null
@@ -185,7 +185,7 @@ export function RankingTable({ stocks }: { stocks: Stock[] }) {
     },
     {
       accessorKey: 'upside_potential',
-      header: ({ column }) => <HeaderCell label="Upside" column={column} />,
+      header: ({ column }) => <HeaderCell label="上昇余地" column={column} />,
       size: 70,
       cell: ({ getValue }) => {
         const v = getValue() as number | null

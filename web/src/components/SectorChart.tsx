@@ -47,8 +47,8 @@ export function SectorChart({ stocks }: Props) {
           <Tooltip
             contentStyle={{ background: '#27272a', border: '1px solid #3f3f46', borderRadius: 6, fontSize: 13 }}
             labelStyle={{ color: '#e4e4e7' }}
-            formatter={(value: number, _name: string, item: any) => [
-              `${value.toFixed(1)}  (${item.payload.count} stocks)`,
+            formatter={(value, _name, item) => [
+              `${Number(value).toFixed(1)}  (${(item as any).payload.count} stocks)`,
               '平均スコア',
             ]}
           />

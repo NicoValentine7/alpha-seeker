@@ -21,6 +21,7 @@ OUTPUT_DIR = Path(__file__).resolve().parent.parent.parent / "output"
 
 def run(
     tickers: list[str] | None = None,
+    extra_tickers: list[str] | None = None,
     top_n: int = TOP_N_DISPLAY,
     portfolio_mode: bool = False,
     trade_mode: bool = False,
@@ -29,6 +30,7 @@ def run(
 
     Args:
         tickers: 対象ティッカーリスト。Noneの場合はS&P500全銘柄。
+        extra_tickers: S&P500に追加するティッカー。tickersがNoneの場合のみ有効。
         top_n: コンソールに表示する上位N件。
         portfolio_mode: Moomoo保有ポジションをスコアと照合する。
         trade_mode: スコアに基づく売買提案を生成し確認フローへ進む。
@@ -39,6 +41,12 @@ def run(
         sp500 = fetch_sp500_tickers()
         ticker_list = sp500["ticker"].tolist()
         sector_map = sp500.set_index("ticker")[["name", "sector"]]
+        # 追加銘柄をマージ
+        if extra_tickers:
+            for t in extra_tickers:
+                if t not in ticker_list:
+                    ticker_list.append(t)
+            logger.info(f"追加銘柄: {extra_tickers}")
     else:
         ticker_list = tickers
         sector_map = None
@@ -205,6 +213,7 @@ def _save_report(
 def main():
     parser = argparse.ArgumentParser(description="過小評価株ランキング")
     parser.add_argument("--tickers", nargs="*", help="対象ティッカー（省略時はS&P500全銘柄）")
+    parser.add_argument("--extra", nargs="*", help="S&P500に追加するティッカー（S&P500 + 指定銘柄）")
     parser.add_argument("--top", type=int, default=TOP_N_DISPLAY, help="表示する上位N件")
     parser.add_argument("--portfolio", action="store_true", help="Moomoo保有ポジションをスコアと照合")
     parser.add_argument("--trade", action="store_true", help="スコアに基づく売買提案を生成（--portfolio自動有効化）")
@@ -217,9 +226,11 @@ def main():
     )
 
     tickers = args.tickers if args.tickers else None
+    extra = args.extra if args.extra else None
     portfolio = args.portfolio or args.trade  # --trade は --portfolio を暗黙的に有効化
     run(
         tickers=tickers,
+        extra_tickers=extra,
         top_n=args.top,
         portfolio_mode=portfolio,
         trade_mode=args.trade,

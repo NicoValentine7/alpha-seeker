@@ -8,6 +8,7 @@ export interface Stock {
   quality_score: number | null
   earnings_momentum_score: number | null
   piotroski_fscore: number | null
+  buy_signal: number | null
   pe_ratio: number | null
   forward_pe: number | null
   pb_ratio: number | null

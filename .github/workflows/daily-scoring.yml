@@ -51,7 +51,7 @@ jobs:
           date_str = csv_path.split('ranking_')[1].replace('.csv', '')
           df = pd.read_csv(csv_path)
 
-          cols = ['ticker', 'name', 'sector', 'total_score', 'valuation_score', 'growth_score',
+          cols = ['ticker', 'name', 'sector', 'total_score', 'buy_signal', 'valuation_score', 'growth_score',
                   'quality_score', 'earnings_momentum_score', 'piotroski_fscore',
                   'pe_ratio', 'forward_pe', 'pb_ratio', 'ev_ebitda', 'ps_ratio', 'fcf_yield',
                   'revenue_growth_calc', 'operating_income_growth', 'eps_growth', 'peg_ratio',

@@ -41,6 +41,10 @@ const tooltips: Record<string, { title: string; body: string }> = {
     title: 'Piotroski F-Score (0-9)',
     body: '9つの財務チェック。収益性(4点) レバレッジ(3点) 効率性(2点)。2以下はバリュートラップ警告。',
   },
+  buy_signal: {
+    title: '買いシグナル (0-100)',
+    body: '総合スコア(40%) + アナリスト上昇余地(25%) + 決算ビート率(15%) + F-Score(10%) + アナリスト評価(10%)。「今買うべきか」の統合指標。',
+  },
 }
 
 const COLUMN_LABELS: Record<string, string> = {
@@ -54,12 +58,13 @@ const COLUMN_LABELS: Record<string, string> = {
   quality_score: '質',
   earnings_momentum_score: '決算勢い',
   piotroski_fscore: 'F値',
+  buy_signal: '買いシグナル',
   current_price: '株価',
   upside_potential: '上昇余地',
 }
 
 const DEFAULT_COLUMN_ORDER = [
-  'rank', 'ticker', 'name', 'sector', 'total_score', 'valuation_score',
+  'rank', 'ticker', 'name', 'sector', 'buy_signal', 'total_score', 'valuation_score',
   'growth_score', 'quality_score', 'earnings_momentum_score', 'piotroski_fscore',
   'current_price', 'upside_potential',
 ]
@@ -173,7 +178,7 @@ function loadState<T>(key: string, fallback: T): T {
 }
 
 export function RankingTable({ stocks }: { stocks: Stock[] }) {
-  const [sorting, setSorting] = useState<SortingState>([{ id: 'total_score', desc: true }])
+  const [sorting, setSorting] = useState<SortingState>([{ id: 'buy_signal', desc: true }])
   const [expandedTicker, setExpandedTicker] = useState<string | null>(null)
   const [columnVisibility, setColumnVisibility] = useState<VisibilityState>(
     () => loadState(STORAGE_KEY_VIS, {})
@@ -230,6 +235,14 @@ export function RankingTable({ stocks }: { stocks: Stock[] }) {
       cell: ({ getValue }) => (
         <span className="text-xs text-zinc-500 truncate block max-w-[140px]">{getValue() as string}</span>
       ),
+    },
+    {
+      id: 'buy_signal',
+      accessorKey: 'buy_signal',
+      header: ({ column }) => <HeaderCell label="買いシグナル" tooltipKey="buy_signal" column={column} />,
+      size: 120,
+      cell: ({ getValue }) => <ScoreBar value={getValue() as number | null} />,
+      sortDescFirst: true,
     },
     {
       id: 'total_score',

@@ -269,4 +269,54 @@ def calculate_total_score(df: pd.DataFrame) -> pd.DataFrame:
     # バリュートラップはスコアにペナルティ（-20点）
     df.loc[is_trap, "total_score"] = df.loc[is_trap, "total_score"] - 20
 
+    # Buy Signal Score（総合力 + 市場評価 + 決算実績 + 財務健全性）
+    df["buy_signal"] = _calculate_buy_signal(df)
+
     return df
+
+
+def _calculate_buy_signal(df: pd.DataFrame) -> pd.Series:
+    """Buy Signal Score (0-100) を計算する。
+
+    総合スコア(40%) + 上昇余地(25%) + 決算ビート率(15%) + F-Score(10%) + アナリスト評価(10%)
+    """
+    result = pd.Series(0.0, index=df.index)
+    total_weight = pd.Series(0.0, index=df.index)
+
+    components = {}
+
+    # 1. 総合スコア (40%) — そのまま使用
+    if "total_score" in df.columns:
+        components["total"] = (df["total_score"].clip(0, 100), 0.40)
+
+    # 2. 上昇余地 (25%) — -50%〜+100%を0-100にマッピング
+    if "upside_potential" in df.columns:
+        upside = df["upside_potential"].clip(-0.5, 1.0)
+        components["upside"] = ((upside + 0.5) / 1.5 * 100, 0.25)
+
+    # 3. 決算ビート率 (15%) — beat_count/beat_total * 100
+    if "earnings_beat_count" in df.columns and "earnings_beat_total" in df.columns:
+        beat_rate = pd.Series(np.nan, index=df.index)
+        mask = df["earnings_beat_total"].notna() & (df["earnings_beat_total"] > 0)
+        beat_rate[mask] = df.loc[mask, "earnings_beat_count"] / df.loc[mask, "earnings_beat_total"] * 100
+        components["beat"] = (beat_rate, 0.15)
+
+    # 4. F-Score (10%) — 0-9を0-100にスケール
+    if "piotroski_fscore" in df.columns:
+        components["fscore"] = (df["piotroski_fscore"] / 9 * 100, 0.10)
+
+    # 5. アナリスト評価 (10%) — 1-5を反転して0-100に（1=Strong Buy=100, 5=Sell=0）
+    if "recommendation_mean" in df.columns:
+        analyst = (5 - df["recommendation_mean"].clip(1, 5)) / 4 * 100
+        components["analyst"] = (analyst, 0.10)
+
+    for _name, (scores, weight) in components.items():
+        mask = scores.notna()
+        result[mask] += scores[mask] * weight
+        total_weight[mask] += weight
+
+    valid = total_weight > 0
+    result[valid] /= total_weight[valid]
+    result[~valid] = np.nan
+
+    return result

@@ -60,12 +60,25 @@ def _calc_peg(info: dict) -> float | None:
     return None
 
 
-def fetch_stock_data(ticker: str) -> dict | None:
+def fetch_stock_data(ticker: str, max_retries: int = 2) -> dict | None:
     """1銘柄の財務データを yfinance から取得する。
 
     Returns:
         指標の辞書。取得失敗時はNone。
     """
+    for attempt in range(max_retries + 1):
+        try:
+            return _fetch_stock_data_impl(ticker)
+        except Exception as e:
+            if attempt < max_retries:
+                time.sleep(1 + attempt)
+                continue
+            logger.warning(f"{ticker}: データ取得失敗（{max_retries+1}回試行） - {e}")
+            return None
+
+
+def _fetch_stock_data_impl(ticker: str) -> dict | None:
+    """fetch_stock_data の実装本体"""
     try:
         t = yf.Ticker(ticker)
         info = t.info or {}

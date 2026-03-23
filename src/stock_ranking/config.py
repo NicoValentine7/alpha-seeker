@@ -55,7 +55,7 @@ CLIP_UPPER_PERCENTILE = 95
 
 # --- データ取得設定 ---
 FETCH_DELAY_SEC = 0.15  # yfinance APIへのリクエスト間隔（逐次取得時）
-FETCH_MAX_WORKERS = 8   # 並列取得のワーカー数
+FETCH_MAX_WORKERS = int(os.environ.get("FETCH_MAX_WORKERS", "8"))  # 並列取得のワーカー数
 TOP_N_DISPLAY = 30  # コンソールに表示するランキング数
 
 # --- Moomoo証券ブローカー設定 ---

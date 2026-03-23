@@ -12,7 +12,7 @@ function App() {
   const [minScore, setMinScore] = useState(0)
 
   useEffect(() => {
-    fetch('/ranking.json')
+    fetch(`${import.meta.env.BASE_URL}ranking.json`)
       .then(res => res.json())
       .then(setData)
   }, [])

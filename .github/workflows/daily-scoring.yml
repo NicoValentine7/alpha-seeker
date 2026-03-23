@@ -76,6 +76,29 @@ jobs:
           with open('web/public/ranking.json', 'w') as f:
               json.dump({'date': date_str[:4]+'-'+date_str[4:6]+'-'+date_str[6:], 'count': len(records), 'stocks': records}, f)
           print(f'ranking.json: {len(records)} stocks')
+
+          # 履歴用の軽量JSON（ticker + scores のみ）
+          import os
+          os.makedirs('web/public/history', exist_ok=True)
+          date_fmt = date_str[:4]+'-'+date_str[4:6]+'-'+date_str[6:]
+          history_cols = ['ticker', 'total_score', 'valuation_score', 'growth_score', 'quality_score', 'earnings_momentum_score']
+          h_available = [c for c in history_cols if c in df.columns]
+          h_records = clean(df[h_available].to_dict(orient='records'))
+          with open(f'web/public/history/{date_fmt}.json', 'w') as f:
+              json.dump(h_records, f)
+
+          # 履歴インデックス更新
+          index_path = 'web/public/history/index.json'
+          dates = []
+          if os.path.exists(index_path):
+              with open(index_path) as f:
+                  dates = json.load(f)
+          if date_fmt not in dates:
+              dates.append(date_fmt)
+              dates.sort()
+          with open(index_path, 'w') as f:
+              json.dump(dates, f)
+          print(f'history: {date_fmt} ({len(h_records)} stocks, {len(dates)} dates total)')
           "
 
       - name: React ダッシュボードをビルド
@@ -99,7 +122,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           # ビルド生成物以外の変更を戻す
           git checkout -- . 2>/dev/null || true
-          git add -f output/ranking_*.csv output/report_*.txt web/public/ranking.json
+          git add -f output/ranking_*.csv output/report_*.txt web/public/ranking.json web/public/history/
           if git diff --staged --quiet; then
             echo "変更なし、スキップ"
           else

@@ -1,0 +1,45 @@
+name: GitHub Pagesデプロイ
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'web/**'
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Node.js セットアップ
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: 依存関係インストール & ビルド
+        working-directory: web
+        run: |
+          npm ci
+          npm run build
+
+      - name: GitHub Pagesにアップロード
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: web/dist
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

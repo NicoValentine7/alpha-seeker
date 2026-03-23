@@ -1,17 +1,38 @@
-import { useState, useMemo, Fragment } from 'react'
+import { useState, useMemo, Fragment, type CSSProperties } from 'react'
 import {
   useReactTable,
   getCoreRowModel,
   getSortedRowModel,
   type SortingState,
   type ColumnDef,
+  type ColumnOrderState,
+  type VisibilityState,
   flexRender,
+  type Header,
 } from '@tanstack/react-table'
-import { ChevronUp, ChevronDown, ChevronsUpDown, AlertTriangle } from 'lucide-react'
+import {
+  DndContext,
+  closestCenter,
+  type DragEndEvent,
+  useSensor,
+  useSensors,
+  PointerSensor,
+} from '@dnd-kit/core'
+import {
+  SortableContext,
+  horizontalListSortingStrategy,
+  useSortable,
+  arrayMove,
+} from '@dnd-kit/sortable'
+import { CSS } from '@dnd-kit/utilities'
+import { ChevronUp, ChevronDown, ChevronsUpDown, AlertTriangle, Settings2 } from 'lucide-react'
 import type { Stock } from '../types'
 import { ScoreBar } from './ScoreBar'
 import { StockDetail } from './StockDetail'
 import { Tooltip } from './Tooltip'
+
+const STORAGE_KEY_ORDER = 'alpha-seeker-col-order'
+const STORAGE_KEY_VIS = 'alpha-seeker-col-vis'
 
 const tooltips: Record<string, { title: string; body: string }> = {
   total: {
@@ -40,6 +61,21 @@ const tooltips: Record<string, { title: string; body: string }> = {
   },
 }
 
+const COLUMN_LABELS: Record<string, string> = {
+  rank: '#',
+  ticker: '銘柄',
+  name: '企業名',
+  sector: 'セクター',
+  total_score: '総合',
+  valuation_score: '割安度',
+  growth_score: '成長力',
+  quality_score: '質',
+  earnings_momentum_score: '決算勢い',
+  piotroski_fscore: 'F値',
+  current_price: '株価',
+  upside_potential: '上昇余地',
+}
+
 function SortIcon({ sorted }: { sorted: false | 'asc' | 'desc' }) {
   if (sorted === 'asc') return <ChevronUp className="w-3.5 h-3.5" />
   if (sorted === 'desc') return <ChevronDown className="w-3.5 h-3.5" />
@@ -57,7 +93,6 @@ function HeaderCell({ label, tooltipKey, column }: { label: string; tooltipKey?:
       <SortIcon sorted={column.getIsSorted()} />
     </button>
   )
-
   if (tooltipKey && tooltips[tooltipKey]) {
     const t = tooltips[tooltipKey]
     return (
@@ -74,9 +109,118 @@ function HeaderCell({ label, tooltipKey, column }: { label: string; tooltipKey?:
   return inner
 }
 
+function DraggableHeader({ header }: { header: Header<Stock, unknown> }) {
+  const { attributes, listeners, setNodeRef, transform, transition, isDragging } = useSortable({
+    id: header.column.id,
+  })
+  const style: CSSProperties = {
+    transform: CSS.Translate.toString(transform),
+    transition,
+    width: header.getSize(),
+    opacity: isDragging ? 0.5 : 1,
+    cursor: isDragging ? 'grabbing' : 'grab',
+    position: 'relative',
+    zIndex: isDragging ? 10 : 0,
+  }
+  return (
+    <th ref={setNodeRef} style={style} {...attributes} {...listeners} className="px-3 py-2.5 text-left">
+      {header.isPlaceholder ? null : flexRender(header.column.columnDef.header, header.getContext())}
+    </th>
+  )
+}
+
+
+function ColumnSettings({
+  allColumns,
+  visibility,
+  setVisibility,
+}: {
+  allColumns: { id: string; label: string }[]
+  visibility: VisibilityState
+  setVisibility: (v: VisibilityState) => void
+}) {
+  const [open, setOpen] = useState(false)
+
+  return (
+    <div className="relative">
+      <button
+        onClick={() => setOpen(!open)}
+        className="flex items-center gap-1.5 px-3 py-1.5 bg-zinc-900 border border-zinc-700 rounded text-sm text-zinc-300 hover:border-blue-500 transition-colors"
+      >
+        <Settings2 className="w-4 h-4" />
+        カラム設定
+      </button>
+      {open && (
+        <div className="absolute right-0 top-full mt-1 z-50 bg-zinc-900 border border-zinc-700 rounded-lg shadow-2xl p-3 min-w-[180px]">
+          <div className="text-xs text-zinc-500 mb-2">表示するカラムを選択</div>
+          {allColumns.map(col => {
+            const isVisible = visibility[col.id] !== false
+            const isFixed = col.id === 'rank' || col.id === 'ticker'
+            return (
+              <label
+                key={col.id}
+                className={`flex items-center gap-2 py-1 text-sm cursor-pointer select-none ${
+                  isFixed ? 'text-zinc-600' : 'text-zinc-300 hover:text-zinc-100'
+                }`}
+              >
+                <input
+                  type="checkbox"
+                  checked={isVisible}
+                  disabled={isFixed}
+                  onChange={() => {
+                    const next = { ...visibility, [col.id]: !isVisible }
+                    setVisibility(next)
+                    localStorage.setItem(STORAGE_KEY_VIS, JSON.stringify(next))
+                  }}
+                  className="accent-blue-500"
+                />
+                {col.label}
+              </label>
+            )
+          })}
+          <button
+            onClick={() => {
+              const reset: VisibilityState = {}
+              allColumns.forEach(c => { reset[c.id] = true })
+              setVisibility(reset)
+              localStorage.removeItem(STORAGE_KEY_VIS)
+            }}
+            className="mt-2 text-xs text-blue-400 hover:text-blue-300"
+          >
+            全て表示に戻す
+          </button>
+        </div>
+      )}
+    </div>
+  )
+}
+
+const DEFAULT_COLUMN_ORDER = [
+  'rank', 'ticker', 'name', 'sector', 'total_score', 'valuation_score',
+  'growth_score', 'quality_score', 'earnings_momentum_score', 'piotroski_fscore',
+  'current_price', 'upside_potential',
+]
+
+function loadState<T>(key: string, fallback: T): T {
+  try {
+    const saved = localStorage.getItem(key)
+    return saved ? JSON.parse(saved) : fallback
+  } catch { return fallback }
+}
+
 export function RankingTable({ stocks }: { stocks: Stock[] }) {
   const [sorting, setSorting] = useState<SortingState>([{ id: 'total_score', desc: true }])
   const [expandedTicker, setExpandedTicker] = useState<string | null>(null)
+  const [columnOrder, setColumnOrder] = useState<ColumnOrderState>(
+    () => loadState(STORAGE_KEY_ORDER, DEFAULT_COLUMN_ORDER)
+  )
+  const [columnVisibility, setColumnVisibility] = useState<VisibilityState>(
+    () => loadState(STORAGE_KEY_VIS, {})
+  )
+
+  const sensors = useSensors(
+    useSensor(PointerSensor, { activationConstraint: { distance: 5 } })
+  )
 
   const columns = useMemo<ColumnDef<Stock>[]>(() => [
     {
@@ -89,6 +233,7 @@ export function RankingTable({ stocks }: { stocks: Stock[] }) {
       enableSorting: false,
     },
     {
+      id: 'ticker',
       accessorKey: 'ticker',
       header: ({ column }) => <HeaderCell label="銘柄" column={column} />,
       size: 70,
@@ -97,7 +242,7 @@ export function RankingTable({ stocks }: { stocks: Stock[] }) {
         return (
           <div className="flex items-center gap-1.5">
             <button
-              onClick={() => setExpandedTicker(expandedTicker === s.ticker ? null : s.ticker)}
+              onClick={(e) => { e.stopPropagation(); setExpandedTicker(expandedTicker === s.ticker ? null : s.ticker) }}
               className="font-semibold text-sm text-zinc-100 hover:text-blue-400 transition-colors"
             >
               {s.ticker}
@@ -112,6 +257,7 @@ export function RankingTable({ stocks }: { stocks: Stock[] }) {
       },
     },
     {
+      id: 'name',
       accessorKey: 'name',
       header: ({ column }) => <HeaderCell label="企業名" column={column} />,
       size: 180,
@@ -120,6 +266,7 @@ export function RankingTable({ stocks }: { stocks: Stock[] }) {
       ),
     },
     {
+      id: 'sector',
       accessorKey: 'sector',
       header: ({ column }) => <HeaderCell label="セクター" column={column} />,
       size: 140,
@@ -128,6 +275,7 @@ export function RankingTable({ stocks }: { stocks: Stock[] }) {
       ),
     },
     {
+      id: 'total_score',
       accessorKey: 'total_score',
       header: ({ column }) => <HeaderCell label="総合" tooltipKey="total" column={column} />,
       size: 110,
@@ -135,6 +283,7 @@ export function RankingTable({ stocks }: { stocks: Stock[] }) {
       sortDescFirst: true,
     },
     {
+      id: 'valuation_score',
       accessorKey: 'valuation_score',
       header: ({ column }) => <HeaderCell label="割安度" tooltipKey="valuation" column={column} />,
       size: 110,
@@ -142,6 +291,7 @@ export function RankingTable({ stocks }: { stocks: Stock[] }) {
       sortDescFirst: true,
     },
     {
+      id: 'growth_score',
       accessorKey: 'growth_score',
       header: ({ column }) => <HeaderCell label="成長力" tooltipKey="growth" column={column} />,
       size: 110,
@@ -149,6 +299,7 @@ export function RankingTable({ stocks }: { stocks: Stock[] }) {
       sortDescFirst: true,
     },
     {
+      id: 'quality_score',
       accessorKey: 'quality_score',
       header: ({ column }) => <HeaderCell label="質" tooltipKey="quality" column={column} />,
       size: 110,
@@ -156,6 +307,7 @@ export function RankingTable({ stocks }: { stocks: Stock[] }) {
       sortDescFirst: true,
     },
     {
+      id: 'earnings_momentum_score',
       accessorKey: 'earnings_momentum_score',
       header: ({ column }) => <HeaderCell label="決算勢い" tooltipKey="momentum" column={column} />,
       size: 110,
@@ -163,6 +315,7 @@ export function RankingTable({ stocks }: { stocks: Stock[] }) {
       sortDescFirst: true,
     },
     {
+      id: 'piotroski_fscore',
       accessorKey: 'piotroski_fscore',
       header: ({ column }) => <HeaderCell label="F値" tooltipKey="fscore" column={column} />,
       size: 50,
@@ -175,6 +328,7 @@ export function RankingTable({ stocks }: { stocks: Stock[] }) {
       sortDescFirst: true,
     },
     {
+      id: 'current_price',
       accessorKey: 'current_price',
       header: ({ column }) => <HeaderCell label="株価" column={column} />,
       size: 80,
@@ -185,6 +339,7 @@ export function RankingTable({ stocks }: { stocks: Stock[] }) {
       sortDescFirst: true,
     },
     {
+      id: 'upside_potential',
       accessorKey: 'upside_potential',
       header: ({ column }) => <HeaderCell label="上昇余地" column={column} />,
       size: 70,
@@ -201,59 +356,84 @@ export function RankingTable({ stocks }: { stocks: Stock[] }) {
   const table = useReactTable({
     data: stocks,
     columns,
-    state: { sorting },
+    state: { sorting, columnOrder, columnVisibility },
     onSortingChange: setSorting,
+    onColumnOrderChange: setColumnOrder,
+    onColumnVisibilityChange: setColumnVisibility,
     getCoreRowModel: getCoreRowModel(),
     getSortedRowModel: getSortedRowModel(),
   })
 
+  function handleDragEnd(event: DragEndEvent) {
+    const { active, over } = event
+    if (active && over && active.id !== over.id) {
+      const oldIndex = columnOrder.indexOf(active.id as string)
+      const newIndex = columnOrder.indexOf(over.id as string)
+      const newOrder = arrayMove(columnOrder, oldIndex, newIndex)
+      setColumnOrder(newOrder)
+      localStorage.setItem(STORAGE_KEY_ORDER, JSON.stringify(newOrder))
+    }
+  }
+
+  const allColumnsMeta = DEFAULT_COLUMN_ORDER.map(id => ({
+    id,
+    label: COLUMN_LABELS[id] || id,
+  }))
+
   return (
-    <div className="overflow-x-auto rounded-lg border border-zinc-800">
-      <table className="w-full">
-        <thead>
-          {table.getHeaderGroups().map(hg => (
-            <tr key={hg.id} className="border-b border-zinc-800 bg-zinc-900/50">
-              {hg.headers.map(header => (
-                <th
-                  key={header.id}
-                  className="px-3 py-2.5 text-left"
-                  style={{ width: header.getSize() }}
-                >
-                  {header.isPlaceholder ? null : flexRender(header.column.columnDef.header, header.getContext())}
-                </th>
-              ))}
-            </tr>
-          ))}
-        </thead>
-        <tbody>
-          {table.getRowModel().rows.map(row => {
-            const s = row.original
-            const isExpanded = expandedTicker === s.ticker
-            return (
-              <Fragment key={row.id}>
-                <tr
-                  className={`border-b border-zinc-800/50 hover:bg-zinc-900/50 transition-colors cursor-pointer
-                    ${s.is_value_trap ? 'opacity-60' : ''} ${isExpanded ? 'bg-zinc-900/80' : ''}`}
-                  onClick={() => setExpandedTicker(isExpanded ? null : s.ticker)}
-                >
-                  {row.getVisibleCells().map(cell => (
-                    <td key={cell.id} className="px-3 py-2">
-                      {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                    </td>
-                  ))}
+    <div>
+      <div className="flex justify-end mb-2">
+        <ColumnSettings
+          allColumns={allColumnsMeta}
+          visibility={columnVisibility}
+          setVisibility={setColumnVisibility}
+        />
+      </div>
+      <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
+        <div className="overflow-x-auto rounded-lg border border-zinc-800">
+          <table className="w-full">
+            <thead>
+              {table.getHeaderGroups().map(hg => (
+                <tr key={hg.id} className="border-b border-zinc-800 bg-zinc-900/50">
+                  <SortableContext items={hg.headers.map(h => h.column.id)} strategy={horizontalListSortingStrategy}>
+                    {hg.headers.map(header => (
+                      <DraggableHeader key={header.id} header={header} />
+                    ))}
+                  </SortableContext>
                 </tr>
-                {isExpanded && (
-                  <StockDetail
-                    key={`${row.id}-detail`}
-                    stock={s}
-                    onClose={() => setExpandedTicker(null)}
-                  />
-                )}
-              </Fragment>
-            )
-          })}
-        </tbody>
-      </table>
+              ))}
+            </thead>
+            <tbody>
+              {table.getRowModel().rows.map(row => {
+                const s = row.original
+                const isExpanded = expandedTicker === s.ticker
+                return (
+                  <Fragment key={row.id}>
+                    <tr
+                      className={`border-b border-zinc-800/50 hover:bg-zinc-900/50 transition-colors cursor-pointer
+                        ${s.is_value_trap ? 'opacity-60' : ''} ${isExpanded ? 'bg-zinc-900/80' : ''}`}
+                      onClick={() => setExpandedTicker(isExpanded ? null : s.ticker)}
+                    >
+                        {row.getVisibleCells().map(cell => (
+                        <td key={cell.id} className="px-3 py-2">
+                          {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                        </td>
+                      ))}
+                    </tr>
+                    {isExpanded && (
+                      <StockDetail
+                        key={`${row.id}-detail`}
+                        stock={s}
+                        onClose={() => setExpandedTicker(null)}
+                      />
+                    )}
+                  </Fragment>
+                )
+              })}
+            </tbody>
+          </table>
+        </div>
+      </DndContext>
     </div>
   )
 }

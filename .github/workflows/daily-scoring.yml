@@ -96,13 +96,14 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          # ビルド生成物以外の変更を戻す
+          git checkout -- . 2>/dev/null || true
           git add -f output/ranking_*.csv output/report_*.txt web/public/ranking.json
           if git diff --staged --quiet; then
             echo "変更なし、スキップ"
           else
             COMMIT_DATE=$(date +%Y-%m-%d)
             git commit -m "日次スコアリング結果を更新 ${COMMIT_DATE}"
-            git pull --rebase origin main
             git push
           fi
 

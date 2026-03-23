@@ -58,7 +58,7 @@ const COLUMN_LABELS: Record<string, string> = {
   quality_score: '質',
   earnings_momentum_score: '決算勢い',
   piotroski_fscore: 'F値',
-  buy_signal: '買いシグナル',
+  buy_signal: 'BUY',
   current_price: '株価',
   upside_potential: '上昇余地',
 }
@@ -239,8 +239,8 @@ export function RankingTable({ stocks }: { stocks: Stock[] }) {
     {
       id: 'buy_signal',
       accessorKey: 'buy_signal',
-      header: ({ column }) => <HeaderCell label="買いシグナル" tooltipKey="buy_signal" column={column} />,
-      size: 120,
+      header: ({ column }) => <HeaderCell label="BUY" tooltipKey="buy_signal" column={column} />,
+      size: 110,
       cell: ({ getValue }) => <ScoreBar value={getValue() as number | null} />,
       sortDescFirst: true,
     },

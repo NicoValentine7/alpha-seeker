@@ -1,5 +1,6 @@
-import { useMemo } from 'react'
+import { useMemo, useState } from 'react'
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 'recharts'
+import { ChevronDown, ChevronRight } from 'lucide-react'
 import type { Stock } from '../types'
 
 interface Props {
@@ -13,6 +14,8 @@ const COLORS = [
 ]
 
 export function SectorChart({ stocks }: Props) {
+  const [isOpen, setIsOpen] = useState(false)
+
   const data = useMemo(() => {
     const grouped: Record<string, { scores: number[]; count: number }> = {}
     for (const s of stocks) {
@@ -38,28 +41,38 @@ export function SectorChart({ stocks }: Props) {
   if (data.length === 0) return null
 
   return (
-    <div className="mb-6 p-4 bg-zinc-900/50 border border-zinc-800 rounded-lg">
-      <h3 className="text-sm font-medium text-zinc-400 mb-3">セクター別平均スコア</h3>
-      <ResponsiveContainer width="100%" height={220}>
-        <BarChart data={data} layout="vertical" margin={{ left: 90, right: 30, top: 0, bottom: 0 }}>
-          <XAxis type="number" domain={[0, 80]} tick={{ fill: '#71717a', fontSize: 11 }} axisLine={false} tickLine={false} />
-          <YAxis type="category" dataKey="sector" tick={{ fill: '#a1a1aa', fontSize: 11 }} axisLine={false} tickLine={false} width={85} />
-          <Tooltip
-            contentStyle={{ background: '#27272a', border: '1px solid #3f3f46', borderRadius: 6, fontSize: 13 }}
-            labelStyle={{ color: '#e4e4e7' }}
-            formatter={(value, _name, item) => [
-              // eslint-disable-next-line @typescript-eslint/no-explicit-any
-              `${Number(value).toFixed(1)}  (${(item as Record<string, any>).payload.count} stocks)`,
-              '平均スコア',
-            ]}
-          />
-          <Bar dataKey="avg" radius={[0, 3, 3, 0]} barSize={14}>
-            {data.map((_, i) => (
-              <Cell key={i} fill={COLORS[i % COLORS.length]} fillOpacity={0.8} />
-            ))}
-          </Bar>
-        </BarChart>
-      </ResponsiveContainer>
+    <div className="mb-4 bg-zinc-900/50 border border-zinc-800 rounded-lg">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full flex items-center gap-2 px-4 py-2.5 text-sm font-medium text-zinc-400 hover:text-zinc-200 transition-colors"
+      >
+        {isOpen ? <ChevronDown className="w-4 h-4" /> : <ChevronRight className="w-4 h-4" />}
+        セクター別平均スコア
+      </button>
+      {isOpen && (
+        <div className="px-4 pb-4">
+          <ResponsiveContainer width="100%" height={220}>
+            <BarChart data={data} layout="vertical" margin={{ left: 90, right: 30, top: 0, bottom: 0 }}>
+              <XAxis type="number" domain={[0, 80]} tick={{ fill: '#71717a', fontSize: 11 }} axisLine={false} tickLine={false} />
+              <YAxis type="category" dataKey="sector" tick={{ fill: '#a1a1aa', fontSize: 11 }} axisLine={false} tickLine={false} width={85} />
+              <Tooltip
+                contentStyle={{ background: '#27272a', border: '1px solid #3f3f46', borderRadius: 6, fontSize: 13 }}
+                labelStyle={{ color: '#e4e4e7' }}
+                formatter={(value, _name, item) => [
+                  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                  `${Number(value).toFixed(1)}  (${(item as Record<string, any>).payload.count} stocks)`,
+                  '平均スコア',
+                ]}
+              />
+              <Bar dataKey="avg" radius={[0, 3, 3, 0]} barSize={14}>
+                {data.map((_, i) => (
+                  <Cell key={i} fill={COLORS[i % COLORS.length]} fillOpacity={0.8} />
+                ))}
+              </Bar>
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
+      )}
     </div>
   )
 }

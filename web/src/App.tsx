@@ -3,7 +3,6 @@ import type { RankingData } from './types'
 import { RankingTable } from './components/RankingTable'
 import { Filters } from './components/Filters'
 import { SectorChart } from './components/SectorChart'
-import { Portfolio } from './components/Portfolio'
 import './index.css'
 
 function App() {
@@ -65,7 +64,6 @@ function App() {
           minScore={minScore}
           setMinScore={setMinScore}
         />
-        <Portfolio stocks={data.stocks} />
         <SectorChart stocks={filtered} />
         <RankingTable stocks={filtered} />
       </main>

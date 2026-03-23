@@ -46,7 +46,8 @@ function SortIcon({ sorted }: { sorted: false | 'asc' | 'desc' }) {
   return <ChevronsUpDown className="w-3.5 h-3.5 text-zinc-600" />
 }
 
-function HeaderCell({ label, tooltipKey, column }: { label: string; tooltipKey?: string; column: any }) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function HeaderCell({ label, tooltipKey, column }: { label: string; tooltipKey?: string; column: Record<string, any> }) {
   const inner = (
     <button
       onClick={column.getToggleSortingHandler()}

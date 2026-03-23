@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, Fragment } from 'react'
 import {
   useReactTable,
   getCoreRowModel,
@@ -230,9 +230,8 @@ export function RankingTable({ stocks }: { stocks: Stock[] }) {
             const s = row.original
             const isExpanded = expandedTicker === s.ticker
             return (
-              <>
+              <Fragment key={row.id}>
                 <tr
-                  key={row.id}
                   className={`border-b border-zinc-800/50 hover:bg-zinc-900/50 transition-colors cursor-pointer
                     ${s.is_value_trap ? 'opacity-60' : ''} ${isExpanded ? 'bg-zinc-900/80' : ''}`}
                   onClick={() => setExpandedTicker(isExpanded ? null : s.ticker)}
@@ -250,7 +249,7 @@ export function RankingTable({ stocks }: { stocks: Stock[] }) {
                     onClose={() => setExpandedTicker(null)}
                   />
                 )}
-              </>
+              </Fragment>
             )
           })}
         </tbody>

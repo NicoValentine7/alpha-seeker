@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import type { RankingData } from './types'
 import { RankingTable } from './components/RankingTable'
 import { Filters } from './components/Filters'
+import { SectorChart } from './components/SectorChart'
 import './index.css'
 
 function App() {
@@ -63,6 +64,7 @@ function App() {
           minScore={minScore}
           setMinScore={setMinScore}
         />
+        <SectorChart stocks={filtered} />
         <RankingTable stocks={filtered} />
       </main>
     </div>

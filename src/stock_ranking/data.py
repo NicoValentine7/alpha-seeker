@@ -504,31 +504,54 @@ def _add_news(data: dict, ticker_obj: yf.Ticker):
 
 
 def fetch_all_stocks(tickers: list[str], delay: float = FETCH_DELAY_SEC,
-                     max_workers: int = FETCH_MAX_WORKERS) -> pd.DataFrame:
-    """複数銘柄のデータを並列取得する。
+                     max_workers: int = FETCH_MAX_WORKERS,
+                     batch_size: int = 100) -> pd.DataFrame:
+    """複数銘柄のデータをバッチ分割＋並列取得する。
 
-    ThreadPoolExecutorで並列化し、yfinanceの逐次取得を高速化する。
+    バッチ間にクールダウンを入れてrate limitを回避。
+    失敗銘柄は最後に逐次リトライする。
     """
     results = []
+    failed_tickers = []
     total = len(tickers)
-    completed = 0
 
-    logger.info(f"取得中: {total} 銘柄（並列数: {max_workers}）")
+    # バッチに分割
+    batches = [tickers[i:i + batch_size] for i in range(0, total, batch_size)]
+    logger.info(f"取得中: {total} 銘柄（並列数: {max_workers}, {len(batches)}バッチ）")
 
-    with ThreadPoolExecutor(max_workers=max_workers) as executor:
-        futures = {executor.submit(fetch_stock_data, t): t for t in tickers}
-        for future in as_completed(futures):
-            ticker = futures[future]
-            completed += 1
-            try:
-                data = future.result()
-                if data:
-                    results.append(data)
-            except Exception as e:
-                logger.warning(f"{ticker}: 並列取得エラー - {e}")
+    for batch_idx, batch in enumerate(batches):
+        if batch_idx > 0:
+            cooldown = 5
+            logger.info(f"バッチ {batch_idx + 1}/{len(batches)} — {cooldown}秒クールダウン")
+            time.sleep(cooldown)
 
-            if completed % 50 == 0 or completed == total:
-                logger.info(f"取得中: {completed}/{total}")
+        completed = 0
+        with ThreadPoolExecutor(max_workers=max_workers) as executor:
+            futures = {executor.submit(fetch_stock_data, t): t for t in batch}
+            for future in as_completed(futures):
+                ticker = futures[future]
+                completed += 1
+                try:
+                    data = future.result()
+                    if data:
+                        results.append(data)
+                    else:
+                        failed_tickers.append(ticker)
+                except Exception as e:
+                    logger.warning(f"{ticker}: 並列取得エラー - {e}")
+                    failed_tickers.append(ticker)
+
+        logger.info(f"バッチ {batch_idx + 1}/{len(batches)} 完了: {len(results)}/{total} 銘柄取得済み")
+
+    # 失敗銘柄の逐次リトライ（rate limit回避のため1銘柄ずつ）
+    if failed_tickers:
+        logger.info(f"失敗銘柄 {len(failed_tickers)} 件をリトライ中...")
+        time.sleep(10)  # クールダウン
+        for ticker in failed_tickers:
+            time.sleep(1)
+            data = fetch_stock_data(ticker)
+            if data:
+                results.append(data)
 
     df = pd.DataFrame(results)
     logger.info(f"取得完了: {len(df)}/{total} 銘柄")

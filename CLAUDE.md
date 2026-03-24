@@ -113,8 +113,10 @@ yfinance経由で取得。主要データ:
 React + Tailwind + TanStack Table でインタラクティブなランキングビューアを提供。
 - `web/` ディレクトリ: Vite + React + TypeScript
 - GitHub Pagesで自動デプロイ: https://nicovalentine7.github.io/alpha-seeker/
-- 機能: ソート、フィルター（セクター/銘柄名/Min Score/Value Trap）、カラム表示切替、行クリック詳細展開
+- 機能: ソート、フィルター（セクター/銘柄名/Min Score/Value Trap/保有銘柄）、カラム表示切替、行クリック詳細展開
 - セクター別平均スコアチャート（Recharts、折りたたみ式）
+- 保有銘柄フィルター: CIのranking.json生成時に`is_portfolio`フラグを付与（`PORTFOLIO_TICKERS`で定義）
+  - 保有銘柄を変更する場合: `.github/workflows/daily-scoring.yml` の `--extra` と `PORTFOLIO_TICKERS` の両方を更新
 
 ## CI/CD
 
@@ -124,7 +126,8 @@ GitHub Actionsで日次自動スコアリングを実行:
 - S&P500全銘柄 + `--extra`銘柄（保有株）をスコアリング → CSV/レポート/JSON生成 → コミット＆push
 - Reactダッシュボードをビルドして GitHub Pages にデプロイ
 - 結果はアーティファクトとしても保存（90日間保持）
-- yfinance rate limit対策: バッチ分割(100銘柄) + クールダウン(5秒) + 失敗リトライ(3秒間隔)
+- yfinance rate limit対策: 優先銘柄の逐次先行取得 + バッチ分割(100銘柄) + クールダウン(5秒) + 失敗リトライ(3秒間隔)
+- ranking.json生成時にCSVのリスト型カラム（news等）を`ast.literal_eval`でパース
 
 ## Moomoo証券API連携
 

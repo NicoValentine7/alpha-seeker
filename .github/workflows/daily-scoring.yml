@@ -87,6 +87,36 @@ jobs:
                       rec['ai_summary'] = summary
               print(f'ai_summaries: {sum(1 for r in records if r.get(\"ai_summary\"))} stocks')
 
+          # 株価スパークライン（直近1年の週次終値）をCI側で一括取得
+          import yfinance as yf
+          from datetime import datetime, timedelta
+          end_date = datetime.now()
+          start_date = end_date - timedelta(days=365)
+          tickers_list = [r['ticker'] for r in records if r.get('ticker')]
+          try:
+              price_data = yf.download(tickers_list, start=start_date.strftime('%Y-%m-%d'),
+                                       end=end_date.strftime('%Y-%m-%d'), interval='1wk',
+                                       group_by='ticker', progress=False)
+              sparkline_count = 0
+              for rec in records:
+                  ticker = rec.get('ticker')
+                  if not ticker:
+                      continue
+                  try:
+                      if len(tickers_list) > 1:
+                          closes = price_data[ticker]['Close'].dropna()
+                      else:
+                          closes = price_data['Close'].dropna()
+                      if len(closes) > 2:
+                          rec['sparkline'] = [round(float(v), 2) for v in closes.values]
+                          rec['sparkline_dates'] = [d.strftime('%Y-%m-%d') for d in closes.index]
+                          sparkline_count += 1
+                  except Exception:
+                      pass
+              print(f'sparklines: {sparkline_count}/{len(tickers_list)} stocks')
+          except Exception as e:
+              print(f'sparkline error: {e}')
+
           with open('web/public/ranking.json', 'w') as f:
               json.dump({'date': date_str[:4]+'-'+date_str[4:6]+'-'+date_str[6:], 'count': len(records), 'stocks': records}, f)
           print(f'ranking.json: {len(records)} stocks')

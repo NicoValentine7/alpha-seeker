@@ -97,7 +97,7 @@ export function StockDetail({ stock: s, onClose }: Props) {
           </div>
 
           {/* Price Chart */}
-          <PriceChart ticker={s.ticker} currentPrice={s.current_price} />
+          <PriceChart sparkline={s.sparkline} sparkline_dates={s.sparkline_dates} ticker={s.ticker} currentPrice={s.current_price} />
 
           {/* AI Summary */}
           {s.ai_summary && (

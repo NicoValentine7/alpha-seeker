@@ -49,6 +49,7 @@ export interface Stock {
   }> | null
   ai_summary: string | null
   sparkline: number[] | null
+  sparkline_dates: string[] | null
 }
 
 export interface RankingData {

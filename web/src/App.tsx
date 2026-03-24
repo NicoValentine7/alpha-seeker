@@ -2,8 +2,9 @@ import { useEffect, useState } from 'react'
 import type { RankingData } from './types'
 import { RankingTable } from './components/RankingTable'
 import { Filters } from './components/Filters'
-import { SectorChart } from './components/SectorChart'
 import './index.css'
+
+const PORTFOLIO_TICKERS = ['INTU', 'MSFT', 'ORCL', 'NAVN']
 
 function App() {
   const [data, setData] = useState<RankingData | null>(null)
@@ -11,6 +12,7 @@ function App() {
   const [searchQuery, setSearchQuery] = useState('')
   const [hideValueTraps, setHideValueTraps] = useState(false)
   const [minScore, setMinScore] = useState(0)
+  const [portfolioOnly, setPortfolioOnly] = useState(false)
 
   useEffect(() => {
     fetch(`${import.meta.env.BASE_URL}ranking.json`)
@@ -29,6 +31,7 @@ function App() {
   const sectors = [...new Set(data.stocks.map(s => s.sector).filter(Boolean))].sort()
 
   const filtered = data.stocks.filter(s => {
+    if (portfolioOnly && !PORTFOLIO_TICKERS.includes(s.ticker)) return false
     if (sectorFilter && s.sector !== sectorFilter) return false
     if (searchQuery) {
       const q = searchQuery.toLowerCase()
@@ -63,8 +66,10 @@ function App() {
           setHideValueTraps={setHideValueTraps}
           minScore={minScore}
           setMinScore={setMinScore}
+          portfolioOnly={portfolioOnly}
+          setPortfolioOnly={setPortfolioOnly}
+          portfolioTickers={PORTFOLIO_TICKERS}
         />
-        <SectorChart stocks={filtered} />
         <RankingTable stocks={filtered} />
       </main>
     </div>

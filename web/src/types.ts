@@ -47,6 +47,7 @@ export interface Stock {
   earnings_surprises: Array<{
     date: string; eps_estimate: number | null; eps_actual: number | null; surprise_pct: number | null
   }> | null
+  ai_summary: string | null
 }
 
 export interface RankingData {

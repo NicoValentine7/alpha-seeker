@@ -75,6 +75,18 @@ jobs:
               return obj
 
           records = clean(records)
+
+          # AI定性評価をマージ
+          ai_path = 'web/public/ai_summaries.json'
+          if os.path.exists(ai_path):
+              with open(ai_path) as f:
+                  summaries = json.load(f)
+              for rec in records:
+                  summary = summaries.get(rec.get('ticker'))
+                  if summary:
+                      rec['ai_summary'] = summary
+              print(f'ai_summaries: {sum(1 for r in records if r.get(\"ai_summary\"))} stocks')
+
           with open('web/public/ranking.json', 'w') as f:
               json.dump({'date': date_str[:4]+'-'+date_str[4:6]+'-'+date_str[6:], 'count': len(records), 'stocks': records}, f)
           print(f'ranking.json: {len(records)} stocks')

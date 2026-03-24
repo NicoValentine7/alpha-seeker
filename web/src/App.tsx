@@ -49,7 +49,7 @@ function App() {
           <div className="flex items-baseline gap-4">
             <h1 className="text-xl font-bold text-zinc-100 tracking-tight">Alpha Seeker</h1>
             <span className="text-sm text-zinc-500">
-              S&P500 Ranking / {data.date} / {filtered.length} stocks
+              S&P500 Ranking / {filtered.length} stocks / 最終更新: {data.date}
             </span>
           </div>
         </div>

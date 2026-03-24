@@ -95,6 +95,13 @@ export function StockDetail({ stock: s, onClose }: Props) {
             </div>
           </div>
 
+          {/* AI Summary */}
+          {s.ai_summary && (
+            <div className="mt-1 mb-4 px-3 py-2.5 bg-blue-950/30 border border-blue-800/30 rounded text-sm text-zinc-300 leading-relaxed whitespace-pre-line">
+              {s.ai_summary}
+            </div>
+          )}
+
           {/* F-Score Details */}
           {s.piotroski_details && (
             <div className="mt-4 px-3 py-2 bg-zinc-800/50 border border-zinc-700/50 rounded text-sm">

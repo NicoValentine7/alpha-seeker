@@ -505,19 +505,42 @@ def _add_news(data: dict, ticker_obj: yf.Ticker):
 
 def fetch_all_stocks(tickers: list[str], delay: float = FETCH_DELAY_SEC,
                      max_workers: int = FETCH_MAX_WORKERS,
-                     batch_size: int = 100) -> pd.DataFrame:
+                     batch_size: int = 100,
+                     priority_count: int = 0) -> pd.DataFrame:
     """複数銘柄のデータをバッチ分割＋並列取得する。
 
     バッチ間にクールダウンを入れてrate limitを回避。
     失敗銘柄は最後に逐次リトライする。
+
+    Args:
+        priority_count: 先頭N銘柄を優先銘柄として逐次取得する（rate limit回避）
     """
     results = []
     failed_tickers = []
     total = len(tickers)
 
+    # 優先銘柄を逐次で先に取得（rate limit回避）
+    remaining_tickers = tickers
+    if priority_count > 0 and priority_count < total:
+        priority = tickers[:priority_count]
+        remaining_tickers = tickers[priority_count:]
+        logger.info(f"優先銘柄 {len(priority)} 件を逐次取得中: {priority}")
+        for ticker in priority:
+            time.sleep(2)
+            data = fetch_stock_data(ticker, max_retries=3)
+            if data:
+                results.append(data)
+                logger.info(f"  {ticker}: 取得成功")
+            else:
+                failed_tickers.append(ticker)
+                logger.warning(f"  {ticker}: 取得失敗（リトライ対象）")
+        logger.info(f"優先銘柄完了: {len(results)}/{len(priority)} 件")
+        if remaining_tickers:
+            time.sleep(5)
+
     # バッチに分割
-    batches = [tickers[i:i + batch_size] for i in range(0, total, batch_size)]
-    logger.info(f"取得中: {total} 銘柄（並列数: {max_workers}, {len(batches)}バッチ）")
+    batches = [remaining_tickers[i:i + batch_size] for i in range(0, len(remaining_tickers), batch_size)]
+    logger.info(f"取得中: {len(remaining_tickers)} 銘柄（並列数: {max_workers}, {len(batches)}バッチ）")
 
     for batch_idx, batch in enumerate(batches):
         if batch_idx > 0:
@@ -543,8 +566,14 @@ def fetch_all_stocks(tickers: list[str], delay: float = FETCH_DELAY_SEC,
 
         logger.info(f"バッチ {batch_idx + 1}/{len(batches)} 完了: {len(results)}/{total} 銘柄取得済み")
 
-    # 失敗銘柄の逐次リトライ（rate limit回避のため十分な間隔を空ける）
+    # 失敗銘柄の逐次リトライ（優先銘柄を先にリトライ）
     if failed_tickers:
+        priority_set = set(tickers[:priority_count]) if priority_count > 0 else set()
+        priority_failed = [t for t in failed_tickers if t in priority_set]
+        other_failed = [t for t in failed_tickers if t not in priority_set]
+        failed_tickers = priority_failed + other_failed
+        if priority_failed:
+            logger.info(f"優先銘柄 {priority_failed} を先にリトライ")
         logger.info(f"失敗銘柄 {len(failed_tickers)} 件をリトライ中（30秒クールダウン後）...")
         time.sleep(30)
         recovered = 0

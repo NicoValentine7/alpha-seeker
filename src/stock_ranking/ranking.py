@@ -52,9 +52,10 @@ def run(
         ticker_list = tickers
         sector_map = None
 
-    # 財務データ取得
+    # 財務データ取得（extra_tickersは優先逐次取得）
+    priority_count = len(extra_tickers) if extra_tickers and tickers is None else 0
     logger.info(f"{len(ticker_list)} 銘柄のデータを取得中...")
-    df = fetch_all_stocks(ticker_list)
+    df = fetch_all_stocks(ticker_list, priority_count=priority_count)
 
     if df.empty:
         logger.error("データが取得できませんでした")

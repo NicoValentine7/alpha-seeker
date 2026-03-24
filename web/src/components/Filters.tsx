@@ -31,7 +31,7 @@ interface FiltersProps {
   setMinScore: (v: number) => void
   portfolioOnly: boolean
   setPortfolioOnly: (v: boolean) => void
-  portfolioTickers: string[]
+  hasPortfolio: boolean
 }
 
 export function Filters({
@@ -39,7 +39,7 @@ export function Filters({
   searchQuery, setSearchQuery,
   hideValueTraps, setHideValueTraps,
   minScore, setMinScore,
-  portfolioOnly, setPortfolioOnly, portfolioTickers,
+  portfolioOnly, setPortfolioOnly, hasPortfolio,
 }: FiltersProps) {
   return (
     <div className="flex flex-wrap items-center gap-3 mb-4">
@@ -85,7 +85,7 @@ export function Filters({
       </div>
 
       {/* Portfolio Only */}
-      {portfolioTickers.length > 0 && (
+      {hasPortfolio && (
         <label className="flex items-center gap-1.5 text-sm text-zinc-400 cursor-pointer select-none">
           <input
             type="checkbox"

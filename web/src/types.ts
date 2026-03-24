@@ -50,10 +50,12 @@ export interface Stock {
   ai_summary: string | null
   sparkline: number[] | null
   sparkline_dates: string[] | null
+  is_portfolio: boolean
 }
 
 export interface RankingData {
   date: string
   count: number
   stocks: Stock[]
+  portfolio_tickers?: string[]
 }

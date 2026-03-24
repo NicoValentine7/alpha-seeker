@@ -4,8 +4,6 @@ import { RankingTable } from './components/RankingTable'
 import { Filters } from './components/Filters'
 import './index.css'
 
-const PORTFOLIO_TICKERS = ['INTU', 'MSFT', 'ORCL', 'NAVN']
-
 function App() {
   const [data, setData] = useState<RankingData | null>(null)
   const [sectorFilter, setSectorFilter] = useState('')
@@ -31,7 +29,7 @@ function App() {
   const sectors = [...new Set(data.stocks.map(s => s.sector).filter(Boolean))].sort()
 
   const filtered = data.stocks.filter(s => {
-    if (portfolioOnly && !PORTFOLIO_TICKERS.includes(s.ticker)) return false
+    if (portfolioOnly && !s.is_portfolio) return false
     if (sectorFilter && s.sector !== sectorFilter) return false
     if (searchQuery) {
       const q = searchQuery.toLowerCase()
@@ -68,7 +66,7 @@ function App() {
           setMinScore={setMinScore}
           portfolioOnly={portfolioOnly}
           setPortfolioOnly={setPortfolioOnly}
-          portfolioTickers={PORTFOLIO_TICKERS}
+          hasPortfolio={data.stocks.some(s => s.is_portfolio)}
         />
         <RankingTable stocks={filtered} />
       </main>

@@ -32,7 +32,7 @@ jobs:
 
       - name: S&P500 スコアリング実行
         run: |
-          uv run python -m stock_ranking.ranking --top 50 --extra INTU ORCL NAVN
+          uv run python -m stock_ranking.ranking --top 50 --extra INTU MSFT ORCL NAVN
         env:
           PYTHONUNBUFFERED: '1'
           FETCH_MAX_WORKERS: '4'
@@ -50,6 +50,8 @@ jobs:
           csv_path = csv_files[-1]
           date_str = csv_path.split('ranking_')[1].replace('.csv', '')
           df = pd.read_csv(csv_path)
+
+          PORTFOLIO_TICKERS = ['INTU', 'MSFT', 'ORCL', 'NAVN']
 
           cols = ['ticker', 'name', 'sector', 'total_score', 'buy_signal', 'valuation_score', 'growth_score',
                   'quality_score', 'earnings_momentum_score', 'piotroski_fscore', 'piotroski_details',
@@ -75,6 +77,10 @@ jobs:
               return obj
 
           records = clean(records)
+
+          # ポートフォリオフラグを付与
+          for rec in records:
+              rec['is_portfolio'] = rec.get('ticker', '') in PORTFOLIO_TICKERS
 
           # AI定性評価をマージ
           ai_path = 'web/public/ai_summaries.json'
@@ -118,7 +124,7 @@ jobs:
               print(f'sparkline error: {e}')
 
           with open('web/public/ranking.json', 'w') as f:
-              json.dump({'date': date_str[:4]+'-'+date_str[4:6]+'-'+date_str[6:], 'count': len(records), 'stocks': records}, f)
+              json.dump({'date': date_str[:4]+'-'+date_str[4:6]+'-'+date_str[6:], 'count': len(records), 'portfolio_tickers': PORTFOLIO_TICKERS, 'stocks': records}, f)
           print(f'ranking.json: {len(records)} stocks')
 
           # 履歴用の軽量JSON（ticker + scores のみ）

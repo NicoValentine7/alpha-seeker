@@ -128,6 +128,7 @@ jobs:
           else
             COMMIT_DATE=$(date +%Y-%m-%d)
             git commit -m "日次スコアリング結果を更新 ${COMMIT_DATE}"
+            git pull --rebase origin main || true
             git push
           fi
 

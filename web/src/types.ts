@@ -48,6 +48,7 @@ export interface Stock {
     date: string; eps_estimate: number | null; eps_actual: number | null; surprise_pct: number | null
   }> | null
   ai_summary: string | null
+  sparkline: number[] | null
 }
 
 export interface RankingData {

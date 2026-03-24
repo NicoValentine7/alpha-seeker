@@ -1,4 +1,5 @@
 import type { Stock } from '../types'
+import { PriceChart } from './PriceChart'
 
 function fmt(v: number | null, suffix = '', mul = 1): string {
   if (v === null || v === undefined) return '-'
@@ -94,6 +95,9 @@ export function StockDetail({ stock: s, onClose }: Props) {
               </dl>
             </div>
           </div>
+
+          {/* Price Chart */}
+          <PriceChart ticker={s.ticker} currentPrice={s.current_price} />
 
           {/* AI Summary */}
           {s.ai_summary && (

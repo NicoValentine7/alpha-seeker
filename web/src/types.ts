@@ -37,6 +37,16 @@ export interface Stock {
   market_cap: number | null
   earnings_beat_count: number | null
   earnings_beat_total: number | null
+  piotroski_details: string | null
+  next_earnings_date: string | null
+  news: Array<{ title: string; url: string; publisher: string; date: string }> | null
+  analyst_actions: Array<{
+    date: string; firm: string; from_grade: string; to_grade: string;
+    action: string; target_price: number | null; prior_target: number | null
+  }> | null
+  earnings_surprises: Array<{
+    date: string; eps_estimate: number | null; eps_actual: number | null; surprise_pct: number | null
+  }> | null
 }
 
 export interface RankingData {

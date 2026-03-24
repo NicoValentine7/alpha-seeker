@@ -52,13 +52,15 @@ jobs:
           df = pd.read_csv(csv_path)
 
           cols = ['ticker', 'name', 'sector', 'total_score', 'buy_signal', 'valuation_score', 'growth_score',
-                  'quality_score', 'earnings_momentum_score', 'piotroski_fscore',
+                  'quality_score', 'earnings_momentum_score', 'piotroski_fscore', 'piotroski_details',
                   'pe_ratio', 'forward_pe', 'pb_ratio', 'ev_ebitda', 'ps_ratio', 'fcf_yield',
                   'revenue_growth_calc', 'operating_income_growth', 'eps_growth', 'peg_ratio',
                   'roe', 'gross_margin', 'debt_to_equity', 'fcf_margin',
                   'avg_surprise_pct', 'eps_revision_90d', 'revenue_acceleration', 'forward_eps_growth',
                   'current_price', 'target_mean_price', 'upside_potential',
                   'recommendation_mean', 'num_analysts', 'is_value_trap', 'value_trap_reason',
+                  'news', 'analyst_actions', 'next_earnings_date',
+                  'earnings_surprises', 'quarterly_results',
                   'market_cap', 'earnings_beat_count', 'earnings_beat_total']
           available = [c for c in cols if c in df.columns]
           records = df[available].to_dict(orient='records')

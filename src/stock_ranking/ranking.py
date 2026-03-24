@@ -41,12 +41,13 @@ def run(
         sp500 = fetch_sp500_tickers()
         ticker_list = sp500["ticker"].tolist()
         sector_map = sp500.set_index("ticker")[["name", "sector"]]
-        # 追加銘柄をマージ
+        # 追加銘柄を先頭に配置（rate limitで落ちる前に優先取得）
         if extra_tickers:
             for t in extra_tickers:
-                if t not in ticker_list:
-                    ticker_list.append(t)
-            logger.info(f"追加銘柄: {extra_tickers}")
+                if t in ticker_list:
+                    ticker_list.remove(t)
+            ticker_list = extra_tickers + ticker_list
+            logger.info(f"追加銘柄（先頭配置）: {extra_tickers}")
     else:
         ticker_list = tickers
         sector_map = None

@@ -543,15 +543,20 @@ def fetch_all_stocks(tickers: list[str], delay: float = FETCH_DELAY_SEC,
 
         logger.info(f"バッチ {batch_idx + 1}/{len(batches)} 完了: {len(results)}/{total} 銘柄取得済み")
 
-    # 失敗銘柄の逐次リトライ（rate limit回避のため1銘柄ずつ）
+    # 失敗銘柄の逐次リトライ（rate limit回避のため十分な間隔を空ける）
     if failed_tickers:
-        logger.info(f"失敗銘柄 {len(failed_tickers)} 件をリトライ中...")
-        time.sleep(10)  # クールダウン
-        for ticker in failed_tickers:
-            time.sleep(1)
+        logger.info(f"失敗銘柄 {len(failed_tickers)} 件をリトライ中（30秒クールダウン後）...")
+        time.sleep(30)
+        recovered = 0
+        for i, ticker in enumerate(failed_tickers):
+            time.sleep(3)  # 3秒間隔
             data = fetch_stock_data(ticker)
             if data:
                 results.append(data)
+                recovered += 1
+            if (i + 1) % 50 == 0:
+                logger.info(f"リトライ進捗: {i + 1}/{len(failed_tickers)} (回復: {recovered})")
+        logger.info(f"リトライ完了: {recovered}/{len(failed_tickers)} 件回復")
 
     df = pd.DataFrame(results)
     logger.info(f"取得完了: {len(df)}/{total} 銘柄")

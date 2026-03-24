@@ -108,13 +108,23 @@ yfinance経由で取得。主要データ:
 - コミットメッセージは日本語で、変更内容が明確にわかるように書く
 - `output/` ディレクトリはCSVとレポートを含むが、大きくなりすぎる場合は `.gitignore` で制御
 
+## Webダッシュボード
+
+React + Tailwind + TanStack Table でインタラクティブなランキングビューアを提供。
+- `web/` ディレクトリ: Vite + React + TypeScript
+- GitHub Pagesで自動デプロイ: https://nicovalentine7.github.io/alpha-seeker/
+- 機能: ソート、フィルター（セクター/銘柄名/Min Score/Value Trap）、カラム表示切替、行クリック詳細展開
+- セクター別平均スコアチャート（Recharts、折りたたみ式）
+
 ## CI/CD
 
 GitHub Actionsで日次自動スコアリングを実行:
 - `.github/workflows/daily-scoring.yml`
-- 毎日 UTC 14:00（JST 23:00）に自動実行、手動トリガーも可
-- S&P500全銘柄をスコアリング → CSV/レポート生成 → コミット＆push
+- 毎日 UTC 22:00（米国市場クローズ後、JST 07:00）に自動実行、手動トリガーも可
+- S&P500全銘柄 + `--extra`銘柄（保有株）をスコアリング → CSV/レポート/JSON生成 → コミット＆push
+- Reactダッシュボードをビルドして GitHub Pages にデプロイ
 - 結果はアーティファクトとしても保存（90日間保持）
+- yfinance rate limit対策: バッチ分割(100銘柄) + クールダウン(5秒) + 失敗リトライ(3秒間隔)
 
 ## Moomoo証券API連携
 
@@ -148,3 +158,6 @@ moomoo OpenAPI経由でポートフォリオ取得・自動取引を実現する
 3. ニュースセンチメント分析（FinBERT）
 4. Moomoo証券 Phase 3: 半自動取引（確認なし自動発注、スケジューラ連携）
 5. テストカバレッジ拡充（order.py、portfolio.pyのテスト）
+
+# currentDate
+Today's date is 2026-03-24.

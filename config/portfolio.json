@@ -1,0 +1,4 @@
+{
+  "tickers": ["INTU", "MSFT", "ORCL", "NAVN"],
+  "description": "保有銘柄リスト。CIのranking.json生成時にis_portfolioフラグとして付与され、--extraにも自動追加される。"
+}

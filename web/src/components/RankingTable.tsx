@@ -12,6 +12,7 @@ import { ChevronUp, ChevronDown, ChevronsUpDown, AlertTriangle, Settings2 } from
 import type { Stock } from '../types'
 import { ScoreBar } from './ScoreBar'
 import { StockDetail } from './StockDetail'
+import { ErrorBoundary } from './ErrorBoundary'
 import { Tooltip } from './Tooltip'
 
 const STORAGE_KEY_VIS = 'alpha-seeker-col-vis'
@@ -382,11 +383,13 @@ export function RankingTable({ stocks }: { stocks: Stock[] }) {
                     ))}
                   </tr>
                   {isExpanded && (
-                    <StockDetail
-                      key={`${row.id}-detail`}
-                      stock={s}
-                      onClose={() => setExpandedTicker(null)}
-                    />
+                    <ErrorBoundary key={`${row.id}-eb`}>
+                      <StockDetail
+                        key={`${row.id}-detail`}
+                        stock={s}
+                        onClose={() => setExpandedTicker(null)}
+                      />
+                    </ErrorBoundary>
                   )}
                 </Fragment>
               )

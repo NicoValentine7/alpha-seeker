@@ -32,7 +32,8 @@ jobs:
 
       - name: S&P500 スコアリング実行
         run: |
-          uv run python -m stock_ranking.ranking --top 50 --extra INTU MSFT ORCL NAVN
+          PORTFOLIO=$(python -c "import json; print(' '.join(json.load(open('config/portfolio.json'))['tickers']))")
+          uv run python -m stock_ranking.ranking --top 50 --extra $PORTFOLIO
         env:
           PYTHONUNBUFFERED: '1'
           FETCH_MAX_WORKERS: '4'
@@ -66,7 +67,7 @@ jobs:
                       return v
                   df[col] = df[col].apply(parse_str_list)
 
-          PORTFOLIO_TICKERS = ['INTU', 'MSFT', 'ORCL', 'NAVN']
+          PORTFOLIO_TICKERS = json.load(open('config/portfolio.json'))['tickers']
 
           cols = ['ticker', 'name', 'sector', 'total_score', 'buy_signal', 'valuation_score', 'growth_score',
                   'quality_score', 'earnings_momentum_score', 'piotroski_fscore', 'piotroski_details',

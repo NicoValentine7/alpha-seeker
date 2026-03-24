@@ -40,7 +40,7 @@ jobs:
       - name: ranking.json を生成
         run: |
           uv run python -c "
-          import pandas as pd, json, math, glob
+          import pandas as pd, json, math, glob, ast
 
           csv_files = sorted(glob.glob('output/ranking_*.csv'))
           if not csv_files:
@@ -50,6 +50,21 @@ jobs:
           csv_path = csv_files[-1]
           date_str = csv_path.split('ranking_')[1].replace('.csv', '')
           df = pd.read_csv(csv_path)
+
+          # CSV保存時にstr()化されたリスト/辞書カラムをパース
+          list_cols = ['news', 'analyst_actions', 'earnings_surprises', 'quarterly_results']
+          for col in list_cols:
+              if col in df.columns:
+                  def parse_str_list(v):
+                      if pd.isna(v) or v == '' or v == 'nan':
+                          return None
+                      if isinstance(v, str):
+                          try:
+                              return ast.literal_eval(v)
+                          except (ValueError, SyntaxError):
+                              return None
+                      return v
+                  df[col] = df[col].apply(parse_str_list)
 
           PORTFOLIO_TICKERS = ['INTU', 'MSFT', 'ORCL', 'NAVN']
 

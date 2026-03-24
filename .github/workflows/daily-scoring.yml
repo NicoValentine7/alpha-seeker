@@ -40,7 +40,7 @@ jobs:
       - name: ranking.json を生成
         run: |
           uv run python -c "
-          import pandas as pd, json, math, glob, ast
+          import pandas as pd, json, math, glob, ast, os
 
           csv_files = sorted(glob.glob('output/ranking_*.csv'))
           if not csv_files:
@@ -143,7 +143,6 @@ jobs:
           print(f'ranking.json: {len(records)} stocks')
 
           # 履歴用の軽量JSON（ticker + scores のみ）
-          import os
           os.makedirs('web/public/history', exist_ok=True)
           date_fmt = date_str[:4]+'-'+date_str[4:6]+'-'+date_str[6:]
           history_cols = ['ticker', 'total_score', 'valuation_score', 'growth_score', 'quality_score', 'earnings_momentum_score']

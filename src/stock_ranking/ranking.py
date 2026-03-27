@@ -136,10 +136,27 @@ def _save_csv(df: pd.DataFrame):
     path = OUTPUT_DIR / f"ranking_{date_str}.csv"
 
     # リスト/辞書型カラムはCSV向けに文字列化
+    # numpy型をPython標準型に変換してからstr()する（ast.literal_evalで復元可能にする）
+    import numpy as np
+
+    def _convert_numpy(obj):
+        """numpy型をPython標準型に再帰的に変換する"""
+        if isinstance(obj, (np.integer,)):
+            return int(obj)
+        if isinstance(obj, (np.floating,)):
+            return float(obj)
+        if isinstance(obj, np.ndarray):
+            return obj.tolist()
+        if isinstance(obj, dict):
+            return {k: _convert_numpy(v) for k, v in obj.items()}
+        if isinstance(obj, list):
+            return [_convert_numpy(v) for v in obj]
+        return obj
+
     df_csv = df.copy()
     for col in df_csv.columns:
         if df_csv[col].apply(lambda x: isinstance(x, (list, dict))).any():
-            df_csv[col] = df_csv[col].apply(str)
+            df_csv[col] = df_csv[col].apply(lambda x: str(_convert_numpy(x)) if isinstance(x, (list, dict)) else str(x))
 
     df_csv.to_csv(path, index=True, index_label="rank")
     logger.info(f"CSV保存: {path}")

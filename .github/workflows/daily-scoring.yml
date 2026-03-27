@@ -95,6 +95,11 @@ jobs:
           records = clean(records)
 
           # ポートフォリオフラグを付与
+          record_tickers = {rec.get('ticker') for rec in records}
+          missing_portfolio = [t for t in PORTFOLIO_TICKERS if t not in record_tickers]
+          if missing_portfolio:
+              print(f'WARNING: 保有銘柄がCSVに未収録: {missing_portfolio}')
+              print(f'  → スコアリング時にデータ取得失敗の可能性。次回CIで--extraオプションにより再取得されます。')
           for rec in records:
               rec['is_portfolio'] = rec.get('ticker', '') in PORTFOLIO_TICKERS
 

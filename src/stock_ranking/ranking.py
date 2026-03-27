@@ -68,8 +68,14 @@ def run(
             if mask.any():
                 df.loc[mask, col] = df.loc[mask, "ticker"].map(sector_map[col])
 
-    # セクターが取れなかった銘柄は除外
+    # セクターが取れなかった銘柄は除外（ただし追加銘柄は保護）
     before = len(df)
+    protected = set(extra_tickers) if extra_tickers else set()
+    mask_no_sector = df["sector"].isna()
+    dropped_protected = df[mask_no_sector & df["ticker"].isin(protected)]
+    if not dropped_protected.empty:
+        logger.warning(f"追加銘柄のセクター情報なし（除外せず保護）: {dropped_protected['ticker'].tolist()}")
+        df.loc[mask_no_sector & df["ticker"].isin(protected), "sector"] = "Unknown"
     df = df.dropna(subset=["sector"])
     if len(df) < before:
         logger.info(f"セクター情報なし: {before - len(df)} 銘柄を除外")

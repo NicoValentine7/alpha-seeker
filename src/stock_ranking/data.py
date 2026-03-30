@@ -143,6 +143,9 @@ def _fetch_stock_data_impl(ticker: str) -> dict | None:
         # ニュース
         _add_news(data, t)
 
+        # 価格モメンタム（12-1ヶ月、Jegadeesh & Titman 1993）
+        _add_price_momentum(data, t)
+
         return data
 
     except Exception as e:
@@ -476,6 +479,40 @@ def _add_analyst_actions(data: dict, ticker_obj: yf.Ticker):
             data["analyst_actions"] = actions
     except Exception as e:
         logger.debug(f"アナリストアクション取得エラー: {e}")
+
+
+def _add_price_momentum(data: dict, ticker_obj: yf.Ticker):
+    """12-1ヶ月価格モメンタムを追加（Jegadeesh & Titman 1993）。
+
+    直近12ヶ月のリターンから直近1ヶ月のリターンを除いたもの。
+    直近1ヶ月を除外する理由: 短期リバーサル効果の除去。
+    """
+    try:
+        hist = ticker_obj.history(period="13mo")
+        if hist.empty or len(hist) < 22:  # 最低1ヶ月分の取引日
+            return
+
+        hist.index = hist.index.tz_localize(None)
+        closes = hist["Close"]
+
+        # 直近の終値
+        price_now = closes.iloc[-1]
+
+        # 約1ヶ月前（21営業日）の終値
+        idx_1m = max(0, len(closes) - 22)
+        price_1m_ago = closes.iloc[idx_1m]
+
+        # 約12ヶ月前の終値（データの先頭付近）
+        price_12m_ago = closes.iloc[0]
+
+        if price_12m_ago > 0 and price_1m_ago > 0:
+            # 12ヶ月リターン（直近1ヶ月を除外）
+            data["momentum_12_1m"] = (price_1m_ago - price_12m_ago) / price_12m_ago
+            # 直近1ヶ月リターン（短期リバーサル指標としても有用）
+            data["momentum_1m"] = (price_now - price_1m_ago) / price_1m_ago
+
+    except Exception as e:
+        logger.debug(f"モメンタム計算エラー: {e}")
 
 
 def _add_news(data: dict, ticker_obj: yf.Ticker):

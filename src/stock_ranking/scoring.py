@@ -13,6 +13,7 @@ from stock_ranking.config import (
     CLIP_UPPER_PERCENTILE,
     EARNINGS_MOMENTUM_WEIGHTS,
     GROWTH_WEIGHTS,
+    PRICE_MOMENTUM_WEIGHTS,
     QUALITY_WEIGHTS,
     VALUE_TRAP_FILTERS,
     VALUATION_WEIGHTS,
@@ -171,6 +172,22 @@ def score_earnings_momentum(df: pd.DataFrame, sector_groups) -> pd.Series:
     return _weighted_average(scores, EARNINGS_MOMENTUM_WEIGHTS, df.index)
 
 
+def score_price_momentum(df: pd.DataFrame, sector_groups) -> pd.Series:
+    """価格モメンタムスコア (0-100)
+
+    12-1ヶ月モメンタム（Jegadeesh & Titman 1993）をセクター内ランク化。
+    直近1ヶ月を除外することで短期リバーサル効果を排除。
+    """
+    scores = {}
+
+    if "momentum_12_1m" in df.columns:
+        scores["momentum_12_1m"] = _percentile_rank_in_sector(
+            df["momentum_12_1m"], sector_groups, "momentum_12_1m", lower_is_better=False
+        )
+
+    return _weighted_average(scores, PRICE_MOMENTUM_WEIGHTS, df.index)
+
+
 def _weighted_average(scores: dict[str, pd.Series], weights: dict[str, float], index: pd.Index) -> pd.Series:
     """利用可能な指標のみで重み付き平均を計算する（欠損指標は除外して正規化）"""
     result = pd.Series(0.0, index=index)
@@ -240,6 +257,7 @@ def calculate_total_score(df: pd.DataFrame) -> pd.DataFrame:
     df["growth_score"] = score_growth(df, sector_groups)
     df["quality_score"] = score_quality(df, sector_groups)
     df["earnings_momentum_score"] = score_earnings_momentum(df, sector_groups)
+    df["price_momentum_score"] = score_price_momentum(df, sector_groups)
 
     # バリュートラップ検出
     is_trap, trap_reasons = _detect_value_traps(df)
@@ -252,6 +270,7 @@ def calculate_total_score(df: pd.DataFrame) -> pd.DataFrame:
         "growth": "growth_score",
         "quality": "quality_score",
         "earnings_momentum": "earnings_momentum_score",
+        "price_momentum": "price_momentum_score",
     }
 
     df["total_score"] = 0.0

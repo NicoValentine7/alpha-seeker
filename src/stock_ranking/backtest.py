@@ -28,7 +28,7 @@ logger = logging.getLogger(__name__)
 # --- 定数 ---
 CATEGORY_COLS = [
     "total_score", "valuation_score", "growth_score",
-    "quality_score", "earnings_momentum_score",
+    "quality_score", "earnings_momentum_score", "price_momentum_score",
 ]
 
 RAW_FACTOR_COLS = [
@@ -37,6 +37,7 @@ RAW_FACTOR_COLS = [
     "roe", "gross_margin", "debt_to_equity", "fcf_margin",
     "avg_surprise_pct", "eps_revision_90d", "revenue_acceleration", "forward_eps_growth",
     "piotroski_fscore", "upside_potential",
+    "momentum_12_1m", "momentum_1m",
 ]
 
 DEFAULT_FORWARD_PERIODS = [1, 5, 10, 21]

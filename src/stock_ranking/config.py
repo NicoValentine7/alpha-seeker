@@ -3,11 +3,18 @@
 import os
 
 # --- カテゴリ別の総合スコアへの重み ---
+# IC分析(2026-03-30)と学術レビューに基づく調整:
+# - バリュエーション: ICIR +3.26（最強）→ 維持
+# - 質: ブートストラップCIが正方向 → 30%に増量（Fama-French 5F, AQR QMJ）
+# - 成長: ICIR -1.41（逆シグナル）→ 20%に減量、冗長指標整理
+# - 決算モメンタム: ICIR -3.43 → 15%に減量（短期ミーンリバージョン疑い）
+# - 価格モメンタム: 新規追加（Jegadeesh & Titman 1993、最も堅牢なアノマリー）
 CATEGORY_WEIGHTS = {
     "valuation": 0.25,
-    "growth": 0.30,
-    "quality": 0.20,
-    "earnings_momentum": 0.25,
+    "growth": 0.20,
+    "quality": 0.30,
+    "earnings_momentum": 0.15,
+    "price_momentum": 0.10,
 }
 
 # --- バリュエーション割安度の指標別重み ---
@@ -20,19 +27,20 @@ VALUATION_WEIGHTS = {
 }
 
 # --- 成長力の指標別重み ---
+# 営業利益成長を削除（売上・EPSと高相関で冗長）、PEGを30%に強化
 GROWTH_WEIGHTS = {
-    "revenue_growth": 0.30,
-    "operating_income_growth": 0.25,
-    "eps_growth": 0.30,
-    "peg_ratio": 0.15,  # GARP: 成長と価格のバランス
+    "revenue_growth": 0.35,
+    "eps_growth": 0.35,
+    "peg_ratio": 0.30,  # GARP: 成長と価格のバランス。Lynch(1989)の核心指標
 }
 
 # --- 質・健全性の指標別重み ---
+# ROEはレバレッジ効果で歪むため25%に抑制、FCFマージンを強化
 QUALITY_WEIGHTS = {
-    "roe": 0.30,
+    "roe": 0.25,
     "gross_margin": 0.20,  # 粗利率（モート/コスト優位性のプロキシ）
     "debt_to_equity": 0.25,
-    "fcf_margin": 0.25,
+    "fcf_margin": 0.30,  # キャッシュ生成力の直接測定
 }
 
 # --- バリュートラップフィルター閾値 ---
@@ -47,6 +55,12 @@ EARNINGS_MOMENTUM_WEIGHTS = {
     "eps_revision_90d": 0.25,   # EPS予想の90日間上方修正率
     "revenue_acceleration": 0.20,  # 売上成長の加速度
     "forward_eps_growth": 0.30, # 来期EPS成長予想
+}
+
+# --- 価格モメンタムの指標別重み ---
+# Jegadeesh & Titman (1993): 12-1ヶ月モメンタムが最も堅牢
+PRICE_MOMENTUM_WEIGHTS = {
+    "momentum_12_1m": 1.0,  # 12ヶ月リターン（直近1ヶ月除外）
 }
 
 # --- 外れ値クリッピング ---

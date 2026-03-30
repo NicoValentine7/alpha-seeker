@@ -14,7 +14,7 @@ src/stock_ranking/
 ├── scoring.py     # 4カテゴリのスコアリングロジック + バリュートラップフィルター
 ├── explain.py     # スコア根拠レポート生成 + ポートフォリオセクション
 ├── ranking.py     # CLI エントリポイント（データ取得→スコアリング→出力）
-├── backtest.py    # IC分析バックテスト基盤
+├── backtest.py    # IC分析バックテスト基盤（ICIR・ブートストラップ・複数期間・CI連携）
 ├── insider.py     # SEC EDGAR Form 4 インサイダー取引データ取得
 └── broker/        # Moomoo証券API連携
     ├── client.py      # OpenDゲートウェイ接続管理（contextmanager）
@@ -24,19 +24,24 @@ src/stock_ranking/
     └── safety.py      # 発注安全チェック（dry-run、ポジション制限、バリデーション）
 ```
 
-## スコアリングモデル（4カテゴリ）
+## スコアリングモデル（5カテゴリ）
 
 | カテゴリ | 重み | 指標 |
 |---------|------|------|
+| 質 | **30%** | ROE(25%) **粗利率(20%)** D/E(25%) **FCFマージン(30%)** |
 | バリュエーション | 25% | PER(20%) PBR(15%) EV/EBITDA(20%) PSR(15%) **FCF利回り(30%)** |
-| 成長力 | 30% | 売上成長(30%) 営業利益成長(25%) EPS成長(30%) **PEG(15%)** |
-| 質 | 20% | ROE(30%) **粗利率(20%)** D/E(25%) FCFマージン(25%) |
-| 決算モメンタム | 25% | サプライズ率(25%) EPS修正90d(25%) 売上加速度(20%) 来期EPS成長(30%) |
+| 成長力 | **20%** | 売上成長(35%) EPS成長(35%) **PEG(30%)** |
+| 決算モメンタム | **15%** | サプライズ率(25%) EPS修正90d(25%) 売上加速度(20%) 来期EPS成長(30%) |
+| **価格モメンタム** | **10%** | **12-1ヶ月モメンタム(100%)** |
 
 ### 設計の学術的根拠
 
 - マルチファクターモデルの有効性: MSCI(2018), S&P Global, Nature(2024)の研究で裏付け
 - FCF利回りの優位性: Pacer ETFs 30年バックテストでPERより高リターン
+- 価格モメンタム: Jegadeesh & Titman(1993)、Carhart 4ファクターモデルの核心
+- 質の重み増: Fama-French 5Fモデル(2015)、AQR "Quality Minus Junk"(2019)
+- PEG強化: Lynch(1989) GARP戦略。成長の割安度を直接測定
+- IC分析による実証: 2026-03-30初回分析でバリュエーションICIR+3.26（最強）を確認
 - EPS修正の予測力: Zacks, Mill Street Research, Alpha Architectの実証
 - セクター内パーセンタイルランク: Stockopedia, Seeking Alpha, Koyfin共通の手法
 - 詳細は `docs/research/` を参照
@@ -71,8 +76,11 @@ uv run python -m stock_ranking.ranking --tickers AAPL MSFT NVDA --top 30 --portf
 # スコアに基づく売買提案を生成（確認フロー付き、OpenD必須）
 uv run python -m stock_ranking.ranking --top 50 --trade
 
-# IC分析バックテスト
-uv run python -m stock_ranking.backtest --csv output/ranking_YYYYMMDD.csv --days 21
+# IC分析バックテスト（単一CSV）
+uv run python -m stock_ranking.backtest --csv output/ranking_YYYYMMDD.csv --days 5
+
+# 包括的IC分析（全CSV、ICIR・ブートストラップ・複数期間・Rolling IC）
+uv run python -m stock_ranking.backtest --all --days 5
 ```
 
 ### 出力

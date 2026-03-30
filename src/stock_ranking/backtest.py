@@ -97,7 +97,10 @@ def calculate_ic(scores_df: pd.DataFrame, returns_df: pd.DataFrame,
             "significant": p_value < 0.05,
         })
 
-    return pd.DataFrame(results).sort_values("ic", ascending=False)
+    df = pd.DataFrame(results)
+    if df.empty:
+        return df
+    return df.sort_values("ic", ascending=False)
 
 
 def calculate_category_ic(scores_df: pd.DataFrame, returns_df: pd.DataFrame) -> pd.DataFrame:
@@ -248,17 +251,205 @@ def print_backtest_report(result: dict):
     print("\n" + "=" * 80)
 
 
+# ============================================================
+# 時系列IC分析: 複数日分のCSVを横断してモデルの安定性を検証
+# ============================================================
+
+def discover_ranking_csvs(output_dir: str = "output") -> list[str]:
+    """output/ディレクトリからranking CSVを日付順に列挙する。"""
+    import glob
+    import os
+    pattern = os.path.join(output_dir, "ranking_*.csv")
+    csvs = sorted(glob.glob(pattern))
+    return csvs
+
+
+def run_timeseries_ic(output_dir: str = "output", forward_days: int = 5) -> dict:
+    """複数日分のCSVで時系列IC分析を実行する。
+
+    各CSVの日付時点のスコアと、forward_days営業日後のリターンのICを計算し、
+    ICの平均・標準偏差・IC>0の割合（Hit Rate）・ICIR を算出する。
+
+    Args:
+        output_dir: ranking CSVが格納されたディレクトリ
+        forward_days: 将来リターンの期間（営業日数）
+
+    Returns:
+        時系列IC分析結果の辞書
+    """
+    import re
+
+    csvs = discover_ranking_csvs(output_dir)
+    if len(csvs) < 2:
+        return {"error": f"CSV が {len(csvs)} 件しかありません（2件以上必要）"}
+
+    logger.info(f"時系列IC分析: {len(csvs)} 日分のCSV, forward={forward_days}営業日")
+
+    factor_cols = [
+        "total_score", "valuation_score", "growth_score",
+        "quality_score", "earnings_momentum_score",
+    ]
+    raw_factor_cols = [
+        "pe_ratio", "pb_ratio", "ev_ebitda", "ps_ratio", "fcf_yield",
+        "revenue_growth_calc", "operating_income_growth", "eps_growth", "peg_ratio",
+        "roe", "gross_margin", "debt_to_equity", "fcf_margin",
+        "avg_surprise_pct", "eps_revision_90d", "revenue_acceleration", "forward_eps_growth",
+        "piotroski_fscore", "upside_potential",
+    ]
+    all_factors = factor_cols + raw_factor_cols
+
+    # 各日付ごとにICを計算
+    daily_ics: list[dict] = []
+
+    for csv_path in csvs:
+        date_match = re.search(r"(\d{8})", csv_path)
+        if not date_match:
+            continue
+        score_date = datetime.strptime(date_match.group(1), "%Y%m%d").strftime("%Y-%m-%d")
+
+        scores_df = pd.read_csv(csv_path)
+        tickers = scores_df["ticker"].tolist()
+
+        returns_df = fetch_returns(tickers, score_date, score_date, forward_days)
+        if len(returns_df) < 30:
+            logger.warning(f"{score_date}: リターン取得不足 ({len(returns_df)} 銘柄), スキップ")
+            continue
+
+        ic_result = calculate_ic(scores_df, returns_df, all_factors)
+        if ic_result.empty:
+            continue
+
+        ic_dict = {"date": score_date, "n_stocks": len(returns_df)}
+        for _, row in ic_result.iterrows():
+            ic_dict[row["factor"]] = row["ic"]
+        daily_ics.append(ic_dict)
+
+        logger.info(f"{score_date}: IC計算完了 (n={len(returns_df)})")
+
+    if len(daily_ics) < 2:
+        return {"error": "有効なIC計算結果が2日分未満です"}
+
+    ic_df = pd.DataFrame(daily_ics)
+
+    # サマリ統計を計算
+    summary_rows = []
+    for factor in all_factors:
+        if factor not in ic_df.columns:
+            continue
+        series = ic_df[factor].dropna()
+        if len(series) < 2:
+            continue
+        mean_ic = series.mean()
+        std_ic = series.std()
+        icir = mean_ic / std_ic if std_ic > 0 else 0.0
+        hit_rate = (series > 0).mean()
+        summary_rows.append({
+            "factor": factor,
+            "mean_ic": mean_ic,
+            "std_ic": std_ic,
+            "icir": icir,
+            "hit_rate": hit_rate,
+            "n_periods": len(series),
+        })
+
+    summary_df = pd.DataFrame(summary_rows).sort_values("mean_ic", ascending=False)
+
+    return {
+        "forward_days": forward_days,
+        "n_periods": len(daily_ics),
+        "dates": [d["date"] for d in daily_ics],
+        "daily_ics": ic_df,
+        "summary": summary_df,
+    }
+
+
+def print_timeseries_report(result: dict):
+    """時系列IC分析結果をコンソールに出力する。"""
+    if "error" in result:
+        print(f"エラー: {result['error']}")
+        return
+
+    print("=" * 90)
+    print(f"  時系列IC分析レポート")
+    print(f"  期間: {result['dates'][0]} ~ {result['dates'][-1]}")
+    print(f"  分析日数: {result['n_periods']}日  将来リターン: {result['forward_days']}営業日")
+    print("=" * 90)
+
+    summary = result["summary"]
+
+    # カテゴリスコア
+    category_factors = {"total_score", "valuation_score", "growth_score",
+                        "quality_score", "earnings_momentum_score"}
+    cat_summary = summary[summary["factor"].isin(category_factors)]
+    raw_summary = summary[~summary["factor"].isin(category_factors)]
+
+    print("\n--- カテゴリスコアの時系列IC ---")
+    print(f"  {'ファクター':30s} {'平均IC':>8s} {'Std':>8s} {'ICIR':>8s} {'Hit%':>6s} {'N':>4s}")
+    print(f"  {'-'*30} {'-'*8} {'-'*8} {'-'*8} {'-'*6} {'-'*4}")
+    for _, row in cat_summary.iterrows():
+        quality = "◎" if row["mean_ic"] > 0.05 and row["hit_rate"] >= 0.6 else \
+                  "○" if row["mean_ic"] > 0 and row["hit_rate"] >= 0.5 else "△"
+        print(f"  {row['factor']:30s} {row['mean_ic']:+8.4f} {row['std_ic']:8.4f} "
+              f"{row['icir']:+8.4f} {row['hit_rate']:5.0%} {int(row['n_periods']):4d}  {quality}")
+
+    print("\n--- 個別ファクターの時系列IC ---")
+    print(f"  {'ファクター':30s} {'平均IC':>8s} {'Std':>8s} {'ICIR':>8s} {'Hit%':>6s} {'N':>4s}")
+    print(f"  {'-'*30} {'-'*8} {'-'*8} {'-'*8} {'-'*6} {'-'*4}")
+    for _, row in raw_summary.iterrows():
+        quality = "◎" if row["mean_ic"] > 0.05 and row["hit_rate"] >= 0.6 else \
+                  "○" if row["mean_ic"] > 0 and row["hit_rate"] >= 0.5 else "△"
+        print(f"  {row['factor']:30s} {row['mean_ic']:+8.4f} {row['std_ic']:8.4f} "
+              f"{row['icir']:+8.4f} {row['hit_rate']:5.0%} {int(row['n_periods']):4d}  {quality}")
+
+    # 日次ICの推移（total_score）
+    ic_df = result["daily_ics"]
+    if "total_score" in ic_df.columns:
+        print("\n--- total_score 日次IC推移 ---")
+        for _, row in ic_df.iterrows():
+            ic_val = row.get("total_score", float("nan"))
+            if pd.notna(ic_val):
+                bar = "+" * int(abs(ic_val) * 100) if ic_val > 0 else "-" * int(abs(ic_val) * 100)
+                sign = "▲" if ic_val > 0 else "▼"
+                print(f"  {row['date']}  {sign} {ic_val:+.4f}  {bar}")
+
+    print("\n  判定基準: ◎=平均IC>0.05 & Hit≥60%  ○=平均IC>0 & Hit≥50%  △=それ以外")
+    print("  ICIR(IC Information Ratio) = 平均IC / IC標準偏差 (高いほど安定)")
+    print("=" * 90)
+
+
 def main():
     parser = argparse.ArgumentParser(description="IC分析バックテスト")
-    parser.add_argument("--csv", required=True, help="スコアリング結果CSVのパス")
-    parser.add_argument("--days", type=int, default=21, help="将来リターンの期間（営業日数）")
+    subparsers = parser.add_subparsers(dest="command")
+
+    # 単発IC分析（既存）
+    single = subparsers.add_parser("single", help="単一CSVのIC分析")
+    single.add_argument("--csv", required=True, help="スコアリング結果CSVのパス")
+    single.add_argument("--days", type=int, default=21, help="将来リターンの期間（営業日数）")
+
+    # 時系列IC分析（新規）
+    ts = subparsers.add_parser("timeseries", help="複数CSVの時系列IC分析")
+    ts.add_argument("--dir", default="output", help="ranking CSVのディレクトリ (default: output)")
+    ts.add_argument("--days", type=int, default=5, help="将来リターンの期間（営業日数、default: 5）")
+
     args = parser.parse_args()
 
     logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s",
                         datefmt="%H:%M:%S")
 
-    result = run_backtest(args.csv, args.days)
-    print_backtest_report(result)
+    if args.command == "timeseries":
+        result = run_timeseries_ic(args.dir, args.days)
+        print_timeseries_report(result)
+    elif args.command == "single":
+        result = run_backtest(args.csv, args.days)
+        print_backtest_report(result)
+    else:
+        # 後方互換: サブコマンドなしの場合は引数を再パース
+        compat = argparse.ArgumentParser()
+        compat.add_argument("--csv", required=True)
+        compat.add_argument("--days", type=int, default=21)
+        compat_args = compat.parse_args()
+        result = run_backtest(compat_args.csv, compat_args.days)
+        print_backtest_report(result)
 
 
 if __name__ == "__main__":

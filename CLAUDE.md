@@ -14,7 +14,7 @@ src/stock_ranking/
 ├── scoring.py     # 4カテゴリのスコアリングロジック + バリュートラップフィルター
 ├── explain.py     # スコア根拠レポート生成 + ポートフォリオセクション
 ├── ranking.py     # CLI エントリポイント（データ取得→スコアリング→出力）
-├── backtest.py    # IC分析バックテスト基盤
+├── backtest.py    # IC分析バックテスト基盤（単発IC + 時系列IC）
 ├── insider.py     # SEC EDGAR Form 4 インサイダー取引データ取得
 └── broker/        # Moomoo証券API連携
     ├── client.py      # OpenDゲートウェイ接続管理（contextmanager）
@@ -71,8 +71,11 @@ uv run python -m stock_ranking.ranking --tickers AAPL MSFT NVDA --top 30 --portf
 # スコアに基づく売買提案を生成（確認フロー付き、OpenD必須）
 uv run python -m stock_ranking.ranking --top 50 --trade
 
-# IC分析バックテスト
-uv run python -m stock_ranking.backtest --csv output/ranking_YYYYMMDD.csv --days 21
+# IC分析バックテスト（単発）
+uv run python -m stock_ranking.backtest single --csv output/ranking_YYYYMMDD.csv --days 21
+
+# 時系列IC分析（複数日分のCSVを横断してスコアリングモデルの安定性を検証）
+uv run python -m stock_ranking.backtest timeseries --dir output --days 5
 ```
 
 ### 出力

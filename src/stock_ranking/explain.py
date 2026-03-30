@@ -28,7 +28,8 @@ def generate_report(
         grw = _fmt_score(row.get("growth_score"))
         qlt = _fmt_score(row.get("quality_score"))
         em = _fmt_score(row.get("earnings_momentum_score"))
-        lines.append(f"  総合: {total}   割安度: {val}   成長力: {grw}   質: {qlt}   決算モメンタム: {em}")
+        pm = _fmt_score(row.get("price_momentum_score"))
+        lines.append(f"  総合: {total}   割安度: {val}   成長力: {grw}   質: {qlt}   決算モメンタム: {em}   価格モメンタム: {pm}")
         lines.append("")
 
         # 定量指標の内訳

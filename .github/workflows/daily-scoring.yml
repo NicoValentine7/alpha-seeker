@@ -84,7 +84,7 @@ jobs:
           PORTFOLIO_TICKERS = json.load(open('config/portfolio.json'))['tickers']
 
           cols = ['ticker', 'name', 'sector', 'total_score', 'buy_signal', 'valuation_score', 'growth_score',
-                  'quality_score', 'earnings_momentum_score', 'piotroski_fscore', 'piotroski_details',
+                  'quality_score', 'earnings_momentum_score', 'price_momentum_score', 'piotroski_fscore', 'piotroski_details',
                   'pe_ratio', 'forward_pe', 'pb_ratio', 'ev_ebitda', 'ps_ratio', 'fcf_yield',
                   'revenue_growth_calc', 'operating_income_growth', 'eps_growth', 'peg_ratio',
                   'roe', 'gross_margin', 'debt_to_equity', 'fcf_margin',
@@ -165,7 +165,7 @@ jobs:
           # 履歴用の軽量JSON（ticker + scores のみ）
           os.makedirs('web/public/history', exist_ok=True)
           date_fmt = date_str[:4]+'-'+date_str[4:6]+'-'+date_str[6:]
-          history_cols = ['ticker', 'total_score', 'valuation_score', 'growth_score', 'quality_score', 'earnings_momentum_score']
+          history_cols = ['ticker', 'total_score', 'valuation_score', 'growth_score', 'quality_score', 'earnings_momentum_score', 'price_momentum_score']
           h_available = [c for c in history_cols if c in df.columns]
           h_records = clean(df[h_available].to_dict(orient='records'))
           with open(f'web/public/history/{date_fmt}.json', 'w') as f:

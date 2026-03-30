@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import type { RankingData } from './types'
 import { RankingTable } from './components/RankingTable'
 import { Filters } from './components/Filters'
+import { ICChart } from './components/ICChart'
 import './index.css'
 
 function App() {
@@ -68,6 +69,7 @@ function App() {
           setPortfolioOnly={setPortfolioOnly}
           hasPortfolio={data.stocks.some(s => s.is_portfolio)}
         />
+        <ICChart />
         <RankingTable stocks={filtered} />
       </main>
     </div>

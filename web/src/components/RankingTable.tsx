@@ -58,6 +58,7 @@ const COLUMN_LABELS: Record<string, string> = {
   growth_score: '成長力',
   quality_score: '質',
   earnings_momentum_score: '決算勢い',
+  price_momentum_score: '価格勢い',
   piotroski_fscore: 'F値',
   buy_signal: 'BUY',
   current_price: '株価',
@@ -66,7 +67,7 @@ const COLUMN_LABELS: Record<string, string> = {
 
 const DEFAULT_COLUMN_ORDER = [
   'rank', 'ticker', 'name', 'sector', 'buy_signal', 'total_score', 'valuation_score',
-  'growth_score', 'quality_score', 'earnings_momentum_score', 'piotroski_fscore',
+  'growth_score', 'quality_score', 'earnings_momentum_score', 'price_momentum_score', 'piotroski_fscore',
   'current_price', 'upside_potential',
 ]
 
@@ -282,6 +283,14 @@ export function RankingTable({ stocks }: { stocks: Stock[] }) {
       accessorKey: 'earnings_momentum_score',
       header: ({ column }) => <HeaderCell label="決算勢い" tooltipKey="momentum" column={column} />,
       size: 110,
+      cell: ({ getValue }) => <ScoreBar value={getValue() as number | null} />,
+      sortDescFirst: true,
+    },
+    {
+      id: 'price_momentum_score',
+      accessorKey: 'price_momentum_score',
+      header: ({ column }) => <HeaderCell label="価格勢い" column={column} />,
+      size: 100,
       cell: ({ getValue }) => <ScoreBar value={getValue() as number | null} />,
       sortDescFirst: true,
     },

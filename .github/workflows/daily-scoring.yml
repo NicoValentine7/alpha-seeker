@@ -206,7 +206,9 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           # ビルド生成物以外の変更を戻す
           git checkout -- . 2>/dev/null || true
-          git add -f output/ranking_*.csv output/report_*.txt output/ic_history.json web/public/ranking.json web/public/history/
+          # IC historyをwebダッシュボード用にもコピー
+          [ -f output/ic_history.json ] && cp output/ic_history.json web/public/ic_history.json
+          git add -f output/ranking_*.csv output/report_*.txt output/ic_history.json web/public/ranking.json web/public/history/ web/public/ic_history.json
           if git diff --staged --quiet; then
             echo "変更なし、スキップ"
           else

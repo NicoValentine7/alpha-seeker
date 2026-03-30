@@ -297,37 +297,37 @@ def calculate_total_score(df: pd.DataFrame) -> pd.DataFrame:
 def _calculate_buy_signal(df: pd.DataFrame) -> pd.Series:
     """Buy Signal Score (0-100) を計算する。
 
-    総合スコア(40%) + 上昇余地(25%) + 決算ビート率(15%) + F-Score(10%) + アナリスト評価(10%)
+    学術レビュー(2026-03-30)に基づく再構成:
+    - total_score(50%): メインシグナルを主軸化
+    - F-Score(20%): 財務健全性の独立チェック（total_scoreに含まれない）
+    - upside_potential(15%): アナリスト楽観バイアスを考慮して減額
+    - price_momentum(15%): 12-1ヶ月モメンタム（独立したアルファ源）
+
+    旧式から除外:
+    - beat_rate: avg_surprise_pctとtotal_score内で二重カウント
+    - analyst_rating: 楽観バイアスが大きい（Barber et al. 2001）
     """
     result = pd.Series(0.0, index=df.index)
     total_weight = pd.Series(0.0, index=df.index)
 
     components = {}
 
-    # 1. 総合スコア (40%) — そのまま使用
+    # 1. 総合スコア (50%) — メインシグナル
     if "total_score" in df.columns:
-        components["total"] = (df["total_score"].clip(0, 100), 0.40)
+        components["total"] = (df["total_score"].clip(0, 100), 0.50)
 
-    # 2. 上昇余地 (25%) — -50%〜+100%を0-100にマッピング
+    # 2. F-Score (20%) — total_scoreに含まれない独立した財務健全性チェック
+    if "piotroski_fscore" in df.columns:
+        components["fscore"] = (df["piotroski_fscore"] / 9 * 100, 0.20)
+
+    # 3. 上昇余地 (15%) — アナリスト楽観バイアスを考慮して減額
     if "upside_potential" in df.columns:
         upside = df["upside_potential"].clip(-0.5, 1.0)
-        components["upside"] = ((upside + 0.5) / 1.5 * 100, 0.25)
+        components["upside"] = ((upside + 0.5) / 1.5 * 100, 0.15)
 
-    # 3. 決算ビート率 (15%) — beat_count/beat_total * 100
-    if "earnings_beat_count" in df.columns and "earnings_beat_total" in df.columns:
-        beat_rate = pd.Series(np.nan, index=df.index)
-        mask = df["earnings_beat_total"].notna() & (df["earnings_beat_total"] > 0)
-        beat_rate[mask] = df.loc[mask, "earnings_beat_count"] / df.loc[mask, "earnings_beat_total"] * 100
-        components["beat"] = (beat_rate, 0.15)
-
-    # 4. F-Score (10%) — 0-9を0-100にスケール
-    if "piotroski_fscore" in df.columns:
-        components["fscore"] = (df["piotroski_fscore"] / 9 * 100, 0.10)
-
-    # 5. アナリスト評価 (10%) — 1-5を反転して0-100に（1=Strong Buy=100, 5=Sell=0）
-    if "recommendation_mean" in df.columns:
-        analyst = (5 - df["recommendation_mean"].clip(1, 5)) / 4 * 100
-        components["analyst"] = (analyst, 0.10)
+    # 4. 価格モメンタム (15%) — 独立したアルファ源
+    if "price_momentum_score" in df.columns:
+        components["momentum"] = (df["price_momentum_score"].clip(0, 100), 0.15)
 
     for _name, (scores, weight) in components.items():
         mask = scores.notna()

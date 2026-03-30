@@ -38,6 +38,20 @@ jobs:
           PYTHONUNBUFFERED: '1'
           FETCH_MAX_WORKERS: '4'
 
+      - name: IC分析（5日前のCSVと照合）
+        run: |
+          # 5営業日前のCSVが存在すれば、そのスコアの予測力を検証
+          CSV_5D_AGO=$(ls output/ranking_*.csv | sort | tail -6 | head -1 2>/dev/null || echo "")
+          if [ -n "$CSV_5D_AGO" ] && [ -f "$CSV_5D_AGO" ]; then
+            echo "IC分析対象: $CSV_5D_AGO"
+            uv run python -m stock_ranking.backtest --csv "$CSV_5D_AGO" --days 5 --save || echo "IC分析スキップ（データ不足）"
+          else
+            echo "IC分析スキップ: 過去CSVなし"
+          fi
+        env:
+          PYTHONUNBUFFERED: '1'
+        continue-on-error: true
+
       - name: ranking.json を生成
         run: |
           uv run python -c "
@@ -192,7 +206,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           # ビルド生成物以外の変更を戻す
           git checkout -- . 2>/dev/null || true
-          git add -f output/ranking_*.csv output/report_*.txt web/public/ranking.json web/public/history/
+          git add -f output/ranking_*.csv output/report_*.txt output/ic_history.json web/public/ranking.json web/public/history/
           if git diff --staged --quiet; then
             echo "変更なし、スキップ"
           else

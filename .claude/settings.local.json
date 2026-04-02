@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Claude_Preview__preview_start",
+      "Bash(uv run python -c \":*)",
+      "Bash(uv run:*)",
+      "Bash(git check-ignore:*)",
+      "Bash(curl -s 'https://nicovalentine7.github.io/alpha-seeker/ranking.json')",
+      "Bash(python3:*)",
+      "mcp__awslabs-bedrock-agentcore__start_code_interpreter_session",
+      "mcp__engram__mem_save"
+    ]
+  }
+}

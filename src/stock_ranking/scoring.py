@@ -19,6 +19,100 @@ from stock_ranking.config import (
     VALUATION_WEIGHTS,
 )
 
+CORE_SCORE_CAP = 59.9
+SEVERE_CORE_SCORE_CAP = 49.9
+BUY_SIGNAL_CAP = 54.9
+
+CATEGORY_MIN_COVERAGE = {
+    "valuation": 3,
+    "growth": 2,
+    "quality": 3,
+    "earnings_momentum": 2,
+}
+
+CORE_COVERAGE_CATEGORIES = ("valuation", "growth", "quality")
+REQUIRED_COVERAGE_CATEGORIES = ("valuation", "growth", "quality", "earnings_momentum")
+
+
+def _nan_series(index: pd.Index) -> pd.Series:
+    """指定indexのNaN Seriesを返す。"""
+    return pd.Series(np.nan, index=index)
+
+
+def _get_series(df: pd.DataFrame, col: str) -> pd.Series:
+    """存在しない列はNaN Seriesとして扱う。"""
+    if col in df.columns:
+        return df[col]
+    return _nan_series(df.index)
+
+
+def _build_growth_inputs(df: pd.DataFrame) -> pd.DataFrame:
+    """成長スコア用の実効入力を構築する。"""
+    growth_df = pd.DataFrame(index=df.index)
+    growth_df["revenue_growth"] = _get_series(df, "revenue_growth_calc").combine_first(
+        _get_series(df, "revenue_growth")
+    )
+    growth_df["eps_growth"] = _get_series(df, "eps_growth").combine_first(
+        _get_series(df, "earnings_growth")
+    )
+    growth_df["peg_ratio"] = _get_series(df, "peg_ratio")
+    return growth_df
+
+
+def _calculate_coverage(df: pd.DataFrame) -> pd.DataFrame:
+    """カテゴリごとのデータカバレッジ件数を計算する。"""
+    growth_df = _build_growth_inputs(df)
+    coverage = pd.DataFrame(index=df.index)
+
+    coverage["valuation_coverage"] = pd.DataFrame(
+        {
+            "pe_ratio": _get_series(df, "pe_ratio"),
+            "pb_ratio": _get_series(df, "pb_ratio"),
+            "ev_ebitda": _get_series(df, "ev_ebitda"),
+            "ps_ratio": _get_series(df, "ps_ratio"),
+            "fcf_yield": _get_series(df, "fcf_yield"),
+        }
+    ).notna().sum(axis=1)
+
+    coverage["growth_coverage"] = growth_df.notna().sum(axis=1)
+
+    coverage["quality_coverage"] = pd.DataFrame(
+        {
+            "roe": _get_series(df, "roe"),
+            "gross_margin": _get_series(df, "gross_margin"),
+            "debt_to_equity": _get_series(df, "debt_to_equity"),
+            "fcf_margin": _get_series(df, "fcf_margin"),
+        }
+    ).notna().sum(axis=1)
+
+    coverage["earnings_momentum_coverage"] = pd.DataFrame(
+        {
+            "avg_surprise_pct": _get_series(df, "avg_surprise_pct"),
+            "eps_revision_90d": _get_series(df, "eps_revision_90d"),
+            "revenue_acceleration": _get_series(df, "revenue_acceleration"),
+            "forward_eps_growth": _get_series(df, "forward_eps_growth"),
+        }
+    ).notna().sum(axis=1)
+
+    return coverage
+
+
+def _category_ok_mask(df: pd.DataFrame, category: str) -> pd.Series:
+    """カテゴリの最低カバレッジ閾値を満たすかを返す。"""
+    col = f"{category}_coverage"
+    min_count = CATEGORY_MIN_COVERAGE[category]
+    return df[col] >= min_count
+
+
+def _build_core_data_warning(df: pd.DataFrame, coverage_ok: pd.DataFrame) -> pd.Series:
+    """不足しているカテゴリ名をCSV向け文字列で返す。"""
+    return coverage_ok.apply(
+        lambda row: ",".join(
+            category for category in REQUIRED_COVERAGE_CATEGORIES if not bool(row[category])
+        ),
+        axis=1,
+    )
+
 
 def _percentile_rank_in_sector(series: pd.Series, sector_groups: pd.api.typing.DataFrameGroupBy,
                                 col_name: str, lower_is_better: bool = False) -> pd.Series:
@@ -80,29 +174,11 @@ def score_growth(df: pd.DataFrame, sector_groups) -> pd.Series:
     成長率が高いほど高スコア。
     yfinance の info と財務諸表計算値を併用（計算値を優先）。
     """
-    # 成長指標: 計算値があればそちらを優先
-    growth_df = pd.DataFrame(index=df.index)
-
-    # 売上成長率
-    if "revenue_growth_calc" in df.columns:
-        growth_df["revenue_growth"] = df["revenue_growth_calc"].fillna(df.get("revenue_growth"))
-    elif "revenue_growth" in df.columns:
-        growth_df["revenue_growth"] = df["revenue_growth"]
-
-    # 営業利益成長率
-    if "operating_income_growth" in df.columns:
-        growth_df["operating_income_growth"] = df["operating_income_growth"]
-
-    # EPS成長率
-    if "eps_growth" in df.columns:
-        growth_df["eps_growth"] = df["eps_growth"]
-    elif "earnings_growth" in df.columns:
-        growth_df["eps_growth"] = df["earnings_growth"]
+    growth_df = _build_growth_inputs(df)
 
     scores = {}
     mapping = {
         "revenue_growth": "revenue_growth",
-        "operating_income_growth": "operating_income_growth",
         "eps_growth": "eps_growth",
     }
 
@@ -110,9 +186,10 @@ def score_growth(df: pd.DataFrame, sector_groups) -> pd.Series:
         if col in growth_df.columns:
             scores[key] = _percentile_rank_in_sector(growth_df[col], sector_groups, col, lower_is_better=False)
 
-    # PEG（低いほど割安成長 → lower_is_better）
-    if "peg_ratio" in df.columns:
-        scores["peg_ratio"] = _percentile_rank_in_sector(df["peg_ratio"], sector_groups, "peg_ratio", lower_is_better=True)
+    if "peg_ratio" in growth_df.columns:
+        scores["peg_ratio"] = _percentile_rank_in_sector(
+            growth_df["peg_ratio"], sector_groups, "peg_ratio", lower_is_better=True
+        )
 
     return _weighted_average(scores, GROWTH_WEIGHTS, df.index)
 
@@ -259,6 +336,18 @@ def calculate_total_score(df: pd.DataFrame) -> pd.DataFrame:
     df["earnings_momentum_score"] = score_earnings_momentum(df, sector_groups)
     df["price_momentum_score"] = score_price_momentum(df, sector_groups)
 
+    coverage = _calculate_coverage(df)
+    for col in coverage.columns:
+        df[col] = coverage[col]
+
+    coverage_ok = pd.DataFrame(index=df.index)
+    for category in REQUIRED_COVERAGE_CATEGORIES:
+        coverage_ok[category] = _category_ok_mask(df, category)
+
+    df["core_data_warning"] = _build_core_data_warning(df, coverage_ok)
+    df["is_data_complete"] = coverage_ok[list(REQUIRED_COVERAGE_CATEGORIES)].all(axis=1)
+    core_fail_count = (~coverage_ok[list(CORE_COVERAGE_CATEGORIES)]).sum(axis=1)
+
     # バリュートラップ検出
     is_trap, trap_reasons = _detect_value_traps(df)
     df["is_value_trap"] = is_trap
@@ -285,11 +374,18 @@ def calculate_total_score(df: pd.DataFrame) -> pd.DataFrame:
     df.loc[valid, "total_score"] /= total_weight[valid]
     df.loc[~valid, "total_score"] = np.nan
 
+    severe_cap_mask = core_fail_count >= 2
+    core_cap_mask = core_fail_count >= 1
+    df.loc[core_cap_mask, "total_score"] = df.loc[core_cap_mask, "total_score"].clip(upper=CORE_SCORE_CAP)
+    df.loc[severe_cap_mask, "total_score"] = df.loc[severe_cap_mask, "total_score"].clip(upper=SEVERE_CORE_SCORE_CAP)
+
     # バリュートラップはスコアにペナルティ（-20点）
     df.loc[is_trap, "total_score"] = df.loc[is_trap, "total_score"] - 20
 
     # Buy Signal Score（総合力 + 市場評価 + 決算実績 + 財務健全性）
+    df["_core_category_fail_count"] = core_fail_count
     df["buy_signal"] = _calculate_buy_signal(df)
+    df = df.drop(columns=["_core_category_fail_count"])
 
     return df
 
@@ -307,35 +403,31 @@ def _calculate_buy_signal(df: pd.DataFrame) -> pd.Series:
     - beat_rate: avg_surprise_pctとtotal_score内で二重カウント
     - analyst_rating: 楽観バイアスが大きい（Barber et al. 2001）
     """
-    result = pd.Series(0.0, index=df.index)
-    total_weight = pd.Series(0.0, index=df.index)
+    if "total_score" not in df.columns:
+        return pd.Series(np.nan, index=df.index)
 
-    components = {}
+    total_component = df["total_score"].clip(0, 100)
+    fscore_component = (_get_series(df, "piotroski_fscore") / 9 * 100).fillna(0).clip(0, 100)
+    upside = _get_series(df, "upside_potential").clip(-0.5, 1.0)
+    upside_component = ((upside + 0.5) / 1.5 * 100).fillna(0).clip(0, 100)
+    momentum_component = _get_series(df, "price_momentum_score").clip(0, 100).fillna(0)
 
-    # 1. 総合スコア (50%) — メインシグナル
-    if "total_score" in df.columns:
-        components["total"] = (df["total_score"].clip(0, 100), 0.50)
+    result = (
+        total_component * 0.50
+        + fscore_component * 0.20
+        + upside_component * 0.15
+        + momentum_component * 0.15
+    )
 
-    # 2. F-Score (20%) — total_scoreに含まれない独立した財務健全性チェック
-    if "piotroski_fscore" in df.columns:
-        components["fscore"] = (df["piotroski_fscore"] / 9 * 100, 0.20)
+    result[total_component.isna()] = np.nan
 
-    # 3. 上昇余地 (15%) — アナリスト楽観バイアスを考慮して減額
-    if "upside_potential" in df.columns:
-        upside = df["upside_potential"].clip(-0.5, 1.0)
-        components["upside"] = ((upside + 0.5) / 1.5 * 100, 0.15)
-
-    # 4. 価格モメンタム (15%) — 独立したアルファ源
-    if "price_momentum_score" in df.columns:
-        components["momentum"] = (df["price_momentum_score"].clip(0, 100), 0.15)
-
-    for _name, (scores, weight) in components.items():
-        mask = scores.notna()
-        result[mask] += scores[mask] * weight
-        total_weight[mask] += weight
-
-    valid = total_weight > 0
-    result[valid] /= total_weight[valid]
-    result[~valid] = np.nan
+    fail_count = None
+    for col in ("core_category_fail_count", "_core_category_fail_count"):
+        if col in df.columns:
+            fail_count = df[col]
+            break
+    if fail_count is not None:
+        fail_mask = fail_count > 0
+        result.loc[fail_mask] = result.loc[fail_mask].clip(upper=BUY_SIGNAL_CAP)
 
     return result

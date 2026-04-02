@@ -6,6 +6,27 @@
 
 import pandas as pd
 
+CATEGORY_LABELS = {
+    "valuation": "割安度",
+    "growth": "成長力",
+    "quality": "質・健全性",
+    "earnings_momentum": "決算モメンタム",
+}
+
+CATEGORY_COVERAGE_COLUMNS = {
+    "valuation": "valuation_coverage",
+    "growth": "growth_coverage",
+    "quality": "quality_coverage",
+    "earnings_momentum": "earnings_momentum_coverage",
+}
+
+CATEGORY_MIN_COVERAGE = {
+    "valuation": 3,
+    "growth": 2,
+    "quality": 3,
+    "earnings_momentum": 2,
+}
+
 
 def generate_report(
     df: pd.DataFrame, top_n: int = 30, portfolio_df: pd.DataFrame | None = None
@@ -31,6 +52,11 @@ def generate_report(
         pm = _fmt_score(row.get("price_momentum_score"))
         lines.append(f"  総合: {total}   割安度: {val}   成長力: {grw}   質: {qlt}   決算モメンタム: {em}   価格モメンタム: {pm}")
         lines.append("")
+
+        data_warning = _data_quality_warning(row)
+        if data_warning:
+            lines.append(data_warning)
+            lines.append("")
 
         # 定量指標の内訳
         lines.append("  【定量指標】")
@@ -301,13 +327,52 @@ def _analyst_section(row: pd.Series) -> str:
     return "\n".join(lines)
 
 
+def _category_has_enough_coverage(row: pd.Series, category: str) -> bool:
+    """カテゴリのデータカバレッジ閾値を満たすか判定する。"""
+    col = CATEGORY_COVERAGE_COLUMNS.get(category)
+    min_count = CATEGORY_MIN_COVERAGE.get(category)
+    if col is None or min_count is None or col not in row.index:
+        return True
+
+    coverage = row.get(col)
+    if coverage is None or pd.isna(coverage):
+        return False
+    return int(coverage) >= min_count
+
+
+def _data_quality_warning(row: pd.Series) -> str:
+    """データ不足時の警告文を返す。"""
+    warning = row.get("core_data_warning")
+    if warning is None or pd.isna(warning) or warning == "":
+        return ""
+
+    categories = [c.strip() for c in str(warning).split(",") if c.strip()]
+    if not categories:
+        return ""
+
+    parts = []
+    for category in categories:
+        label = CATEGORY_LABELS.get(category, category)
+        coverage_col = CATEGORY_COVERAGE_COLUMNS.get(category)
+        coverage = row.get(coverage_col) if coverage_col else None
+        min_count = CATEGORY_MIN_COVERAGE.get(category)
+        if coverage is not None and pd.notna(coverage) and min_count is not None:
+            parts.append(f"{label}({int(coverage)}/{min_count}+件)")
+        else:
+            parts.append(label)
+
+    return "  [警告] データ品質: " + "、".join(parts) + " のカバレッジ不足により一部スコアを制限"
+
+
 def _score_rationale(row: pd.Series) -> str:
     """スコアの根拠を自然言語でサマリーする"""
     reasons = []
 
     # 割安度の根拠
     val_score = row.get("valuation_score")
-    if pd.notna(val_score):
+    if not _category_has_enough_coverage(row, "valuation"):
+        reasons.append("割安度はデータ不足で判定保留")
+    elif pd.notna(val_score):
         if val_score >= 70:
             reasons.append("セクター内で割安な水準にある")
         elif val_score >= 40:
@@ -317,7 +382,9 @@ def _score_rationale(row: pd.Series) -> str:
 
     # 成長力の根拠
     grw_score = row.get("growth_score")
-    if pd.notna(grw_score):
+    if not _category_has_enough_coverage(row, "growth"):
+        reasons.append("成長力はデータ不足で判定保留")
+    elif pd.notna(grw_score):
         if grw_score >= 70:
             reasons.append("高い成長率を示している")
         elif grw_score >= 40:
@@ -327,7 +394,9 @@ def _score_rationale(row: pd.Series) -> str:
 
     # 質の根拠
     qlt_score = row.get("quality_score")
-    if pd.notna(qlt_score):
+    if not _category_has_enough_coverage(row, "quality"):
+        reasons.append("質・健全性はデータ不足で判定保留")
+    elif pd.notna(qlt_score):
         if qlt_score >= 70:
             reasons.append("ROE・財務健全性が高く質が良い")
         elif qlt_score >= 40:
@@ -337,7 +406,9 @@ def _score_rationale(row: pd.Series) -> str:
 
     # 決算モメンタムの根拠
     em_score = row.get("earnings_momentum_score")
-    if pd.notna(em_score):
+    if not _category_has_enough_coverage(row, "earnings_momentum"):
+        reasons.append("決算モメンタムはデータ不足で判定保留")
+    elif pd.notna(em_score):
         if em_score >= 70:
             reasons.append("決算モメンタムが強い（サプライズ・上方修正・成長加速）")
         elif em_score >= 40:

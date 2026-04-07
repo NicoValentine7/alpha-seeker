@@ -20,7 +20,7 @@ const STORAGE_KEY_VIS = 'alpha-seeker-col-vis'
 const tooltips: Record<string, { title: string; body: string }> = {
   total: {
     title: '総合スコア (0-100)',
-    body: '4カテゴリの加重平均。割安度 25%、成長力 30%、質 20%、決算モメンタム 25%。',
+    body: '5カテゴリの加重平均。割安度 25%、成長力 20%、質 30%、決算モメンタム 15%、価格モメンタム 10%。',
   },
   valuation: {
     title: '割安度スコア (0-100)',
@@ -28,11 +28,11 @@ const tooltips: Record<string, { title: string; body: string }> = {
   },
   growth: {
     title: '成長力スコア (0-100)',
-    body: '売上成長(30%) 営業利益成長(25%) EPS成長(30%) PEG(15%)。高いほど成長が速い。',
+    body: '売上成長(35%) EPS成長(35%) PEG(30%)。高いほど成長が速い。',
   },
   quality: {
     title: '質スコア (0-100)',
-    body: 'ROE(30%) 粗利率(20%) D/E(25%) FCFマージン(25%)。高いほど財務基盤が強い。',
+    body: 'ROE(25%) 粗利率(20%) D/E(25%) FCFマージン(30%)。高いほど財務基盤が強い。',
   },
   momentum: {
     title: '決算モメンタム (0-100)',
@@ -44,7 +44,7 @@ const tooltips: Record<string, { title: string; body: string }> = {
   },
   buy_signal: {
     title: '買いシグナル (0-100)',
-    body: '総合スコア(40%) + アナリスト上昇余地(25%) + 決算ビート率(15%) + F-Score(10%) + アナリスト評価(10%)。「今買うべきか」の統合指標。',
+    body: '基本は buy_signal を表示し、Fed liquidity regime overlay がある日は overlay 後BUYを優先表示。資金環境に応じて quality/value と growth/momentum の傾斜を少しだけ調整する。',
   },
 }
 
@@ -240,10 +240,10 @@ export function RankingTable({ stocks }: { stocks: Stock[] }) {
     },
     {
       id: 'buy_signal',
-      accessorKey: 'buy_signal',
+      accessorFn: (row) => row.overlay_buy_signal ?? row.buy_signal,
       header: ({ column }) => <HeaderCell label="BUY" tooltipKey="buy_signal" column={column} />,
       size: 110,
-      cell: ({ getValue }) => <ScoreBar value={getValue() as number | null} />,
+      cell: ({ row }) => <ScoreBar value={row.original.overlay_buy_signal ?? row.original.buy_signal} />,
       sortDescFirst: true,
     },
     {

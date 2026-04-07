@@ -25,6 +25,22 @@ def _make_portfolio_df(rows: list[dict]) -> pd.DataFrame:
 
 
 class TestGenerateBuySignals:
+    def test_overlay_buy_signal_takes_priority(self):
+        ranking = _make_ranking_df([
+            {
+                "ticker": "AAPL",
+                "total_score": 60.0,
+                "buy_signal": 65.0,
+                "overlay_buy_signal": 72.0,
+                "current_price": 200.0,
+            },
+        ])
+
+        signals = _generate_buy_signals(ranking, set(), total_assets=100_000)
+
+        assert len(signals) == 1
+        assert "Overlay BUY72.0" in signals[0].reason
+
     def test_high_score_unowned_generates_buy(self):
         ranking = _make_ranking_df([
             {"ticker": "AAPL", "total_score": 85.0, "current_price": 200.0},

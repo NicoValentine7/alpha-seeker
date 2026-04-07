@@ -1,3 +1,20 @@
+export interface LiquidityRegimeInfo {
+  liquidity_regime: string
+  liquidity_regime_summary: string | null
+  liquidity_regime_strength: number | null
+  iorb: number | null
+  iorb_as_of: string | null
+  reserve_balances_bn: number | null
+  reserve_balances_as_of: string | null
+  on_rrp_bn: number | null
+  on_rrp_as_of: string | null
+  fed_liabilities_bn: number | null
+  fed_liabilities_as_of: string | null
+  liquidity_premium_change_low_bp: number | null
+  liquidity_premium_change_base_bp: number | null
+  liquidity_premium_change_high_bp: number | null
+}
+
 export interface Stock {
   ticker: string
   name: string
@@ -10,6 +27,24 @@ export interface Stock {
   price_momentum_score: number | null
   piotroski_fscore: number | null
   buy_signal: number | null
+  overlay_buy_signal: number | null
+  liquidity_overlay_adjustment: number | null
+  liquidity_style_tilt: number | null
+  liquidity_overlay_reason: string | null
+  liquidity_regime: string | null
+  liquidity_regime_summary: string | null
+  liquidity_regime_strength: number | null
+  iorb: number | null
+  iorb_as_of: string | null
+  reserve_balances_bn: number | null
+  reserve_balances_as_of: string | null
+  on_rrp_bn: number | null
+  on_rrp_as_of: string | null
+  fed_liabilities_bn: number | null
+  fed_liabilities_as_of: string | null
+  liquidity_premium_change_low_bp: number | null
+  liquidity_premium_change_base_bp: number | null
+  liquidity_premium_change_high_bp: number | null
   pe_ratio: number | null
   forward_pe: number | null
   pb_ratio: number | null
@@ -59,4 +94,5 @@ export interface RankingData {
   count: number
   stocks: Stock[]
   portfolio_tickers?: string[]
+  liquidity_regime?: LiquidityRegimeInfo | null
 }

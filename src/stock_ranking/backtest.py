@@ -29,7 +29,9 @@ logger = logging.getLogger(__name__)
 CATEGORY_COLS = [
     "total_score", "valuation_score", "growth_score",
     "quality_score", "earnings_momentum_score", "price_momentum_score",
+    "buy_signal", "overlay_buy_signal",
 ]
+SIGNAL_COMPARISON_FACTORS = ["total_score", "buy_signal", "overlay_buy_signal"]
 
 RAW_FACTOR_COLS = [
     "pe_ratio", "pb_ratio", "ev_ebitda", "ps_ratio", "fcf_yield",
@@ -313,6 +315,55 @@ def calculate_icir(rolling_ic_df: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame(results).sort_values("icir", ascending=False)
 
 
+def build_signal_comparison(
+    category_ic: pd.DataFrame | None = None,
+    icir_df: pd.DataFrame | None = None,
+    quintiles: dict[str, pd.DataFrame] | None = None,
+) -> pd.DataFrame:
+    """total/buy/overlay の優劣を横並びで比較する。"""
+    quintiles = quintiles or {}
+    cat_map = {}
+    if category_ic is not None and not category_ic.empty:
+        cat_map = category_ic.set_index("factor").to_dict(orient="index")
+
+    icir_map = {}
+    if icir_df is not None and not icir_df.empty:
+        icir_map = icir_df.set_index("factor").to_dict(orient="index")
+
+    rows = []
+    for factor in SIGNAL_COMPARISON_FACTORS:
+        row: dict[str, float | str] = {"factor": factor}
+        has_data = False
+
+        if factor in cat_map:
+            has_data = True
+            row["ic"] = float(cat_map[factor]["ic"])
+            row["p_value"] = float(cat_map[factor]["p_value"])
+
+        if factor in icir_map:
+            has_data = True
+            row["mean_ic"] = float(icir_map[factor]["mean_ic"])
+            row["icir"] = float(icir_map[factor]["icir"])
+            row["hit_rate"] = float(icir_map[factor]["hit_rate"])
+            row["n_periods"] = int(icir_map[factor]["n_periods"])
+
+        quintile_df = quintiles.get(factor)
+        if quintile_df is not None and not quintile_df.empty:
+            has_data = True
+            row["spread"] = float(quintile_df.iloc[-1]["mean_return"] - quintile_df.iloc[0]["mean_return"])
+            spread_p = quintile_df.attrs.get("spread_p_value")
+            if spread_p is not None:
+                row["spread_p_value"] = float(spread_p)
+
+        if has_data:
+            rows.append(row)
+
+    if not rows:
+        return pd.DataFrame()
+
+    return pd.DataFrame(rows)
+
+
 def run_backtest(ranking_csv: str, forward_days: int = 21) -> dict:
     """単一CSVのバックテストを実行し、IC分析レポートを返す。"""
     logger.info(f"バックテスト開始: {ranking_csv}")
@@ -345,16 +396,21 @@ def run_backtest(ranking_csv: str, forward_days: int = 21) -> dict:
 
     # 五分位分析
     quintiles = {}
-    for factor in ["total_score", "valuation_score", "growth_score", "earnings_momentum_score"]:
+    for factor in list(dict.fromkeys(SIGNAL_COMPARISON_FACTORS + ["valuation_score", "growth_score", "earnings_momentum_score"])):
+        if factor not in scores_df.columns:
+            continue
         q = quintile_analysis(scores_df, returns_df, factor)
         if not q.empty:
             quintiles[factor] = q
+
+    signal_comparison = build_signal_comparison(category_ic, quintiles=quintiles)
 
     return {
         "score_date": score_date,
         "forward_days": forward_days,
         "n_stocks": len(returns_df),
         "category_ic": category_ic,
+        "signal_comparison": signal_comparison,
         "raw_factor_ic": raw_ic,
         "bootstrap": bootstrap_results,
         "quintile_analysis": quintiles,
@@ -395,8 +451,10 @@ def run_comprehensive_backtest(csv_dir: str = "output",
 
     # 最新CSVのブートストラップ
     returns_df = fetch_returns(tickers, latest_date, forward_days=forward_days)
+    latest_category_ic = pd.DataFrame()
     bootstrap_results = {}
     if len(returns_df) >= MIN_STOCKS_FOR_IC:
+        latest_category_ic = calculate_ic(scores_df, returns_df, CATEGORY_COLS)
         for factor in CATEGORY_COLS:
             if factor in scores_df.columns:
                 bootstrap_results[factor] = bootstrap_ic(scores_df, returns_df, factor)
@@ -404,16 +462,24 @@ def run_comprehensive_backtest(csv_dir: str = "output",
     # 最新CSVの五分位分析
     quintiles = {}
     if len(returns_df) >= MIN_STOCKS_FOR_IC:
-        for factor in ["total_score", "valuation_score", "growth_score",
-                        "earnings_momentum_score"]:
+        for factor in list(dict.fromkeys(SIGNAL_COMPARISON_FACTORS + [
+            "valuation_score", "growth_score", "earnings_momentum_score",
+        ])):
+            if factor not in scores_df.columns:
+                continue
             q = quintile_analysis(scores_df, returns_df, factor)
             if not q.empty:
                 quintiles[factor] = q
+
+    signal_comparison = build_signal_comparison(latest_category_ic, icir_df=icir_df, quintiles=quintiles)
 
     return {
         "n_csvs": len(csv_strs),
         "csv_dates": [re.search(r"(\d{8})", p).group(1) for p in csv_strs if re.search(r"(\d{8})", p)],
         "forward_days": forward_days,
+        "n_stocks": len(returns_df),
+        "category_ic": latest_category_ic,
+        "signal_comparison": signal_comparison,
         "rolling_ic": rolling_df,
         "icir": icir_df,
         "multi_period_ic": multi_ic,
@@ -460,6 +526,28 @@ def print_backtest_report(result: dict):
             rating = _rate_ic(row["ic"])
             print(f"  {row['factor']:30s}  IC={row['ic']:+.4f}  p={row['p_value']:.4f}  "
                   f"n={int(row['n_stocks'])} {sig}  {rating}")
+
+    signal_comparison = result.get("signal_comparison")
+    if signal_comparison is not None and not signal_comparison.empty:
+        print("\n--- Signal Comparison (Total vs BUY vs Overlay BUY) ---")
+        print(f"  {'ファクター':22s}  {'IC':>7s}  {'ICIR':>7s}  {'Hit%':>6s}  {'Q5-Q1':>8s}")
+        for _, row in signal_comparison.iterrows():
+            ic = row.get("ic")
+            icir_val = row.get("icir")
+            hit_rate = row.get("hit_rate")
+            spread = row.get("spread")
+            ic_str = f"{ic:+.4f}" if pd.notna(ic) else "   N/A"
+            icir_str = f"{icir_val:+.2f}" if pd.notna(icir_val) else "   N/A"
+            hit_str = f"{hit_rate:.0%}" if pd.notna(hit_rate) else "  N/A"
+            spread_str = f"{spread:+.2%}" if pd.notna(spread) else "   N/A"
+            print(f"  {row['factor']:22s}  {ic_str:>7s}  {icir_str:>7s}  {hit_str:>6s}  {spread_str:>8s}")
+
+        factor_map = signal_comparison.set_index("factor").to_dict(orient="index")
+        if "buy_signal" in factor_map and "overlay_buy_signal" in factor_map:
+            buy_ic = factor_map["buy_signal"].get("ic")
+            overlay_ic = factor_map["overlay_buy_signal"].get("ic")
+            if buy_ic is not None and overlay_ic is not None:
+                print(f"  Overlay - BUY のIC差: {overlay_ic - buy_ic:+.4f}")
 
     # ブートストラップ
     bootstrap = result.get("bootstrap", {})

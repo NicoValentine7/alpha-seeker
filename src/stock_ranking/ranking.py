@@ -8,10 +8,14 @@ from pathlib import Path
 
 import pandas as pd
 
-from stock_ranking.config import TOP_N_DISPLAY
+from stock_ranking.config import LIQUIDITY_OVERLAY_ENABLED, TOP_N_DISPLAY
 from stock_ranking.data import fetch_all_stocks, fetch_sp500_tickers
 from stock_ranking.explain import generate_report
 from stock_ranking.html_report import generate_html
+from stock_ranking.liquidity_overlay import (
+    apply_latest_liquidity_overlay,
+    save_liquidity_regime_artifacts,
+)
 from stock_ranking.scoring import calculate_total_score
 
 logger = logging.getLogger(__name__)
@@ -83,9 +87,19 @@ def run(
     # スコアリング
     logger.info("スコアリング実行中...")
     df = calculate_total_score(df)
+    if LIQUIDITY_OVERLAY_ENABLED:
+        df, regime = apply_latest_liquidity_overlay(df)
+        if regime is not None:
+            logger.info("Fed liquidity regime overlay 適用: %s", regime.regime)
+            save_liquidity_regime_artifacts(
+                regime,
+                snapshot_date=datetime.now().strftime("%Y-%m-%d"),
+                output_dir=OUTPUT_DIR,
+            )
 
     # ランキング
-    df = df.sort_values("total_score", ascending=False).reset_index(drop=True)
+    sort_col = "overlay_buy_signal" if "overlay_buy_signal" in df.columns else "total_score"
+    df = df.sort_values(sort_col, ascending=False, na_position="last").reset_index(drop=True)
     df.index = df.index + 1  # 1始まり
 
     # ポートフォリオモード: 保有銘柄をスコアと照合
@@ -113,7 +127,21 @@ def run(
 
 def _print_ranking(df: pd.DataFrame, top_n: int):
     """ランキングをコンソールに出力する"""
-    display_cols = ["ticker", "name", "sector", "total_score", "valuation_score", "growth_score", "quality_score", "earnings_momentum_score", "price_momentum_score", "piotroski_fscore"]
+    display_cols = [
+        "ticker",
+        "name",
+        "sector",
+        "overlay_buy_signal",
+        "liquidity_overlay_adjustment",
+        "total_score",
+        "buy_signal",
+        "valuation_score",
+        "growth_score",
+        "quality_score",
+        "earnings_momentum_score",
+        "price_momentum_score",
+        "piotroski_fscore",
+    ]
     available = [c for c in display_cols if c in df.columns]
     top = df.head(top_n)[available].copy()
 

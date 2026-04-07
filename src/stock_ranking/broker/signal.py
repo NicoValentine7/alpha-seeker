@@ -16,6 +16,13 @@ from stock_ranking.config import (
 logger = logging.getLogger(__name__)
 
 
+def _preferred_buy_score_column(ranking_df: pd.DataFrame) -> str | None:
+    for col in ("overlay_buy_signal", "buy_signal", "total_score"):
+        if col in ranking_df.columns:
+            return col
+    return None
+
+
 def generate_signals(
     ranking_df: pd.DataFrame,
     portfolio_df: pd.DataFrame,
@@ -62,12 +69,13 @@ def _generate_buy_signals(
     total_assets: float,
 ) -> list[OrderIntent]:
     """高スコア未保有銘柄の買いシグナルを生成する。"""
-    if "total_score" not in ranking_df.columns:
+    score_col = _preferred_buy_score_column(ranking_df)
+    if score_col is None:
         return []
 
     # 高スコアかつ未保有の銘柄を抽出
     candidates = ranking_df[
-        (ranking_df["total_score"] >= SIGNAL_BUY_MIN_SCORE)
+        (ranking_df[score_col] >= SIGNAL_BUY_MIN_SCORE)
         & (~ranking_df["ticker"].isin(held_tickers))
     ].head(SIGNAL_BUY_TOP_N)
 
@@ -77,7 +85,7 @@ def _generate_buy_signals(
     for _, row in candidates.iterrows():
         ticker = row["ticker"]
         price = row.get("current_price")
-        score = row["total_score"]
+        score = row[score_col]
 
         if price is None or pd.isna(price) or price <= 0:
             continue
@@ -87,12 +95,17 @@ def _generate_buy_signals(
         if qty <= 0:
             continue
 
+        score_label = {
+            "overlay_buy_signal": "Overlay BUY",
+            "buy_signal": "BUY",
+            "total_score": "スコア",
+        }.get(score_col, score_col)
         signals.append(OrderIntent(
             ticker=ticker,
             quantity=qty,
             side="BUY",
             price=round(price, 2),
-            reason=f"スコア{score:.1f} (上位{SIGNAL_BUY_MIN_SCORE}以上、未保有)",
+            reason=f"{score_label}{score:.1f} ({SIGNAL_BUY_MIN_SCORE}以上、未保有)",
         ))
 
     return signals

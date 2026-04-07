@@ -20,6 +20,8 @@ interface ICRecord {
 
 const CATEGORY_COLORS: Record<string, string> = {
   total_score: '#a78bfa',
+  buy_signal: '#22d3ee',
+  overlay_buy_signal: '#f472b6',
   valuation_score: '#34d399',
   growth_score: '#60a5fa',
   quality_score: '#fbbf24',
@@ -29,6 +31,8 @@ const CATEGORY_COLORS: Record<string, string> = {
 
 const CATEGORY_LABELS: Record<string, string> = {
   total_score: 'Total',
+  buy_signal: 'BUY',
+  overlay_buy_signal: 'Overlay BUY',
   valuation_score: 'Valuation',
   growth_score: 'Growth',
   quality_score: 'Quality',

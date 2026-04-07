@@ -37,6 +37,10 @@ def generate_report(
     lines.append(f"  過小評価株ランキング 詳細レポート TOP {top_n}")
     lines.append("=" * 100)
 
+    liquidity_section = _liquidity_regime_section(df)
+    if liquidity_section:
+        lines.extend(["", *liquidity_section])
+
     for rank, (_, row) in enumerate(df.head(top_n).iterrows(), 1):
         lines.append("")
         lines.append(f"{'─' * 100}")
@@ -51,6 +55,16 @@ def generate_report(
         em = _fmt_score(row.get("earnings_momentum_score"))
         pm = _fmt_score(row.get("price_momentum_score"))
         lines.append(f"  総合: {total}   割安度: {val}   成長力: {grw}   質: {qlt}   決算モメンタム: {em}   価格モメンタム: {pm}")
+        buy_signal = row.get("buy_signal")
+        overlay_buy = row.get("overlay_buy_signal")
+        overlay_adj = row.get("liquidity_overlay_adjustment")
+        if buy_signal is not None and pd.notna(buy_signal):
+            if overlay_buy is not None and pd.notna(overlay_buy):
+                lines.append(
+                    f"  BUY: {buy_signal:.1f}   Overlay後BUY: {overlay_buy:.1f}   調整: {overlay_adj:+.1f}"
+                )
+            else:
+                lines.append(f"  BUY: {buy_signal:.1f}")
         lines.append("")
 
         data_warning = _data_quality_warning(row)
@@ -192,6 +206,35 @@ def _fmt_ratio(val) -> str:
     if val is None or pd.isna(val):
         return "N/A"
     return f"{val:.2f}"
+
+
+def _liquidity_regime_section(df: pd.DataFrame) -> list[str]:
+    if df.empty or "liquidity_regime" not in df.columns:
+        return []
+
+    row = df.iloc[0]
+    regime = row.get("liquidity_regime")
+    if regime is None or pd.isna(regime) or regime == "":
+        return []
+
+    lines = []
+    lines.append("=" * 100)
+    lines.append("  Fed Liquidity Regime Overlay")
+    lines.append("=" * 100)
+
+    summary = row.get("liquidity_regime_summary")
+    if summary and pd.notna(summary):
+        lines.append(f"  {summary}")
+
+    lp_low = row.get("liquidity_premium_change_low_bp")
+    lp_base = row.get("liquidity_premium_change_base_bp")
+    lp_high = row.get("liquidity_premium_change_high_bp")
+    if lp_base is not None and pd.notna(lp_base):
+        lines.append(
+            f"  推定 liquidity premium 変化レンジ: {lp_low:+.2f}bp / {lp_base:+.2f}bp / {lp_high:+.2f}bp"
+        )
+
+    return lines
 
 
 def _quantitative_breakdown(row: pd.Series) -> str:
@@ -479,6 +522,14 @@ def _score_rationale(row: pd.Series) -> str:
             reasons.append(f"ターゲット価格まで{upside*100:.0f}%の上昇余地")
         elif upside < -0.05:
             reasons.append(f"現在価格はターゲットを{abs(upside)*100:.0f}%上回っている")
+
+    overlay_buy = row.get("overlay_buy_signal")
+    overlay_adj = row.get("liquidity_overlay_adjustment")
+    overlay_reason = row.get("liquidity_overlay_reason")
+    if overlay_buy is not None and pd.notna(overlay_buy) and overlay_adj is not None and pd.notna(overlay_adj):
+        reasons.append(
+            f"Fed liquidity overlay で BUY を {overlay_adj:+.1f} 点調整（{overlay_reason or '理由なし'}）"
+        )
 
     if not reasons:
         return "    データ不足のため根拠を生成できません"

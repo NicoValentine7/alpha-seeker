@@ -30,6 +30,9 @@ jobs:
       - name: 依存関係インストール
         run: uv sync
 
+      - name: 内部ツール回帰テスト
+        run: uv run python -m stock_ranking.tool_regression tests/fixtures/tool_regression_cases.json
+
       - name: S&P500 スコアリング実行
         run: |
           PORTFOLIO=$(python -c "import json; print(' '.join(json.load(open('config/portfolio.json'))['tickers']))")
@@ -85,6 +88,11 @@ jobs:
 
           cols = ['ticker', 'name', 'sector', 'total_score', 'buy_signal', 'valuation_score', 'growth_score',
                   'quality_score', 'earnings_momentum_score', 'price_momentum_score', 'piotroski_fscore', 'piotroski_details',
+                  'overlay_buy_signal', 'liquidity_overlay_adjustment', 'liquidity_style_tilt', 'liquidity_overlay_reason',
+                  'liquidity_regime', 'liquidity_regime_summary', 'liquidity_regime_strength',
+                  'iorb', 'iorb_as_of', 'reserve_balances_bn', 'reserve_balances_as_of',
+                  'on_rrp_bn', 'on_rrp_as_of', 'fed_liabilities_bn', 'fed_liabilities_as_of',
+                  'liquidity_premium_change_low_bp', 'liquidity_premium_change_base_bp', 'liquidity_premium_change_high_bp',
                   'pe_ratio', 'forward_pe', 'pb_ratio', 'ev_ebitda', 'ps_ratio', 'fcf_yield',
                   'revenue_growth_calc', 'operating_income_growth', 'eps_growth', 'peg_ratio',
                   'roe', 'gross_margin', 'debt_to_equity', 'fcf_margin',
@@ -107,6 +115,24 @@ jobs:
               return obj
 
           records = clean(records)
+          liquidity_regime = None
+          if records and records[0].get('liquidity_regime'):
+              liquidity_regime = {
+                  'liquidity_regime': records[0].get('liquidity_regime'),
+                  'liquidity_regime_summary': records[0].get('liquidity_regime_summary'),
+                  'liquidity_regime_strength': records[0].get('liquidity_regime_strength'),
+                  'iorb': records[0].get('iorb'),
+                  'iorb_as_of': records[0].get('iorb_as_of'),
+                  'reserve_balances_bn': records[0].get('reserve_balances_bn'),
+                  'reserve_balances_as_of': records[0].get('reserve_balances_as_of'),
+                  'on_rrp_bn': records[0].get('on_rrp_bn'),
+                  'on_rrp_as_of': records[0].get('on_rrp_as_of'),
+                  'fed_liabilities_bn': records[0].get('fed_liabilities_bn'),
+                  'fed_liabilities_as_of': records[0].get('fed_liabilities_as_of'),
+                  'liquidity_premium_change_low_bp': records[0].get('liquidity_premium_change_low_bp'),
+                  'liquidity_premium_change_base_bp': records[0].get('liquidity_premium_change_base_bp'),
+                  'liquidity_premium_change_high_bp': records[0].get('liquidity_premium_change_high_bp'),
+              }
 
           # ポートフォリオフラグを付与
           record_tickers = {rec.get('ticker') for rec in records}
@@ -159,13 +185,13 @@ jobs:
               print(f'sparkline error: {e}')
 
           with open('web/public/ranking.json', 'w') as f:
-              json.dump({'date': date_str[:4]+'-'+date_str[4:6]+'-'+date_str[6:], 'count': len(records), 'portfolio_tickers': PORTFOLIO_TICKERS, 'stocks': records}, f)
+              json.dump({'date': date_str[:4]+'-'+date_str[4:6]+'-'+date_str[6:], 'count': len(records), 'portfolio_tickers': PORTFOLIO_TICKERS, 'liquidity_regime': liquidity_regime, 'stocks': records}, f)
           print(f'ranking.json: {len(records)} stocks')
 
           # 履歴用の軽量JSON（ticker + scores のみ）
           os.makedirs('web/public/history', exist_ok=True)
           date_fmt = date_str[:4]+'-'+date_str[4:6]+'-'+date_str[6:]
-          history_cols = ['ticker', 'total_score', 'valuation_score', 'growth_score', 'quality_score', 'earnings_momentum_score', 'price_momentum_score']
+          history_cols = ['ticker', 'total_score', 'buy_signal', 'overlay_buy_signal', 'valuation_score', 'growth_score', 'quality_score', 'earnings_momentum_score', 'price_momentum_score']
           h_available = [c for c in history_cols if c in df.columns]
           h_records = clean(df[h_available].to_dict(orient='records'))
           with open(f'web/public/history/{date_fmt}.json', 'w') as f:
@@ -183,6 +209,15 @@ jobs:
           with open(index_path, 'w') as f:
               json.dump(dates, f)
           print(f'history: {date_fmt} ({len(h_records)} stocks, {len(dates)} dates total)')
+
+          regime_history_src = 'output/liquidity_regime_history.json'
+          regime_history_dst = 'web/public/history/liquidity_regime_history.json'
+          if os.path.exists(regime_history_src):
+              with open(regime_history_src) as f:
+                  regime_history = json.load(f)
+              with open(regime_history_dst, 'w') as f:
+                  json.dump(regime_history, f)
+              print(f'liquidity regime history: {len(regime_history)} records')
           "
 
       - name: React ダッシュボードをビルド
@@ -198,17 +233,20 @@ jobs:
           path: |
             output/ranking_*.csv
             output/report_*.txt
+            output/liquidity_regime_*.json
           retention-days: 90
 
       - name: 結果をリポジトリにコミット
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          # ビルド生成物以外の変更を戻す
-          git checkout -- . 2>/dev/null || true
           # IC historyをwebダッシュボード用にもコピー
           [ -f output/ic_history.json ] && cp output/ic_history.json web/public/ic_history.json
-          git add -f output/ranking_*.csv output/report_*.txt output/ic_history.json web/public/ranking.json web/public/history/ web/public/ic_history.json
+          [ -f output/liquidity_regime_history.json ] && cp output/liquidity_regime_history.json web/public/history/liquidity_regime_history.json
+          git add -f output/ranking_*.csv output/report_*.txt web/public/ranking.json web/public/history/
+          [ -f output/ic_history.json ] && git add -f output/ic_history.json web/public/ic_history.json
+          [ -f output/liquidity_regime_latest.json ] && git add -f output/liquidity_regime_latest.json
+          [ -f output/liquidity_regime_history.json ] && git add -f output/liquidity_regime_history.json web/public/history/liquidity_regime_history.json
           if git diff --staged --quiet; then
             echo "変更なし、スキップ"
           else

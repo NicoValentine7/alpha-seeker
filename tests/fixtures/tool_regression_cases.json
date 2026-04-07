@@ -1,0 +1,69 @@
+[
+  {
+    "name": "baseline liquidity regime stays neutral",
+    "tool": "compute_liquidity_regime",
+    "tolerance": 0.001,
+    "input": {
+      "iorb": 5.4,
+      "fed_liabilities_bn": 3500.0,
+      "iorb_as_of": "2026-04-07",
+      "fed_liabilities_as_of": "2026-04-02"
+    },
+    "expected": {
+      "regime": "neutral",
+      "regime_strength": 0.0,
+      "liquidity_premium_change_low_bp": 0.0,
+      "liquidity_premium_change_base_bp": 0.0,
+      "liquidity_premium_change_high_bp": 0.0
+    }
+  },
+  {
+    "name": "tightening overlay rewards defensive profiles",
+    "tool": "apply_liquidity_overlay",
+    "tolerance": 0.02,
+    "input": {
+      "iorb": 5.4,
+      "fed_liabilities_bn": 3000.0,
+      "stocks": [
+        {
+          "ticker": "QUAL",
+          "buy_signal": 70.0,
+          "valuation_score": 80.0,
+          "quality_score": 85.0,
+          "growth_score": 40.0,
+          "price_momentum_score": 30.0
+        },
+        {
+          "ticker": "MOMO",
+          "buy_signal": 70.0,
+          "valuation_score": 30.0,
+          "quality_score": 40.0,
+          "growth_score": 85.0,
+          "price_momentum_score": 80.0
+        }
+      ],
+      "output_columns": [
+        "ticker",
+        "liquidity_overlay_adjustment",
+        "overlay_buy_signal",
+        "liquidity_regime"
+      ]
+    },
+    "expected": {
+      "stocks": [
+        {
+          "ticker": "QUAL",
+          "liquidity_overlay_adjustment": 1.3,
+          "overlay_buy_signal": 71.3,
+          "liquidity_regime": "tightening"
+        },
+        {
+          "ticker": "MOMO",
+          "liquidity_overlay_adjustment": -1.3,
+          "overlay_buy_signal": 68.7,
+          "liquidity_regime": "tightening"
+        }
+      ]
+    }
+  }
+]

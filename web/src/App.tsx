@@ -3,7 +3,24 @@ import type { RankingData } from './types'
 import { RankingTable } from './components/RankingTable'
 import { Filters } from './components/Filters'
 import { ICChart } from './components/ICChart'
+import { LiquidityRegimeChart } from './components/LiquidityRegimeChart'
 import './index.css'
+
+function fmtNum(value: number | null | undefined, digits = 1): string {
+  if (value === null || value === undefined) return '-'
+  return value.toFixed(digits)
+}
+
+function regimeTone(regime?: string | null): string {
+  switch (regime) {
+    case 'tightening':
+      return 'border-amber-500/40 bg-amber-950/20 text-amber-200'
+    case 'easing':
+      return 'border-emerald-500/40 bg-emerald-950/20 text-emerald-200'
+    default:
+      return 'border-zinc-700 bg-zinc-900/80 text-zinc-200'
+  }
+}
 
 function App() {
   const [data, setData] = useState<RankingData | null>(null)
@@ -55,6 +72,24 @@ function App() {
       </header>
 
       <main className="max-w-[1600px] mx-auto px-6 py-4">
+        {data.liquidity_regime && (
+          <section className={`mb-4 rounded-xl border px-4 py-3 ${regimeTone(data.liquidity_regime.liquidity_regime)}`}>
+            <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
+              <div>
+                <div className="text-xs uppercase tracking-[0.2em] text-zinc-400">Fed Liquidity Regime</div>
+                <div className="mt-1 text-sm font-medium">
+                  {data.liquidity_regime.liquidity_regime_summary ?? 'liquidity regime summary unavailable'}
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-x-4 gap-y-1 text-xs text-zinc-400 md:text-right">
+                <div>IORB {fmtNum(data.liquidity_regime.iorb, 2)}% ({data.liquidity_regime.iorb_as_of ?? '-'})</div>
+                <div>Fed liabilities {fmtNum(data.liquidity_regime.fed_liabilities_bn, 0)}B</div>
+                <div>LP base {fmtNum(data.liquidity_regime.liquidity_premium_change_base_bp, 2)}bp</div>
+                <div>LP range {fmtNum(data.liquidity_regime.liquidity_premium_change_low_bp, 2)} / {fmtNum(data.liquidity_regime.liquidity_premium_change_high_bp, 2)}bp</div>
+              </div>
+            </div>
+          </section>
+        )}
         <Filters
           sectors={sectors}
           sectorFilter={sectorFilter}
@@ -70,6 +105,7 @@ function App() {
           hasPortfolio={data.stocks.some(s => s.is_portfolio)}
         />
         <ICChart />
+        <LiquidityRegimeChart />
         <RankingTable stocks={filtered} />
       </main>
     </div>

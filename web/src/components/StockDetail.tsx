@@ -7,6 +7,11 @@ function fmt(v: number | null, suffix = '', mul = 1): string {
   return val >= 0 ? `+${val.toFixed(1)}${suffix}` : `${val.toFixed(1)}${suffix}`
 }
 
+function fmtScore(v: number | null): string {
+  if (v === null || v === undefined) return '-'
+  return v.toFixed(1)
+}
+
 function fmtRatio(v: number | null): string {
   if (v === null || v === undefined) return '-'
   return v.toFixed(2)
@@ -95,6 +100,31 @@ export function StockDetail({ stock: s, onClose }: Props) {
               </dl>
             </div>
           </div>
+
+          {(s.overlay_buy_signal !== null || s.liquidity_regime) && (
+            <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="px-3 py-2.5 bg-zinc-800/50 border border-zinc-700/50 rounded text-sm">
+                <h4 className="text-xs font-medium text-cyan-300 uppercase tracking-wide mb-2">Fed Liquidity Overlay</h4>
+                <dl className="space-y-1">
+                  <Row label="Base BUY" value={fmtScore(s.buy_signal)} />
+                  <Row label="Overlay BUY" value={fmtScore(s.overlay_buy_signal)} />
+                  <Row label="Adjustment" value={fmt(s.liquidity_overlay_adjustment)} />
+                  <Row label="Regime" value={s.liquidity_regime ?? '-'} />
+                  <Row label="LP Base" value={fmt(s.liquidity_premium_change_base_bp, 'bp')} />
+                  <Row label="Style Tilt" value={fmt(s.liquidity_style_tilt, '', 1)} />
+                </dl>
+              </div>
+              <div className="px-3 py-2.5 bg-zinc-800/30 border border-zinc-700/50 rounded text-sm text-zinc-300 leading-relaxed">
+                <div className="text-xs font-medium text-zinc-400 uppercase tracking-wide mb-2">Overlay Rationale</div>
+                <div>{s.liquidity_overlay_reason ?? s.liquidity_regime_summary ?? '-'}</div>
+                {(s.iorb !== null || s.fed_liabilities_bn !== null) && (
+                  <div className="mt-2 text-xs text-zinc-500">
+                    IORB {s.iorb !== null ? `${s.iorb.toFixed(2)}%` : '-'} ({s.iorb_as_of ?? '-'}) / Fed liabilities {s.fed_liabilities_bn !== null ? `${s.fed_liabilities_bn.toFixed(0)}B` : '-'} ({s.fed_liabilities_as_of ?? '-'})
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
 
           {/* Price Chart */}
           <PriceChart sparkline={s.sparkline} sparkline_dates={s.sparkline_dates} ticker={s.ticker} currentPrice={s.current_price} />

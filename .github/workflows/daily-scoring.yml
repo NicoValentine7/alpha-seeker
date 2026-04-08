@@ -202,6 +202,12 @@ jobs:
 
       - name: 結果をリポジトリにコミット
         run: |
+          CURRENT_BRANCH="${GITHUB_REF_NAME:-$(git rev-parse --abbrev-ref HEAD)}"
+          if [ -z "$CURRENT_BRANCH" ] || [ "$CURRENT_BRANCH" = "HEAD" ]; then
+            echo "push先ブランチを判定できません"
+            exit 1
+          fi
+
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           # ビルド生成物以外の変更を戻す
@@ -214,8 +220,8 @@ jobs:
           else
             COMMIT_DATE=$(date +%Y-%m-%d)
             git commit -m "日次スコアリング結果を更新 ${COMMIT_DATE}"
-            git pull --rebase origin main || true
-            git push
+            git pull --rebase origin "${CURRENT_BRANCH}"
+            git push origin HEAD:"${CURRENT_BRANCH}"
           fi
 
       - name: GitHub Pagesにアップロード

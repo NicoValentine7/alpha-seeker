@@ -1,0 +1,3487 @@
+====================================================================================================
+  過小評価株ランキング 詳細レポート TOP 50
+====================================================================================================
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  #1  NEM  Newmont Corporation  [Basic Materials]
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  総合: 82.0   割安度: 78.4   成長力: 85.8   質: 95.0   決算モメンタム: 55.0   価格モメンタム: 85.0
+
+  【定量指標】
+    [バリュエーション]
+      PER: 12.00  (Forward: 8.63)  PBR: 2.84  EV/EBITDA: 5.64  PSR: 3.95
+      FCF利回り: +10.6%  PEG: 0.11
+    [成長]
+      売上成長: +21.3%  営業利益成長: +86.5%  EPS成長: +111.6%
+    [質・健全性]
+      ROE: +25.8%  粗利率: +67.4%  D/E: 15.76  FCFマージン: +32.2%
+
+  【決算情報】
+    次回決算日: 2026-07-23
+    直近4.0四半期: 4.0回ビート  平均サプライズ: +24.86%
+      2026-04-23  予想EPS: $2.17  実績: $2.90  サプライズ: +33.45%
+      2026-02-19  予想EPS: $2.03  実績: $2.52  サプライズ: +24.25%
+      2025-10-23  予想EPS: $1.44  実績: $1.71  サプライズ: +18.84%
+      2025-07-24  予想EPS: $1.16  実績: $1.43  サプライズ: +22.90%
+    EPS予想修正: 90日間 +1.4%  30日間 -7.6%
+    来期EPS成長予想: +13.1%  今期売上成長予想: +19.1%
+    売上成長減速中 (QoQ変化: -16.3%)
+    四半期売上推移:
+      2026-03-31  売上: $7.3B  営業利益: $4.5B
+      2025-12-31  売上: $6.8B  営業利益: $4.0B
+      2025-09-30  売上: $5.5B  営業利益: $2.6B
+      2025-06-30  売上: $5.3B  営業利益: $2.4B
+
+  【アナリスト評価】
+    コンセンサス: 1.5 - Buy  (アナリスト数: 21名)
+    現在価格: $92.49  ターゲット平均: $132.57  ($67〜$175)  上昇余地: +43.3%
+    直近アクション: アップグレード 1件 / ダウングレード 0件
+
+  【直近アナリストアクション】
+    2026-07-16  Barclays: Overweight→Overweight (main)  TP: $125 (前回: $133)
+    2026-07-14  Scotiabank: Sector Outperform→Sector Outperform (main)  TP: $147 (前回: $151)
+    2026-07-14  TD Cowen: Hold→Buy (up)  TP: $127 (前回: $129)
+    2026-07-09  RBC Capital: Outperform→Outperform (main)  TP: $135 (前回: $140)
+    2026-07-09  B of A Securities: Buy→Buy (main)  TP: $132 (前回: $157)
+
+  【直近ニュース】
+    2026-07-21  Wall Street Bulls Look Optimistic About Newmont (NEM): Should You Buy?
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/wall-street-bulls-look-optimistic-133004625.html
+    2026-07-21  Here's How to Play Newmont Stock Before Q2 Earnings Release
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/heres-play-newmont-stock-q2-130100529.html
+    2026-07-20  Newmont Stock Suddenly Offers a Double-Sided Debit Trade on U.S.-Iran Tensions and Upcoming Earnings
+             Barchart
+             https://www.barchart.com/story/news/3365266/newmont-stock-suddenly-offers-a-double-sided-debit-trade-on-u-s-iran-tensions-and-upcoming-earnings
+    2026-07-20  Seeking Clues to Newmont (NEM) Q2 Earnings? A Peek Into Wall Street Projections for Key Metrics
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/seeking-clues-newmont-nem-q2-131512714.html
+    2026-07-17  Newmont Corporation (NEM) Sees a More Significant Dip Than Broader Market: Some Facts to Know
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/newmont-corporation-nem-sees-more-215005743.html
+
+  【スコア根拠サマリー】
+    セクター内で割安な水準にある。
+    高い成長率を示している。
+    ROE・財務健全性が高く質が良い。
+    決算モメンタムはセクター平均並み。
+    直近4四半期連続で決算ビート。
+    Piotroski F-Score 9/9 — 財務状態が優良（ROA>0; CFO>0; ROA改善; CFO>NI; LTD低下; 流動比率改善; 希薄化なし; 粗利率改善; 資産回転率改善）。
+    FCF利回りが高い（10.6%）— キャッシュ創出力が強い。
+    PEG 0.11 — 成長に対して非常に割安。
+    アナリストは強気（レーティング: 1.5/5）。
+    ターゲット価格まで43%の上昇余地。
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  #2  EQT  EQT Corporation  [Energy]
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  総合: 73.0   割安度: 87.5   成長力: 95.6   質: 78.6   決算モメンタム: 51.5   価格モメンタム: 7.1
+
+  【定量指標】
+    [バリュエーション]
+      PER: 9.45  (Forward: 12.03)  PBR: 1.24  EV/EBITDA: 5.22  PSR: N/A
+      FCF利回り: +6.3%  PEG: 0.02
+    [成長]
+      売上成長: +60.0%  営業利益成長: +988.5%  EPS成長: +784.4%
+    [質・健全性]
+      ROE: +13.4%  粗利率: +81.0%  D/E: 20.82  FCFマージン: +34.0%
+
+  【決算情報】
+    次回決算日: 2026-07-21
+    直近4.0四半期: 4.0回ビート  平均サプライズ: +20.42%
+      2026-04-21  予想EPS: $2.09  実績: $2.33  サプライズ: +11.22%
+      2026-02-17  予想EPS: $0.76  実績: $0.90  サプライズ: +17.66%
+      2025-10-21  予想EPS: $0.36  実績: $0.52  サプライズ: +42.79%
+      2025-07-22  予想EPS: $0.41  実績: $0.45  サプライズ: +10.01%
+    EPS予想修正: 90日間 -13.1%  30日間 -9.5%
+    来期EPS成長予想: -4.8%  今期売上成長予想: +7.8%
+    売上成長加速中 (QoQ変化: +34.3%)
+    四半期売上推移:
+      2026-03-31  売上: $3.6B  営業利益: $2.3B
+      2025-12-31  売上: $2.3B  営業利益: $1.0B
+      2025-09-30  売上: $1.8B  営業利益: $0.5B
+      2025-06-30  売上: $1.8B  営業利益: $0.4B
+
+  【アナリスト評価】
+    コンセンサス: 1.5 - Buy  (アナリスト数: 25名)
+    現在価格: $49.80  ターゲット平均: $67.16  ($52〜$79)  上昇余地: +34.9%
+    直近アクション: アップグレード 0件 / ダウングレード 0件
+
+  【直近アナリストアクション】
+    2026-07-15  Stephens & Co.: Overweight→Overweight (main)  TP: $71 (前回: $72)
+    2026-07-08  UBS: Buy→Buy (main)  TP: $73 (前回: $74)
+    2026-07-02  Jefferies: Buy→Buy (main)  TP: $75 (前回: $77)
+    2026-06-30  Freedom Broker: →Buy (init)  TP: $79
+    2026-06-29  Morgan Stanley: Overweight→Overweight (main)  TP: $68 (前回: $74)
+
+  【直近ニュース】
+    2026-07-21  EQT (NYSE:EQT) Surprises With Strong Q2 CY2026
+             StockStory
+             https://finance.yahoo.com/markets/stocks/articles/eqt-nyse-eqt-surprises-strong-204416888.html
+    2026-07-20  EQT Earnings: What To Look For From EQT
+             StockStory
+             https://finance.yahoo.com/markets/stocks/articles/eqt-earnings-look-eqt-103133888.html
+    2026-07-17  EQT Gears Up to Report Q2 Earnings: What's in Store for the Stock?
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/eqt-gears-report-q2-earnings-154500164.html
+    2026-07-17  Antero Resources Is in Play: Which Energy Titan Will Acquire It?
+             24/7 Wall St.
+             https://247wallst.com/investing/2026/07/17/antero-resources-is-in-play-which-energy-titan-will-acquire-it/
+    2026-07-15  UBS Keeps Buy Rating on EQT Corporation (EQT)
+             Insider Monkey
+             https://finance.yahoo.com/markets/stocks/articles/ubs-keeps-buy-rating-eqt-142438217.html
+
+  【スコア根拠サマリー】
+    セクター内で割安な水準にある。
+    高い成長率を示している。
+    ROE・財務健全性が高く質が良い。
+    決算モメンタムはセクター平均並み。
+    直近4四半期連続で決算ビート。
+    Piotroski F-Score 8/9 — 財務状態が優良（ROA>0; CFO>0; ROA改善; CFO>NI; LTD低下; 流動比率改善; 粗利率改善; 資産回転率改善）。
+    PEG 0.02 — 成長に対して非常に割安。
+    アナリストは強気（レーティング: 1.5/5）。
+    ターゲット価格まで35%の上昇余地。
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  #3  INCY  Incyte Corporation  [Healthcare]
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  総合: 72.6   割安度: 51.6   成長力: 95.2   質: 80.2   決算モメンタム: 54.4   価格モメンタム: 84.7
+
+  【定量指標】
+    [バリュエーション]
+      PER: 16.58  (Forward: 13.42)  PBR: 4.17  EV/EBITDA: 12.35  PSR: 4.37
+      FCF利回り: +2.9%  PEG: 0.16
+    [成長]
+      売上成長: +21.2%  営業利益成長: +1225.6%  EPS成長: +3845.0%
+    [質・健全性]
+      ROE: +30.8%  粗利率: +52.8%  D/E: 0.70  FCFマージン: +25.9%
+
+  【決算情報】
+    次回決算日: 2026-07-28
+    直近4.0四半期: 3.0回ビート  平均サプライズ: +18.42%
+      2026-04-28  予想EPS: $1.34  実績: $1.81  サプライズ: +35.12%
+      2026-02-10  予想EPS: $1.92  実績: $1.80  サプライズ: -6.08%
+      2025-10-28  予想EPS: $1.64  実績: $2.26  サプライズ: +38.04%
+      2025-07-29  予想EPS: $1.47  実績: $1.57  サプライズ: +6.59%
+    EPS予想修正: 90日間 -63.9%  30日間 -65.4%
+    来期EPS成長予想: +227.5%  今期売上成長予想: +10.8%
+    売上成長減速中 (QoQ変化: -25.9%)
+    四半期売上推移:
+      2026-03-31  売上: $1.3B  営業利益: $0.3B
+      2025-12-31  売上: $1.5B  営業利益: $0.4B
+      2025-09-30  売上: $1.4B  営業利益: $0.4B
+      2025-06-30  売上: $1.2B  営業利益: $0.3B
+
+  【アナリスト評価】
+    コンセンサス: 2.3 - Buy  (アナリスト数: 22名)
+    現在価格: $117.39  ターゲット平均: $113.82  ($71〜$140)  上昇余地: -3.0%
+    直近アクション: アップグレード 1件 / ダウングレード 0件
+
+  【直近アナリストアクション】
+    2026-07-21  HC Wainwright & Co.: Buy→Buy (reit)  TP: $140 (前回: $140)
+    2026-07-14  Barclays: Overweight→Overweight (main)  TP: $134 (前回: $117)
+    2026-07-13  BMO Capital: Market Perform→Market Perform (main)  TP: $112 (前回: $94)
+    2026-07-07  RBC Capital: Sector Perform→Sector Perform (main)  TP: $99 (前回: $95)
+    2026-06-29  HC Wainwright & Co.: Buy→Buy (reit)  TP: $140 (前回: $140)
+
+  【直近ニュース】
+    2026-07-21  HALO Inks Deal With INCY to Support Cancer Therapy Development
+             Zacks
+             https://finance.yahoo.com/healthcare/articles/halo-inks-deal-incy-support-143800503.html
+    2026-07-21  Incyte (INCY) Reports Next Week: Wall Street Expects Earnings Growth
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/incyte-incy-reports-next-week-140019383.html
+    2026-07-20  Halozyme Signs ENHANZE Collaboration with Incyte for Subcutaneous INCA033989 Development
+             InvestorsHub
+             https://investorshub.advfn.com/market-news/article/32239/halozyme-signs-enhanze-collaboration-with-incyte-for-subcutaneous-inca033989-development
+    2026-07-16  Collect 9.8% On VRTX Stock Now, And Still Keep 15% Of Upside
+             Trefis
+             https://www.trefis.com/articles/607527/collect-9-8-on-vrtx-stock-now-and-still-keep-15-of-upside/2026-07-16
+    2026-07-16  What to Expect From Incyte's Q2 2026 Earnings Report
+             Barchart
+             https://www.barchart.com/story/news/3307808/what-to-expect-from-incyte-s-q2-2026-earnings-report
+
+  【スコア根拠サマリー】
+    バリュエーションはセクター平均並み。
+    高い成長率を示している。
+    ROE・財務健全性が高く質が良い。
+    決算モメンタムはセクター平均並み。
+    直近4四半期中3回決算ビート。
+    Piotroski F-Score 6/9 — 財務状態は普通。
+    PEG 0.16 — 成長に対して非常に割安。
+    アナリストは中立〜やや強気（レーティング: 2.3/5）。
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  #4  APA  APA Corporation  [Energy]
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  総合: 72.6   割安度: 90.8   成長力: 43.4   質: 78.3   決算モメンタム: 52.9   価格モメンタム: 97.6
+
+  【定量指標】
+    [バリュエーション]
+      PER: 8.34  (Forward: 8.72)  PBR: 1.96  EV/EBITDA: 3.36  PSR: N/A
+      FCF利回り: +9.7%  PEG: 0.27
+    [成長]
+      売上成長: -8.4%  営業利益成長: -14.0%  EPS成長: +78.4%
+    [質・健全性]
+      ROE: +26.2%  粗利率: +72.3%  D/E: 61.31  FCFマージン: +19.9%
+
+  【決算情報】
+    次回決算日: 2026-08-05
+    直近4.0四半期: 4.0回ビート  平均サプライズ: +39.92%
+      2026-05-06  予想EPS: $1.14  実績: $1.38  サプライズ: +20.90%
+      2026-02-25  予想EPS: $0.64  実績: $0.91  サプライズ: +41.73%
+      2025-11-05  予想EPS: $0.79  実績: $0.93  サプライズ: +17.59%
+      2025-08-05  予想EPS: $0.48  実績: $0.87  サプライズ: +79.46%
+    EPS予想修正: 90日間 +9.1%  30日間 -9.3%
+    来期EPS成長予想: -28.6%  今期売上成長予想: +1.2%
+    売上成長加速中 (QoQ変化: +22.7%)
+    四半期売上推移:
+      2026-03-31  売上: $2.3B  営業利益: $1.0B
+      2025-12-31  売上: $2.0B  営業利益: $0.6B
+      2025-09-30  売上: $2.1B  営業利益: $0.7B
+      2025-06-30  売上: $2.2B  営業利益: $0.7B
+
+  【アナリスト評価】
+    コンセンサス: 2.7 - Hold  (アナリスト数: 24名)
+    現在価格: $35.77  ターゲット平均: $42.12  ($32〜$62)  上昇余地: +17.8%
+    直近アクション: アップグレード 1件 / ダウングレード 0件
+
+  【直近アナリストアクション】
+    2026-07-21  Susquehanna: Positive→Positive (main)  TP: $45 (前回: $47)
+    2026-07-15  UBS: Neutral→Neutral (main)  TP: $41 (前回: $45)
+    2026-07-13  Raymond James: Outperform→Outperform (main)  TP: $50 (前回: $57)
+    2026-07-10  Truist Securities: Hold→Hold (main)  TP: $38 (前回: $39)
+    2026-06-29  Morgan Stanley: Underweight→Underweight (main)  TP: $41 (前回: $44)
+
+  【直近ニュース】
+    2026-07-17  APA (APA) Gains As Market Dips: What You Should Know
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/apa-apa-gains-market-dips-221504700.html
+    2026-07-17  APA Corporation’s Quarterly Earnings Preview: What You Need to Know
+             Barchart
+             https://www.barchart.com/story/news/3334788/apa-corporations-quarterly-earnings-preview-what-you-need-to-know
+    2026-07-15  APA (APA) Stock Gets Fair Value Trim As Analysts Weigh Oil Upside And Risks
+             Simply Wall St.
+             https://finance.yahoo.com/markets/stocks/articles/apa-apa-stock-gets-fair-122403880.html
+    2026-07-15  How APA’s Completed Buyback and Strait of Hormuz Risks At APA (APA) Has Changed Its Investment Story
+             Simply Wall St.
+             https://finance.yahoo.com/markets/stocks/articles/apa-completed-buyback-strait-hormuz-071753044.html
+    2026-07-15  APA (APA) Could Be 18% Below Fair Value After Strait Of Hormuz Tensions
+             Simply Wall St.
+             https://finance.yahoo.com/markets/stocks/articles/apa-apa-could-18-below-043553407.html
+
+  【スコア根拠サマリー】
+    セクター内で割安な水準にある。
+    成長率はセクター平均並み。
+    ROE・財務健全性が高く質が良い。
+    決算モメンタムはセクター平均並み。
+    直近4四半期連続で決算ビート。
+    Piotroski F-Score 7/9 — 財務状態が優良（ROA>0; CFO>0; ROA改善; CFO>NI; LTD低下; 希薄化なし; 資産回転率改善）。
+    FCF利回りが高い（9.7%）— キャッシュ創出力が強い。
+    PEG 0.27 — 成長に対して非常に割安。
+    アナリストは中立〜やや強気（レーティング: 2.7/5）。
+    ターゲット価格まで18%の上昇余地。
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  #5  MU  Micron Technology, Inc.  [Technology]
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  総合: 72.0   割安度: 46.2   成長力: 97.2   質: 61.9   決算モメンタム: 84.8   価格モメンタム: 97.6
+
+  【定量指標】
+    [バリュエーション]
+      PER: 21.95  (Forward: 6.31)  PBR: 10.88  EV/EBITDA: 14.04  PSR: N/A
+      FCF利回り: +0.8%  PEG: 0.00
+    [成長]
+      売上成長: +48.9%  営業利益成長: +651.6%  EPS成長: +997.6%
+    [質・健全性]
+      ROE: +66.6%  粗利率: +72.6%  D/E: 6.33  FCFマージン: +4.5%
+
+  【決算情報】
+    次回決算日: 2026-09-23
+    直近4.0四半期: 4.0回ビート  平均サプライズ: +20.24%
+      2026-06-24  予想EPS: $20.71  実績: $25.11  サプライズ: +21.25%
+      2026-03-18  予想EPS: $9.16  実績: $12.20  サプライズ: +33.21%
+      2025-12-17  予想EPS: $3.96  実績: $4.78  サプライズ: +20.58%
+      2025-09-23  予想EPS: $2.86  実績: $3.03  サプライズ: +5.94%
+    EPS予想修正: 90日間 +26.9%  30日間 +20.3%
+    来期EPS成長予想: +105.6%  今期売上成長予想: +247.0%
+    売上成長減速中 (QoQ変化: -1.1%)
+    四半期売上推移:
+      2026-05-31  売上: $41.5B  営業利益: $33.3B
+      2026-02-28  売上: $23.9B  営業利益: $16.1B
+      2025-11-30  売上: $13.6B  営業利益: $6.1B
+      2025-08-31  売上: $11.3B  営業利益: $3.7B
+
+  【アナリスト評価】
+    コンセンサス: 1.4 - Strong Buy  (アナリスト数: 42名)
+    現在価格: $970.82  ターゲット平均: $1491.95  ($361〜$2200)  上昇余地: +53.7%
+    直近アクション: アップグレード 0件 / ダウングレード 0件
+
+  【直近アナリストアクション】
+    2026-07-14  Keybanc: Overweight→Overweight (main)  TP: $1750 (前回: $1600)
+    2026-06-29  Cantor Fitzgerald: Overweight→Overweight (main)  TP: $2000 (前回: $1500)
+    2026-06-25  Barclays: Overweight→Overweight (main)  TP: $2000 (前回: $1175)
+    2026-06-25  Citigroup: Buy→Buy (main)  TP: $1400 (前回: $1200)
+    2026-06-25  Goldman Sachs: Neutral→Neutral (main)  TP: $1100 (前回: $900)
+
+  【直近ニュース】
+    2026-07-21  Why GM's memory chip guidance could help stabilize stocks like Micron and Sandisk
+             Yahoo Finance
+             https://finance.yahoo.com/markets/stocks/article/why-gms-memory-chip-guidance-could-help-stabilize-stocks-like-micron-and-sandisk-120313927.html
+    2026-07-21  Dow Jones Futures: S&P 500 Regains 50-Day As Sandisk, Micron Soar; Google, Tesla Earnings Due
+             Investor's Business Daily
+             https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-sp-500-sandisk-micron-google-tesla-earnings/?src=A00220&yptr=yahoo
+    2026-07-21  Nvidia, Micron just got hit by an AI model from Beijing
+             TheStreet
+             https://www.thestreet.com/technology/nvidia-micron-competitor-kimi-k3-ai-model-beijing-china
+    2026-07-21  Stock Market Today, July 21: Micron Surges 12% as Semiconductor Strength Lifts Nasdaq
+             Motley Fool
+             https://www.fool.com/coverage/stock-market-today/2026/07/21/stock-market-today-july-21-micron-surges-12-as-semiconductor-strength-lifts-nasdaq/
+    2026-07-21  Micron giving thousands of young New Yorkers $250 for Trump accounts
+             Watertown Daily Times, N.Y.
+             https://www.nny360.com/news/statenews/micron-giving-thousands-of-young-new-yorkers-250-for-trump-accounts/article_c8ae2ed8-1225-5636-a972-2410a16bb8b1.html
+
+  【スコア根拠サマリー】
+    バリュエーションはセクター平均並み。
+    高い成長率を示している。
+    質・健全性はセクター平均並み。
+    決算モメンタムが強い（サプライズ・上方修正・成長加速）。
+    直近4四半期連続で決算ビート。
+    Piotroski F-Score 7/9 — 財務状態が優良（ROA>0; CFO>0; ROA改善; CFO>NI; LTD低下; 粗利率改善; 資産回転率改善）。
+    PEG 0.00 — 成長に対して非常に割安。
+    アナリストは強気（レーティング: 1.4/5）。
+    ターゲット価格まで54%の上昇余地。
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  #6  DECK  Deckers Outdoor Corporation  [Consumer Cyclical]
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  総合: 71.7   割安度: 74.4   成長力: 74.1   質: 85.0   決算モメンタム: 53.1   価格モメンタム: 48.1
+
+  【定量指標】
+    [バリュエーション]
+      PER: 14.72  (Forward: 12.41)  PBR: 5.79  EV/EBITDA: 9.65  PSR: 2.62
+      FCF利回り: +6.6%  PEG: N/A
+    [成長]
+      売上成長: +9.8%  営業利益成長: +7.1%  EPS成長: +6.0%
+    [質・健全性]
+      ROE: +40.9%  粗利率: +57.7%  D/E: 15.01  FCFマージン: +20.1%
+
+  【決算情報】
+    次回決算日: 2026-07-23
+    直近4.0四半期: 4.0回ビート  平均サプライズ: +21.80%
+      2026-05-21  予想EPS: $0.83  実績: $0.96  サプライズ: +15.21%
+      2026-01-29  予想EPS: $2.77  実績: $3.33  サプライズ: +20.42%
+      2025-10-23  予想EPS: $1.58  実績: $1.82  サプライズ: +14.89%
+      2025-07-24  予想EPS: $0.68  実績: $0.93  サプライズ: +36.68%
+    EPS予想修正: 90日間 +2.2%  30日間 +0.1%
+    来期EPS成長予想: +11.5%  今期売上成長予想: +7.9%
+    売上成長減速中 (QoQ変化: -79.6%)
+    四半期売上推移:
+      2026-03-31  売上: $1.1B  営業利益: $0.2B
+      2025-12-31  売上: $2.0B  営業利益: $0.6B
+      2025-09-30  売上: $1.4B  営業利益: $0.3B
+      2025-06-30  売上: $1.0B  営業利益: $0.2B
+
+  【アナリスト評価】
+    コンセンサス: 2.4 - Buy  (アナリスト数: 21名)
+    現在価格: $103.31  ターゲット平均: $127.81  ($90〜$184)  上昇余地: +23.7%
+    直近アクション: アップグレード 3件 / ダウングレード 2件
+
+  【直近アナリストアクション】
+    2026-07-13  Jefferies: Hold→Buy (up)  TP: $130 (前回: $110)
+    2026-05-26  Barclays: Overweight→Overweight (main)  TP: $141 (前回: $143)
+    2026-05-22  UBS: Buy→Buy (main)  TP: $161 (前回: $145)
+    2026-05-22  KGI Securities: Outperform→Neutral (down)  TP: $117
+    2026-05-22  Truist Securities: Buy→Buy (main)  TP: $125 (前回: $132)
+
+  【直近ニュース】
+    2026-07-21  Hoka Expected to Drive First Quarter Earnings Results for Deckers, Analysts Say
+             Footwear News
+             https://wwd.com/footwear-news/shoe-industry-news/deckers-hoka-first-quarter-revenue-analysts-predictions-1239077330/
+    2026-07-21  5 Must See Earnings Charts This Week
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/5-must-see-earnings-charts-203200290.html
+    2026-07-21  Deckers' Q1 Earnings Preview: Is DECK Ready to Surprise Wall Street?
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/deckers-q1-earnings-preview-deck-135300823.html
+    2026-07-20  DECK or IDEXY: Which Is the Better Value Stock Right Now?
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/deck-idexy-better-value-stock-154002091.html
+    2026-07-20  Ahead of Deckers (DECK) Q1 Earnings: Get Ready With Wall Street Estimates for Key Metrics
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/ahead-deckers-deck-q1-earnings-131512126.html
+
+  【スコア根拠サマリー】
+    セクター内で割安な水準にある。
+    高い成長率を示している。
+    ROE・財務健全性が高く質が良い。
+    決算モメンタムはセクター平均並み。
+    直近4四半期連続で決算ビート。
+    Piotroski F-Score 6/9 — 財務状態は普通。
+    アナリストは中立〜やや強気（レーティング: 2.4/5）。
+    ターゲット価格まで24%の上昇余地。
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  #7  EXE  Expand Energy Corporation  [Energy]
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  総合: 71.5   割安度: 94.5   成長力: 97.6   質: 70.7   決算モメンタム: 42.4   価格モメンタム: 7.1
+
+  【定量指標】
+    [バリュエーション]
+      PER: 6.59  (Forward: 10.60)  PBR: 1.09  EV/EBITDA: 3.18  PSR: N/A
+      FCF利回り: +7.1%  PEG: N/A
+    [成長]
+      売上成長: +188.8%  営業利益成長: +497.6%  EPS成長: +354.8%
+    [質・健全性]
+      ROE: +17.6%  粗利率: +48.0%  D/E: 25.88  FCFマージン: +13.5%
+
+  【決算情報】
+    次回決算日: 2026-07-28
+    直近4.0四半期: 3.0回ビート  平均サプライズ: +5.32%
+      2026-04-28  予想EPS: $3.63  実績: $3.83  サプライズ: +5.37%
+      2026-02-17  予想EPS: $1.89  実績: $2.00  サプライズ: +5.85%
+      2025-10-28  予想EPS: $0.85  実績: $0.97  サプライズ: +14.22%
+      2025-07-29  予想EPS: $1.15  実績: $1.10  サプライズ: -4.14%
+    EPS予想修正: 90日間 -6.4%  30日間 -4.5%
+    来期EPS成長予想: -0.9%  今期売上成長予想: +17.3%
+    売上成長加速中 (QoQ変化: +19.1%)
+    四半期売上推移:
+      2026-03-31  売上: $4.4B  営業利益: $1.6B
+      2025-12-31  売上: $3.3B  営業利益: $0.9B
+      2025-09-30  売上: $3.0B  営業利益: $0.8B
+      2025-06-30  売上: $3.7B  営業利益: $1.3B
+
+  【アナリスト評価】
+    コンセンサス: 1.6 - Buy  (アナリスト数: 25名)
+    現在価格: $88.58  ターゲット平均: $125.16  ($92〜$160)  上昇余地: +41.3%
+    直近アクション: アップグレード 0件 / ダウングレード 2件
+
+  【直近アナリストアクション】
+    2026-07-10  UBS: Buy→Buy (main)  TP: $127 (前回: $135)
+    2026-07-10  Truist Securities: Buy→Buy (main)  TP: $117 (前回: $134)
+    2026-07-09  Citigroup: Buy→Buy (main)  TP: $115 (前回: $125)
+    2026-06-29  Morgan Stanley: Overweight→Overweight (main)  TP: $131 (前回: $139)
+    2026-05-26  Barclays: Overweight→Equal-Weight (down)  TP: $110 (前回: $127)
+
+  【直近ニュース】
+    2026-07-21  Billionaire Investor Howard Marks’ Top 5 Holdings: A Buy at These Prices?
+             24/7 Wall St.
+             https://247wallst.com/investing/2026/07/21/billionaire-investor-howard-marks-top-5-holdings-a-buy-at-these-prices/
+    2026-07-21  Expand Energy (EXE) Earnings Expected to Grow: What to Know Ahead of Next Week's Release
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/expand-energy-exe-earnings-expected-140010114.html
+    2026-07-16  3 Reasons We Love Expand Energy (EXE)
+             StockStory
+             https://finance.yahoo.com/energy/articles/3-reasons-love-expand-energy-133722828.html
+    2026-07-16  Expand Energy (EXE) Could Be 31% Undervalued Following A Big Earnings Beat
+             Simply Wall St.
+             https://finance.yahoo.com/energy/articles/expand-energy-exe-could-31-051541729.html
+    2026-07-16  Expand Energy (EXE) Stock Looks Below Fair Value After Its 109% Run
+             Simply Wall St.
+             https://finance.yahoo.com/markets/stocks/articles/expand-energy-exe-stock-looks-032459743.html
+
+  【スコア根拠サマリー】
+    セクター内で割安な水準にある。
+    高い成長率を示している。
+    ROE・財務健全性が高く質が良い。
+    決算モメンタムはセクター平均並み。
+    直近4四半期中3回決算ビート。
+    Piotroski F-Score 8/9 — 財務状態が優良（ROA>0; CFO>0; ROA改善; CFO>NI; LTD低下; 流動比率改善; 粗利率改善; 資産回転率改善）。
+    アナリストは強気（レーティング: 1.6/5）。
+    ターゲット価格まで41%の上昇余地。
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  #8  CF  CF Industries Holdings, Inc.  [Basic Materials]
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  総合: 71.3   割安度: 76.8   成長力: 82.0   質: 82.5   決算モメンタム: 46.5   価格モメンタム: 40.0
+
+  【定量指標】
+    [バリュエーション]
+      PER: 11.08  (Forward: 10.98)  PBR: 3.54  EV/EBITDA: 6.83  PSR: 2.55
+      FCF利回り: +4.6%  PEG: 0.10
+    [成長]
+      売上成長: +19.3%  営業利益成長: +38.8%  EPS成長: +19.5%
+    [質・健全性]
+      ROE: +27.3%  粗利率: +39.1%  D/E: 43.85  FCFマージン: +25.4%
+
+  【決算情報】
+    次回決算日: 2026-08-05
+    直近4.0四半期: 3.0回ビート  平均サプライズ: +8.68%
+      2026-05-06  予想EPS: $2.66  実績: $2.89  サプライズ: +8.66%
+      2026-02-18  予想EPS: $2.47  実績: $3.06  サプライズ: +23.91%
+      2025-11-05  予想EPS: $2.07  実績: $2.19  サプライズ: +5.59%
+      2025-08-06  予想EPS: $2.47  実績: $2.39  サプライズ: -3.43%
+    EPS予想修正: 90日間 +49.2%  30日間 -2.4%
+    来期EPS成長予想: -37.8%  今期売上成長予想: +22.2%
+    売上成長減速中 (QoQ変化: -6.7%)
+    四半期売上推移:
+      2026-03-31  売上: $2.0B  営業利益: $0.7B
+      2025-12-31  売上: $1.9B  営業利益: $0.7B
+      2025-09-30  売上: $1.7B  営業利益: $0.6B
+      2025-06-30  売上: $1.9B  営業利益: $0.6B
+
+  【アナリスト評価】
+    コンセンサス: 2.8 - Hold  (アナリスト数: 19名)
+    現在価格: $122.96  ターゲット平均: $125.20  ($100〜$196)  上昇余地: +1.8%
+    直近アクション: アップグレード 1件 / ダウングレード 0件
+
+  【直近アナリストアクション】
+    2026-07-17  RBC Capital: Sector Perform→Sector Perform (main)  TP: $115 (前回: $125)
+    2026-07-07  Morgan Stanley: Equal-Weight→Equal-Weight (main)  TP: $115 (前回: $135)
+    2026-06-30  Scotiabank: Sector Perform→Sector Outperform (up)  TP: $125 (前回: $120)
+    2026-06-03  JP Morgan: Neutral→Neutral (main)  TP: $115 (前回: $94)
+    2026-05-11  Scotiabank: Sector Perform→Sector Perform (main)  TP: $120 (前回: $115)
+
+  【直近ニュース】
+    2026-07-21  Flexible Solutions Reports Q2 Revenues of $7.4M, Down 35% Y/Y
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/flexible-solutions-reports-q2-revenues-141000217.html
+    2026-07-20  What to Expect From CF Industries' Q2 2026 Earnings Report
+             Barchart
+             https://www.barchart.com/story/news/3364340/what-to-expect-from-cf-industries-q2-2026-earnings-report
+    2026-07-14  CF Industries Boosts Shareholder Returns With 20% Dividend Hike
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/cf-industries-boosts-shareholder-returns-120100462.html
+    2026-07-14  Hartford and Amdocs Join the Perfect 10 Portfolio
+             GuruFocus.com
+             https://finance.yahoo.com/markets/stocks/articles/hartford-amdocs-join-perfect-10-104523151.html
+    2026-07-14  Zacks Industry Outlook Nutrien, CF Industries and Yara International
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/zacks-industry-outlook-nutrien-cf-072800115.html
+
+  【スコア根拠サマリー】
+    セクター内で割安な水準にある。
+    高い成長率を示している。
+    ROE・財務健全性が高く質が良い。
+    決算モメンタムはセクター平均並み。
+    直近4四半期中3回決算ビート。
+    Piotroski F-Score 8/9 — 財務状態が優良（ROA>0; CFO>0; ROA改善; CFO>NI; 流動比率改善; 希薄化なし; 粗利率改善; 資産回転率改善）。
+    PEG 0.10 — 成長に対して非常に割安。
+    アナリストは中立〜やや強気（レーティング: 2.8/5）。
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  #9  PTC  PTC Inc.  [Technology]
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  総合: 70.8   割安度: 81.3   成長力: 82.2   質: 75.4   決算モメンタム: 62.1   価格モメンタム: 21.2
+
+  【定量指標】
+    [バリュエーション]
+      PER: 11.60  (Forward: 13.99)  PBR: 3.61  EV/EBITDA: 11.64  PSR: 4.65
+      FCF利回り: +6.4%  PEG: 0.05
+    [成長]
+      売上成長: +19.2%  営業利益成長: +69.9%  EPS成長: +95.0%
+    [質・健全性]
+      ROE: +34.4%  粗利率: +84.7%  D/E: 35.78  FCFマージン: +31.3%
+
+  【決算情報】
+    次回決算日: 2026-07-29
+    直近4.0四半期: 4.0回ビート  平均サプライズ: +34.65%
+      2026-05-06  予想EPS: $2.10  実績: $2.69  サプライズ: +27.86%
+      2026-02-04  予想EPS: $1.56  実績: $1.92  サプライズ: +22.76%
+      2025-11-05  予想EPS: $2.27  実績: $3.47  サプライズ: +52.71%
+      2025-07-30  予想EPS: $1.21  実績: $1.64  サプライズ: +35.26%
+    EPS予想修正: 90日間 +5.0%  30日間 +0.3%
+    来期EPS成長予想: +7.0%  今期売上成長予想: -0.3%
+    売上成長加速中 (QoQ変化: +36.2%)
+    四半期売上推移:
+      2026-03-31  売上: $0.8B  営業利益: $0.3B
+      2025-12-31  売上: $0.7B  営業利益: $0.2B
+      2025-09-30  売上: $0.9B  営業利益: $0.4B
+      2025-06-30  売上: $0.6B  営業利益: $0.2B
+
+  【アナリスト評価】
+    コンセンサス: 1.9 - Buy  (アナリスト数: 20名)
+    現在価格: $120.77  ターゲット平均: $177.50  ($130〜$230)  上昇余地: +47.0%
+    直近アクション: アップグレード 0件 / ダウングレード 0件
+
+  【直近アナリストアクション】
+    2026-07-13  Barclays: Overweight→Overweight (main)  TP: $150 (前回: $185)
+    2026-06-18  BNP Paribas: →Neutral (init)  TP: $130
+    2026-05-08  Citigroup: Neutral→Neutral (main)  TP: $155 (前回: $146)
+    2026-05-07  Barclays: Overweight→Overweight (main)  TP: $185 (前回: $180)
+    2026-05-05  Rosenblatt: Buy→Buy (main)  TP: $190 (前回: $190)
+
+  【直近ニュース】
+    2026-07-16  For Autodesk Stock, Patience Is the Real Catalyst
+             Trefis
+             https://www.trefis.com/articles/607502/for-autodesk-stock-patience-is-the-real-catalyst/2026-07-16
+    2026-07-16  2 Software Stocks with Promising Prospects and 1 We Ignore
+             StockStory
+             https://finance.yahoo.com/markets/stocks/articles/2-software-stocks-promising-prospects-101722927.html
+    2026-07-15  PTC Targets ALM Growth as Codebeamer Gains Traction in Software-Defined Products
+             MarketBeat
+             https://www.marketbeat.com/instant-alerts/ptc-targets-alm-growth-as-codebeamer-gains-traction-in-software-defined-products-2026-07-15/?utm_source=yahoofinance&utm_medium=yahoofinance
+    2026-07-15  3 Big Reasons to Love PTC (PTC)
+             StockStory
+             https://finance.yahoo.com/markets/stocks/articles/3-big-reasons-love-ptc-144517263.html
+    2026-07-07  PTC (PTC) Stock Sees Fair Value Cut As Analysts Split On AI Growth
+             Simply Wall St.
+             https://finance.yahoo.com/markets/stocks/articles/ptc-ptc-stock-sees-fair-211633976.html
+
+  【スコア根拠サマリー】
+    セクター内で割安な水準にある。
+    高い成長率を示している。
+    ROE・財務健全性が高く質が良い。
+    決算モメンタムはセクター平均並み。
+    直近4四半期連続で決算ビート。
+    Piotroski F-Score 9/9 — 財務状態が優良（ROA>0; CFO>0; ROA改善; CFO>NI; LTD低下; 流動比率改善; 希薄化なし; 粗利率改善; 資産回転率改善）。
+    PEG 0.05 — 成長に対して非常に割安。
+    アナリストは強気（レーティング: 1.9/5）。
+    ターゲット価格まで47%の上昇余地。
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  #10  ALL  Allstate Corporation (The)  [Financial Services]
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  総合: 68.6   割安度: 88.9   成長力: 72.6   質: 57.6   決算モメンタム: 58.1   価格モメンタム: 58.6
+
+  【定量指標】
+    [バリュエーション]
+      PER: 5.57  (Forward: 9.50)  PBR: 2.19  EV/EBITDA: 4.68  PSR: 0.95
+      FCF利回り: +17.9%  PEG: 0.03
+    [成長]
+      売上成長: +5.6%  営業利益成長: +120.0%  EPS成長: +120.3%
+    [質・健全性]
+      ROE: +45.2%  粗利率: +34.4%  D/E: 23.72  FCFマージン: +14.7%
+
+  【決算情報】
+    次回決算日: 2026-08-05
+    直近4.0四半期: 4.0回ビート  平均サプライズ: +68.22%
+      2026-04-29  予想EPS: $7.24  実績: $10.65  サプライズ: +47.01%
+      2026-02-04  予想EPS: $10.21  実績: $14.37  サプライズ: +40.74%
+      2025-11-05  予想EPS: $7.57  実績: $13.95  サプライズ: +84.40%
+      2025-07-30  予想EPS: $3.87  実績: $7.76  サプライズ: +100.72%
+    EPS予想修正: 90日間 +19.8%  30日間 +4.4%
+    来期EPS成長予想: -15.1%  今期売上成長予想: +4.1%
+    売上成長減速中 (QoQ変化: -3.4%)
+    四半期売上推移:
+      2026-03-31  売上: $16.8B  営業利益: N/A
+      2025-12-31  売上: $17.2B  営業利益: N/A
+      2025-09-30  売上: $17.1B  営業利益: N/A
+      2025-06-30  売上: $16.5B  営業利益: N/A
+
+  【アナリスト評価】
+    コンセンサス: 2.4 - Buy  (アナリスト数: 22名)
+    現在価格: $251.74  ターゲット平均: $254.64  ($176〜$319)  上昇余地: +1.2%
+    直近アクション: アップグレード 0件 / ダウングレード 2件
+
+  【直近アナリストアクション】
+    2026-07-15  UBS: Buy→Neutral (down)  TP: $261 (前回: $255)
+    2026-07-14  JP Morgan: Overweight→Overweight (main)  TP: $282 (前回: $263)
+    2026-07-10  Evercore ISI Group: Outperform→Outperform (main)  TP: $240 (前回: $225)
+    2026-07-09  Cantor Fitzgerald: Neutral→Neutral (main)  TP: $242 (前回: $236)
+    2026-07-09  Mizuho: Outperform→Outperform (main)  TP: $272 (前回: $255)
+
+  【直近ニュース】
+    2026-07-21  Are Finance Stocks Lagging  Allstate (ALL) This Year?
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/finance-stocks-lagging-allstate-134003596.html
+    2026-07-21  Are Investors Undervaluing Allstate (ALL) Right Now?
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/investors-undervaluing-allstate-now-134003449.html
+    2026-07-20  Will Nasdaq's Beat Streak Continue This Earnings Season?
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/nasdaqs-beat-streak-continue-earnings-140700864.html
+    2026-07-20  SAP Heads Into Q2 Earnings: Key Drivers Investors Should Watch
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/sap-heads-q2-earnings-key-135100239.html
+    2026-07-20  If You Invested $1000 in Allstate a Decade Ago, This is How Much It'd Be Worth Now
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/invested-1000-allstate-decade-ago-123002067.html
+
+  【スコア根拠サマリー】
+    セクター内で割安な水準にある。
+    高い成長率を示している。
+    質・健全性はセクター平均並み。
+    決算モメンタムはセクター平均並み。
+    直近4四半期連続で決算ビート。
+    Piotroski F-Score 5/9 — 財務状態は普通。
+    FCF利回りが高い（17.9%）— キャッシュ創出力が強い。
+    PEG 0.03 — 成長に対して非常に割安。
+    アナリストは中立〜やや強気（レーティング: 2.4/5）。
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  #11  PEG  Public Service Enterprise Group  [Utilities]
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  総合: 67.2   割安度: 71.2   成長力: 81.9   質: 70.3   決算モメンタム: 69.1   価格モメンタム: 16.1
+
+  【定量指標】
+    [バリュエーション]
+      PER: 17.13  (Forward: 16.52)  PBR: 2.23  EV/EBITDA: 13.09  PSR: 3.02
+      FCF利回り: -0.3%  PEG: 0.65
+    [成長]
+      売上成長: +18.3%  営業利益成長: +26.6%  EPS成長: +19.1%
+    [質・健全性]
+      ROE: +13.4%  粗利率: +35.4%  D/E: 141.01  FCFマージン: +0.2%
+
+  【決算情報】
+    次回決算日: 2026-08-04
+    直近4.0四半期: 4.0回ビート  平均サプライズ: +7.94%
+      2026-05-05  予想EPS: $1.43  実績: $1.55  サプライズ: +8.48%
+      2026-02-26  予想EPS: $0.71  実績: $0.72  サプライズ: +1.44%
+      2025-11-03  予想EPS: $1.01  実績: $1.13  サプライズ: +11.57%
+      2025-08-05  予想EPS: $0.70  実績: $0.77  サプライズ: +10.25%
+    EPS予想修正: 90日間 +0.3%  30日間 -0.0%
+    来期EPS成長予想: +7.2%  今期売上成長予想: +3.2%
+    売上成長加速中 (QoQ変化: +41.6%)
+    四半期売上推移:
+      2026-03-31  売上: $3.8B  営業利益: $1.1B
+      2025-12-31  売上: $2.9B  営業利益: $0.5B
+      2025-09-30  売上: $3.2B  営業利益: $0.9B
+      2025-06-30  売上: $2.8B  営業利益: $0.8B
+
+  【アナリスト評価】
+    コンセンサス: 2.3 - Buy  (アナリスト数: 19名)
+    現在価格: $77.43  ターゲット平均: $89.82  ($75〜$104)  上昇余地: +16.0%
+    直近アクション: アップグレード 0件 / ダウングレード 2件
+
+  【直近アナリストアクション】
+    2026-07-20  Jefferies: Hold→Hold (main)  TP: $78 (前回: $89)
+    2026-07-16  Truist Securities: Hold→Hold (main)  TP: $90 (前回: $88)
+    2026-07-02  RBC Capital: →Sector Perform (init)  TP: $81
+    2026-05-18  Truist Securities: Hold→Hold (main)  TP: $88 (前回: $91)
+    2026-05-06  Wells Fargo: Overweight→Overweight (main)  TP: $97 (前回: $96)
+
+  【直近ニュース】
+    2026-07-17  Public Service Enterprise Group (PEG) Stock May Be Fairly Valued Despite Storm Recovery Work
+             Simply Wall St.
+             https://finance.yahoo.com/markets/stocks/articles/public-enterprise-group-peg-stock-201035741.html
+    2026-07-16  What to Expect From Public Service Enterprise’s Next Quarterly Earnings Report
+             Barchart
+             https://www.barchart.com/story/news/3311903/what-to-expect-from-public-service-enterprises-next-quarterly-earnings-report
+    2026-07-10  Chief Investment Strategist: “We Are Spending Almost 3% of GDP on AI” as Stocks Tune Out Global Conflict on “Astronomical Investment”
+             24/7 Wall St.
+             https://247wallst.com/investing/2026/07/10/chief-investment-strategist-we-are-spending-almost-3-of-gdp-on-ai-as-stocks-tune-out-global-conflict-on-astronomical-investment/
+    2026-07-02  Palantir, Chevron upgraded: Wall Street's top analyst calls
+             The Fly
+             https://finance.yahoo.com/markets/stocks/articles/palantir-chevron-upgraded-wall-streets-134235004.html
+    2026-06-29  Vistra or Public Service Enterprise: Which Utility Stock Stands Out?
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/vistra-public-enterprise-utility-stock-155400277.html
+
+  【スコア根拠サマリー】
+    セクター内で割安な水準にある。
+    高い成長率を示している。
+    ROE・財務健全性が高く質が良い。
+    決算モメンタムはセクター平均並み。
+    直近4四半期連続で決算ビート。
+    Piotroski F-Score 8/9 — 財務状態が優良（ROA>0; CFO>0; ROA改善; CFO>NI; 流動比率改善; 希薄化なし; 粗利率改善; 資産回転率改善）。
+    FCF利回りがマイナス — キャッシュ燃焼中。
+    PEG 0.65 — 成長に対して割安（GARP基準クリア）。
+    アナリストは中立〜やや強気（レーティング: 2.3/5）。
+    ターゲット価格まで16%の上昇余地。
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  #12  CCL  Carnival Corporation Ltd.  [Consumer Cyclical]
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  総合: 67.0   割安度: 74.1   成長力: 73.1   質: 52.9   決算モメンタム: 69.0   価格モメンタム: 75.9
+
+  【定量指標】
+    [バリュエーション]
+      PER: 11.78  (Forward: 9.94)  PBR: 2.77  EV/EBITDA: 8.16  PSR: 1.31
+      FCF利回り: +3.2%  PEG: N/A
+    [成長]
+      売上成長: +6.4%  営業利益成長: +25.4%  EPS成長: +44.1%
+    [質・健全性]
+      ROE: +26.7%  粗利率: +55.7%  D/E: 201.56  FCFマージン: +9.8%
+
+  【決算情報】
+    次回決算日: 2026-09-28
+    直近4.0四半期: 4.0回ビート  平均サプライズ: +19.30%
+      2026-06-23  予想EPS: $0.34  実績: $0.41  サプライズ: +21.08%
+      2026-03-27  予想EPS: $0.18  実績: $0.20  サプライズ: +8.94%
+      2025-12-19  予想EPS: $0.25  実績: $0.34  サプライズ: +38.64%
+      2025-09-29  予想EPS: $1.32  実績: $1.43  サプライズ: +8.54%
+    EPS予想修正: 90日間 +0.7%  30日間 +0.7%
+    来期EPS成長予想: +17.3%  今期売上成長予想: +3.8%
+    売上成長加速中 (QoQ変化: +10.7%)
+    四半期売上推移:
+      2026-05-31  売上: $6.7B  営業利益: $0.9B
+      2026-02-28  売上: $6.2B  営業利益: $0.6B
+      2025-11-30  売上: $6.3B  営業利益: $0.7B
+      2025-08-31  売上: $8.2B  営業利益: $2.3B
+
+  【アナリスト評価】
+    コンセンサス: 1.6 - Buy  (アナリスト数: 25名)
+    現在価格: $26.16  ターゲット平均: $35.47  ($29〜$43)  上昇余地: +35.6%
+    直近アクション: アップグレード 0件 / ダウングレード 0件
+
+  【直近アナリストアクション】
+    2026-07-08  BMO Capital: →Market Perform (init)  TP: $30
+    2026-06-30  Tigress Financial: Buy→Buy (main)  TP: $42 (前回: $40)
+    2026-06-25  Wells Fargo: Overweight→Overweight (main)  TP: $38 (前回: $36)
+    2026-06-24  Susquehanna: Positive→Positive (main)  TP: $33 (前回: $30)
+    2026-06-24  Barclays: Overweight→Overweight (main)  TP: $35 (前回: $36)
+
+  【直近ニュース】
+    2026-07-20  Do Options Traders Know Something About Carnival Stock We Don't?
+             Zacks
+             https://finance.yahoo.com/markets/options/articles/options-traders-know-something-carnival-124600737.html
+    2026-07-19  Carnival Reported Earnings on June 23, Royal Caribbean Is Next on July 28, Then Norwegian Cruise Line on July 30. Here's My Top Buy of the Bunch.
+             Motley Fool
+             https://www.fool.com/investing/2026/07/19/carnival-reports-earnings-on-july-23-followed-by-r/
+    2026-07-18  RCL Stock: Collect 13% Now, In Exchange For 19% Of Upside
+             Trefis
+             https://www.trefis.com/articles/607734/rcl-stock-collect-13-now-in-exchange-for-19-of-upside/2026-07-18
+    2026-07-17  DB cautious on cruise stocks as fundamentals “not as clear as bulls believe”
+             Investing.com
+             https://finance.yahoo.com/markets/stocks/articles/db-cautious-cruise-stocks-fundamentals-152936866.html
+    2026-07-15  Carnival (CCL) Unveils Ace Class With Carnival Destiny Set For 2029
+             Simply Wall St.
+             https://finance.yahoo.com/markets/stocks/articles/carnival-ccl-unveils-ace-class-081449287.html
+
+  【スコア根拠サマリー】
+    セクター内で割安な水準にある。
+    高い成長率を示している。
+    質・健全性はセクター平均並み。
+    決算モメンタムはセクター平均並み。
+    直近4四半期連続で決算ビート。
+    Piotroski F-Score 8/9 — 財務状態が優良（ROA>0; CFO>0; ROA改善; CFO>NI; LTD低下; 流動比率改善; 粗利率改善; 資産回転率改善）。
+    アナリストは強気（レーティング: 1.6/5）。
+    ターゲット価格まで36%の上昇余地。
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  #13  DAL  Delta Air Lines, Inc.  [Industrials]
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  総合: 66.6   割安度: 88.8   成長力: 67.3   質: 30.3   決算モメンタム: 87.8   価格モメンタム: 86.7
+
+  【定量指標】
+    [バリュエーション]
+      PER: 14.03  (Forward: 9.54)  PBR: 2.54  EV/EBITDA: 9.55  PSR: N/A
+      FCF利回り: +3.9%  PEG: N/A
+    [成長]
+      売上成長: +2.8%  営業利益成長: -2.9%  EPS成長: +44.8%
+    [質・健全性]
+      ROE: +20.1%  粗利率: +18.7%  D/E: 96.65  FCFマージン: +6.1%
+
+  【決算情報】
+    次回決算日: 2026-10-08
+    直近4.0四半期: 4.0回ビート  平均サプライズ: +7.01%
+      2026-07-10  予想EPS: $1.49  実績: $1.56  サプライズ: +4.54%
+      2026-04-08  予想EPS: $0.57  実績: $0.64  サプライズ: +11.35%
+      2026-01-13  予想EPS: $1.55  実績: $1.55  サプライズ: +0.27%
+      2025-10-09  予想EPS: $1.53  実績: $1.71  サプライズ: +11.87%
+    EPS予想修正: 90日間 +22.5%  30日間 +20.3%
+    来期EPS成長予想: +36.9%  今期売上成長予想: +13.5%
+    売上成長加速中 (QoQ変化: +25.5%)
+    四半期売上推移:
+      2026-06-30  売上: $19.8B  営業利益: $1.9B
+      2026-03-31  売上: $15.9B  営業利益: $0.5B
+      2025-12-31  売上: $16.0B  営業利益: $1.5B
+      2025-09-30  売上: $16.7B  営業利益: $1.7B
+
+  【アナリスト評価】
+    コンセンサス: 1.3 - Strong Buy  (アナリスト数: 24名)
+    現在価格: $84.63  ターゲット平均: $105.52  ($50〜$125)  上昇余地: +24.7%
+    直近アクション: アップグレード 0件 / ダウングレード 1件
+
+  【直近アナリストアクション】
+    2026-07-14  TD Cowen: Buy→Buy (main)  TP: $112 (前回: $106)
+    2026-07-13  UBS: Buy→Buy (main)  TP: $112 (前回: $107)
+    2026-07-13  Morgan Stanley: Overweight→Overweight (main)  TP: $125 (前回: $115)
+    2026-07-13  JP Morgan: Overweight→Overweight (main)  TP: $114 (前回: $85)
+    2026-07-13  Citigroup: Buy→Buy (main)  TP: $110 (前回: $106)
+
+  【直近ニュース】
+    2026-07-21  The World Cup effect leaves airlines with a tougher test
+             TheStreet
+             https://www.thestreet.com/investing/world-cup-travel-demand-airline-capacity-increase
+    2026-07-21  Ryanair Q1 Earnings Miss on Lower Fares and Fuel Cost Spike
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/ryanair-q1-earnings-miss-lower-172600767.html
+    2026-07-21  All You Need to Know About Delta (DAL) Rating Upgrade to Buy
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/know-delta-dal-rating-upgrade-160004947.html
+    2026-07-21  Cheaper jet fuel won't lower airfares, Delta Air Lines CEO Ed Bastian says — here’s why the cost to fly will stay high
+             Moneywise
+             https://finance.yahoo.com/economy/articles/cheaper-jet-fuel-wont-lower-154000854.html
+    2026-07-21  Is Delta Air Lines (DAL) a Great Value Stock Right Now?
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/delta-air-lines-dal-great-134004448.html
+
+  【スコア根拠サマリー】
+    セクター内で割安な水準にある。
+    成長率はセクター平均並み。
+    質・健全性に懸念あり。
+    決算モメンタムが強い（サプライズ・上方修正・成長加速）。
+    直近4四半期連続で決算ビート。
+    Piotroski F-Score 6/9 — 財務状態は普通。
+    アナリストは強気（レーティング: 1.3/5）。
+    ターゲット価格まで25%の上昇余地。
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  #14  NVDA  NVIDIA Corporation  [Technology]
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  総合: 66.5   割安度: 28.5   成長力: 87.4   質: 90.1   決算モメンタム: 61.4   価格モメンタム: 56.5
+
+  【定量指標】
+    [バリュエーション]
+      PER: 31.74  (Forward: 16.14)  PBR: 25.69  EV/EBITDA: 29.48  PSR: 19.81
+      FCF利回り: +0.9%  PEG: 0.08
+    [成長]
+      売上成長: +65.5%  営業利益成長: +60.1%  EPS成長: +64.7%
+    [質・健全性]
+      ROE: +114.3%  粗利率: +74.1%  D/E: 6.55  FCFマージン: +44.8%
+
+  【決算情報】
+    次回決算日: 2026-08-26
+    直近4.0四半期: 4.0回ビート  平均サプライズ: +4.61%
+      2026-05-20  予想EPS: $1.77  実績: $1.87  サプライズ: +5.54%
+      2026-02-25  予想EPS: $1.54  実績: $1.62  サプライズ: +5.32%
+      2025-11-19  予想EPS: $1.26  実績: $1.30  サプライズ: +3.46%
+      2025-08-27  予想EPS: $1.01  実績: $1.05  サプライズ: +4.10%
+    EPS予想修正: 90日間 +7.8%  30日間 +0.3%
+    来期EPS成長予想: +42.9%  今期売上成長予想: +82.2%
+    売上成長加速中 (QoQ変化: +0.3%)
+    四半期売上推移:
+      2026-04-30  売上: $81.6B  営業利益: $53.5B
+      2026-01-31  売上: $68.1B  営業利益: $44.3B
+      2025-10-31  売上: $57.0B  営業利益: $36.0B
+      2025-07-31  売上: $46.7B  営業利益: $28.4B
+
+  【アナリスト評価】
+    コンセンサス: 1.3 - Strong Buy  (アナリスト数: 58名)
+    現在価格: $207.29  ターゲット平均: $302.31  ($180〜$500)  上昇余地: +45.8%
+    直近アクション: アップグレード 0件 / ダウングレード 0件
+
+  【直近アナリストアクション】
+    2026-07-14  Keybanc: Overweight→Overweight (main)  TP: $330 (前回: $310)
+    2026-06-05  China Renaissance: →Buy (init)  TP: $319
+    2026-06-02  Needham: Buy→Buy (reit)  TP: $270 (前回: $270)
+    2026-06-01  DA Davidson: Buy→Buy (main)  TP: $300 (前回: $300)
+    2026-05-27  Tigress Financial: Strong Buy→Strong Buy (main)  TP: $425 (前回: $360)
+
+  【直近ニュース】
+    2026-07-21  Big Tech's big AI spending is 'a good thing' right now
+             Yahoo Finance Video
+             https://finance.yahoo.com/video/big-techs-big-ai-spending-is-a-good-thing-right-now-203258720.html
+    2026-07-21  Jamie Dimon's Latest Warning Sends Shockwaves Through Wall Street. History Is Very Clear About What Happens Next.
+             Motley Fool
+             https://www.fool.com/investing/2026/07/21/jamie-dimons-latest-warning-sends-shockwaves-throu/
+    2026-07-21  Prediction: MercadoLibre Stock Could Soar in the Next 5 Years if This Happens
+             Motley Fool
+             https://www.fool.com/investing/2026/07/21/prediction-mercadolibre-stock-could-soar-in-the-ne/
+    2026-07-21  Nvidia Vera Rubin shown to provide 10x more throughput per megawatt than Blackwell
+             Investing.com
+             https://tech.yahoo.com/ai/articles/nvidia-vera-rubin-shown-10x-222148022.html
+    2026-07-21  Why Tutor Perini Stock Trounced the Market on Tuesday
+             Motley Fool
+             https://www.fool.com/investing/2026/07/21/why-tutor-perini-stock-trounced-the-market-on-tues/
+
+  【スコア根拠サマリー】
+    バリュエーションはセクター内で割高。
+    高い成長率を示している。
+    ROE・財務健全性が高く質が良い。
+    決算モメンタムはセクター平均並み。
+    直近4四半期連続で決算ビート。
+    Piotroski F-Score 4/9 — 財務状態は普通。
+    PEG 0.08 — 成長に対して非常に割安。
+    アナリストは強気（レーティング: 1.3/5）。
+    ターゲット価格まで46%の上昇余地。
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  #15  BIIB  Biogen Inc.  [Healthcare]
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  総合: 66.2   割安度: 77.6   成長力: 29.9   質: 66.6   決算モメンタム: 73.6   価格モメンタム: 98.3
+
+  【定量指標】
+    [バリュエーション]
+      PER: 21.85  (Forward: 12.35)  PBR: 1.61  EV/EBITDA: 8.98  PSR: 3.02
+      FCF利回り: +6.1%  PEG: 0.40
+    [成長]
+      売上成長: +2.2%  営業利益成長: +8.3%  EPS成長: -20.8%
+    [質・健全性]
+      ROE: +7.7%  粗利率: +78.7%  D/E: 35.18  FCFマージン: +19.9%
+
+  【決算情報】
+    次回決算日: 2026-07-29
+    直近4.0四半期: 4.0回ビート  平均サプライズ: +27.91%
+      2026-04-29  予想EPS: $2.89  実績: $3.57  サプライズ: +23.61%
+      2026-02-06  予想EPS: $1.62  実績: $1.99  サプライズ: +23.18%
+      2025-10-30  予想EPS: $3.88  実績: $4.81  サプライズ: +23.88%
+      2025-07-31  予想EPS: $3.88  実績: $5.47  サプライズ: +40.97%
+    EPS予想修正: 90日間 -19.4%  30日間 -5.1%
+    来期EPS成長予想: +31.5%  今期売上成長予想: +2.0%
+    売上成長加速中 (QoQ変化: +18.8%)
+    四半期売上推移:
+      2026-03-31  売上: $2.5B  営業利益: $0.5B
+      2025-12-31  売上: $2.3B  営業利益: $0.4B
+      2025-09-30  売上: $2.5B  営業利益: $0.6B
+      2025-06-30  売上: $2.6B  営業利益: $0.9B
+
+  【アナリスト評価】
+    コンセンサス: 1.9 - Buy  (アナリスト数: 30名)
+    現在価格: $203.16  ターゲット平均: $226.29  ($157〜$300)  上昇余地: +11.4%
+    直近アクション: アップグレード 2件 / ダウングレード 0件
+
+  【直近アナリストアクション】
+    2026-07-21  Guggenheim: Buy→Buy (main)  TP: $280 (前回: $260)
+    2026-07-21  B of A Securities: Neutral→Neutral (main)  TP: $215 (前回: $217)
+    2026-07-13  Truist Securities: Hold→Buy (up)  TP: $235 (前回: $190)
+    2026-07-08  Morgan Stanley: Equal-Weight→Equal-Weight (main)  TP: $222 (前回: $224)
+    2026-07-07  RBC Capital: Outperform→Outperform (main)  TP: $242 (前回: $227)
+
+  【直近ニュース】
+    2026-07-21  3 Profitable Stocks We Steer Clear Of
+             StockStory
+             https://finance.yahoo.com/markets/stocks/articles/3-profitable-stocks-steer-clear-124626796.html
+    2026-07-20  VERAXA Biotech Shows Regulatory Progress on Cancer Therapy Platform
+             Exec Edge
+             https://finance.yahoo.com/healthcare/articles/veraxa-biotech-shows-regulatory-progress-161540245.html
+    2026-07-16  Slate Medicines Appoints Mark W. Hahn to Board of Directors
+             Exec Edge
+             https://finance.yahoo.com/healthcare/articles/slate-medicines-appoints-mark-w-161853217.html
+    2026-07-15  3 Reasons to Avoid BIIB and 1 Stock to Buy Instead
+             StockStory
+             https://finance.yahoo.com/markets/stocks/articles/3-reasons-avoid-biib-1-151717282.html
+    2026-07-15  Biogen Shares Decline After Detailed Diranersen Alzheimer's Study Data
+             Zacks
+             https://finance.yahoo.com/healthcare/articles/biogen-shares-decline-detailed-diranersen-145100264.html
+
+  【スコア根拠サマリー】
+    セクター内で割安な水準にある。
+    成長率はセクター内で低い。
+    質・健全性はセクター平均並み。
+    決算モメンタムが強い（サプライズ・上方修正・成長加速）。
+    直近4四半期連続で決算ビート。
+    Piotroski F-Score 4/9 — 財務状態は普通。
+    PEG 0.40 — 成長に対して非常に割安。
+    アナリストは強気（レーティング: 1.9/5）。
+    ターゲット価格まで11%の上昇余地。
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  #16  AEE  Ameren Corporation  [Utilities]
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  総合: 65.7   割安度: 53.9   成長力: 82.8   質: 67.3   決算モメンタム: 69.1   価格モメンタム: 51.6
+
+  【定量指標】
+    [バリュエーション]
+      PER: 19.74  (Forward: 18.94)  PBR: 2.24  EV/EBITDA: 13.58  PSR: N/A
+      FCF利回り: -3.6%  PEG: 0.97
+    [成長]
+      売上成長: +15.4%  営業利益成長: +33.6%  EPS成長: +23.2%
+    [質・健全性]
+      ROE: +11.7%  粗利率: +50.5%  D/E: 155.67  FCFマージン: -9.3%
+
+  【決算情報】
+    次回決算日: 2026-07-30
+    直近4.0四半期: 4.0回ビート  平均サプライズ: +5.56%
+      2026-05-05  予想EPS: $1.18  実績: $1.28  サプライズ: +8.16%
+      2026-02-11  予想EPS: $0.77  実績: $0.78  サプライズ: +1.44%
+      2025-11-05  予想EPS: $2.12  実績: $2.35  サプライズ: +10.95%
+      2025-07-31  予想EPS: $0.99  実績: $1.01  サプライズ: +1.71%
+    EPS予想修正: 90日間 +0.1%  30日間 +0.2%
+    来期EPS成長予想: +8.5%  今期売上成長予想: +5.2%
+    売上成長加速中 (QoQ変化: +56.1%)
+    四半期売上推移:
+      2026-03-31  売上: $2.2B  営業利益: $0.5B
+      2025-12-31  売上: $1.8B  営業利益: $0.4B
+      2025-09-30  売上: $2.7B  営業利益: $0.8B
+      2025-06-30  売上: $2.2B  営業利益: $0.4B
+
+  【アナリスト評価】
+    コンセンサス: 1.9 - Buy  (アナリスト数: 15名)
+    現在価格: $109.94  ターゲット平均: $121.80  ($105〜$137)  上昇余地: +10.8%
+    直近アクション: アップグレード 1件 / ダウングレード 0件
+
+  【直近アナリストアクション】
+    2026-07-16  JP Morgan: Overweight→Overweight (main)  TP: $137 (前回: $126)
+    2026-07-16  Truist Securities: Buy→Buy (main)  TP: $124 (前回: $121)
+    2026-07-09  Barclays: Equal-Weight→Equal-Weight (main)  TP: $117 (前回: $116)
+    2026-05-21  JP Morgan: Neutral→Overweight (up)  TP: $126 (前回: $120)
+    2026-05-18  Truist Securities: Buy→Buy (main)  TP: $121 (前回: $126)
+
+  【直近ニュース】
+    2026-07-20  Zacks Industry Outlook Highlights NextEra Energy, Duke Energy, American Electric Power and Ameren
+             Zacks
+             https://finance.yahoo.com/energy/articles/zacks-industry-outlook-highlights-nextera-174000803.html
+    2026-07-20  Are You Looking for a High-Growth Dividend Stock?
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/looking-high-growth-dividend-stock-154504820.html
+    2026-07-17  4 Utility Electric Power Stocks to Buy Amid Industry Headwinds
+             Zacks
+             https://finance.yahoo.com/energy/articles/4-utility-electric-power-stocks-150800385.html
+    2026-07-16  Can FirstEnergy's Grid Investments Drive Long-Term Earnings Growth?
+             Zacks
+             https://finance.yahoo.com/energy/articles/firstenergys-grid-investments-drive-long-174700212.html
+    2026-07-16  Are Utilities Stocks Lagging  Ameren (AEE) This Year?
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/utilities-stocks-lagging-ameren-aee-134004905.html
+
+  【スコア根拠サマリー】
+    バリュエーションはセクター平均並み。
+    高い成長率を示している。
+    質・健全性はセクター平均並み。
+    決算モメンタムはセクター平均並み。
+    直近4四半期連続で決算ビート。
+    Piotroski F-Score 6/9 — 財務状態は普通。
+    FCF利回りがマイナス — キャッシュ燃焼中。
+    PEG 0.97 — 成長に対して割安（GARP基準クリア）。
+    アナリストは強気（レーティング: 1.9/5）。
+    ターゲット価格まで11%の上昇余地。
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  #17  TRV  The Travelers Companies, Inc.  [Financial Services]
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  総合: 65.6   割安度: 84.6   成長力: 59.5   質: 60.6   決算モメンタム: 55.2   価格モメンタム: 61.4
+
+  【定量指標】
+    [バリュエーション]
+      PER: 9.93  (Forward: 12.58)  PBR: 2.33  EV/EBITDA: 7.04  PSR: 1.67
+      FCF利回り: +18.3%  PEG: 0.22
+    [成長]
+      売上成長: +5.2%  営業利益成長: +25.1%  EPS成長: +25.8%
+    [質・健全性]
+      ROE: +26.5%  粗利率: +34.7%  D/E: 27.38  FCFマージン: +21.7%
+
+  【決算情報】
+    EPS予想修正: 90日間 +11.1%  30日間 +10.7%
+    来期EPS成長予想: -6.4%  今期売上成長予想: -1.0%
+    売上成長加速中 (QoQ変化: +6.0%)
+    四半期売上推移:
+      2026-06-30  売上: $12.2B  営業利益: N/A
+      2026-03-31  売上: $11.9B  営業利益: N/A
+      2025-12-31  売上: $12.4B  営業利益: N/A
+      2025-09-30  売上: $12.5B  営業利益: N/A
+
+  【アナリスト評価】
+    コンセンサス: 2.8 - Hold  (アナリスト数: 24名)
+    現在価格: $369.63  ターゲット平均: $336.92  ($262〜$425)  上昇余地: -8.9%
+    直近アクション: アップグレード 0件 / ダウングレード 2件
+
+  【直近アナリストアクション】
+    2026-07-21  Roth Capital: Buy→Buy (main)  TP: $425 (前回: $345)
+    2026-07-21  Barclays: Underweight→Underweight (main)  TP: $318 (前回: $295)
+    2026-07-21  Morgan Stanley: Underweight→Underweight (main)  TP: $330 (前回: $290)
+    2026-07-21  BMO Capital: Outperform→Market Perform (down)  TP: $379 (前回: $314)
+    2026-07-20  Citigroup: Neutral→Neutral (main)  TP: $385 (前回: $315)
+
+  【直近ニュース】
+    2026-07-21  How Berkshire Turns Its Massive Cash Reserve Into an Advantage?
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/berkshire-turns-massive-cash-advantage-182000313.html
+    2026-07-21  WRB Q2 Earnings Beat Estimates on Higher Premiums, Investment Income
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/wrb-q2-earnings-beat-estimates-172400485.html
+    2026-07-20  Netflix upgraded, Microsoft initiated: Wall Street's top analyst calls
+             The Fly
+             https://finance.yahoo.com/markets/stocks/articles/netflix-upgraded-carvana-downgraded-wall-135411903.html
+    2026-07-20  Company News for July 20, 2026
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/company-news-july-20-2026-132700750.html
+    2026-07-20  US Stock Market Today: S&P 500 Futures Drop As Yields Ease And Housing Cools
+             Simply Wall St.
+             https://finance.yahoo.com/markets/stocks/articles/us-stock-market-today-p-080840351.html
+
+  【スコア根拠サマリー】
+    セクター内で割安な水準にある。
+    成長率はセクター平均並み。
+    質・健全性はセクター平均並み。
+    決算モメンタムはセクター平均並み。
+    Piotroski F-Score 5/9 — 財務状態は普通。
+    FCF利回りが高い（18.3%）— キャッシュ創出力が強い。
+    PEG 0.22 — 成長に対して非常に割安。
+    アナリストは中立〜やや強気（レーティング: 2.8/5）。
+    現在価格はターゲットを9%上回っている。
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  #18  HST  Host Hotels & Resorts, Inc.  [Real Estate]
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  総合: 65.5   割安度: 86.2   成長力: 66.1   質: 43.5   決算モメンタム: 52.4   価格モメンタム: 98.4
+
+  【定量指標】
+    [バリュエーション]
+      PER: 16.63  (Forward: 24.02)  PBR: 2.45  EV/EBITDA: 12.35  PSR: N/A
+      FCF利回り: +5.8%  PEG: 0.23
+    [成長]
+      売上成長: +7.6%  営業利益成長: +7.8%  EPS成長: +9.8%
+    [質・健全性]
+      ROE: +14.9%  粗利率: +29.0%  D/E: 80.48  FCFマージン: +14.2%
+
+  【決算情報】
+    次回決算日: 2026-08-05
+    直近4.0四半期: 4.0回ビート  平均サプライズ: +147.24%
+      2026-05-06  予想EPS: $0.33  実績: $0.72  サプライズ: +116.00%
+      2026-02-17  予想EPS: $0.19  実績: $0.20  サプライズ: +4.07%
+      2025-11-05  予想EPS: $0.04  実績: $0.23  サプライズ: +428.25%
+      2025-07-30  予想EPS: $0.23  実績: $0.32  サプライズ: +40.66%
+    EPS予想修正: 90日間 +18.5%  30日間 -5.7%
+    来期EPS成長予想: -21.6%  今期売上成長予想: -0.1%
+    売上成長減速中 (QoQ変化: -17.8%)
+    四半期売上推移:
+      2026-03-31  売上: $1.6B  営業利益: $0.3B
+      2025-12-31  売上: $1.6B  営業利益: $0.2B
+      2025-09-30  売上: $1.3B  営業利益: $0.1B
+      2025-06-30  売上: $1.6B  営業利益: $0.3B
+
+  【アナリスト評価】
+    コンセンサス: 1.9 - Buy  (アナリスト数: 20名)
+    現在価格: $24.44  ターゲット平均: $24.50  ($21〜$28)  上昇余地: +0.3%
+    直近アクション: アップグレード 0件 / ダウングレード 0件
+
+  【直近アナリストアクション】
+    2026-07-21  JP Morgan: Neutral→Neutral (main)  TP: $25 (前回: $22)
+    2026-07-21  Barclays: Equal-Weight→Equal-Weight (main)  TP: $24 (前回: $23)
+    2026-06-10  Ladenburg Thalmann: Buy→Buy (main)  TP: $28 (前回: $25)
+    2026-06-02  UBS: Neutral→Neutral (main)  TP: $23 (前回: $20)
+    2026-06-01  Barclays: Equal-Weight→Equal-Weight (main)  TP: $23 (前回: $20)
+
+  【直近ニュース】
+    2026-07-17  What You Need To Know Ahead of Host Hotels & Resorts’ Earnings Release
+             Barchart
+             https://www.barchart.com/story/news/3333501/what-you-need-to-know-ahead-of-host-hotels-resorts-earnings-release
+    2026-07-15  Ladenburg Lifts PT on Host Hotels & Resorts (HST) – Here’s Why
+             Insider Monkey
+             https://finance.yahoo.com/markets/stocks/articles/ladenburg-lifts-pt-host-hotels-083514388.html
+    2026-07-14  HST or CUBE: Which Is the Better Value Stock Right Now?
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/hst-cube-better-value-stock-154003532.html
+    2026-07-07  Host Hotels Gains 18.8% in Three Months: Will the Trend Last?
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/host-hotels-gains-18-8-174600216.html
+    2026-07-04  Host Hotels & Resorts (HST) Earns Price Target Hikes as World Cup and RevPAR Boost Outlook
+             Insider Monkey
+             https://finance.yahoo.com/real-estate/articles/host-hotels-resorts-hst-earns-023457624.html
+
+  【スコア根拠サマリー】
+    セクター内で割安な水準にある。
+    成長率はセクター平均並み。
+    質・健全性はセクター平均並み。
+    決算モメンタムはセクター平均並み。
+    直近4四半期連続で決算ビート。
+    Piotroski F-Score 8/9 — 財務状態が優良（ROA>0; CFO>0; ROA改善; CFO>NI; LTD低下; 流動比率改善; 希薄化なし; 資産回転率改善）。
+    PEG 0.23 — 成長に対して非常に割安。
+    アナリストは強気（レーティング: 1.9/5）。
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  #19  WDC  Western Digital Corporation  [Technology]
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  総合: 65.2   割安度: 29.7   成長力: 94.2   質: 55.6   決算モメンタム: 83.3   価格モメンタム: 97.6
+
+  【定量指標】
+    [バリュエーション]
+      PER: 32.80  (Forward: 29.57)  PBR: 26.22  EV/EBITDA: 42.39  PSR: N/A
+      FCF利回り: +1.2%  PEG: 0.06
+    [成長]
+      売上成長: +50.7%  営業利益成長: +2095.9%  EPS成長: +333.2%
+    [質・健全性]
+      ROE: +85.9%  粗利率: +45.4%  D/E: 17.81  FCFマージン: +13.4%
+
+  【決算情報】
+    EPS予想修正: 90日間 +11.0%  30日間 +0.2%
+    来期EPS成長予想: +86.3%  今期売上成長予想: +35.2%
+    売上成長加速中 (QoQ変化: +3.5%)
+    四半期売上推移:
+      2026-03-31  売上: $3.3B  営業利益: $1.2B
+      2025-12-31  売上: $3.0B  営業利益: $1.0B
+      2025-09-30  売上: $2.8B  営業利益: $0.8B
+      2025-06-30  売上: $2.6B  営業利益: $0.7B
+
+  【アナリスト評価】
+    コンセンサス: 1.5 - Strong Buy  (アナリスト数: 24名)
+    現在価格: $548.39  ターゲット平均: $633.83  ($415〜$1050)  上昇余地: +15.6%
+    直近アクション: アップグレード 0件 / ダウングレード 0件
+
+  【直近アナリストアクション】
+    2026-07-13  Citigroup: Buy→Buy (main)  TP: $800 (前回: $685)
+    2026-07-10  Wells Fargo: Overweight→Overweight (main)  TP: $730 (前回: $575)
+    2026-07-08  Susquehanna: Neutral→Neutral (main)  TP: $500 (前回: $360)
+    2026-07-01  B of A Securities: Buy→Buy (main)  TP: $732 (前回: $610)
+    2026-06-29  Cantor Fitzgerald: Overweight→Overweight (main)  TP: $900 (前回: $660)
+
+  【直近ニュース】
+    2026-07-21  Dow Jones Futures: S&P 500 Regains 50-Day As Sandisk, Micron Soar; Google, Tesla Earnings Due
+             Investor's Business Daily
+             https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-sp-500-sandisk-micron-google-tesla-earnings/?src=A00220&yptr=yahoo
+    2026-07-21  Why Sandisk Shares Are Tumbling and What Investors Should Know
+             Motley Fool
+             https://www.fool.com/investing/2026/07/21/why-sandisk-shares-are-tumbling-and-what-investors/
+    2026-07-21  Seagate, Western Digital, FormFactor, Amkor, and Teradyne Shares Are Soaring, What You Need To Know
+             StockStory
+             https://finance.yahoo.com/markets/stocks/articles/seagate-western-digital-formfactor-amkor-204626885.html
+    2026-07-21  SpaceX, Micron, Western Digital, Sandisk, Danaher, and More Stocks That Explain Today’s Market
+             Barrons.com
+             https://www.barrons.com/articles/stock-movers-84ab056e?siteid=yhoof2&yptr=yahoo
+    2026-07-21  Chip Stocks Surge as SK hynix, Micron Lead AI-Fueled Rally
+             GuruFocus.com
+             https://finance.yahoo.com/markets/stocks/articles/chip-stocks-surge-sk-hynix-174430156.html
+
+  【スコア根拠サマリー】
+    バリュエーションはセクター内で割高。
+    高い成長率を示している。
+    質・健全性はセクター平均並み。
+    決算モメンタムが強い（サプライズ・上方修正・成長加速）。
+    Piotroski F-Score 6/9 — 財務状態は普通。
+    PEG 0.06 — 成長に対して非常に割安。
+    アナリストは強気（レーティング: 1.5/5）。
+    ターゲット価格まで16%の上昇余地。
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  #20  EME  EMCOR Group, Inc.  [Industrials]
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  総合: 65.2   割安度: 57.2   成長力: 84.2   質: 54.9   決算モメンタム: 60.3   価格モメンタム: 85.3
+
+  【定量指標】
+    [バリュエーション]
+      PER: 25.55  (Forward: 23.09)  PBR: 8.74  EV/EBITDA: 17.65  PSR: 1.91
+      FCF利回り: +2.7%  PEG: 0.77
+    [成長]
+      売上成長: +16.6%  営業利益成長: +16.6%  EPS成長: +26.4%
+    [質・健全性]
+      ROE: +39.2%  粗利率: +19.3%  D/E: 13.36  FCFマージン: +7.0%
+
+  【決算情報】
+    次回決算日: 2026-07-30
+    直近4.0四半期: 4.0回ビート  平均サプライズ: +10.38%
+      2026-04-29  予想EPS: $5.90  実績: $6.84  サプライズ: +15.85%
+      2026-02-26  予想EPS: $6.68  実績: $7.19  サプライズ: +7.61%
+      2025-10-30  予想EPS: $6.53  実績: $6.57  サプライズ: +0.65%
+      2025-07-31  予想EPS: $5.72  実績: $6.72  サプライズ: +17.42%
+    EPS予想修正: 90日間 +3.9%  30日間 +0.2%
+    来期EPS成長予想: +11.9%  今期売上成長予想: +11.8%
+    売上成長減速中 (QoQ変化: -2.4%)
+    四半期売上推移:
+      2026-03-31  売上: $4.6B  営業利益: $0.4B
+      2025-12-31  売上: $4.5B  営業利益: $0.4B
+      2025-09-30  売上: $4.3B  営業利益: $0.4B
+      2025-06-30  売上: $4.3B  営業利益: $0.4B
+
+  【アナリスト評価】
+    コンセンサス: 1.6 - Buy  (アナリスト数: 7名)
+    現在価格: $760.27  ターゲット平均: $1000.14  ($885〜$1123)  上昇余地: +31.6%
+    直近アクション: アップグレード 0件 / ダウングレード 0件
+
+  【直近アナリストアクション】
+    2026-06-16  Cantor Fitzgerald: Overweight→Overweight (reit)  TP: $1123 (前回: $1123)
+    2026-05-28  Oppenheimer: →Outperform (init)  TP: $1100
+    2026-03-10  Cantor Fitzgerald: →Overweight (init)  TP: $848
+    2026-03-06  UBS: Buy→Buy (main)  TP: $945 (前回: $900)
+    2026-03-03  Stifel: Buy→Buy (main)  TP: $814 (前回: $754)
+
+  【直近ニュース】
+    2026-07-21  Is Comfort Systems Stock Worth Buying Before Q2 Earnings?
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/comfort-systems-stock-worth-buying-144100363.html
+    2026-07-21  Can Quanta's Execution Certainty Strengthen Its Competitive Position?
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/quantas-execution-certainty-strengthen-competitive-140300879.html
+    2026-07-20  Sterling vs. Granite: Which Construction Stock Is a Buy Now?
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/sterling-vs-granite-construction-stock-165500884.html
+    2026-07-17  Implied Volatility Surging for EMCOR Stock Options
+             Zacks
+             https://finance.yahoo.com/markets/options/articles/implied-volatility-surging-emcor-stock-151200990.html
+    2026-07-17  EMCOR (EME) Stock Could Be 43% Undervalued Following Raised 2026 Guidance
+             Simply Wall St.
+             https://finance.yahoo.com/markets/stocks/articles/emcor-eme-stock-could-43-151143549.html
+
+  【スコア根拠サマリー】
+    バリュエーションはセクター平均並み。
+    高い成長率を示している。
+    質・健全性はセクター平均並み。
+    決算モメンタムはセクター平均並み。
+    直近4四半期連続で決算ビート。
+    Piotroski F-Score 6/9 — 財務状態は普通。
+    PEG 0.77 — 成長に対して割安（GARP基準クリア）。
+    アナリストは強気（レーティング: 1.6/5）。
+    ターゲット価格まで32%の上昇余地。
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  #21  ES  Eversource Energy (D/B/A)  [Utilities]
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  総合: 65.2   割安度: 86.3   成長力: 73.6   質: 67.4   決算モメンタム: 25.5   価格モメンタム: 48.4
+
+  【定量指標】
+    [バリュエーション]
+      PER: 15.64  (Forward: 14.90)  PBR: 1.66  EV/EBITDA: 11.86  PSR: 1.97
+      FCF利回り: +1.0%  PEG: 2.01
+    [成長]
+      売上成長: +13.8%  営業利益成長: +10.5%  EPS成長: +108.5%
+    [質・健全性]
+      ROE: +10.9%  粗利率: +53.5%  D/E: 181.82  FCFマージン: -0.3%
+
+  【決算情報】
+    次回決算日: 2026-07-30
+    直近4.0四半期: 4.0回ビート  平均サプライズ: +3.11%
+      2026-05-06  予想EPS: $1.63  実績: $1.73  サプライズ: +6.21%
+      2026-02-12  予想EPS: $1.10  実績: $1.12  サプライズ: +1.64%
+      2025-11-04  予想EPS: $1.15  実績: $1.19  サプライズ: +3.62%
+      2025-07-31  予想EPS: $0.95  実績: $0.96  サプライズ: +0.96%
+    EPS予想修正: 90日間 -2.6%  30日間 -0.6%
+    来期EPS成長予想: +5.4%  今期売上成長予想: +1.2%
+    売上成長加速中 (QoQ変化: +29.0%)
+    四半期売上推移:
+      2026-03-31  売上: $4.5B  営業利益: $1.1B
+      2025-12-31  売上: $3.4B  営業利益: $0.7B
+      2025-09-30  売上: $3.2B  営業利益: $0.7B
+      2025-06-30  売上: $2.8B  営業利益: $0.7B
+
+  【アナリスト評価】
+    コンセンサス: 2.8 - Hold  (アナリスト数: 12名)
+    現在価格: $73.05  ターゲット平均: $73.25  ($54〜$85)  上昇余地: +0.3%
+    直近アクション: アップグレード 0件 / ダウングレード 2件
+
+  【直近アナリストアクション】
+    2026-07-02  Wells Fargo: Overweight→Overweight (main)  TP: $76 (前回: $75)
+    2026-06-11  Argus Research: Buy→Hold (down)
+    2026-05-11  BMO Capital: Market Perform→Market Perform (main)  TP: $73 (前回: $75)
+    2026-05-08  Wells Fargo: Overweight→Overweight (main)  TP: $75 (前回: $74)
+    2026-04-21  Scotiabank: Sector Underperform→Sector Underperform (main)  TP: $63 (前回: $66)
+
+  【直近ニュース】
+    2026-07-21  AI Power Demand Continues to Surge: 5 Highest Yielding Utility Stocks You Can Hold for Decades
+             24/7 Wall St.
+             https://247wallst.com/investing/2026/07/21/power-demand-continues-to-surge-5-highest-yielding-utility-stocks-you-can-hold-for-decades/
+    2026-07-11  Eversource Energy (ES) Stock Looks Undervalued Even As The Market Stays Cautious
+             Simply Wall St.
+             https://finance.yahoo.com/markets/stocks/articles/eversource-energy-es-stock-looks-220731759.html
+    2026-07-11  Did Eversource’s Aquarion Exit and Pure-Play Shift Just Redefine ES’s Risk-Reward Profile?
+             Simply Wall St.
+             https://finance.yahoo.com/markets/stocks/articles/did-eversource-aquarion-exit-pure-111050719.html
+    2026-07-09  Can ES' Portfolio Transformation Create Long-Term Shareholder Value?
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/es-portfolio-transformation-create-long-160100259.html
+    2026-07-09  Eversource Energy's Quarterly Earnings Preview: What You Need to Know
+             Barchart
+             https://www.barchart.com/story/news/3205317/eversource-energy-s-quarterly-earnings-preview-what-you-need-to-know
+
+  【スコア根拠サマリー】
+    セクター内で割安な水準にある。
+    高い成長率を示している。
+    質・健全性はセクター平均並み。
+    決算モメンタムが弱い。
+    直近4四半期連続で決算ビート。
+    Piotroski F-Score 7/9 — 財務状態が優良（ROA>0; CFO>0; ROA改善; CFO>NI; LTD低下; 粗利率改善; 資産回転率改善）。
+    PEG 2.01 — 成長に対して割高。
+    アナリストは中立〜やや強気（レーティング: 2.8/5）。
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  #22  GILD  Gilead Sciences, Inc.  [Healthcare]
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  総合: 65.0   割安度: 55.8   成長力: 67.0   質: 77.9   決算モメンタム: 49.2   価格モメンタム: 69.5
+
+  【定量指標】
+    [バリュエーション]
+      PER: 17.73  (Forward: 13.51)  PBR: 6.88  EV/EBITDA: 12.05  PSR: 5.44
+      FCF利回り: +4.5%  PEG: 0.25
+    [成長]
+      売上成長: +2.4%  営業利益成長: +10.4%  EPS成長: +1672.9%
+    [質・健全性]
+      ROE: +43.4%  粗利率: +79.4%  D/E: 94.64  FCFマージン: +32.1%
+
+  【決算情報】
+    次回決算日: 2026-08-06
+    直近4.0四半期: 4.0回ビート  平均サプライズ: +6.87%
+      2026-05-07  予想EPS: $1.91  実績: $2.03  サプライズ: +6.24%
+      2026-02-10  予想EPS: $1.81  実績: $1.86  サプライズ: +2.82%
+      2025-10-30  予想EPS: $2.14  実績: $2.47  サプライズ: +15.68%
+      2025-08-07  予想EPS: $1.96  実績: $2.01  サプライズ: +2.72%
+    EPS予想修正: 90日間 -108.9%  30日間 +2.6%
+    来期EPS成長予想: +1358.8%  今期売上成長予想: +3.5%
+    売上成長減速中 (QoQ変化: -14.2%)
+    四半期売上推移:
+      2026-03-31  売上: $7.0B  営業利益: $2.7B
+      2025-12-31  売上: $7.9B  営業利益: $3.0B
+      2025-09-30  売上: $7.8B  営業利益: $3.5B
+      2025-06-30  売上: $7.1B  営業利益: $2.7B
+
+  【アナリスト評価】
+    コンセンサス: 1.6 - Buy  (アナリスト数: 27名)
+    現在価格: $130.28  ターゲット平均: $158.30  ($120〜$180)  上昇余地: +21.5%
+    直近アクション: アップグレード 2件 / ダウングレード 1件
+
+  【直近アナリストアクション】
+    2026-07-21  Leerink Partners: Outperform→Market Perform (down)  TP: $127 (前回: $146)
+    2026-07-08  Morgan Stanley: Overweight→Overweight (main)  TP: $166 (前回: $168)
+    2026-07-07  RBC Capital: Sector Perform→Sector Perform (main)  TP: $120 (前回: $122)
+    2026-07-07  Truist Securities: Buy→Buy (main)  TP: $156 (前回: $157)
+    2026-07-06  Cantor Fitzgerald: Overweight→Overweight (reit)  TP: $155 (前回: $155)
+
+  【直近ニュース】
+    2026-07-21  3 Market-Beating Stocks with Solid Fundamentals
+             StockStory
+             https://finance.yahoo.com/markets/stocks/articles/3-market-beating-stocks-solid-142226623.html
+    2026-07-21  Gilead Sciences' Quarterly Earnings Preview: What You Need to Know
+             Barchart
+             https://www.barchart.com/story/news/3382126/gilead-sciences-quarterly-earnings-preview-what-you-need-to-know
+    2026-07-21  Here Are Tuesday’s Top Wall Street Analyst Research Calls: Adobe, Datadog, Five Below, Fortinet, Gilead Sciences, Goldman Sachs, Microsoft, Salesforce, and More
+             24/7 Wall St.
+             https://247wallst.com/investing/2026/07/21/here-are-tuesdays-top-wall-street-analyst-research-calls-adobe-datadog-five-below-fortinet-gilead-sciences-goldman-sachs-microsoft-salesforce-and-more/
+    2026-07-17  Gilead Sciences (GILD) Sees a More Significant Dip Than Broader Market: Some Facts to Know
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/gilead-sciences-gild-sees-more-220004424.html
+    2026-07-17  Gilead Leads The Battle Vs. HIV. But Rivals Are On The Move.
+             Investor's Business Daily
+             https://www.investors.com/news/technology/gilead-stock-hiv-treatments/?src=A00220&yptr=yahoo
+
+  【スコア根拠サマリー】
+    バリュエーションはセクター平均並み。
+    成長率はセクター平均並み。
+    ROE・財務健全性が高く質が良い。
+    決算モメンタムはセクター平均並み。
+    直近4四半期連続で決算ビート。
+    Piotroski F-Score 8/9 — 財務状態が優良（ROA>0; CFO>0; ROA改善; CFO>NI; LTD低下; 希薄化なし; 粗利率改善; 資産回転率改善）。
+    PEG 0.25 — 成長に対して非常に割安。
+    アナリストは強気（レーティング: 1.6/5）。
+    ターゲット価格まで22%の上昇余地。
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  #23  APP  Applovin Corporation  [Communication Services]
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  総合: 64.1   割安度: 17.0   成長力: 90.1   質: 78.6   決算モメンタム: 65.9   価格モメンタム: 83.3
+
+  【定量指標】
+    [バリュエーション]
+      PER: 37.25  (Forward: 19.78)  PBR: 61.00  EV/EBITDA: 29.50  PSR: 23.36
+      FCF利回り: +2.2%  PEG: 0.17
+    [成長]
+      売上成長: +70.0%  営業利益成長: +117.3%  EPS成長: +111.0%
+    [質・健全性]
+      ROE: +266.4%  粗利率: +88.4%  D/E: 162.89  FCFマージン: +71.9%
+
+  【決算情報】
+    次回決算日: 2026-08-05
+    直近4.0四半期: 4.0回ビート  平均サプライズ: +4.43%
+      2026-05-06  予想EPS: $3.64  実績: $3.76  サプライズ: +3.49%
+      2026-02-11  予想EPS: $3.11  実績: $3.48  サプライズ: +11.87%
+      2025-11-05  予想EPS: $2.53  実績: $2.55  サプライズ: +0.64%
+      2025-08-06  予想EPS: $2.32  実績: $2.36  サプライズ: +1.71%
+    EPS予想修正: 90日間 +1.9%  30日間 -0.2%
+    来期EPS成長予想: +31.8%  今期売上成長予想: +49.5%
+    売上成長減速中 (QoQ変化: -6.9%)
+    四半期売上推移:
+      2026-03-31  売上: $1.8B  営業利益: $1.4B
+      2025-12-31  売上: $1.7B  営業利益: $1.3B
+      2025-09-30  売上: $1.4B  営業利益: $1.1B
+      2025-06-30  売上: $1.3B  営業利益: $1.0B
+
+  【アナリスト評価】
+    コンセンサス: 1.4 - Strong Buy  (アナリスト数: 30名)
+    現在価格: $428.69  ターゲット平均: $654.60  ($406〜$860)  上昇余地: +52.7%
+    直近アクション: アップグレード 0件 / ダウングレード 0件
+
+  【直近アナリストアクション】
+    2026-07-07  Wells Fargo: Overweight→Overweight (main)  TP: $575 (前回: $571)
+    2026-06-29  Raymond James: →Strong Buy (init)  TP: $640
+    2026-06-01  Citigroup: Buy→Buy (main)  TP: $710 (前回: $710)
+    2026-05-28  Needham: Buy→Buy (reit)  TP: $700 (前回: $700)
+    2026-05-07  Macquarie: Outperform→Outperform (main)  TP: $730 (前回: $710)
+
+  【直近ニュース】
+    2026-07-21  PATH or APP: Which AI-driven Tech Stock Should You Bet on?
+             Zacks
+             https://finance.yahoo.com/technology/ai/articles/path-app-ai-driven-tech-172800802.html
+    2026-07-21  AppLovin Corporation (APP) Is a Trending Stock: Facts to Know Before Betting on It
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/applovin-corporation-app-trending-stock-130005575.html
+    2026-07-17  Zoom, AppLovin, and Doximity Shares Are Falling, What You Need To Know
+             StockStory
+             https://finance.yahoo.com/markets/stocks/articles/zoom-applovin-doximity-shares-falling-221746535.html
+    2026-07-16  Is Applovin Corp (APP) Stock a Buy Ahead of the Q2 Report?
+             Insider Monkey
+             https://finance.yahoo.com/markets/stocks/articles/applovin-corp-app-stock-buy-185016265.html
+    2026-07-16  Here's What to Expect From AppLovin’s Next Earnings Report
+             Barchart
+             https://www.barchart.com/story/news/3312916/here-s-what-to-expect-from-applovins-next-earnings-report
+
+  【スコア根拠サマリー】
+    バリュエーションはセクター内で割高。
+    高い成長率を示している。
+    ROE・財務健全性が高く質が良い。
+    決算モメンタムはセクター平均並み。
+    直近4四半期連続で決算ビート。
+    Piotroski F-Score 9/9 — 財務状態が優良（ROA>0; CFO>0; ROA改善; CFO>NI; LTD低下; 流動比率改善; 希薄化なし; 粗利率改善; 資産回転率改善）。
+    PEG 0.17 — 成長に対して非常に割安。
+    アナリストは強気（レーティング: 1.4/5）。
+    ターゲット価格まで53%の上昇余地。
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  #24  FSLR  First Solar, Inc.  [Technology]
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  総合: 63.6   割安度: 83.6   成長力: 71.4   質: 55.0   決算モメンタム: 32.2   価格モメンタム: 70.6
+
+  【定量指標】
+    [バリュエーション]
+      PER: 13.31  (Forward: 8.79)  PBR: 2.24  EV/EBITDA: 8.90  PSR: 4.09
+      FCF利回り: +5.7%  PEG: 0.14
+    [成長]
+      売上成長: +24.1%  営業利益成長: +14.6%  EPS成長: +18.3%
+    [質・健全性]
+      ROE: +18.4%  粗利率: +41.7%  D/E: 5.94  FCFマージン: +22.7%
+
+  【決算情報】
+    次回決算日: 2026-07-30
+    直近4.0四半期: 2.0回ビート  平均サプライズ: +4.75%
+      2026-04-30  予想EPS: $2.96  実績: $3.22  サプライズ: +8.95%
+      2026-02-24  予想EPS: $5.24  実績: $4.84  サプライズ: -7.60%
+      2025-10-30  予想EPS: $4.29  実績: $4.24  サプライズ: -1.13%
+      2025-07-31  予想EPS: $2.68  実績: $3.18  サプライズ: +18.77%
+    EPS予想修正: 90日間 -3.5%  30日間 -0.4%
+    来期EPS成長予想: +33.0%  今期売上成長予想: -2.6%
+    売上成長減速中 (QoQ変化: -43.5%)
+    四半期売上推移:
+      2026-03-31  売上: $1.0B  営業利益: $0.3B
+      2025-12-31  売上: $1.7B  営業利益: $0.5B
+      2025-09-30  売上: $1.6B  営業利益: $0.5B
+      2025-06-30  売上: $1.1B  営業利益: $0.4B
+
+  【アナリスト評価】
+    コンセンサス: 2.1 - Buy  (アナリスト数: 28名)
+    現在価格: $206.05  ターゲット平均: $254.25  ($150〜$330)  上昇余地: +23.4%
+    直近アクション: アップグレード 2件 / ダウングレード 0件
+
+  【直近アナリストアクション】
+    2026-07-14  Barclays: Overweight→Overweight (main)  TP: $279 (前回: $213)
+    2026-07-14  Truist Securities: Buy→Hold (init)  TP: $249
+    2026-07-10  Susquehanna: Positive→Positive (main)  TP: $270 (前回: $250)
+    2026-07-09  Morgan Stanley: Overweight→Overweight (main)  TP: $245 (前回: $230)
+    2026-07-07  Deutsche Bank: Hold→Buy (up)  TP: $272 (前回: $245)
+
+  【直近ニュース】
+    2026-07-21  Jim Cramer Says Buy Lyft at $15, But Warns AST SpaceMobile Is “Losing a Fortune” and Could Fall to $40
+             24/7 Wall St.
+             https://247wallst.com/investing/2026/07/21/jim-cramer-says-buy-lyft-at-15-but-warns-ast-spacemobile-is-losing-a-fortune-and-could-fall-to-40/
+    2026-07-21  T1 Energy vs. First Solar: Which Solar Stock Has More Upside?
+             Zacks
+             https://finance.yahoo.com/energy/articles/t1-energy-vs-first-solar-153000977.html
+    2026-07-20  Alphabet’s Biggest Solar Deal Isn’t Really About Going Green. Here’s Why Investors Should Buy the GOOGL Stock Dip.
+             Barchart
+             https://www.barchart.com/story/news/3366438/alphabets-biggest-solar-deal-isnt-really-about-going-green-heres-why-investors-should-buy-the-googl-stock-dip
+    2026-07-19  3 Green Energy Stocks to Buy in July
+             24/7 Wall St.
+             https://247wallst.com/investing/2026/07/19/3-green-energy-stocks-to-buy-in-july/
+    2026-07-17  2 Mid-Cap Stocks with Solid Fundamentals and 1 Facing Headwinds
+             StockStory
+             https://finance.yahoo.com/markets/stocks/articles/2-mid-cap-stocks-solid-141746694.html
+
+  【スコア根拠サマリー】
+    セクター内で割安な水準にある。
+    高い成長率を示している。
+    質・健全性はセクター平均並み。
+    決算モメンタムが弱い。
+    Piotroski F-Score 7/9 — 財務状態が優良（ROA>0; CFO>0; ROA改善; CFO>NI; LTD低下; 流動比率改善; 資産回転率改善）。
+    PEG 0.14 — 成長に対して非常に割安。
+    アナリストは中立〜やや強気（レーティング: 2.1/5）。
+    ターゲット価格まで23%の上昇余地。
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  #25  GEN  Gen Digital Inc.  [Technology]
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  総合: 63.6   割安度: 79.7   成長力: 85.6   質: 60.8   決算モメンタム: 34.3   価格モメンタム: 31.8
+
+  【定量指標】
+    [バリュエーション]
+      PER: 16.63  (Forward: 7.94)  PBR: 5.98  EV/EBITDA: 10.02  PSR: N/A
+      FCF利回り: +5.9%  PEG: 0.03
+    [成長]
+      売上成長: +27.1%  営業利益成長: +33.0%  EPS成長: +51.3%
+    [質・健全性]
+      ROE: +39.9%  粗利率: +78.5%  D/E: 316.35  FCFマージン: +30.5%
+
+  【決算情報】
+    次回決算日: 2026-08-06
+    直近4.0四半期: 4.0回ビート  平均サプライズ: +3.29%
+      2026-05-07  予想EPS: $0.65  実績: $0.67  サプライズ: +3.40%
+      2026-02-05  予想EPS: $0.63  実績: $0.64  サプライズ: +1.43%
+      2025-11-06  予想EPS: $0.61  実績: $0.62  サプライズ: +1.59%
+      2025-08-07  予想EPS: $0.60  実績: $0.64  サプライズ: +6.72%
+    EPS予想修正: 90日間 +1.0%  30日間 N/A
+    来期EPS成長予想: +13.5%  今期売上成長予想: +7.5%
+    売上成長加速中 (QoQ変化: +1.8%)
+    四半期売上推移:
+      2026-03-31  売上: $1.3B  営業利益: $0.8B
+      2025-12-31  売上: $1.2B  営業利益: $0.4B
+      2025-09-30  売上: $1.2B  営業利益: $0.4B
+      2025-06-30  売上: $1.3B  営業利益: $0.5B
+
+  【アナリスト評価】
+    コンセンサス: 2.1 - Buy  (アナリスト数: 10名)
+    現在価格: $26.11  ターゲット平均: $29.71  ($22〜$46)  上昇余地: +13.8%
+    直近アクション: アップグレード 0件 / ダウングレード 0件
+
+  【直近アナリストアクション】
+    2026-05-08  RBC Capital: Sector Perform→Sector Perform (main)  TP: $24 (前回: $22)
+    2026-05-08  Barclays: Equal-Weight→Equal-Weight (main)  TP: $27 (前回: $26)
+    2026-05-08  Evercore ISI Group: Outperform→Outperform (main)  TP: $38 (前回: $37)
+    2026-04-13  Barclays: Equal-Weight→Equal-Weight (main)  TP: $26 (前回: $32)
+    2026-03-03  Wells Fargo: →Equal-Weight (init)  TP: $22
+
+  【直近ニュース】
+    2026-07-10  CVLT Grew. The Stock Did Not. Someone Is Wrong
+             Trefis
+             https://www.trefis.com/articles/606426/cvlt-grew-the-stock-did-not-someone-is-wrong/2026-07-09
+    2026-07-08  Own ServiceNow For AI? Gen Digital's Numbers Speak Louder
+             Trefis
+             https://www.trefis.com/articles/606165/own-servicenow-for-ai-gen-digitals-numbers-speak-louder/2026-07-08
+    2026-07-07  GEN Grew. The Stock Did Not. Someone Is Wrong
+             Trefis
+             https://www.trefis.com/articles/605950/gen-grew-the-stock-did-not-someone-is-wrong/2026-07-07
+    2026-06-19  Gen Digital Stock: Is GEN Underperforming the Technology Sector?
+             Barchart
+             https://www.barchart.com/story/news/2548287/gen-digital-stock-is-gen-underperforming-the-technology-sector
+    2026-06-04  Gen Digital (GEN) Valuation Check After Best In Class Identity Protection Recognition
+             Simply Wall St.
+             https://finance.yahoo.com/markets/stocks/articles/gen-digital-gen-valuation-check-201255299.html
+
+  【スコア根拠サマリー】
+    セクター内で割安な水準にある。
+    高い成長率を示している。
+    質・健全性はセクター平均並み。
+    決算モメンタムが弱い。
+    直近4四半期連続で決算ビート。
+    Piotroski F-Score 7/9 — 財務状態が優良（ROA>0; CFO>0; ROA改善; CFO>NI; LTD低下; 希薄化なし; 資産回転率改善）。
+    PEG 0.03 — 成長に対して非常に割安。
+    アナリストは中立〜やや強気（レーティング: 2.1/5）。
+    ターゲット価格まで14%の上昇余地。
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  #26  MNST  Monster Beverage Corporation  [Consumer Defensive]
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  総合: 63.5   割安度: 8.8   成長力: 71.0   質: 85.5   決算モメンタム: 77.2   価格モメンタム: 98.5
+
+  【定量指標】
+    [バリュエーション]
+      PER: 45.63  (Forward: 36.43)  PBR: 10.58  EV/EBITDA: 32.05  PSR: 10.51
+      FCF利回り: +1.9%  PEG: 1.26
+    [成長]
+      売上成長: +10.7%  営業利益成長: +25.3%  EPS成長: +26.3%
+    [質・健全性]
+      ROE: +26.7%  粗利率: +55.5%  D/E: 1.08  FCFマージン: +23.4%
+
+  【決算情報】
+    次回決算日: 2026-08-06
+    直近4.0四半期: 3.0回ビート  平均サプライズ: +6.44%
+      2026-05-07  予想EPS: $0.53  実績: $0.58  サプライズ: +10.16%
+      2026-02-26  予想EPS: $0.48  実績: $0.46  サプライズ: -4.50%
+      2025-11-06  予想EPS: $0.48  実績: $0.54  サプライズ: +13.36%
+      2025-08-07  予想EPS: $0.48  実績: $0.51  サプライズ: +6.73%
+    EPS予想修正: 90日間 +1.6%  30日間 +0.6%
+    来期EPS成長予想: +13.2%  今期売上成長予想: +15.3%
+    売上成長加速中 (QoQ変化: +13.4%)
+    四半期売上推移:
+      2026-03-31  売上: $2.4B  営業利益: $0.7B
+      2025-12-31  売上: $2.1B  営業利益: $0.5B
+      2025-09-30  売上: $2.2B  営業利益: $0.7B
+      2025-06-30  売上: $2.1B  営業利益: $0.6B
+
+  【アナリスト評価】
+    コンセンサス: 2.1 - Buy  (アナリスト数: 24名)
+    現在価格: $94.46  ターゲット平均: $93.53  ($64〜$113)  上昇余地: -1.0%
+    直近アクション: アップグレード 0件 / ダウングレード 1件
+
+  【直近アナリストアクション】
+    2026-07-20  BMO Capital: Market Perform→Market Perform (main)  TP: $95 (前回: $73)
+    2026-07-20  Deutsche Bank: Buy→Hold (down)  TP: $98 (前回: $94)
+    2026-07-16  UBS: Neutral→Neutral (main)  TP: $104 (前回: $84)
+    2026-07-16  Stifel: Buy→Buy (main)  TP: $105 (前回: $90)
+    2026-07-14  Citigroup: Buy→Buy (main)  TP: $113 (前回: $100)
+
+  【直近ニュース】
+    2026-07-21  Monster Beverage Earnings Preview: What to Expect
+             Barchart
+             https://www.barchart.com/story/news/3378318/monster-beverage-earnings-preview-what-to-expect
+    2026-07-20  Sector Update: Consumer Stocks Softer Late Afternoon
+             MT Newswires
+             https://finance.yahoo.com/markets/stocks/articles/sector-consumer-stocks-softer-afternoon-192046455.html
+    2026-07-20  Monster Stock Creates Add-On Entry After Powerful Earnings-Fueled Breakout
+             Investor's Business Daily
+             https://www.investors.com/research/monster-stock-mnst/?src=A00220&yptr=yahoo
+    2026-07-20  Monster Beverage stock downgraded by Deutsche Bank as valuation limits upside
+             InvestorsHub
+             https://investorshub.advfn.com/market-news/article/32212/monster-beverage-stock-downgraded-by-deutsche-bank-as-valuation-limits-upside
+    2026-07-20  Monster Beverage downgraded to Hold as valuation seen limiting further upside
+             Investing.com
+             https://finance.yahoo.com/markets/stocks/articles/monster-beverage-downgraded-hold-valuation-134425573.html
+
+  【スコア根拠サマリー】
+    バリュエーションはセクター内で割高。
+    高い成長率を示している。
+    ROE・財務健全性が高く質が良い。
+    決算モメンタムが強い（サプライズ・上方修正・成長加速）。
+    直近4四半期中3回決算ビート。
+    Piotroski F-Score 5/9 — 財務状態は普通。
+    アナリストは中立〜やや強気（レーティング: 2.1/5）。
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  #27  VICI  VICI Properties Inc.  [Real Estate]
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  総合: 63.1   割安度: 69.3   成長力: 51.9   質: 87.9   決算モメンタム: 47.0   価格モメンタム: 19.4
+
+  【定量指標】
+    [バリュエーション]
+      PER: 9.10  (Forward: 9.07)  PBR: 1.01  EV/EBITDA: 11.61  PSR: 7.24
+      FCF利回り: +2.8%  PEG: 0.15
+    [成長]
+      売上成長: +4.1%  営業利益成長: +3.1%  EPS成長: +3.6%
+    [質・健全性]
+      ROE: +11.3%  粗利率: +99.1%  D/E: 61.85  FCFマージン: +62.6%
+
+  【決算情報】
+    EPS予想修正: 90日間 +0.7%  30日間 N/A
+    来期EPS成長予想: +1.4%  今期売上成長予想: +4.6%
+    売上成長減速中 (QoQ変化: -0.0%)
+    四半期売上推移:
+      2026-03-31  売上: $1.0B  営業利益: $1.1B
+      2025-12-31  売上: $1.0B  営業利益: $0.8B
+      2025-09-30  売上: $1.0B  営業利益: $1.0B
+      2025-06-30  売上: $1.0B  営業利益: $1.1B
+
+  【アナリスト評価】
+    コンセンサス: 1.8 - Buy  (アナリスト数: 24名)
+    現在価格: $26.58  ターゲット平均: $33.38  ($27〜$39)  上昇余地: +25.6%
+    直近アクション: アップグレード 0件 / ダウングレード 2件
+
+  【直近アナリストアクション】
+    2026-07-15  Wells Fargo: Equal-Weight→Equal-Weight (main)  TP: $27 (前回: $29)
+    2026-07-08  Morgan Stanley: Equal-Weight→Equal-Weight (main)  TP: $31 (前回: $38)
+    2026-06-25  RBC Capital: →Sector Perform (init)  TP: $29
+    2026-06-18  Scotiabank: Sector Perform→Sector Perform (main)  TP: $29 (前回: $32)
+    2026-05-12  Scotiabank: Sector Perform→Sector Perform (main)  TP: $32 (前回: $30)
+
+  【直近ニュース】
+    2026-07-17  Why VICI Properties Inc. (VICI) Dipped More Than Broader Market Today
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/why-vici-properties-inc-vici-221503421.html
+    2026-07-15  Morgan Stanley Keeps Equal Weight Rating on VICI Properties (VICI)
+             Insider Monkey
+             https://finance.yahoo.com/markets/stocks/articles/morgan-stanley-keeps-equal-weight-142432456.html
+    2026-07-13  The Market Could Crack This Summer: 5 Defensive High-Yielding Dividend Stocks to Buy Now
+             24/7 Wall St.
+             https://247wallst.com/investing/2026/07/13/the-market-could-crack-this-summer-5-defensive-high-yielding-divided-stocks-to-buy-now/
+    2026-07-10  5 High-Yield Dividend Stocks Yielding 5% or More to Buy in July
+             24/7 Wall St.
+             https://247wallst.com/investing/2026/07/10/5-high-yield-dividend-stocks-yielding-5-or-more-to-buy-in-july/
+    2026-07-08  Realty Income Announces Dividend Again: Can It Retain Its Market Edge?
+             Zacks
+             https://finance.yahoo.com/real-estate/articles/realty-income-announces-dividend-again-170800519.html
+
+  【スコア根拠サマリー】
+    バリュエーションはセクター平均並み。
+    成長率はセクター平均並み。
+    ROE・財務健全性が高く質が良い。
+    決算モメンタムはセクター平均並み。
+    Piotroski F-Score 6/9 — 財務状態は普通。
+    PEG 0.15 — 成長に対して非常に割安。
+    アナリストは強気（レーティング: 1.8/5）。
+    ターゲット価格まで26%の上昇余地。
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  #28  ED  Consolidated Edison, Inc.  [Utilities]
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  総合: 62.9   割安度: 84.3   成長力: 60.4   質: 66.1   決算モメンタム: 46.9   価格モメンタム: 29.0
+
+  【定量指標】
+    [バリュエーション]
+      PER: 18.52  (Forward: 16.92)  PBR: 1.58  EV/EBITDA: 11.29  PSR: N/A
+      FCF利回り: -1.2%  PEG: 1.31
+    [成長]
+      売上成長: +10.9%  営業利益成長: +9.8%  EPS成長: +11.2%
+    [質・健全性]
+      ROE: +8.7%  粗利率: +53.2%  D/E: 106.18  FCFマージン: +0.2%
+
+  【決算情報】
+    次回決算日: 2026-08-06
+    直近4.0四半期: 3.0回ビート  平均サプライズ: +2.43%
+      2026-05-07  予想EPS: $2.27  実績: $2.18  サプライズ: -3.83%
+      2026-02-19  予想EPS: $0.86  実績: $0.89  サプライズ: +3.44%
+      2025-11-06  予想EPS: $1.75  実績: $1.90  サプライズ: +8.28%
+      2025-08-07  予想EPS: $0.66  実績: $0.67  サプライズ: +1.82%
+    EPS予想修正: 90日間 +0.3%  30日間 -0.0%
+    来期EPS成長予想: +6.2%  今期売上成長予想: +3.2%
+    売上成長加速中 (QoQ変化: +39.4%)
+    四半期売上推移:
+      2026-03-31  売上: $5.1B  営業利益: $1.2B
+      2025-12-31  売上: $4.0B  営業利益: $0.5B
+      2025-09-30  売上: $4.5B  営業利益: $1.0B
+      2025-06-30  売上: $3.6B  営業利益: $0.4B
+
+  【アナリスト評価】
+    コンセンサス: 3.3 - Hold  (アナリスト数: 17名)
+    現在価格: $109.81  ターゲット平均: $110.74  ($97〜$130)  上昇余地: +0.8%
+    直近アクション: アップグレード 0件 / ダウングレード 1件
+
+  【直近アナリストアクション】
+    2026-06-02  Mizuho: Outperform→Neutral (down)  TP: $105
+    2026-05-11  Barclays: Underweight→Underweight (main)  TP: $107 (前回: $110)
+    2026-04-21  Morgan Stanley: Underweight→Underweight (main)  TP: $105 (前回: $106)
+    2026-04-21  Keybanc: Underweight→Underweight (main)  TP: $97 (前回: $96)
+    2026-03-12  JP Morgan: Underweight→Underweight (main)  TP: $113 (前回: $107)
+
+  【直近ニュース】
+    2026-07-21  What You Need To Know Ahead of Consolidated Edison's Earnings Release
+             Barchart
+             https://www.barchart.com/story/news/3386155/what-you-need-to-know-ahead-of-consolidated-edison-s-earnings-release
+    2026-07-17  Live In Manhattan Without Roommates. Here’s the Portfolio That Makes It Happen.
+             24/7 Wall St.
+             https://247wallst.com/personal-finance/2026/07/17/live-in-manhattan-without-roommates-heres-the-portfolio-that-makes-it-happen/
+    2026-07-04  Heat-Driven Grid Strain And New Board Expertise Might Change The Case For Investing In Consolidated Edison (ED)
+             Simply Wall St.
+             https://finance.yahoo.com/markets/stocks/articles/heat-driven-grid-strain-board-180958452.html
+    2026-07-04  Con Edison (ED) Stock Looks Fairly Valued At Current Levels
+             Simply Wall St.
+             https://finance.yahoo.com/markets/stocks/articles/con-edison-ed-stock-looks-081015893.html
+    2026-07-03  Sweltering Heat Dome Threatens US Holiday Events and Power Grids
+             Bloomberg
+             https://finance.yahoo.com/energy/articles/sweltering-heat-dome-threatens-us-113945114.html
+
+  【スコア根拠サマリー】
+    セクター内で割安な水準にある。
+    成長率はセクター平均並み。
+    質・健全性はセクター平均並み。
+    決算モメンタムはセクター平均並み。
+    直近4四半期中3回決算ビート。
+    Piotroski F-Score 6/9 — 財務状態は普通。
+    FCF利回りがマイナス — キャッシュ燃焼中。
+    アナリストは弱気寄り（レーティング: 3.3/5）。
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  #29  VRT  Vertiv Holdings, LLC  [Industrials]
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  総合: 62.8   割安度: 8.6   成長力: 97.3   質: 71.0   決算モメンタム: 67.6   価格モメンタム: 98.0
+
+  【定量指標】
+    [バリュエーション]
+      PER: 76.70  (Forward: 34.32)  PBR: 27.54  EV/EBITDA: 47.33  PSR: 10.79
+      FCF利回り: +1.7%  PEG: 0.25
+    [成長]
+      売上成長: +27.7%  営業利益成長: +37.2%  EPS成長: +168.8%
+    [質・健全性]
+      ROE: +45.1%  粗利率: +37.2%  D/E: 76.91  FCFマージン: +18.4%
+
+  【決算情報】
+    EPS予想修正: 90日間 +5.6%  30日間 +0.1%
+    来期EPS成長予想: +36.5%  今期売上成長予想: +35.8%
+    売上成長減速中 (QoQ変化: -15.6%)
+    四半期売上推移:
+      2026-03-31  売上: $2.6B  営業利益: $0.4B
+      2025-12-31  売上: $2.9B  営業利益: $0.6B
+      2025-09-30  売上: $2.7B  営業利益: $0.5B
+      2025-06-30  売上: $2.6B  営業利益: $0.4B
+
+  【アナリスト評価】
+    コンセンサス: 1.4 - Strong Buy  (アナリスト数: 25名)
+    現在価格: $304.50  ターゲット平均: $379.20  ($236〜$500)  上昇余地: +24.5%
+    直近アクション: アップグレード 0件 / ダウングレード 0件
+
+  【直近アナリストアクション】
+    2026-07-16  RBC Capital: Outperform→Outperform (main)  TP: $418 (前回: $435)
+    2026-07-16  Baird: →Outperform (init)  TP: $370
+    2026-06-10  Bernstein: →Outperform (init)  TP: $416
+    2026-05-21  Oppenheimer: Outperform→Outperform (main)  TP: $353 (前回: $330)
+    2026-05-20  TD Cowen: Buy→Buy (main)  TP: $387 (前回: $347)
+
+  【直近ニュース】
+    2026-07-21  AI Chips Need Liquid Cooling. That's Why Vertiv's Stock Rally Can Continue.
+             Motley Fool
+             https://www.fool.com/investing/2026/07/21/ai-chips-need-liquid-cooling-thats-why-vertivs-sto/
+    2026-07-20  Vertiv (VRT) Is Buying Strategic Thermal Labs For AI Cooling Growth
+             Simply Wall St.
+             https://finance.yahoo.com/technology/ai/articles/vertiv-vrt-buying-strategic-thermal-210822081.html
+    2026-07-20  VRT Stock Is Rising Today – What’s The Deal With Strategic Thermal Labs About?
+             Stocktwits
+             https://stocktwits.com/news-articles/markets/equity/vrt-stock-is-rising-today-what-s-the-deal-with-strategic-thermal-labs-about/cZZi9MDR7Hc
+    2026-07-20  Jim Cramer Says Wait Before Buying the Dip on Vertiv: “You’ll Get A Better Price.”
+             24/7 Wall St.
+             https://247wallst.com/investing/2026/07/20/jim-cramer-says-wait-before-buying-the-dip-on-vertiv-youll-get-a-better-price/
+    2026-07-20  Roper Technologies Set to Report Q2 Earnings: What's in the Cards?
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/roper-technologies-set-report-q2-144400182.html
+
+  【スコア根拠サマリー】
+    バリュエーションはセクター内で割高。
+    高い成長率を示している。
+    ROE・財務健全性が高く質が良い。
+    決算モメンタムはセクター平均並み。
+    Piotroski F-Score 5/9 — 財務状態は普通。
+    PEG 0.25 — 成長に対して非常に割安。
+    アナリストは強気（レーティング: 1.4/5）。
+    ターゲット価格まで25%の上昇余地。
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  #30  BMY  Bristol-Myers Squibb Company  [Healthcare]
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  総合: 62.5   割安度: 73.4   成長力: 46.4   質: 69.2   決算モメンタム: 45.6   価格モメンタム: 72.9
+
+  【定量指標】
+    [バリュエーション]
+      PER: 17.07  (Forward: 9.83)  PBR: 6.20  EV/EBITDA: 8.37  PSR: 2.57
+      FCF利回り: +6.2%  PEG: 1.07
+    [成長]
+      売上成長: -0.2%  営業利益成長: +133.1%  EPS成長: +178.8%
+    [質・健全性]
+      ROE: +38.7%  粗利率: +72.0%  D/E: 230.97  FCFマージン: +26.7%
+
+  【決算情報】
+    次回決算日: 2026-07-30
+    直近4.0四半期: 4.0回ビート  平均サプライズ: +13.98%
+      2026-04-30  予想EPS: $1.42  実績: $1.58  サプライズ: +11.18%
+      2026-02-05  予想EPS: $1.20  実績: $1.26  サプライズ: +4.57%
+      2025-10-30  予想EPS: $1.52  実績: $1.63  サプライズ: +7.55%
+      2025-07-31  予想EPS: $1.10  実績: $1.46  サプライズ: +32.60%
+    EPS予想修正: 90日間 +1.3%  30日間 +0.5%
+    来期EPS成長予想: -2.3%  今期売上成長予想: -1.5%
+    売上成長減速中 (QoQ変化: -10.4%)
+    四半期売上推移:
+      2026-03-31  売上: $11.5B  営業利益: $3.4B
+      2025-12-31  売上: $12.5B  営業利益: $2.8B
+      2025-09-30  売上: $12.2B  営業利益: $3.6B
+      2025-06-30  売上: $12.3B  営業利益: $3.8B
+
+  【アナリスト評価】
+    コンセンサス: 2.5 - Buy  (アナリスト数: 24名)
+    現在価格: $60.93  ターゲット平均: $62.96  ($40〜$75)  上昇余地: +3.3%
+    直近アクション: アップグレード 0件 / ダウングレード 0件
+
+  【直近アナリストアクション】
+    2026-07-10  B of A Securities: Buy→Buy (main)  TP: $66 (前回: $67)
+    2026-07-06  Cantor Fitzgerald: Neutral→Neutral (reit)  TP: $54 (前回: $54)
+    2026-04-09  B of A Securities: Buy→Buy (main)  TP: $67 (前回: $68)
+    2026-04-08  Guggenheim: Buy→Buy (reit)  TP: $72 (前回: $72)
+    2026-04-08  Cantor Fitzgerald: Neutral→Neutral (main)  TP: $54 (前回: $45)
+
+  【直近ニュース】
+    2026-07-21  Bristol Myers Squibb (BMY) Opens 427,000 Square Foot San Diego Hub For AI Drug Discovery
+             Simply Wall St.
+             https://finance.yahoo.com/healthcare/articles/bristol-myers-squibb-bmy-opens-211338744.html
+    2026-07-21  AbbVie Stock Zigs When The Market Zags
+             Trefis
+             https://www.trefis.com/articles/608161/abbvie-stock-zigs-when-the-market-zags/2026-07-21
+    2026-07-21  What to Watch in Pfizer's Non-Oncology Portfolio This Earnings Season
+             Zacks
+             https://finance.yahoo.com/healthcare/articles/watch-pfizers-non-oncology-portfolio-140500786.html
+    2026-07-21  Bristol Myers, NVIDIA join forces to build life science’s ‘most powerful’ AI factory
+             Pharmaceutical Technology
+             https://www.pharmaceutical-technology.com/news/bms-nvidia-build-ai-supercomputer-pharma/
+    2026-07-20  Merck’s Keytruda Faces a Patent Cliff. These New Cancer Drugs Could Take Over.
+             Barrons.com
+             https://www.barrons.com/articles/merck-keytruda-new-cancer-drugs-treatments-ec397d85?siteid=yhoof2&yptr=yahoo
+
+  【スコア根拠サマリー】
+    セクター内で割安な水準にある。
+    成長率はセクター平均並み。
+    質・健全性はセクター平均並み。
+    決算モメンタムはセクター平均並み。
+    直近4四半期連続で決算ビート。
+    Piotroski F-Score 8/9 — 財務状態が優良（ROA>0; CFO>0; ROA改善; CFO>NI; LTD低下; 流動比率改善; 粗利率改善; 資産回転率改善）。
+    アナリストは中立〜やや強気（レーティング: 2.5/5）。
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  #31  REGN  Regeneron Pharmaceuticals, Inc.  [Healthcare]
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  総合: 62.3   割安度: 67.0   成長力: 32.2   質: 70.8   決算モメンタム: 71.3   価格モメンタム: 71.2
+
+  【定量指標】
+    [バリュエーション]
+      PER: 16.50  (Forward: 12.34)  PBR: 2.19  EV/EBITDA: 14.22  PSR: 4.74
+      FCF利回り: +5.3%  PEG: N/A
+    [成長]
+      売上成長: +1.0%  営業利益成長: -7.2%  EPS成長: +2.1%
+    [質・健全性]
+      ROE: +14.5%  粗利率: +43.9%  D/E: 8.61  FCFマージン: +26.3%
+
+  【決算情報】
+    EPS予想修正: 90日間 +2.3%  30日間 -0.7%
+    来期EPS成長予想: +24.6%  今期売上成長予想: +10.6%
+    売上成長減速中 (QoQ変化: -10.6%)
+    四半期売上推移:
+      2026-03-31  売上: $3.6B  営業利益: $0.7B
+      2025-12-31  売上: $3.9B  営業利益: $0.9B
+      2025-09-30  売上: $3.8B  営業利益: $1.1B
+      2025-06-30  売上: $3.7B  営業利益: $1.1B
+
+  【アナリスト評価】
+    コンセンサス: 1.8 - Buy  (アナリスト数: 26名)
+    現在価格: $675.19  ターゲット平均: $819.18  ($641〜$1000)  上昇余地: +21.3%
+    直近アクション: アップグレード 1件 / ダウングレード 0件
+
+  【直近アナリストアクション】
+    2026-07-21  Guggenheim: Buy→Buy (main)  TP: $1000 (前回: $995)
+    2026-07-09  Piper Sandler: Overweight→Overweight (main)  TP: $854 (前回: $855)
+    2026-07-08  Morgan Stanley: Equal-Weight→Equal-Weight (main)  TP: $730 (前回: $788)
+    2026-07-07  RBC Capital: Sector Perform→Sector Perform (main)  TP: $696 (前回: $707)
+    2026-07-07  Truist Securities: Buy→Buy (main)  TP: $769 (前回: $778)
+
+  【直近ニュース】
+    2026-07-17  Regeneron Pharmaceuticals (REGN) Rebounds As Undervalued View Holds, Is The Upside Already Priced In?
+             Simply Wall St.
+             https://finance.yahoo.com/markets/stocks/articles/regeneron-pharmaceuticals-regn-rebounds-undervalued-141054473.html
+    2026-07-17  The weight-loss drugs boom is creating both winners and wipeouts: One Big Investment Idea
+             Yahoo Finance
+             https://finance.yahoo.com/markets/article/the-weight-loss-drugs-boom-is-creating-both-winners-and-wipeouts-one-big-investment-idea-103918718.html
+    2026-07-16  Merck Snags A First-Of-Its-Kind Approval, And Shares Jump
+             Investor's Business Daily
+             https://www.investors.com/news/technology/merck-stock-enlicitide-approval-cholesterol-pill/?src=A00220&yptr=yahoo
+    2026-07-16  Merck Stock Rises After U.S. Approval for Powerful Cholesterol-Cutting Pill
+             Barrons.com
+             https://www.barrons.com/articles/merck-stock-cholesterol-pill-approval-8e76dba5?siteid=yhoof2&yptr=yahoo
+    2026-07-16  Collect 9.8% On VRTX Stock Now, And Still Keep 15% Of Upside
+             Trefis
+             https://www.trefis.com/articles/607527/collect-9-8-on-vrtx-stock-now-and-still-keep-15-of-upside/2026-07-16
+
+  【スコア根拠サマリー】
+    バリュエーションはセクター平均並み。
+    成長率はセクター内で低い。
+    ROE・財務健全性が高く質が良い。
+    決算モメンタムが強い（サプライズ・上方修正・成長加速）。
+    Piotroski F-Score 5/9 — 財務状態は普通。
+    アナリストは強気（レーティング: 1.8/5）。
+    ターゲット価格まで21%の上昇余地。
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  #32  HIG  The Hartford Insurance Group, I  [Financial Services]
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  総合: 62.3   割安度: 82.5   成長力: 61.9   質: 62.1   決算モメンタム: 44.2   価格モメンタム: 40.0
+
+  【定量指標】
+    [バリュエーション]
+      PER: 10.00  (Forward: 10.27)  PBR: 2.10  EV/EBITDA: 7.03  PSR: 1.35
+      FCF利回り: +14.4%  PEG: 0.25
+    [成長]
+      売上成長: +6.4%  営業利益成長: +22.5%  EPS成長: +23.3%
+    [質・健全性]
+      ROE: +22.7%  粗利率: +38.2%  D/E: 23.15  FCFマージン: +20.5%
+
+  【決算情報】
+    次回決算日: 2026-07-23
+    直近4.0四半期: 3.0回ビート  平均サプライズ: +12.89%
+      2026-04-23  予想EPS: $3.39  実績: $3.09  サプライズ: -8.83%
+      2026-01-29  予想EPS: $3.22  実績: $4.06  サプライズ: +26.23%
+      2025-10-27  予想EPS: $3.31  実績: $3.77  サプライズ: +13.80%
+      2025-07-28  予想EPS: $2.83  実績: $3.41  サプライズ: +20.36%
+    EPS予想修正: 90日間 -5.8%  30日間 -2.8%
+    来期EPS成長予想: +9.6%  今期売上成長予想: +2.0%
+    売上成長減速中 (QoQ変化: -0.8%)
+    四半期売上推移:
+      2026-03-31  売上: $7.2B  営業利益: N/A
+      2025-12-31  売上: $7.2B  営業利益: N/A
+      2025-09-30  売上: $7.1B  営業利益: N/A
+      2025-06-30  売上: $7.0B  営業利益: N/A
+
+  【アナリスト評価】
+    コンセンサス: 2.3 - Buy  (アナリスト数: 20名)
+    現在価格: $141.98  ターゲット平均: $148.95  ($135〜$165)  上昇余地: +4.9%
+    直近アクション: アップグレード 0件 / ダウングレード 1件
+
+  【直近アナリストアクション】
+    2026-07-20  JP Morgan: Neutral→Neutral (main)  TP: $152 (前回: $149)
+    2026-07-15  Piper Sandler: Overweight→Neutral (down)  TP: $146 (前回: $148)
+    2026-07-10  Evercore ISI Group: In-Line→In-Line (main)  TP: $146 (前回: $145)
+    2026-07-09  Wells Fargo: Overweight→Overweight (main)  TP: $165 (前回: $154)
+    2026-07-09  Cantor Fitzgerald: Overweight→Overweight (main)  TP: $158 (前回: $156)
+
+  【直近ニュース】
+    2026-07-21  Chubb (CB) Tops Q2 Earnings Estimates
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/chubb-cb-tops-q2-earnings-213003903.html
+    2026-07-20  What Analyst Projections for Key Metrics Reveal About The Hartford Insurance Group (HIG) Q2 Earnings
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/analyst-projections-key-metrics-reveal-131511998.html
+    2026-07-16  Kinsale Capital Group, Inc. (KNSL) Earnings Expected to Grow: Should You Buy?
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/kinsale-capital-group-inc-knsl-140019906.html
+    2026-07-15  Piper Sandler revamps insurance playbook, upgrades Gallagher, cuts five ratings
+             Investing.com
+             https://finance.yahoo.com/markets/stocks/articles/piper-sandler-revamps-insurance-playbook-202456561.html
+    2026-07-13  Can AMSF Sustain Growth Despite a Tough Workers' Compensation Market?
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/amsf-sustain-growth-despite-tough-164200180.html
+
+  【スコア根拠サマリー】
+    セクター内で割安な水準にある。
+    成長率はセクター平均並み。
+    質・健全性はセクター平均並み。
+    決算モメンタムはセクター平均並み。
+    直近4四半期中3回決算ビート。
+    Piotroski F-Score 7/9 — 財務状態が優良（ROA>0; CFO>0; ROA改善; CFO>NI; LTD低下; 希薄化なし; 資産回転率改善）。
+    FCF利回りが高い（14.4%）— キャッシュ創出力が強い。
+    PEG 0.25 — 成長に対して非常に割安。
+    アナリストは中立〜やや強気（レーティング: 2.3/5）。
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  #33  GEV  GE Vernova Inc.  [Industrials]
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  総合: 62.2   割安度: 34.8   成長力: 91.0   質: 60.8   決算モメンタム: 50.7   価格モメンタム: 94.7
+
+  【定量指標】
+    [バリュエーション]
+      PER: 31.53  (Forward: 43.84)  PBR: 20.82  EV/EBITDA: 83.49  PSR: 7.36
+      FCF利回り: +3.3%  PEG: 0.02
+    [成長]
+      売上成長: +9.0%  営業利益成長: +194.9%  EPS成長: +214.7%
+    [質・健全性]
+      ROE: +75.7%  粗利率: +20.3%  D/E: 24.93  FCFマージン: +9.7%
+
+  【決算情報】
+    次回決算日: 2026-07-22
+    直近4.0四半期: 3.0回ビート  平均サプライズ: +83.27%
+      2026-04-22  予想EPS: $1.67  実績: $2.01  サプライズ: +20.38%
+      2026-01-28  予想EPS: $3.14  実績: $12.91  サプライズ: +310.91%
+      2025-10-22  予想EPS: $1.86  実績: $1.64  サプライズ: -11.67%
+      2025-07-23  予想EPS: $1.64  実績: $1.86  サプライズ: +13.44%
+    EPS予想修正: 90日間 +107.8%  30日間 -0.3%
+    来期EPS成長予想: -20.4%  今期売上成長予想: +19.5%
+    売上成長減速中 (QoQ変化: -24.7%)
+    四半期売上推移:
+      2026-03-31  売上: $9.3B  営業利益: $0.2B
+      2025-12-31  売上: $11.0B  営業利益: $0.6B
+      2025-09-30  売上: $10.0B  営業利益: $0.4B
+      2025-06-30  売上: $9.1B  営業利益: $0.4B
+
+  【アナリスト評価】
+    コンセンサス: 1.6 - Buy  (アナリスト数: 34名)
+    現在価格: $1078.81  ターゲット平均: $1221.48  ($836〜$1424)  上昇余地: +13.2%
+    直近アクション: アップグレード 0件 / ダウングレード 1件
+
+  【直近アナリストアクション】
+    2026-06-17  Bernstein: →Outperform (init)  TP: $1206
+    2026-06-11  Jefferies: Buy→Buy (main)  TP: $1210 (前回: $1350)
+    2026-04-27  BNP Paribas: Outperform→Neutral (down)  TP: $1190
+    2026-04-24  Jefferies: Buy→Buy (main)  TP: $1350 (前回: $965)
+    2026-04-23  RBC Capital: Outperform→Outperform (main)  TP: $1195 (前回: $996)
+
+  【直近ニュース】
+    2026-07-21  Dow Jones Futures: S&P 500 Regains 50-Day As Sandisk, Micron Soar; Google, Tesla Earnings Due
+             Investor's Business Daily
+             https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-sp-500-sandisk-micron-google-tesla-earnings/?src=A00220&yptr=yahoo
+    2026-07-21  The Hidden Engine Behind Elevance Health Stock's Next Climb
+             Trefis
+             https://www.trefis.com/articles/608179/the-hidden-engine-behind-elevance-health-stocks-next-climb/2026-07-21
+    2026-07-21  5 Must See Earnings Charts This Week
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/5-must-see-earnings-charts-203200290.html
+    2026-07-21  GE Vernova Earnings Due. This Will Matter Far More Than Gas Turbine Orders.
+             Investor's Business Daily
+             https://www.investors.com/news/ge-vernova-earnings-gas-turbine-orders-backlog-ai-data-centers/?src=A00220&yptr=yahoo
+    2026-07-21  Best Stocks to Buy in July and Hold Forever: GEV, NEE
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/best-stocks-buy-july-hold-191800894.html
+
+  【スコア根拠サマリー】
+    バリュエーションはセクター内で割高。
+    高い成長率を示している。
+    質・健全性はセクター平均並み。
+    決算モメンタムはセクター平均並み。
+    直近4四半期中3回決算ビート。
+    Piotroski F-Score 7/9 — 財務状態が優良（ROA>0; CFO>0; ROA改善; CFO>NI; LTD低下; 希薄化なし; 粗利率改善）。
+    PEG 0.02 — 成長に対して非常に割安。
+    アナリストは強気（レーティング: 1.6/5）。
+    ターゲット価格まで13%の上昇余地。
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  #34  INTU  Intuit Inc.  [Technology]
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  総合: 61.8   割安度: 80.8   成長力: 57.5   質: 71.0   決算モメンタム: 56.3   価格モメンタム: 3.5
+
+  【定量指標】
+    [バリュエーション]
+      PER: 17.68  (Forward: 10.61)  PBR: 3.85  EV/EBITDA: 12.56  PSR: 3.79
+      FCF利回り: +6.5%  PEG: 0.99
+    [成長]
+      売上成長: +15.6%  営業利益成長: +28.2%  EPS成長: +30.6%
+    [質・健全性]
+      ROE: +22.5%  粗利率: +80.8%  D/E: 33.45  FCFマージン: +32.3%
+
+  【決算情報】
+    次回決算日: 2026-08-20
+    直近4.0四半期: 4.0回ビート  平均サプライズ: +6.48%
+      2026-05-20  予想EPS: $12.57  実績: $12.80  サプライズ: +1.84%
+      2026-02-26  予想EPS: $3.68  実績: $4.15  サプライズ: +12.69%
+      2025-11-20  予想EPS: $3.09  実績: $3.34  サプライズ: +7.99%
+      2025-08-21  予想EPS: $2.66  実績: $2.75  サプライズ: +3.40%
+    EPS予想修正: 90日間 +2.6%  30日間 -0.0%
+    来期EPS成長予想: +14.7%  今期売上成長予想: +13.5%
+    売上成長加速中 (QoQ変化: +64.3%)
+    四半期売上推移:
+      2026-04-30  売上: $8.6B  営業利益: $4.0B
+      2026-01-31  売上: $4.7B  営業利益: $0.9B
+      2025-10-31  売上: $3.9B  営業利益: $0.5B
+      2025-07-31  売上: $3.8B  営業利益: $0.3B
+
+  【アナリスト評価】
+    コンセンサス: 1.7 - Buy  (アナリスト数: 33名)
+    現在価格: $289.92  ターゲット平均: $473.68  ($250〜$921)  上昇余地: +63.4%
+    直近アクション: アップグレード 0件 / ダウングレード 4件
+
+  【直近アナリストアクション】
+    2026-07-21  Morgan Stanley: Overweight→Equal-Weight (down)  TP: $335 (前回: $580)
+    2026-07-20  Susquehanna: Positive→Positive (main)  TP: $427 (前回: $550)
+    2026-06-18  Stifel: Buy→Hold (down)  TP: $275 (前回: $375)
+    2026-06-02  Goldman Sachs: Neutral→Sell (down)  TP: $276 (前回: $519)
+    2026-05-26  Mizuho: Outperform→Outperform (main)  TP: $500 (前回: $600)
+
+  【直近ニュース】
+    2026-07-21  Morgan Stanley Underweights Adobe and Workday in Software Reset
+             GuruFocus.com
+             https://finance.yahoo.com/markets/stocks/articles/morgan-stanley-underweights-adobe-workday-154622282.html
+    2026-07-21  Intuit's Competitive Moat Remains Strong Despite Near-Term Pressure, Morgan Stanley Says
+             MT Newswires
+             https://finance.yahoo.com/markets/stocks/articles/intuit-apos-competitive-moat-remains-145811372.html
+    2026-07-21  History Has An Opinion On This INTU Price Level
+             Trefis
+             https://www.trefis.com/articles/608160/history-has-an-opinion-on-this-intu-price-level/2026-07-21
+    2026-07-21  Shopify downgraded, Five Below upgraded: Wall Street's top analyst calls
+             The Fly
+             https://finance.yahoo.com/markets/stocks/articles/micron-downgraded-five-below-upgraded-133947861.html
+    2026-07-21  Adobe, Salesforce and Intuit fall as Morgan Stanley begins cautious coverage
+             Investing.com
+             https://finance.yahoo.com/markets/stocks/articles/adobe-salesforce-intuit-fall-morgan-112023808.html
+
+  【スコア根拠サマリー】
+    セクター内で割安な水準にある。
+    成長率はセクター平均並み。
+    ROE・財務健全性が高く質が良い。
+    決算モメンタムはセクター平均並み。
+    直近4四半期連続で決算ビート。
+    Piotroski F-Score 9/9 — 財務状態が優良（ROA>0; CFO>0; ROA改善; CFO>NI; LTD低下; 流動比率改善; 希薄化なし; 粗利率改善; 資産回転率改善）。
+    PEG 0.99 — 成長に対して割安（GARP基準クリア）。
+    アナリストは強気（レーティング: 1.7/5）。
+    ターゲット価格まで63%の上昇余地。
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  #35  FIX  Comfort Systems USA, Inc.  [Industrials]
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  総合: 61.8   割安度: 13.1   成長力: 87.7   質: 61.8   決算モメンタム: 84.1   価格モメンタム: 98.0
+
+  【定量指標】
+    [バリュエーション]
+      PER: 51.27  (Forward: 32.74)  PBR: 96.62  EV/EBITDA: 36.02  PSR: N/A
+      FCF利回り: +1.8%  PEG: 0.84
+    [成長]
+      売上成長: +29.5%  営業利益成長: +75.9%  EPS成長: +95.7%
+    [質・健全性]
+      ROE: +53.3%  粗利率: +25.1%  D/E: 45.49  FCFマージン: +11.3%
+
+  【決算情報】
+    次回決算日: 2026-07-23
+    直近4.0四半期: 4.0回ビート  平均サプライズ: +39.87%
+      2026-04-23  予想EPS: $6.81  実績: $10.51  サプライズ: +54.44%
+      2026-02-19  予想EPS: $6.75  実績: $9.37  サプライズ: +38.71%
+      2025-10-23  予想EPS: $6.29  実績: $8.25  サプライズ: +31.26%
+      2025-07-24  予想EPS: $4.84  実績: $6.53  サプライズ: +35.05%
+    EPS予想修正: 90日間 +19.2%  30日間 +1.1%
+    来期EPS成長予想: +24.2%  今期売上成長予想: +32.2%
+    売上成長加速中 (QoQ変化: +0.3%)
+    四半期売上推移:
+      2026-03-31  売上: $2.9B  営業利益: $0.5B
+      2025-12-31  売上: $2.6B  営業利益: $0.4B
+      2025-09-30  売上: $2.5B  営業利益: $0.4B
+      2025-06-30  売上: $2.2B  営業利益: $0.3B
+
+  【アナリスト評価】
+    コンセンサス: 1.2 - Strong Buy  (アナリスト数: 7名)
+    現在価格: $1773.51  ターゲット平均: $2064.00  ($1910〜$2200)  上昇余地: +16.4%
+    直近アクション: アップグレード 1件 / ダウングレード 0件
+
+  【直近アナリストアクション】
+    2026-07-09  Goldman Sachs: →Buy (init)  TP: $2159
+    2026-06-08  UBS: Buy→Buy (main)  TP: $2125 (前回: $1992)
+    2026-05-28  Oppenheimer: →Outperform (init)  TP: $2200
+    2026-04-27  UBS: Buy→Buy (main)  TP: $1992 (前回: $1680)
+    2026-04-24  Keybanc: Sector Weight→Overweight (up)  TP: $2004
+
+  【直近ニュース】
+    2026-07-21  Is Comfort Systems Stock Worth Buying Before Q2 Earnings?
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/comfort-systems-stock-worth-buying-144100363.html
+    2026-07-20  Sterling vs. Granite: Which Construction Stock Is a Buy Now?
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/sterling-vs-granite-construction-stock-165500884.html
+    2026-07-20  Oppenheimer Names Nvidia Among Its 'Best of the Best' Momentum Stocks
+             GuruFocus.com
+             https://finance.yahoo.com/markets/stocks/articles/oppenheimer-names-nvidia-among-best-131112008.html
+    2026-07-18  Comfort Systems USA (FIX) Stock Still Looks Below Fair Value Following Its Huge Five Year Run
+             Simply Wall St.
+             https://finance.yahoo.com/markets/stocks/articles/comfort-systems-usa-fix-stock-111336602.html
+    2026-07-17  Quanta vs. EMCOR: Which Infrastructure Stock Is the Better Buy?
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/quanta-vs-emcor-infrastructure-stock-150800432.html
+
+  【スコア根拠サマリー】
+    バリュエーションはセクター内で割高。
+    高い成長率を示している。
+    質・健全性はセクター平均並み。
+    決算モメンタムが強い（サプライズ・上方修正・成長加速）。
+    直近4四半期連続で決算ビート。
+    Piotroski F-Score 7/9 — 財務状態が優良（ROA>0; CFO>0; ROA改善; CFO>NI; 流動比率改善; 希薄化なし; 粗利率改善）。
+    PEG 0.84 — 成長に対して割安（GARP基準クリア）。
+    アナリストは強気（レーティング: 1.2/5）。
+    ターゲット価格まで16%の上昇余地。
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  #36  FOXA  Fox Corporation  [Communication Services]
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  総合: 61.8   割安度: 64.2   成長力: 72.9   質: 52.5   決算モメンタム: 66.3   価格モメンタム: 54.2
+
+  【定量指標】
+    [バリュエーション]
+      PER: 15.15  (Forward: 9.93)  PBR: 2.21  EV/EBITDA: 7.98  PSR: 1.49
+      FCF利回り: +5.0%  PEG: N/A
+    [成長]
+      売上成長: +16.6%  営業利益成長: +30.3%  EPS成長: +50.8%
+    [質・健全性]
+      ROE: +15.2%  粗利率: +36.8%  D/E: 67.87  FCFマージン: +18.4%
+
+  【決算情報】
+    次回決算日: 2026-08-06
+    直近4.0四半期: 4.0回ビート  平均サプライズ: +39.91%
+      2026-05-11  予想EPS: $0.97  実績: $1.32  サプライズ: +36.35%
+      2026-02-04  予想EPS: $0.52  実績: $0.82  サプライズ: +58.60%
+      2025-10-30  予想EPS: $1.10  実績: $1.51  サプライズ: +37.42%
+      2025-08-05  予想EPS: $1.00  実績: $1.27  サプライズ: +27.28%
+    EPS予想修正: 90日間 +7.7%  30日間 +1.6%
+    来期EPS成長予想: +16.0%  今期売上成長予想: +1.9%
+    売上成長減速中 (QoQ変化: -61.6%)
+    四半期売上推移:
+      2026-03-31  売上: $4.0B  営業利益: $0.9B
+      2025-12-31  売上: $5.2B  営業利益: $0.6B
+      2025-09-30  売上: $3.7B  営業利益: $1.0B
+      2025-06-30  売上: $3.3B  営業利益: $0.8B
+
+  【アナリスト評価】
+    コンセンサス: 2.1 - Buy  (アナリスト数: 18名)
+    現在価格: $57.57  ターゲット平均: $70.81  ($53〜$112)  上昇余地: +23.0%
+    直近アクション: アップグレード 2件 / ダウングレード 0件
+
+  【直近アナリストアクション】
+    2026-07-06  Wells Fargo: Equal-Weight→Equal-Weight (main)  TP: $65 (前回: $71)
+    2026-07-01  Wolfe Research: Peer Perform→Outperform (up)  TP: $71
+    2026-06-15  Barclays: Equal-Weight→Equal-Weight (main)  TP: $60 (前回: $67)
+    2026-05-12  Evercore ISI Group: In-Line→In-Line (main)  TP: $73 (前回: $70)
+    2026-05-12  JP Morgan: Neutral→Neutral (main)  TP: $70 (前回: $69)
+
+  【直近ニュース】
+    2026-07-20  FIFA Races to Cash In on Its Hit Tournament
+             The Wall Street Journal
+             https://www.wsj.com/business/media/fifa-races-to-cash-in-on-its-hit-tournament-2d692d3f?siteid=yhoof2&yptr=yahoo
+    2026-07-20  Here's What to Expect From Fox Corporation’s Next Earnings Report
+             Barchart
+             https://www.barchart.com/story/news/3362857/here-s-what-to-expect-from-fox-corporations-next-earnings-report
+    2026-07-17  Citi says buy the dip in this media stock
+             Investing.com
+             https://finance.yahoo.com/media-advertising/articles/citi-says-buy-dip-media-135114512.html
+    2026-07-16  Earnings Preview: What To Expect From Fox Corporation's Report
+             Barchart
+             https://www.barchart.com/story/news/3314534/earnings-preview-what-to-expect-from-fox-corporation-s-report
+    2026-07-15  Are Investors Undervaluing Fox (FOXA) Right Now?
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/investors-undervaluing-fox-foxa-now-134002830.html
+
+  【スコア根拠サマリー】
+    バリュエーションはセクター平均並み。
+    高い成長率を示している。
+    質・健全性はセクター平均並み。
+    決算モメンタムはセクター平均並み。
+    直近4四半期連続で決算ビート。
+    Piotroski F-Score 8/9 — 財務状態が優良（ROA>0; CFO>0; ROA改善; CFO>NI; LTD低下; 流動比率改善; 希薄化なし; 資産回転率改善）。
+    アナリストは中立〜やや強気（レーティング: 2.1/5）。
+    ターゲット価格まで23%の上昇余地。
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  #37  FOX  Fox Corporation  [Communication Services]
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  総合: 61.6   割安度: 72.0   成長力: 72.9   質: 52.5   決算モメンタム: 55.2   価格モメンタム: 50.0
+
+  【定量指標】
+    [バリュエーション]
+      PER: 13.54  (Forward: 9.49)  PBR: 1.97  EV/EBITDA: 7.28  PSR: 1.33
+      FCF利回り: +5.4%  PEG: N/A
+    [成長]
+      売上成長: +16.6%  営業利益成長: +30.3%  EPS成長: +50.8%
+    [質・健全性]
+      ROE: +15.2%  粗利率: +36.8%  D/E: 67.87  FCFマージン: +18.4%
+
+  【決算情報】
+    次回決算日: 2026-08-06
+    直近4.0四半期: 4.0回ビート  平均サプライズ: +33.68%
+      2026-05-11  予想EPS: $1.08  実績: $1.32  サプライズ: +22.22%
+      2026-02-04  予想EPS: $0.54  実績: $0.82  サプライズ: +51.85%
+      2025-10-30  予想EPS: $1.09  実績: $1.51  サプライズ: +38.53%
+      2025-08-05  予想EPS: $1.04  実績: $1.27  サプライズ: +22.12%
+    売上成長減速中 (QoQ変化: -61.6%)
+    四半期売上推移:
+      2026-03-31  売上: $4.0B  営業利益: $0.9B
+      2025-12-31  売上: $5.2B  営業利益: $0.6B
+      2025-09-30  売上: $3.7B  営業利益: $1.0B
+      2025-06-30  売上: $3.3B  営業利益: $0.8B
+
+  【アナリスト評価】
+    コンセンサス: nan  (アナリスト数: N/A)
+    現在価格: $51.47  ターゲット平均: $nan  ($nan〜$nan)  上昇余地: N/A
+    直近アクション: アップグレード 1件 / ダウングレード 2件
+
+  【直近アナリストアクション】
+    2026-02-25  B of A Securities: Buy→Underperform (down)  TP: $45 (前回: $80)
+    2023-03-22  Rosenblatt: →Neutral (reit)  TP: $35
+    2022-08-11  Credit Suisse: →Outperform (main)  TP: $46 (前回: $48)
+    2022-06-02  Wolfe Research: Outperform→Peer Perform (down)  TP: $39 (前回: $52)
+    2021-12-14  Macquarie: →Neutral (main)  TP: $37 (前回: $40)
+
+  【直近ニュース】
+    2026-07-20  FIFA Races to Cash In on Its Hit Tournament
+             The Wall Street Journal
+             https://www.wsj.com/business/media/fifa-races-to-cash-in-on-its-hit-tournament-2d692d3f?siteid=yhoof2&yptr=yahoo
+    2026-07-20  Here's What to Expect From Fox Corporation’s Next Earnings Report
+             Barchart
+             https://www.barchart.com/story/news/3362857/here-s-what-to-expect-from-fox-corporations-next-earnings-report
+    2026-07-17  Citi says buy the dip in this media stock
+             Investing.com
+             https://finance.yahoo.com/media-advertising/articles/citi-says-buy-dip-media-135114512.html
+    2026-07-16  Earnings Preview: What To Expect From Fox Corporation's Report
+             Barchart
+             https://www.barchart.com/story/news/3314534/earnings-preview-what-to-expect-from-fox-corporation-s-report
+    2026-07-15  Are Investors Undervaluing Fox (FOXA) Right Now?
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/investors-undervaluing-fox-foxa-now-134002830.html
+
+  【スコア根拠サマリー】
+    セクター内で割安な水準にある。
+    高い成長率を示している。
+    質・健全性はセクター平均並み。
+    決算モメンタムはセクター平均並み。
+    直近4四半期連続で決算ビート。
+    Piotroski F-Score 8/9 — 財務状態が優良（ROA>0; CFO>0; ROA改善; CFO>NI; LTD低下; 流動比率改善; 希薄化なし; 資産回転率改善）。
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  #38  DLTR  Dollar Tree, Inc.  [Consumer Defensive]
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  総合: 61.4   割安度: 61.4   成長力: 72.9   質: 47.2   決算モメンタム: 67.2   価格モメンタム: 72.7
+
+  【定量指標】
+    [バリュエーション]
+      PER: 20.18  (Forward: 16.38)  PBR: 6.93  EV/EBITDA: 12.84  PSR: 1.22
+      FCF利回り: +4.7%  PEG: 1.72
+    [成長]
+      売上成長: +10.4%  営業利益成長: +13.1%  EPS成長: +142.3%
+    [質・健全性]
+      ROE: +34.0%  粗利率: +37.0%  D/E: 216.52  FCFマージン: +7.2%
+
+  【決算情報】
+    次回決算日: 2026-09-02
+    直近4.0四半期: 4.0回ビート  平均サプライズ: +28.37%
+      2026-05-28  予想EPS: $1.54  実績: $1.74  サプライズ: +12.89%
+      2026-03-16  予想EPS: $2.53  実績: $2.56  サプライズ: +1.13%
+      2025-12-03  予想EPS: $1.08  実績: $1.21  サプライズ: +11.80%
+      2025-09-03  予想EPS: $0.41  実績: $0.77  サプライズ: +87.65%
+    EPS予想修正: 90日間 +3.8%  30日間 +0.4%
+    来期EPS成長予想: +10.2%  今期売上成長予想: +6.5%
+    売上成長減速中 (QoQ変化: -23.4%)
+    四半期売上推移:
+      2026-04-30  売上: $5.0B  営業利益: $0.5B
+      2026-01-31  売上: $5.5B  営業利益: $0.7B
+      2025-10-31  売上: $4.8B  営業利益: $0.3B
+      2025-07-31  売上: $4.6B  営業利益: $0.2B
+
+  【アナリスト評価】
+    コンセンサス: 2.6 - Hold  (アナリスト数: 25名)
+    現在価格: $125.74  ターゲット平均: $127.20  ($85〜$170)  上昇余地: +1.2%
+    直近アクション: アップグレード 2件 / ダウングレード 1件
+
+  【直近アナリストアクション】
+    2026-07-08  Raymond James: Market Perform→Outperform (up)  TP: $140
+    2026-07-08  Goldman Sachs: Sell→Neutral (up)  TP: $125 (前回: $105)
+    2026-07-06  JP Morgan: Overweight→Overweight (main)  TP: $170 (前回: $160)
+    2026-05-29  BNP Paribas: Underperform→Underperform (main)  TP: $98 (前回: $88)
+    2026-05-29  Truist Securities: Buy→Buy (main)  TP: $136 (前回: $107)
+
+  【直近ニュース】
+    2026-07-21  Discount grocery chain closing stores despite millions in public cash
+             TheStreet
+             https://www.thestreet.com/retail/save-a-lot-closes-stores-after-receiving-millions-in-city-funding
+    2026-07-20  Dollar Tree closing 75 stores, opening 400 new ones in 2026
+             Quartz
+             https://qz.com/dollar-tree-store-closures-openings-2026-072026
+    2026-07-20  Buyback Boom: These 3 Companies Are Betting Billions on Their Own Stocks
+             MarketBeat
+             https://www.marketbeat.com/articles/3-companies-dltr-ms-acn-buying-back-billions-of-their-own-stock/?utm_source=yahoofinance&utm_medium=yahoofinance
+    2026-07-18  Discount chain shuts 75 locations, calls its stores 'substandard'
+             TheStreet
+             https://www.thestreet.com/retail/dollar-tree-closing-75-stores-admits-1000s-are-substandard
+    2026-07-17  5 Solid Stocks to Boost Your Portfolio as Retail Sales Continue to Surge
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/5-solid-stocks-boost-portfolio-171300517.html
+
+  【スコア根拠サマリー】
+    バリュエーションはセクター平均並み。
+    高い成長率を示している。
+    質・健全性はセクター平均並み。
+    決算モメンタムはセクター平均並み。
+    直近4四半期連続で決算ビート。
+    Piotroski F-Score 8/9 — 財務状態が優良（ROA>0; CFO>0; ROA改善; CFO>NI; 流動比率改善; 希薄化なし; 粗利率改善; 資産回転率改善）。
+    アナリストは中立〜やや強気（レーティング: 2.6/5）。
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  #39  ADBE  Adobe Inc.  [Technology]
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  総合: 61.4   割安度: 83.2   成長力: 50.0   質: 78.7   決算モメンタム: 39.6   価格モメンタム: 10.6
+
+  【定量指標】
+    [バリュエーション]
+      PER: 12.99  (Forward: 8.26)  PBR: 7.87  EV/EBITDA: 9.74  PSR: 3.58
+      FCF利回り: +9.7%  PEG: 1.05
+    [成長]
+      売上成長: +10.5%  営業利益成長: +12.5%  EPS成長: +28.2%
+    [質・健全性]
+      ROE: +63.0%  粗利率: +89.4%  D/E: 61.44  FCFマージン: +41.4%
+
+  【決算情報】
+    次回決算日: 2026-09-10
+    直近4.0四半期: 4.0回ビート  平均サプライズ: +2.52%
+      2026-06-11  予想EPS: $5.81  実績: $5.96  サプライズ: +2.50%
+      2026-03-12  予想EPS: $5.87  実績: $6.06  サプライズ: +3.18%
+      2025-12-10  予想EPS: $5.40  実績: $5.50  サプライズ: +1.90%
+      2025-09-11  予想EPS: $5.18  実績: $5.31  サプライズ: +2.48%
+    EPS予想修正: 90日間 +3.8%  30日間 -0.0%
+    来期EPS成長予想: +12.7%  今期売上成長予想: +11.6%
+    売上成長加速中 (QoQ変化: +0.1%)
+    四半期売上推移:
+      2026-05-31  売上: $6.6B  営業利益: $2.2B
+      2026-02-28  売上: $6.4B  営業利益: $2.4B
+      2025-11-30  売上: $6.2B  営業利益: $2.3B
+      2025-08-31  売上: $6.0B  営業利益: $2.2B
+
+  【アナリスト評価】
+    コンセンサス: 2.7 - Hold  (アナリスト数: 34名)
+    現在価格: $227.16  ターゲット平均: $273.28  ($190〜$380)  上昇余地: +20.3%
+    直近アクション: アップグレード 1件 / ダウングレード 1件
+
+  【直近アナリストアクション】
+    2026-07-21  Morgan Stanley: Equal-Weight→Underweight (down)  TP: $240 (前回: $365)
+    2026-07-20  CLSA: →Outperform (init)  TP: $300
+    2026-07-02  HSBC: Hold→Buy (up)  TP: $308 (前回: $282)
+    2026-06-12  Citigroup: Neutral→Neutral (main)  TP: $228 (前回: $264)
+    2026-06-12  Goldman Sachs: Sell→Sell (main)  TP: $190 (前回: $220)
+
+  【直近ニュース】
+    2026-07-21  Morgan Stanley Underweights Adobe and Workday in Software Reset
+             GuruFocus.com
+             https://finance.yahoo.com/markets/stocks/articles/morgan-stanley-underweights-adobe-workday-154622282.html
+    2026-07-21  Salesforce vs. Adobe: Which Enterprise Software Stock Has the Edge?
+             Zacks
+             https://finance.yahoo.com/technology/articles/salesforce-vs-adobe-enterprise-software-141600624.html
+    2026-07-21  Shopify downgraded, Five Below upgraded: Wall Street's top analyst calls
+             The Fly
+             https://finance.yahoo.com/markets/stocks/articles/micron-downgraded-five-below-upgraded-133947861.html
+    2026-07-21  ADBE Stock Drops After Morgan Stanley Downgrade – Sees ‘Cleaner Growth And AI Monetization Elsewhere’
+             Stocktwits
+             https://stocktwits.com/news-articles/markets/equity/adobe-adbe-stock-downgrade-price-target-slashed-ai-growth-concerns/cZZSap8R7ve
+    2026-07-21  Will Adobe's (ADBE) Project Indigo AI Push and New Bullish Coverage Change Its Narrative?
+             Simply Wall St.
+             https://finance.yahoo.com/technology/ai/articles/adobes-adbe-project-indigo-ai-130943353.html
+
+  【スコア根拠サマリー】
+    セクター内で割安な水準にある。
+    成長率はセクター平均並み。
+    ROE・財務健全性が高く質が良い。
+    決算モメンタムが弱い。
+    直近4四半期連続で決算ビート。
+    Piotroski F-Score 7/9 — 財務状態が優良（ROA>0; CFO>0; ROA改善; CFO>NI; 希薄化なし; 粗利率改善; 資産回転率改善）。
+    FCF利回りが高い（9.7%）— キャッシュ創出力が強い。
+    アナリストは中立〜やや強気（レーティング: 2.6/5）。
+    ターゲット価格まで20%の上昇余地。
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  #40  ADI  Analog Devices, Inc.  [Technology]
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  総合: 60.9   割安度: 41.0   成長力: 70.5   質: 65.2   決算モメンタム: 63.3   価格モメンタム: 75.3
+
+  【定量指標】
+    [バリュエーション]
+      PER: 57.14  (Forward: 25.45)  PBR: 5.53  EV/EBITDA: 30.36  PSR: N/A
+      FCF利回り: +2.1%  PEG: 0.23
+    [成長]
+      売上成長: +16.9%  営業利益成長: +45.0%  EPS成長: +38.7%
+    [質・健全性]
+      ROE: +9.6%  粗利率: +64.5%  D/E: 25.81  FCFマージン: +38.8%
+
+  【決算情報】
+    次回決算日: 2026-08-19
+    直近4.0四半期: 4.0回ビート  平均サプライズ: +4.81%
+      2026-05-20  予想EPS: $2.91  実績: $3.09  サプライズ: +6.22%
+      2026-02-18  予想EPS: $2.31  実績: $2.46  サプライズ: +6.55%
+      2025-11-25  予想EPS: $2.23  実績: $2.26  サプライズ: +1.13%
+      2025-08-20  予想EPS: $1.95  実績: $2.05  サプライズ: +5.33%
+    EPS予想修正: 90日間 +8.2%  30日間 +0.5%
+    来期EPS成長予想: +21.0%  今期売上成長予想: +34.2%
+    売上成長加速中 (QoQ変化: +11.9%)
+    四半期売上推移:
+      2026-04-30  売上: $3.6B  営業利益: $1.4B
+      2026-01-31  売上: $3.2B  営業利益: $1.0B
+      2025-10-31  売上: $3.1B  営業利益: $0.9B
+      2025-07-31  売上: $2.9B  営業利益: $0.8B
+
+  【アナリスト評価】
+    コンセンサス: 1.5 - Buy  (アナリスト数: 30名)
+    現在価格: $382.81  ターゲット平均: $457.40  ($365〜$550)  上昇余地: +19.5%
+    直近アクション: アップグレード 0件 / ダウングレード 0件
+
+  【直近アナリストアクション】
+    2026-07-14  Keybanc: Overweight→Overweight (main)  TP: $525 (前回: $500)
+    2026-07-13  TD Cowen: Buy→Buy (main)  TP: $460 (前回: $450)
+    2026-06-29  Cantor Fitzgerald: Overweight→Overweight (main)  TP: $550 (前回: $510)
+    2026-06-24  Stifel: Buy→Buy (main)  TP: $498 (前回: $450)
+    2026-05-26  JP Morgan: Overweight→Overweight (main)  TP: $450 (前回: $400)
+
+  【直近ニュース】
+    2026-07-21  Monolithic Power Systems (MPWR) vs. TXN and ADI: Are Investors Paying Too Much for AI Power Growth?
+             Insider Monkey
+             https://finance.yahoo.com/markets/stocks/articles/monolithic-power-systems-mpwr-vs-170019451.html
+    2026-07-21  3 Market-Beating Stocks with Exciting Potential
+             StockStory
+             https://finance.yahoo.com/markets/stocks/articles/3-market-beating-stocks-exciting-123026227.html
+    2026-07-18  Analog Devices (ADI) at $375: Are Investors Paying an AI Premium for Industrial Tech?
+             Insider Monkey
+             https://finance.yahoo.com/markets/stocks/articles/analog-devices-adi-375-investors-171914602.html
+    2026-07-17  Is Analog Devices (ADI) Stock Outpacing Its Computer and Technology Peers This Year?
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/analog-devices-adi-stock-outpacing-134050281.html
+    2026-07-16  Analog Devices (ADI) Declines More Than Market: Some Information for Investors
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/analog-devices-adi-declines-more-221504075.html
+
+  【スコア根拠サマリー】
+    バリュエーションはセクター平均並み。
+    高い成長率を示している。
+    質・健全性はセクター平均並み。
+    決算モメンタムはセクター平均並み。
+    直近4四半期連続で決算ビート。
+    Piotroski F-Score 8/9 — 財務状態が優良（ROA>0; CFO>0; ROA改善; CFO>NI; 流動比率改善; 希薄化なし; 粗利率改善; 資産回転率改善）。
+    PEG 0.23 — 成長に対して非常に割安。
+    アナリストは強気（レーティング: 1.5/5）。
+    ターゲット価格まで19%の上昇余地。
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  #41  ALB  Albemarle Corporation  [Basic Materials]
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  総合: 60.9   割安度: 64.1   成長力: 55.0   質: 52.0   決算モメンタム: 55.1   価格モメンタム: 100.0
+
+  【定量指標】
+    [バリュエーション]
+      PER: N/A  (Forward: 9.33)  PBR: 1.84  EV/EBITDA: 16.25  PSR: 2.55
+      FCF利回り: +4.1%  PEG: N/A
+    [成長]
+      売上成長: -4.4%  営業利益成長: +110.5%  EPS成長: +56.7%
+    [質・健全性]
+      ROE: -1.8%  粗利率: +18.5%  D/E: 19.84  FCFマージン: +13.5%
+
+  【決算情報】
+    次回決算日: 2026-08-05
+    直近4.0四半期: 3.0回ビート  平均サプライズ: +76.96%
+      2026-05-06  予想EPS: $1.31  実績: $2.95  サプライズ: +124.60%
+      2026-02-11  予想EPS: $-0.49  実績: $-0.53  サプライズ: -8.60%
+      2025-11-05  予想EPS: $-0.88  実績: $-0.19  サプライズ: +78.33%
+      2025-07-30  予想EPS: $-0.81  実績: $0.11  サプライズ: +113.51%
+    EPS予想修正: 90日間 +49.0%  30日間 +4.3%
+    来期EPS成長予想: +1.2%  今期売上成長予想: +23.4%
+    売上成長減速中 (QoQ変化: -9.1%)
+    四半期売上推移:
+      2026-03-31  売上: $1.4B  営業利益: $0.4B
+      2025-12-31  売上: $1.4B  営業利益: $0.0B
+      2025-09-30  売上: $1.3B  営業利益: $-0.0B
+      2025-06-30  売上: $1.3B  営業利益: $0.1B
+
+  【アナリスト評価】
+    コンセンサス: 2.0 - Buy  (アナリスト数: 20名)
+    現在価格: $118.62  ターゲット平均: $196.41  ($83〜$260)  上昇余地: +65.6%
+    直近アクション: アップグレード 1件 / ダウングレード 0件
+
+  【直近アナリストアクション】
+    2026-07-20  Truist Securities: Buy→Buy (main)  TP: $245 (前回: $260)
+    2026-07-01  Mizuho: Neutral→Neutral (main)  TP: $185 (前回: $205)
+    2026-06-18  Citigroup: Neutral→Buy (up)  TP: $225 (前回: $225)
+    2026-05-26  RBC Capital: Outperform→Outperform (main)  TP: $257 (前回: $253)
+    2026-05-14  Scotiabank: Sector Outperform→Sector Outperform (main)  TP: $215 (前回: $200)
+
+  【直近ニュース】
+    2026-07-20  BASF Expands Specialty Emollients Capacity With New Dusseldorf Plant
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/basf-expands-specialty-emollients-capacity-134400323.html
+    2026-07-17  Albemarle (ALB) Rises As Market Takes a Dip: Key Facts
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/albemarle-alb-rises-market-takes-215002560.html
+    2026-07-17  Do Rising Earnings Estimates Reframe Albemarle’s (ALB) Lithium Strategy as Discipline or Cyclicality?
+             Simply Wall St.
+             https://finance.yahoo.com/markets/stocks/articles/rising-earnings-estimates-reframe-albemarle-151122091.html
+    2026-07-17  NGVT's Evotherm P35 Gets German Approval for Warm-Mix Asphalt Use
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/ngvts-evotherm-p35-gets-german-150700788.html
+    2026-07-17  The No.1 Commodity Story of the Year Is Flying Under Wall Street’s Radar
+             Oilprice.com
+             https://finance.yahoo.com/markets/commodities/articles/no-1-commodity-story-flying-000000244.html
+
+  【スコア根拠サマリー】
+    バリュエーションはセクター平均並み。
+    成長率はセクター平均並み。
+    質・健全性はセクター平均並み。
+    決算モメンタムはセクター平均並み。
+    直近4四半期中3回決算ビート。
+    Piotroski F-Score 5/9 — 財務状態は普通。
+    アナリストは強気（レーティング: 2.0/5）。
+    ターゲット価格まで66%の上昇余地。
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  #42  RL  Ralph Lauren Corporation  [Consumer Cyclical]
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  総合: 60.5   割安度: 43.3   成長力: 75.3   質: 60.5   決算モメンタム: 48.1   価格モメンタム: 92.6
+
+  【定量指標】
+    [バリュエーション]
+      PER: 25.36  (Forward: 18.75)  PBR: 8.10  EV/EBITDA: 15.36  PSR: 2.81
+      FCF利回り: +2.8%  PEG: 0.94
+    [成長]
+      売上成長: +14.6%  営業利益成長: +31.1%  EPS成長: +26.7%
+    [質・健全性]
+      ROE: +34.7%  粗利率: +69.9%  D/E: 105.91  FCFマージン: +8.7%
+
+  【決算情報】
+    次回決算日: 2026-08-06
+    直近4.0四半期: 4.0回ビート  平均サプライズ: +8.71%
+      2026-05-21  予想EPS: $2.54  実績: $2.80  サプライズ: +10.07%
+      2026-02-05  予想EPS: $5.81  実績: $6.22  サプライズ: +7.10%
+      2025-11-06  予想EPS: $3.45  実績: $3.79  サプライズ: +9.86%
+      2025-08-07  予想EPS: $3.50  実績: $3.77  サプライズ: +7.79%
+    EPS予想修正: 90日間 +2.3%  30日間 +0.1%
+    来期EPS成長予想: +10.7%  今期売上成長予想: +6.2%
+    売上成長減速中 (QoQ変化: -37.4%)
+    四半期売上推移:
+      2026-03-31  売上: $2.0B  営業利益: $0.2B
+      2025-12-31  売上: $2.4B  営業利益: $0.5B
+      2025-09-30  売上: $2.0B  営業利益: $0.3B
+      2025-06-30  売上: $1.7B  営業利益: $0.3B
+
+  【アナリスト評価】
+    コンセンサス: nan  (アナリスト数: 16名)
+    現在価格: $382.93  ターゲット平均: $429.56  ($235〜$511)  上昇余地: +12.2%
+    直近アクション: アップグレード 1件 / ダウングレード 0件
+
+  【直近アナリストアクション】
+    2026-07-21  Raymond James: Market Perform→Outperform (up)  TP: $410
+    2026-07-21  Wells Fargo: Overweight→Overweight (main)  TP: $425 (前回: $415)
+    2026-06-23  Telsey Advisory Group: Outperform→Outperform (main)  TP: $460 (前回: $435)
+    2026-05-26  Evercore ISI Group: Outperform→Outperform (main)  TP: $440 (前回: $420)
+    2026-05-22  UBS: Buy→Buy (main)  TP: $511 (前回: $480)
+
+  【直近ニュース】
+    2026-07-21  Shopify downgraded, Five Below upgraded: Wall Street's top analyst calls
+             The Fly
+             https://finance.yahoo.com/markets/stocks/articles/micron-downgraded-five-below-upgraded-133947861.html
+    2026-07-21  Is Ralph Lauren (RL) Outperforming Other Consumer Discretionary Stocks This Year?
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/ralph-lauren-rl-outperforming-other-134004119.html
+    2026-07-21  Raymond James upgrades Ralph Lauren on stronger growth outlook ahead of earnings
+             Investing.com
+             https://finance.yahoo.com/markets/stocks/articles/raymond-james-upgrades-ralph-lauren-123302157.html
+    2026-07-21  3 S&P 500 Stocks We Think Twice About
+             StockStory
+             https://finance.yahoo.com/markets/stocks/articles/3-p-500-stocks-think-121426605.html
+    2026-07-21  Here Are Tuesday’s Top Wall Street Analyst Research Calls: Adobe, Datadog, Five Below, Fortinet, Gilead Sciences, Goldman Sachs, Microsoft, Salesforce, and More
+             24/7 Wall St.
+             https://247wallst.com/investing/2026/07/21/here-are-tuesdays-top-wall-street-analyst-research-calls-adobe-datadog-five-below-fortinet-gilead-sciences-goldman-sachs-microsoft-salesforce-and-more/
+
+  【スコア根拠サマリー】
+    バリュエーションはセクター平均並み。
+    高い成長率を示している。
+    質・健全性はセクター平均並み。
+    決算モメンタムはセクター平均並み。
+    直近4四半期連続で決算ビート。
+    Piotroski F-Score 8/9 — 財務状態が優良（ROA>0; CFO>0; ROA改善; CFO>NI; 流動比率改善; 希薄化なし; 粗利率改善; 資産回転率改善）。
+    PEG 0.94 — 成長に対して割安（GARP基準クリア）。
+    ターゲット価格まで12%の上昇余地。
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  #43  CTVA  Corteva, Inc.  [Basic Materials]
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  総合: 60.4   割安度: 54.1   成長力: 57.2   質: 75.2   決算モメンタム: 65.7   価格モメンタム: 30.0
+
+  【定量指標】
+    [バリュエーション]
+      PER: 46.99  (Forward: 21.02)  PBR: 2.39  EV/EBITDA: 14.41  PSR: 3.25
+      FCF利回り: +4.3%  PEG: 1.74
+    [成長]
+      売上成長: +2.9%  営業利益成長: +25.0%  EPS成長: +20.6%
+    [質・健全性]
+      ROE: +5.1%  粗利率: +48.6%  D/E: 13.64  FCFマージン: +16.2%
+
+  【決算情報】
+    次回決算日: 2026-07-30
+    直近4.0四半期: 3.0回ビート  平均サプライズ: +23.30%
+      2026-05-05  予想EPS: $1.18  実績: $1.50  サプライズ: +27.11%
+      2026-02-03  予想EPS: $0.22  実績: $0.22  サプライズ: -1.60%
+      2025-11-04  予想EPS: $-0.47  実績: $-0.23  サプライズ: +50.61%
+      2025-08-06  予想EPS: $1.88  実績: $2.20  サプライズ: +17.09%
+    EPS予想修正: 90日間 +2.3%  30日間 +0.3%
+    来期EPS成長予想: +24.7%  今期売上成長予想: +5.3%
+    売上成長減速中 (QoQ変化: -23.9%)
+    四半期売上推移:
+      2026-03-31  売上: $4.9B  営業利益: $1.2B
+      2025-12-31  売上: $3.9B  営業利益: $0.2B
+      2025-09-30  売上: $2.6B  営業利益: $-0.3B
+      2025-06-30  売上: $6.5B  営業利益: $1.8B
+
+  【アナリスト評価】
+    コンセンサス: 1.8 - Buy  (アナリスト数: 20名)
+    現在価格: $86.94  ターゲット平均: $90.20  ($77〜$100)  上昇余地: +3.7%
+    直近アクション: アップグレード 0件 / ダウングレード 0件
+
+  【直近アナリストアクション】
+    2026-07-21  RBC Capital: Outperform→Outperform (main)  TP: $103 (前回: $97)
+    2026-07-20  B of A Securities: Buy→Buy (main)  TP: $96 (前回: $90)
+    2026-07-14  Mizuho: Outperform→Outperform (main)  TP: $97 (前回: $96)
+    2026-07-02  Mizuho: Outperform→Outperform (main)  TP: $96 (前回: $94)
+    2026-06-11  Barclays: Overweight→Overweight (main)  TP: $91 (前回: $84)
+
+  【直近ニュース】
+    2026-07-21  Cibus Inc’s Precision-Breeding Platform and BioFragrance Scale-Up Support Commercial Inflection
+             Exec Edge
+             https://finance.yahoo.com/healthcare/articles/cibus-inc-precision-breeding-platform-203104004.html
+    2026-07-21  Cibus Inc’s Precision-Breeding Platform and BioFragrance Scale-Up Support Commercial Inflection – Downloadable Initiation Report
+             Exec Edge
+             https://finance.yahoo.com/healthcare/articles/cibus-inc-precision-breeding-platform-202747984.html
+    2026-07-21  Oppenheimer Picks Apple, Amazon, Alphabet as Top Stock Buys
+             GuruFocus.com
+             https://finance.yahoo.com/markets/stocks/articles/oppenheimer-picks-apple-amazon-alphabet-130755332.html
+    2026-07-20  Is Profitability Improving Across Mission Produce's Segments?
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/profitability-improving-across-mission-produces-134200781.html
+    2026-07-13  Mission Produce's Farming Segment: Is a Recovery Underway?
+             Zacks
+             https://finance.yahoo.com/markets/commodities/articles/mission-produces-farming-segment-recovery-141600754.html
+
+  【スコア根拠サマリー】
+    バリュエーションはセクター平均並み。
+    成長率はセクター平均並み。
+    ROE・財務健全性が高く質が良い。
+    決算モメンタムはセクター平均並み。
+    直近4四半期中3回決算ビート。
+    Piotroski F-Score 7/9 — 財務状態が優良（ROA>0; CFO>0; ROA改善; CFO>NI; LTD低下; 希薄化なし; 粗利率改善）。
+    アナリストは強気（レーティング: 1.8/5）。
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  #44  PLTR  Palantir Technologies Inc.  [Technology]
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  総合: 60.3   割安度: 7.0   成長力: 88.8   質: 87.2   決算モメンタム: 74.0   価格モメンタム: 35.3
+
+  【定量指標】
+    [バリュエーション]
+      PER: 149.06  (Forward: 63.34)  PBR: 37.63  EV/EBITDA: 156.36  PSR: 60.88
+      FCF利回り: +0.6%  PEG: 0.19
+    [成長]
+      売上成長: +56.2%  営業利益成長: +355.5%  EPS成長: +251.6%
+    [質・健全性]
+      ROE: +32.6%  粗利率: +84.1%  D/E: 2.48  FCFマージン: +46.9%
+
+  【決算情報】
+    次回決算日: 2026-08-03
+    直近4.0四半期: 4.0回ビート  平均サプライズ: +16.93%
+      2026-05-04  予想EPS: $0.28  実績: $0.33  サプライズ: +18.08%
+      2026-02-02  予想EPS: $0.23  実績: $0.25  サプライズ: +8.60%
+      2025-11-03  予想EPS: $0.17  実績: $0.21  サプライズ: +25.46%
+      2025-08-04  予想EPS: $0.14  実績: $0.16  サプライズ: +15.57%
+    EPS予想修正: 90日間 +11.6%  30日間 +0.2%
+    来期EPS成長予想: +41.9%  今期売上成長予想: +72.5%
+    売上成長減速中 (QoQ変化: -3.1%)
+    四半期売上推移:
+      2026-03-31  売上: $1.6B  営業利益: $0.8B
+      2025-12-31  売上: $1.4B  営業利益: $0.6B
+      2025-09-30  売上: $1.2B  営業利益: $0.4B
+      2025-06-30  売上: $1.0B  営業利益: $0.3B
+
+  【アナリスト評価】
+    コンセンサス: 1.9 - Buy  (アナリスト数: 27名)
+    現在価格: $132.66  ターゲット平均: $183.12  ($70〜$255)  上昇余地: +38.0%
+    直近アクション: アップグレード 3件 / ダウングレード 0件
+
+  【直近アナリストアクション】
+    2026-07-17  DA Davidson: Buy→Buy (main)  TP: $175 (前回: $175)
+    2026-07-02  DA Davidson: Neutral→Buy (up)  TP: $175 (前回: $165)
+    2026-06-16  Wolfe Research: Underperform→Peer Perform (up)
+    2026-06-05  Rosenblatt: Buy→Buy (main)  TP: $225 (前回: $225)
+    2026-06-05  Wedbush: Outperform→Outperform (reit)  TP: $230 (前回: $230)
+
+  【直近ニュース】
+    2026-07-21  Warren Buffett's Berkshire Hathaway Owns Zero Pure-Play AI Stocks. But This 2016 Acquisition Gives It Exposure to the Data Center Boom.
+             Motley Fool
+             https://www.fool.com/investing/2026/07/21/warren-buffetts-berkshire-hathaway-owns-zero-pure/
+    2026-07-21  This Is My Favorite Artificial Intelligence Stock to Buy Right Now (Hint: Not Nvidia, Broadcom, or Alphabet)
+             Motley Fool
+             https://www.fool.com/investing/2026/07/21/this-is-my-favorite-artificial-intelligence-stock/
+    2026-07-21  Palantir Stock Is Down More Than 35% from Its Peak. Is It Finally a Buy?
+             Motley Fool
+             https://www.fool.com/investing/2026/07/21/palantir-stock-is-down-more-than-35-from-its-peak/
+    2026-07-21  Billionaire CEO Says AI Could Make Him 20 Times Richer: ‘That’s a Problem for Society’
+             Entrepreneur
+             https://www.entrepreneur.com/business-news/billionaire-ceo-says-ai-could-make-him-20-times-richer
+    2026-07-21  Google Expands in Miami After Its Billionaire Founders Buy Homes
+             Bloomberg
+             https://finance.yahoo.com/real-estate/articles/google-expands-miami-billionaire-founders-140549656.html
+
+  【スコア根拠サマリー】
+    バリュエーションはセクター内で割高。
+    高い成長率を示している。
+    ROE・財務健全性が高く質が良い。
+    決算モメンタムが強い（サプライズ・上方修正・成長加速）。
+    直近4四半期連続で決算ビート。
+    Piotroski F-Score 7/9 — 財務状態が優良（ROA>0; CFO>0; ROA改善; CFO>NI; 流動比率改善; 粗利率改善; 資産回転率改善）。
+    PEG 0.19 — 成長に対して非常に割安。
+    アナリストは強気（レーティング: 1.9/5）。
+    ターゲット価格まで38%の上昇余地。
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  #45  SJM  The J.M. Smucker Company  [Consumer Defensive]
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  総合: 60.2   割安度: 74.8   成長力: 80.3   質: 40.7   決算モメンタム: 33.9   価格モメンタム: 81.8
+
+  【定量指標】
+    [バリュエーション]
+      PER: N/A  (Forward: 10.81)  PBR: 2.23  EV/EBITDA: 9.90  PSR: 1.37
+      FCF利回り: +5.3%  PEG: N/A
+    [成長]
+      売上成長: +3.7%  営業利益成長: -18.8%  EPS成長: +88.7%
+    [質・健全性]
+      ROE: -2.4%  粗利率: +34.3%  D/E: 128.61  FCFマージン: +12.8%
+
+  【決算情報】
+    EPS予想修正: 90日間 -0.8%  30日間 -0.1%
+    来期EPS成長予想: +6.3%  今期売上成長予想: -2.2%
+    売上成長減速中 (QoQ変化: -3.4%)
+    四半期売上推移:
+      2026-04-30  売上: $2.3B  営業利益: $0.4B
+      2026-01-31  売上: $2.3B  営業利益: $0.4B
+      2025-10-31  売上: $2.3B  営業利益: $0.4B
+      2025-07-31  売上: $2.1B  営業利益: $0.1B
+
+  【アナリスト評価】
+    コンセンサス: 2.1 - Buy  (アナリスト数: 16名)
+    現在価格: $115.75  ターゲット平均: $123.31  ($102〜$135)  上昇余地: +6.5%
+    直近アクション: アップグレード 0件 / ダウングレード 0件
+
+  【直近アナリストアクション】
+    2026-06-11  UBS: Buy→Buy (main)  TP: $130 (前回: $121)
+    2026-06-11  Barclays: Equal-Weight→Equal-Weight (main)  TP: $125 (前回: $103)
+    2026-06-10  Evercore ISI Group: Outperform→Outperform (main)  TP: $120 (前回: $117)
+    2026-06-10  TD Cowen: Hold→Hold (main)  TP: $115 (前回: $103)
+    2026-06-10  JP Morgan: Overweight→Overweight (main)  TP: $125 (前回: $120)
+
+  【直近ニュース】
+    2026-07-21  Coffee Drinkers Get Encouraging Health News
+             GuruFocus.com
+             https://finance.yahoo.com/healthcare/articles/coffee-drinkers-encouraging-health-news-122717371.html
+    2026-07-21  4 Stocks That Recently Hiked Dividends Amid Geopolitical Tensions
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/4-stocks-recently-hiked-dividends-121800954.html
+    2026-07-21  Is J. M. Smucker (SJM) Fairly Valued After Its 2% Dividend Increase?
+             Simply Wall St.
+             https://finance.yahoo.com/markets/stocks/articles/j-m-smucker-sjm-fairly-121024796.html
+    2026-07-21  Does Smucker’s Modest Dividend Hike And New SVP Reframe Its Capital Allocation Story (SJM)?
+             Simply Wall St.
+             https://finance.yahoo.com/markets/stocks/articles/does-smucker-modest-dividend-hike-111212149.html
+    2026-07-20  The J.M. Smucker Raises Dividend, Reinforces Growth Strategy
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/j-m-smucker-raises-dividend-135000890.html
+
+  【スコア根拠サマリー】
+    セクター内で割安な水準にある。
+    高い成長率を示している。
+    質・健全性はセクター平均並み。
+    決算モメンタムが弱い。
+    Piotroski F-Score 5/9 — 財務状態は普通。
+    アナリストは中立〜やや強気（レーティング: 2.1/5）。
+    ターゲット価格まで7%の上昇余地。
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  #46  CPRT  Copart, Inc.  [Industrials]
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  総合: 60.2   割安度: 77.5   成長力: 56.6   質: 79.4   決算モメンタム: 35.8   価格モメンタム: 3.3
+
+  【定量指標】
+    [バリュエーション]
+      PER: 16.88  (Forward: 16.14)  PBR: 2.87  EV/EBITDA: 10.89  PSR: 5.42
+      FCF利回り: +4.7%  PEG: 7.02
+    [成長]
+      売上成長: +9.7%  営業利益成長: +7.9%  EPS成長: +13.9%
+    [質・健全性]
+      ROE: +17.6%  粗利率: +47.5%  D/E: 1.06  FCFマージン: +26.5%
+
+  【決算情報】
+    次回決算日: 2026-09-03
+    直近4.0四半期: 3.0回ビート  平均サプライズ: +3.99%
+      2026-05-21  予想EPS: $0.41  実績: $0.43  サプライズ: +5.71%
+      2026-02-19  予想EPS: $0.39  実績: $0.36  サプライズ: -8.12%
+      2025-11-20  予想EPS: $0.39  実績: $0.41  サプライズ: +5.09%
+      2025-09-04  予想EPS: $0.36  実績: $0.41  サプライズ: +13.29%
+    EPS予想修正: 90日間 +0.6%  30日間 -0.0%
+    来期EPS成長予想: +6.2%  今期売上成長予想: -0.1%
+    売上成長加速中 (QoQ変化: +13.2%)
+    四半期売上推移:
+      2026-04-30  売上: $1.2B  営業利益: $0.5B
+      2026-01-31  売上: $1.1B  営業利益: $0.4B
+      2025-10-31  売上: $1.2B  営業利益: $0.4B
+      2025-07-31  売上: $1.1B  営業利益: $0.4B
+
+  【アナリスト評価】
+    コンセンサス: 2.2 - Buy  (アナリスト数: 10名)
+    現在価格: $27.17  ターゲット平均: $40.90  ($32〜$55)  上昇余地: +50.5%
+    直近アクション: アップグレード 1件 / ダウングレード 0件
+
+  【直近アナリストアクション】
+    2026-06-26  Freedom Broker: →Buy (init)  TP: $39
+    2026-02-23  JP Morgan: Neutral→Neutral (main)  TP: $34 (前回: $45)
+    2026-02-23  Barclays: Underweight→Underweight (main)  TP: $32 (前回: $33)
+    2026-02-20  Baird: Outperform→Outperform (main)  TP: $48 (前回: $52)
+    2025-11-24  JP Morgan: Neutral→Neutral (main)  TP: $45 (前回: $50)
+
+  【直近ニュース】
+    2026-07-20  1 Oversold Stock Set for a Comeback and 2 We Brush Off
+             StockStory
+             https://finance.yahoo.com/markets/stocks/articles/1-oversold-stock-set-comeback-092733548.html
+    2026-07-18  Copart Director Daniel Englander Sells 80,000 Shares for $2.2 Million. Should Investors Sell Too, With the Stock Down 40%?
+             Motley Fool
+             https://www.fool.com/coverage/filings/2026/07/18/copart-director-daniel-englander-sells-80-000-shares-for-usd2-2-million-should-investors-sell-too-with-the-stock-down-40/
+    2026-07-17  Copart, Inc. (CPRT) Falls More Steeply Than Broader Market: What Investors Need to Know
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/copart-inc-cprt-falls-more-221504837.html
+    2026-07-16  3 Reasons CPRT Has Explosive Upside Potential
+             StockStory
+             https://finance.yahoo.com/markets/stocks/articles/3-reasons-cprt-explosive-upside-181722717.html
+    2026-07-15  3 Stocks Under $50 for Long-Term Investors
+             StockStory
+             https://finance.yahoo.com/markets/stocks/articles/3-stocks-under-50-long-114917729.html
+
+  【スコア根拠サマリー】
+    セクター内で割安な水準にある。
+    成長率はセクター平均並み。
+    ROE・財務健全性が高く質が良い。
+    決算モメンタムが弱い。
+    直近4四半期中3回決算ビート。
+    Piotroski F-Score 5/9 — 財務状態は普通。
+    PEG 7.02 — 成長に対して割高。
+    アナリストは中立〜やや強気（レーティング: 2.2/5）。
+    ターゲット価格まで51%の上昇余地。
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  #47  DXCM  DexCom, Inc.  [Healthcare]
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  総合: 60.0   割安度: 31.0   成長力: 83.5   質: 74.3   決算モメンタム: 72.5   価格モメンタム: 23.7
+
+  【定量指標】
+    [バリュエーション]
+      PER: 32.08  (Forward: 24.29)  PBR: 9.76  EV/EBITDA: 21.80  PSR: 5.99
+      FCF利回り: +3.8%  PEG: 0.26
+    [成長]
+      売上成長: +15.6%  営業利益成長: +52.0%  EPS成長: +45.1%
+    [質・健全性]
+      ROE: +35.6%  粗利率: +61.5%  D/E: 46.83  FCFマージン: +23.1%
+
+  【決算情報】
+    次回決算日: 2026-07-30
+    直近4.0四半期: 4.0回ビート  平均サプライズ: +9.81%
+      2026-04-30  予想EPS: $0.47  実績: $0.56  サプライズ: +18.99%
+      2026-02-12  予想EPS: $0.65  実績: $0.68  サプライズ: +4.50%
+      2025-10-30  予想EPS: $0.57  実績: $0.61  サプライズ: +7.51%
+      2025-07-30  予想EPS: $0.44  実績: $0.48  サプライズ: +8.25%
+    EPS予想修正: 90日間 +3.8%  30日間 +0.0%
+    来期EPS成長予想: +18.9%  今期売上成長予想: +12.1%
+    売上成長減速中 (QoQ変化: -9.5%)
+    四半期売上推移:
+      2026-03-31  売上: $1.2B  営業利益: $0.3B
+      2025-12-31  売上: $1.3B  営業利益: $0.3B
+      2025-09-30  売上: $1.2B  営業利益: $0.2B
+      2025-06-30  売上: $1.2B  営業利益: $0.2B
+
+  【アナリスト評価】
+    コンセンサス: 1.3 - Strong Buy  (アナリスト数: 24名)
+    現在価格: $74.75  ターゲット平均: $85.75  ($65〜$112)  上昇余地: +14.7%
+    直近アクション: アップグレード 0件 / ダウングレード 0件
+
+  【直近アナリストアクション】
+    2026-07-16  Truist Securities: Buy→Buy (main)  TP: $87 (前回: $80)
+    2026-07-15  Mizuho: Outperform→Outperform (main)  TP: $90 (前回: $85)
+    2026-06-23  Deutsche Bank: Buy→Buy (init)  TP: $86
+    2026-06-15  Piper Sandler: Overweight→Overweight (main)  TP: $88 (前回: $75)
+    2026-06-10  TD Cowen: Buy→Buy (main)  TP: $95 (前回: $75)
+
+  【直近ニュース】
+    2026-07-21  Are Medical Stocks Lagging  DexCom (DXCM) This Year?
+             Zacks
+             https://finance.yahoo.com/healthcare/articles/medical-stocks-lagging-dexcom-dxcm-134004686.html
+    2026-07-21  2 Cash-Heavy Stocks on Our Buy List and 1 We Avoid
+             StockStory
+             https://finance.yahoo.com/markets/stocks/articles/2-cash-heavy-stocks-buy-110226500.html
+    2026-07-16  What Investors Don’t Understand About Abbott Laboratories
+             24/7 Wall St.
+             https://247wallst.com/investing/2026/07/16/what-investors-dont-understand-about-abbott-laboratories/
+    2026-07-14  DXCM Secures Health Canada Authorization for Dexcom G7 15 Day CGM
+             Zacks
+             https://finance.yahoo.com/healthcare/articles/dxcm-secures-health-canada-authorization-142000608.html
+    2026-07-14  1 Mid-Cap Stock to Target This Week and 2 We Find Risky
+             StockStory
+             https://finance.yahoo.com/markets/stocks/articles/1-mid-cap-stock-target-110311699.html
+
+  【スコア根拠サマリー】
+    バリュエーションはセクター内で割高。
+    高い成長率を示している。
+    ROE・財務健全性が高く質が良い。
+    決算モメンタムが強い（サプライズ・上方修正・成長加速）。
+    直近4四半期連続で決算ビート。
+    Piotroski F-Score 7/9 — 財務状態が優良（ROA>0; CFO>0; ROA改善; CFO>NI; 流動比率改善; 希薄化なし; 資産回転率改善）。
+    PEG 0.26 — 成長に対して非常に割安。
+    アナリストは強気（レーティング: 1.3/5）。
+    ターゲット価格まで15%の上昇余地。
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  #48  FICO  Fair Isaac Corporation  [Technology]
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  総合: 59.9   割安度: 49.8   成長力: 63.6   質: 91.9   決算モメンタム: 69.8   価格モメンタム: 14.1
+
+  [警告] データ品質: 質・健全性(2/3+件) のカバレッジ不足により一部スコアを制限
+
+  【定量指標】
+    [バリュエーション]
+      PER: 38.84  (Forward: 22.52)  PBR: -13.60  EV/EBITDA: 28.16  PSR: 12.62
+      FCF利回り: +2.2%  PEG: 0.33
+    [成長]
+      売上成長: +15.9%  営業利益成長: +27.6%  EPS成長: +27.1%
+    [質・健全性]
+      ROE: N/A  粗利率: +84.2%  D/E: N/A  FCFマージン: +37.1%
+
+  【決算情報】
+    次回決算日: 2026-07-29
+    直近4.0四半期: 4.0回ビート  平均サプライズ: +8.46%
+      2026-04-28  予想EPS: $10.97  実績: $12.50  サプライズ: +13.91%
+      2026-01-28  予想EPS: $7.08  実績: $7.33  サプライズ: +3.46%
+      2025-11-05  予想EPS: $7.36  実績: $7.74  サプライズ: +5.21%
+      2025-07-30  予想EPS: $7.70  実績: $8.57  サプライズ: +11.28%
+    EPS予想修正: 90日間 +3.7%  30日間 +0.2%
+    来期EPS成長予想: +26.3%  今期売上成長予想: +27.9%
+    売上成長加速中 (QoQ変化: +35.8%)
+    四半期売上推移:
+      2026-03-31  売上: $0.7B  営業利益: $0.4B
+      2025-12-31  売上: $0.5B  営業利益: $0.2B
+      2025-09-30  売上: $0.5B  営業利益: $0.2B
+      2025-06-30  売上: $0.5B  営業利益: $0.3B
+
+  【アナリスト評価】
+    コンセンサス: 1.8 - Buy  (アナリスト数: 20名)
+    現在価格: $1227.34  ターゲット平均: $1534.55  ($707〜$2400)  上昇余地: +25.0%
+    直近アクション: アップグレード 0件 / ダウングレード 0件
+
+  【直近アナリストアクション】
+    2026-07-02  UBS: Neutral→Neutral (main)  TP: $1270 (前回: $1250)
+    2026-06-16  UBS: Neutral→Neutral (main)  TP: $1250 (前回: $1110)
+    2026-06-09  Needham: Buy→Buy (reit)  TP: $1650 (前回: $1650)
+    2026-05-19  B of A Securities: Buy→Buy (main)  TP: $1400 (前回: $1550)
+    2026-05-04  Jefferies: Buy→Buy (main)  TP: $1700 (前回: $1800)
+
+  【直近ニュース】
+    2026-07-21  Equifax Q2 Earnings Call Highlights
+             MarketBeat
+             https://www.marketbeat.com/instant-alerts/equifax-q2-earnings-call-highlights-2026-07-21/?utm_source=yahoofinance&utm_medium=yahoofinance
+    2026-07-15  How Fair Isaac (FICO) Is Deepening Its Mortgage Lending Moat Through Broader FICO Score 10T Adoption
+             Insider Monkey
+             https://finance.yahoo.com/markets/stocks/articles/fair-isaac-fico-deepening-mortgage-111639107.html
+    2026-07-13  Can CashAI Continue Powering Dave's Credit Growth Momentum Ahead?
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/cashai-continue-powering-daves-credit-155100044.html
+    2026-07-12  Equifax Expands in Mexico With $750 Million Círculo de Crédito Deal
+             MarketBeat
+             https://www.marketbeat.com/instant-alerts/equifax-expands-in-mexico-with-750-million-crculo-de-crdito-deal-2026-07-12/?utm_source=yahoofinance&utm_medium=yahoofinance
+    2026-07-07  What to Expect From Fair Isaac’s Q3 2026 Earnings Report
+             Barchart
+             https://www.barchart.com/story/news/3159894/what-to-expect-from-fair-isaacs-q3-2026-earnings-report
+
+  【スコア根拠サマリー】
+    バリュエーションはセクター平均並み。
+    成長率はセクター平均並み。
+    質・健全性はデータ不足で判定保留。
+    決算モメンタムはセクター平均並み。
+    直近4四半期連続で決算ビート。
+    Piotroski F-Score 7/9 — 財務状態が優良（ROA>0; CFO>0; ROA改善; CFO>NI; 希薄化なし; 粗利率改善; 資産回転率改善）。
+    PEG 0.33 — 成長に対して非常に割安。
+    アナリストは強気（レーティング: 1.8/5）。
+    ターゲット価格まで25%の上昇余地。
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  #49  TDG  Transdigm Group Incorporated  [Industrials]
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  総合: 59.9   割安度: 39.2   成長力: 66.1   質: 94.3   決算モメンタム: 75.2   価格モメンタム: 25.3
+
+  [警告] データ品質: 質・健全性(2/3+件) のカバレッジ不足により一部スコアを制限
+
+  【定量指標】
+    [バリュエーション]
+      PER: 37.61  (Forward: 25.67)  PBR: -7.33  EV/EBITDA: 19.69  PSR: N/A
+      FCF利回り: +1.6%  PEG: 2.23
+    [成長]
+      売上成長: +11.2%  営業利益成長: +17.1%  EPS成長: +21.0%
+    [質・健全性]
+      ROE: N/A  粗利率: +59.7%  D/E: N/A  FCFマージン: +20.6%
+
+  【決算情報】
+    EPS予想修正: 90日間 +2.4%  30日間 +0.1%
+    来期EPS成長予想: +17.2%  今期売上成長予想: +17.5%
+    売上成長加速中 (QoQ変化: +17.6%)
+    四半期売上推移:
+      2026-03-31  売上: $2.5B  営業利益: $1.2B
+      2025-12-31  売上: $2.3B  営業利益: $1.0B
+      2025-09-30  売上: $2.4B  営業利益: $1.2B
+      2025-06-30  売上: $2.2B  営業利益: $1.0B
+
+  【アナリスト評価】
+    コンセンサス: 1.9 - Buy  (アナリスト数: 20名)
+    現在価格: $1205.49  ターゲット平均: $1508.95  ($1200〜$1937)  上昇余地: +25.2%
+    直近アクション: アップグレード 0件 / ダウングレード 2件
+
+  【直近アナリストアクション】
+    2026-07-15  Morgan Stanley: Overweight→Equal-Weight (down)  TP: $1345 (前回: $1680)
+    2026-07-02  BMO Capital: Outperform→Outperform (main)  TP: $1525 (前回: $1450)
+    2026-05-06  UBS: Buy→Buy (main)  TP: $1645 (前回: $1745)
+    2026-05-06  Stifel: Buy→Buy (main)  TP: $1525 (前回: $1650)
+    2026-05-06  RBC Capital: Sector Perform→Sector Perform (main)  TP: $1350 (前回: $1400)
+
+  【直近ニュース】
+    2026-07-20  A $4.2M Sale, 46% Stake Cut: What TransDigm Co-COO Joel Reiss's Latest Transaction Means for Investors
+             Motley Fool
+             https://www.fool.com/coverage/filings/2026/07/20/a-usd4-2m-sale-46-stake-cut-what-transdigm-co-coo-joel-reiss-s-latest-transaction-means-for-investors/
+    2026-07-16  What to Expect From TransDigm Group's Q3 2026 Earnings Report
+             Barchart
+             https://www.barchart.com/story/news/3318314/what-to-expect-from-transdigm-group-s-q3-2026-earnings-report
+    2026-07-15  Morgan Stanley stays bullish on aerospace, defense ahead of Q2 earnings
+             Investing.com
+             https://finance.yahoo.com/markets/stocks/articles/morgan-stanley-stays-bullish-aerospace-190818551.html
+    2026-07-15  Here Are Wednesday’s Top Wall Street Analyst Research Calls: Allstate, AMC Entertainment, Boeing, CAVA Group, Check Point Software, Digital Realty Trust, FedEx, IBM, UPS, and More
+             24/7 Wall St.
+             https://247wallst.com/investing/2026/07/15/here-are-wednesdays-top-wall-street-analyst-research-calls-allstate-amc-entertainment-boeing-cava-group-check-point-software-digital-realty-trust-fedex-ibm-ups-and-more/
+    2026-07-08  Honeywell Aerospace's Competitive Edge Lies in Its 'Develop Once, Deploy Everywhere' R&D Model, Morgan Stanley Says
+             MT Newswires
+             https://finance.yahoo.com/markets/stocks/articles/honeywell-aerospace-apos-competitive-edge-144840591.html
+
+  【スコア根拠サマリー】
+    バリュエーションはセクター内で割高。
+    成長率はセクター平均並み。
+    質・健全性はデータ不足で判定保留。
+    決算モメンタムが強い（サプライズ・上方修正・成長加速）。
+    Piotroski F-Score 6/9 — 財務状態は普通。
+    PEG 2.23 — 成長に対して割高。
+    アナリストは強気（レーティング: 1.9/5）。
+    ターゲット価格まで25%の上昇余地。
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  #50  KEY  KeyCorp  [Financial Services]
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  総合: 59.9   割安度: 72.6   成長力: 86.2   質: 38.6   決算モメンタム: 54.0   価格モメンタム: 84.3
+
+  [警告] データ品質: 割安度(2/3+件) のカバレッジ不足により一部スコアを制限
+
+  【定量指標】
+    [バリュエーション]
+      PER: 14.08  (Forward: 10.72)  PBR: 1.43  EV/EBITDA: N/A  PSR: N/A
+      FCF利回り: N/A  PEG: 0.32
+    [成長]
+      売上成長: +65.7%  営業利益成長: N/A  EPS成長: +1236.0%
+    [質・健全性]
+      ROE: +10.0%  粗利率: N/A  D/E: N/A  FCFマージン: +28.8%
+
+  【決算情報】
+    直近4.0四半期: 4.0回ビート  平均サプライズ: +6.52%
+      2026-07-21  予想EPS: $0.42  実績: $0.44  サプライズ: +4.18%
+      2026-04-16  予想EPS: $0.41  実績: $0.44  サプライズ: +8.02%
+      2026-01-20  予想EPS: $0.39  実績: $0.41  サプライズ: +6.28%
+      2025-10-16  予想EPS: $0.38  実績: $0.41  サプライズ: +7.60%
+    EPS予想修正: 90日間 +0.6%  30日間 +0.1%
+    来期EPS成長予想: +17.7%  今期売上成長予想: +7.5%
+    売上成長減速中 (QoQ変化: -6.5%)
+    四半期売上推移:
+      2026-03-31  売上: $1.9B  営業利益: N/A
+      2025-12-31  売上: $1.9B  営業利益: N/A
+      2025-09-30  売上: $1.8B  営業利益: N/A
+      2025-06-30  売上: $1.8B  営業利益: N/A
+
+  【アナリスト評価】
+    コンセンサス: 2.1 - Buy  (アナリスト数: 19名)
+    現在価格: $22.95  ターゲット平均: $25.85  ($22〜$43)  上昇余地: +12.6%
+    直近アクション: アップグレード 0件 / ダウングレード 0件
+
+  【直近アナリストアクション】
+    2026-07-07  UBS: Buy→Buy (main)  TP: $27 (前回: $25)
+    2026-07-06  JP Morgan: Neutral→Neutral (main)  TP: $24 (前回: $22)
+    2026-07-06  Wells Fargo: Overweight→Overweight (main)  TP: $27 (前回: $24)
+    2026-06-29  Morgan Stanley: Equal-Weight→Equal-Weight (main)  TP: $25 (前回: $24)
+    2026-06-24  Truist Securities: Hold→Hold (main)  TP: $24 (前回: $23)
+
+  【直近ニュース】
+    2026-07-21  KeyCorp (KEY) Q2 2026 Earnings Call Highlights: Strong EPS Growth and Strategic Acquisitions ...
+             GuruFocus.com
+             https://finance.yahoo.com/markets/stocks/articles/keycorp-key-q2-2026-earnings-210052341.html
+    2026-07-21  KeyCorp Q2 Earnings Call Highlights
+             MarketBeat
+             https://www.marketbeat.com/instant-alerts/keycorp-q2-earnings-call-highlights-2026-07-21/?utm_source=yahoofinance&utm_medium=yahoofinance
+    2026-07-21  KEY Q2 Earnings Beat as NII & Fee Income Grow Y/Y & Provisions Dip
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/key-q2-earnings-beat-nii-143100285.html
+    2026-07-21  Compared to Estimates, KeyCorp (KEY) Q2 Earnings: A Look at Key Metrics
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/compared-estimates-keycorp-key-q2-133005515.html
+    2026-07-21  KeyCorp (KEY) Beats Q2 Earnings Estimates
+             Zacks
+             https://finance.yahoo.com/markets/stocks/articles/keycorp-key-beats-q2-earnings-114002872.html
+
+  【スコア根拠サマリー】
+    割安度はデータ不足で判定保留。
+    高い成長率を示している。
+    質・健全性に懸念あり。
+    決算モメンタムはセクター平均並み。
+    直近4四半期連続で決算ビート。
+    Piotroski F-Score 7/9 — 財務状態が優良（ROA>0; CFO>0; ROA改善; CFO>NI; LTD低下; 希薄化なし; 資産回転率改善）。
+    PEG 0.32 — 成長に対して非常に割安。
+    アナリストは中立〜やや強気（レーティング: 2.1/5）。
+    ターゲット価格まで13%の上昇余地。
+
+====================================================================================================
